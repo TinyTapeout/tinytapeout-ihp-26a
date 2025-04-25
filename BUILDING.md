@@ -16,7 +16,7 @@ Then install OpenLane 2 with Nix, as explained [here](https://openlane2.readthed
 First, make sure that you have checked out the submodules:
 
 ```bash
-git submodule update --init
+git submodule update --init --recursive
 ```
 
 Then install all the Python dependencies. You may want to use a virtual enviroment (venv or similar).
