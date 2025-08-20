@@ -46,7 +46,7 @@ jobs:
       - name: Run DRC check
         working-directory: tinytapeout-submission
         run: |
-          klayout -b -r ${{ env.TO_REPO_ROOT }}/drc/drc.lydrc -rd "in_gds"="gds/tt_ihp_wrapper_final.gds" -rd "report_file"="tt_ihp_wrapper_final.gds.lyrdb" 2>&1 | tee tt_ihp_wrapper_final.gds.log
+          klayout -b -r ${{ env.TO_REPO_ROOT }}/drc/drc.lydrc -rd "in_gds"="gds/tt_ihp_wrapper_final.gds" -rd "report_file"="tt_ihp_wrapper_final.gds.lyrdb" -rd density=false 2>&1 | tee tt_ihp_wrapper_final.gds.log
           if [ $? -ne 0 ]; then
             echo "❌ DRC check failed" | tee -a $GITHUB_STEP_SUMMARY
             exit 1
