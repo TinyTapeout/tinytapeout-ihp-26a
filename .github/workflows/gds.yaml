@@ -54,29 +54,6 @@ jobs:
             extra-substituters = https://nix-cache.fossi-foundation.org
             extra-trusted-public-keys = nix-cache.fossi-foundation.org:3+K59iFwXqKsL7BNu6Guy0v+uTlwsxYQxjspXzqLYQs=
 
-      - name: Patch projects to move power rails to TopMetal1
-        working-directory: projects
-        run: |
-          for project in tt_um_*; do
-            if [ "$project" = "tt_um_chip_rom" ]; then
-              continue
-            fi
-
-            if [ -f $project/$project.gds.br ]; then
-              brotli -jd $project/$project.gds.br
-            fi
-            
-            python ../tt-multiplexer/py/ihp_legacy_mod_lef.py $project/$project.lef $project/$project.lef
-
-            if [ -f $project/$project.gds ]; then
-              python ../tt-multiplexer/py/ihp_legacy_mod_gds.py $project/$project.gds $project/$project.gds
-            fi
-
-            if [ -f $project/$project.oas ]; then
-              python ../tt-multiplexer/py/ihp_legacy_mod_gds.py $project/$project.oas $project/$project.oas
-            fi
-          done
-
       - name: Harden Chip ROM
         run: nix-shell $GITHUB_WORKSPACE/librelane/shell.nix --run "python -m librelane --pdk-root $PDK_ROOT --manual-pdk --pdk $PDK tt/rom/config.json"
 
