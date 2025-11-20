@@ -1,7 +1,7 @@
-id: 'ttihp25b'
-name: 'Tiny Tapeout IHP 25b'
+id: 'ttihp26a'
+name: 'Tiny Tapeout IHP 26a'
 pdk: 'ihp-sg13g2'
-end_date: '2025-09-01'
+end_date: '2025-03-23'
 project_dir: 'projects'
 top_level_macro: 'tt_ihp_wrapper'
 powered_netlists: false

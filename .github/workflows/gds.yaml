@@ -14,7 +14,7 @@ on:
 jobs:
   gds:
     env:
-      SHUTTLE_SLUG: TTIHP25b
+      SHUTTLE_SLUG: TTIHP26a
       PYTHONIOENCODING: utf-8
       PDK: ihp-sg13g2
       PDK_ROOT: ${{ github.workspace }}/IHP-Open-PDK
