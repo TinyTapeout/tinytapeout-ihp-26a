@@ -1,0 +1,45 @@
+145. Printing statistics.
+
+=== tt_um_rebeccargb_hardware_utf8 ===
+
+   Number of wires:               1127
+   Number of wire bits:           1162
+   Number of public wires:          54
+   Number of public wire bits:      89
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1143
+     sg13g2_a21o_1                  27
+     sg13g2_a21oi_1                150
+     sg13g2_a221oi_1                38
+     sg13g2_a22oi_1                 66
+     sg13g2_and2_1                  28
+     sg13g2_and3_1                  13
+     sg13g2_and4_1                   7
+     sg13g2_buf_1                    8
+     sg13g2_dfrbpq_1                54
+     sg13g2_inv_1                   58
+     sg13g2_mux2_1                   2
+     sg13g2_nand2_1                113
+     sg13g2_nand2b_1                31
+     sg13g2_nand3_1                 45
+     sg13g2_nand3b_1                 3
+     sg13g2_nand4_1                 37
+     sg13g2_nor2_1                 112
+     sg13g2_nor2b_1                 28
+     sg13g2_nor3_1                  49
+     sg13g2_nor4_1                  25
+     sg13g2_o21ai_1                156
+     sg13g2_or2_1                   17
+     sg13g2_or3_1                    8
+     sg13g2_or4_1                    6
+     sg13g2_tiehi                   54
+     sg13g2_xnor2_1                  5
+     sg13g2_xor2_1                   3
+
+   Chip area for module '\tt_um_rebeccargb_hardware_utf8': 12547.710000
+     of which used for sequential elements: 2645.395200 (21.08%)
+
