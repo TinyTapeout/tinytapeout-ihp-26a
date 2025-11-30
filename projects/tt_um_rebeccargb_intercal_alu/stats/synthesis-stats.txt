@@ -1,0 +1,42 @@
+108. Printing statistics.
+
+=== tt_um_rebeccargb_intercal_alu ===
+
+   Number of wires:               1814
+   Number of wire bits:           1849
+   Number of public wires:          72
+   Number of public wire bits:     107
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1830
+     sg13g2_a21o_1                  13
+     sg13g2_a21oi_1                129
+     sg13g2_a221oi_1                30
+     sg13g2_a22oi_1                 37
+     sg13g2_and2_1                  39
+     sg13g2_and3_1                   7
+     sg13g2_and4_1                   4
+     sg13g2_buf_1                   15
+     sg13g2_dfrbpq_1                64
+     sg13g2_inv_1                   41
+     sg13g2_mux2_1                 103
+     sg13g2_nand2_1                 92
+     sg13g2_nand2b_1                20
+     sg13g2_nand3_1                705
+     sg13g2_nand3b_1                 2
+     sg13g2_nand4_1                 30
+     sg13g2_nor2_1                  91
+     sg13g2_nor2b_1                  8
+     sg13g2_nor3_1                 120
+     sg13g2_nor4_1                   4
+     sg13g2_o21ai_1                193
+     sg13g2_or2_1                   15
+     sg13g2_or3_1                    4
+     sg13g2_tiehi                   64
+
+   Chip area for module '\tt_um_rebeccargb_intercal_alu': 19873.539000
+     of which used for sequential elements: 3135.283200 (15.78%)
+
