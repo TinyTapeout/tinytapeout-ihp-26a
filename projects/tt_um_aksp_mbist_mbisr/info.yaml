@@ -1,0 +1,60 @@
+# Tiny Tapeout project information
+project:
+  title:        "MBIST + MBISR Built-In Memory Test & Repair"      # Project title
+  author:       "Dr Aditya Kumar Singh Pundir, Dr Pallavi Singh"      # Your name
+  discord:      "dradityapundir"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Memory Built-In Self-Test (March C-) and Built-In Self-Repair with CAM-based faulty address remapping."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_aksp_mbist_mbisr"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_aksp_mbist_mbisr.v"
+    - "top.v"
+    - "mbist_marchc_controller.v"
+    - "mbisr_controller.v"
+    - "memory.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "START"          # MBIST start signal (active high)
+  ui[1]: ""               # Unused
+  ui[2]: ""               # Unused
+  ui[3]: ""               # Unused
+  ui[4]: ""               # Unused
+  ui[5]: ""               # Unused
+  ui[6]: ""               # Unused
+  ui[7]: ""               # Unused
+
+  # Outputs
+  uo[0]: "DONE"           # MBIST completion status (active high)
+  uo[1]: "FAIL"           # MBIST failure status (active high if fault detected)
+  uo[2]: ""               # Unused
+  uo[3]: ""               # Unused
+  uo[4]: ""               # Unused
+  uo[5]: ""               # Unused
+  uo[6]: ""               # Unused
+  uo[7]: ""               # Unused
+
+  # Bidirectional pins
+  uio[0]: ""              # Unused (configured as input)
+  uio[1]: ""              # Unused (configured as input)
+  uio[2]: ""              # Unused (configured as input)
+  uio[3]: ""              # Unused (configured as input)
+  uio[4]: ""              # Unused (configured as input)
+  uio[5]: ""              # Unused (configured as input)
+  uio[6]: ""              # Unused (configured as input)
+  uio[7]: ""              # Unused (configured as input)
+
+# Do not change!
+yaml_version: 6
