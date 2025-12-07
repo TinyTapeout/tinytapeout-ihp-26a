@@ -14,22 +14,6 @@ MACRO tt_um_silicon_art
     USE GROUND ;
     PORT
       LAYER TopMetal1 ;
-        RECT 21.580 3.150 23.780 151.420 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
-        RECT 60.450 3.150 62.650 151.420 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
-        RECT 99.320 3.150 101.520 151.420 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
-        RECT 138.190 3.150 140.390 151.420 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
         RECT 177.060 3.150 179.260 151.420 ;
     END
   END VGND
@@ -37,22 +21,6 @@ MACRO tt_um_silicon_art
   PIN VPWR
     DIRECTION INOUT ;
     USE POWER ;
-    PORT
-      LAYER TopMetal1 ;
-        RECT 15.380 3.560 17.580 151.830 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
-        RECT 54.250 3.560 56.450 151.830 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
-        RECT 93.120 3.560 95.320 151.830 ;
-    END
-    PORT
-      LAYER TopMetal1 ;
-        RECT 131.990 3.560 134.190 151.830 ;
-    END
     PORT
       LAYER TopMetal1 ;
         RECT 170.860 3.560 173.060 151.830 ;
