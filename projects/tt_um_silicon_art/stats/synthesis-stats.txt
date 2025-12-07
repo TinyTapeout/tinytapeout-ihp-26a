@@ -1,21 +1,22 @@
-100. Printing statistics.
+107. Printing statistics.
 
 === tt_um_silicon_art ===
 
-   Number of wires:                  8
-   Number of wire bits:             43
-   Number of public wires:           8
-   Number of public wire bits:      43
+   Number of wires:                 24
+   Number of wire bits:             59
+   Number of public wires:          16
+   Number of public wire bits:      51
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 24
-     sg13g2_buf_1                    4
-     sg13g2_inv_1                    4
-     sg13g2_tielo                   16
+   Number of cells:                 40
+     sg13g2_dfrbpq_1                 8
+     sg13g2_mux2_1                   8
+     sg13g2_nor2b_1                 16
+     sg13g2_tielo                    8
 
-   Chip area for module '\tt_um_silicon_art': 166.924800
-     of which used for sequential elements: 0.000000 (0.00%)
+   Chip area for module '\tt_um_silicon_art': 740.275200
+     of which used for sequential elements: 391.910400 (52.94%)
 
