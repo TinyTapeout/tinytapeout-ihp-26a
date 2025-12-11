@@ -365,10 +365,6 @@ MACRO tt_um_oscillating_bones
         RECT 6.080 51.470 196.625 312.530 ;
       LAYER Metal5 ;
         RECT 6.080 51.470 196.625 310.725 ;
-      LAYER TopMetal1 ;
-        RECT 13.740 51.470 196.625 311.195 ;
-      LAYER TopMetal2 ;
-        RECT 16.625 51.470 196.625 231.470 ;
   END
 END tt_um_oscillating_bones
 END LIBRARY
