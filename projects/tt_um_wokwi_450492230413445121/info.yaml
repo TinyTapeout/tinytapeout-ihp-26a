@@ -1,0 +1,49 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     450492230413445121       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "RandomNum"      # Project title
+  author:       "Aakarsh Yadav"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Currently shows a random number on the display"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "A_IN0 (shared input, tied with ui[1] and ui[2])"
+  ui[1]: "A_IN1 (shared input, tied with ui[0] and ui[2])"
+  ui[2]: "A_IN2 (shared input, tied with ui[0] and ui[1])"
+  ui[3]: "IN3 (direct to output)"
+  ui[4]: "IN4 (direct to output)"
+  ui[5]: "IN5 (XOR and direct)"
+  ui[6]: "IN6 (XOR and AND)"
+  ui[7]: "IN7 (AND input)"
+
+  # Outputs
+  uo[0]: "OUT0 (NOT A, seven-segment control)"
+  uo[1]: "OUT1 (NOT A, seven-segment control)"
+  uo[2]: "OUT2 (NOT A, seven-segment control)"
+  uo[3]: "OUT3 (direct from IN3)"
+  uo[4]: "OUT4 (direct from IN4)"
+  uo[5]: "OUT5 (direct from IN5)"
+  uo[6]: "OUT6 (IN5 XOR IN6)"
+  uo[7]: "OUT7 (IN6 AND IN7)"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
