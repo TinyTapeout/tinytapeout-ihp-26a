@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title: "Bouncing Box" # Project title
+  title: "Silly Dog" # Project title
   author: "Daniel Wagner & Tim Burr" # Your name
   discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description: "A bouncing box with a speed control." # One line description of what your project does
+  description: "A dog bouncing around the screen controlled by the user." # One line description of what your project does
   language: "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz: 25175000 # Clock frequency in Hz (or 0 if not applicable)
 
