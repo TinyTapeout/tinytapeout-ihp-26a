@@ -1,0 +1,66 @@
+101. Printing statistics.
+
+=== dff_cell ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of ports:                  4
+   Number of port bits:              4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    1
+     sg13g2_tiehi                    1
+
+   Chip area for module '\dff_cell': 61.689600
+     of which used for sequential elements: 48.988800 (79.41%)
+
+=== tt_um_wokwi_450492222691728385 ===
+
+   Number of wires:                 10
+   Number of wire bits:             45
+   Number of public wires:          10
+   Number of public wire bits:      45
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 25
+     dff_cell                        1
+     sg13g2_buf_1                    4
+     sg13g2_tielo                   20
+
+   Area for cell type \dff_cell is unknown!
+
+   Chip area for module '\tt_um_wokwi_450492222691728385': 174.182400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   tt_um_wokwi_450492222691728385      1
+     dff_cell                        1
+
+   Number of wires:                 15
+   Number of wire bits:             50
+   Number of public wires:          14
+   Number of public wire bits:      49
+   Number of ports:                 12
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 27
+     sg13g2_buf_1                    4
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    1
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   20
+
+   Chip area for top module '\tt_um_wokwi_450492222691728385': 235.872000
+     of which used for sequential elements: 48.988800 (20.77%)
+
