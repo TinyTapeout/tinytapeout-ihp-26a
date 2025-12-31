@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Discrete-to-ASIC Delta-Sigma Acquisition System"      # Project title
+  author:       "YU ICHI"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A 3rd order CIC filter for PDM signal processing."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     2048000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_cic_filter_demo"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_cic_filter_demo.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "PDM Input (d_in)"
+  ui[1]: "NC"
+  ui[2]: "NC"
+  ui[3]: "NC"
+  ui[4]: "NC"
+  ui[5]: "NC"
+  ui[6]: "NC"
+  ui[7]: "NC"
+
+  # Outputs
+  uo[0]: "PCM Output Bit 7 (MSB)"
+  uo[1]: "PCM Output Bit 6"
+  uo[2]: "PCM Output Bit 5"
+  uo[3]: "PCM Output Bit 4"
+  uo[4]: "PCM Output Bit 3"
+  uo[5]: "PCM Output Bit 2"
+  uo[6]: "PCM Output Bit 1"
+  uo[7]: "PCM Output Bit 0 (LSB)"
+
+  # Inouts
+  uio[0]: "NC"
+  uio[1]: "NC"
+  uio[2]: "NC"
+  uio[3]: "NC"
+  uio[4]: "NC"
+  uio[5]: "NC"
+  uio[6]: "NC"
+  uio[7]: "NC"
+
+# Do not change!
+yaml_version: 6
