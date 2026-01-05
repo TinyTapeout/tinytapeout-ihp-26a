@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "Synapse-1: Memristive Neuromorphic Accelerator"
+  author:       "Sujan Challa"
+  discord:      "sujan9513"
+  description:  "100x100 memristor crossbar for analog matrix multiplication via in-memory computing"
+  language:     "Verilog"
+  clock_hz:     50000000     # 50 MHz system clock
+
+  # Mixed-signal design requires 1x2 tiles
+  tiles: "1x2"
+
+  # Top module name (must start with tt_um_)
+  top_module:  "tt_um_sujanreddy_synapse"
+
+  # Source files in ./src
+  source_files:
+    - "tt_um_sujanreddy_synapse.v"
+
+  # Custom GDS for analog portion (memristor crossbar)
+  # This GDS contains the 100x100 ReRAM crossbar array for analog matrix multiplication
+  gds:
+    - "gds/crossbar_100x100.gds"
+
+# Pinout - Define all 24 I/O pins
+pinout:
+  # Digital Inputs (ui[0-7])
+  ui[0]: "SPI_CS_N"      # SPI Chip Select (active low)
+  ui[1]: "SPI_SCK"       # SPI Clock
+  ui[2]: "SPI_MOSI"      # SPI Data In
+  ui[3]: "ROW_ADDR_0"    # Row address bit 0
+  ui[4]: "ROW_ADDR_1"    # Row address bit 1
+  ui[5]: "COL_ADDR_0"    # Column address bit 0
+  ui[6]: "COL_ADDR_1"    # Column address bit 1
+  ui[7]: "PROG_EN"       # Programming enable
+
+  # Digital Outputs (uo[0-7])
+  uo[0]: "SPI_MISO"      # SPI Data Out
+  uo[1]: "READY"         # Ready status
+  uo[2]: "ERROR"         # Error flag
+  uo[3]: "PROG_DONE"     # Programming complete
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins (uio[0-7]) - Used for analog interface
+  uio[0]: "DAC_OUT_0"    # DAC output to crossbar rows
+  uio[1]: "DAC_OUT_1"
+  uio[2]: "DAC_OUT_2"
+  uio[3]: "DAC_OUT_3"
+  uio[4]: "ADC_IN_0"     # ADC input from crossbar columns
+  uio[5]: "ADC_IN_1"
+  uio[6]: "ADC_IN_2"
+  uio[7]: "ADC_IN_3"
+
+# Do not change!
+yaml_version: 6
