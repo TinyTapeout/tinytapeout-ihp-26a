@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Quad SPI Aggregator"      # Project title
+  author:       "Zack Li"      # Your name
+  discord:      "xzackli"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Serialize four SPI mode 0 inputs into one output."
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     20000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_spi_aggregator"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "CFG_BITDEPTH_0"  # bits per sample for each ADC [0]
+  ui[1]: "CFG_BITDEPTH_1"  # bits per sample for each ADC [1]
+  ui[2]: "CFG_BITDEPTH_2"  # bits per sample for each ADC [2]
+  ui[3]: "CFG_BITDEPTH_3"  # bits per sample for each ADC [3]
+  ui[4]: "CFG_NULL_0"  # bits after chip select during sampling [0]
+  ui[5]: "CFG_NULL_1"  # bits after chip select during sampling [1]
+  ui[6]: "CFG_CLKDIV_0" # clock divider for ADC serial clock [0]
+  ui[7]: "CFG_CLKDIV_1" # clock divider for ADC serial clock [1]
+
+  # Outputs
+  uo[0]: "ADC0_SCLK"  # serial clock for ADC0
+  uo[1]: "ADC0_CS_N"  # chip select for ADC0
+  uo[2]: "ADC1_SCLK"  # serial clock for ADC1
+  uo[3]: "TX_MOSI"    # output pin for serial TX
+  uo[4]: "ADC1_CS_N"  # chip select for ADC1
+  uo[5]: "TX_SCLK"    # clock pin for TX
+  uo[6]: "ADC2_SCLK"  # serial clock for ADC2
+  uo[7]: "ADC2_CS_N"  # chip select for ADC2
+
+  # Bidirectional pins
+  uio[0]: "ADC0_MISO" # input pin for ADC0
+  uio[1]: "ADC1_MISO" # input pin for ADC1
+  uio[2]: "ADC2_MISO" # input pin for ADC2
+  uio[3]: "ADC3_MISO" # input pin for ADC3
+  uio[4]: "ADC3_SCLK" # serial clock for ADC3
+  uio[5]: "ADC3_CS_N" # chip select for ADC3
+  uio[6]: "TX_CS_N"   # chip select for egress
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
