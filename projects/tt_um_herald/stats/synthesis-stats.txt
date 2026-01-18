@@ -1,46 +1,46 @@
-162. Printing statistics.
+159. Printing statistics.
 
 === tt_um_herald ===
 
-   Number of wires:               2910
-   Number of wire bits:           2945
-   Number of public wires:         202
-   Number of public wire bits:     237
+   Number of wires:               5496
+   Number of wire bits:           5531
+   Number of public wires:         281
+   Number of public wire bits:     316
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2926
-     sg13g2_a21o_1                  63
-     sg13g2_a21oi_1                204
-     sg13g2_a221oi_1                37
-     sg13g2_a22oi_1                123
-     sg13g2_and2_1                  72
-     sg13g2_and3_1                  10
-     sg13g2_and4_1                  12
-     sg13g2_dfrbpq_1               203
-     sg13g2_inv_1                  110
-     sg13g2_mux2_1                  93
-     sg13g2_mux4_1                  17
-     sg13g2_nand2_1                409
-     sg13g2_nand2b_1               107
-     sg13g2_nand3_1                 79
-     sg13g2_nand3b_1                 6
-     sg13g2_nand4_1                 18
-     sg13g2_nor2_1                 193
-     sg13g2_nor2b_1                 90
-     sg13g2_nor3_1                  44
-     sg13g2_nor4_1                   8
-     sg13g2_o21ai_1                299
-     sg13g2_or2_1                   55
-     sg13g2_or3_1                   18
-     sg13g2_or4_1                    3
-     sg13g2_tiehi                  102
+   Number of cells:               5512
+     sg13g2_a21o_1                 160
+     sg13g2_a21oi_1                420
+     sg13g2_a221oi_1                64
+     sg13g2_a22oi_1                200
+     sg13g2_and2_1                 137
+     sg13g2_and3_1                  48
+     sg13g2_and4_1                  43
+     sg13g2_dfrbpq_1               282
+     sg13g2_inv_1                  199
+     sg13g2_mux2_1                 100
+     sg13g2_mux4_1                  31
+     sg13g2_nand2_1                774
+     sg13g2_nand2b_1               240
+     sg13g2_nand3_1                111
+     sg13g2_nand3b_1                11
+     sg13g2_nand4_1                 29
+     sg13g2_nor2_1                 322
+     sg13g2_nor2b_1                179
+     sg13g2_nor3_1                  83
+     sg13g2_nor4_1                   6
+     sg13g2_o21ai_1                630
+     sg13g2_or2_1                  114
+     sg13g2_or3_1                   51
+     sg13g2_or4_1                    2
+     sg13g2_tiehi                  148
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                357
-     sg13g2_xor2_1                 178
+     sg13g2_xnor2_1                667
+     sg13g2_xor2_1                 445
 
-   Chip area for module '\tt_um_herald': 38092.307400
-     of which used for sequential elements: 9944.726400 (26.11%)
+   Chip area for module '\tt_um_herald': 68105.016000
+     of which used for sequential elements: 13814.841600 (20.28%)
 
