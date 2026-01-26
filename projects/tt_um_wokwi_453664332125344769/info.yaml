@@ -1,0 +1,45 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     453664332125344769       # ID from your Wokwi project URL
+  title:        "Digital Lock with Easter Eggs"      # Project title
+  author:       "Paula Lozano"      # Your name
+  discord:      ""      # Your Discord username (optional)
+  description:  "A 4-bit digital lock that unlocks when the correct code is entered, with additional outputs for near-miss patterns as Easter eggs."  # One-line description
+  language:     "Wokwi" # This design is built in Wokwi
+  clock_hz:     0       # No clock needed, purely combinational
+  tiles: "1x1"          # Single tile
+
+# The pinout of your project. Leave unused pins blank.
+pinout:
+  # Inputs
+  ui[0]: "Least significant bit of code (IN0)"
+  ui[1]: "Code bit IN1"
+  ui[2]: "Code bit IN2"
+  ui[3]: "Most significant bit of code (IN3)"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "UNLOCK output: high when code = 1011"
+  uo[1]: "EASTER0 output: high when code = 1010"
+  uo[2]: "EASTER1 output: high when code = 1001"
+  uo[3]: "EASTER2 output: high when code = 0011"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins (not used)
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
