@@ -1,0 +1,32 @@
+107. Printing statistics.
+
+=== tt_um_floAfentaki_top ===
+
+   Number of wires:                 39
+   Number of wire bits:             74
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 55
+     sg13g2_a21oi_1                  6
+     sg13g2_and2_1                   1
+     sg13g2_and3_1                   1
+     sg13g2_and4_1                   2
+     sg13g2_dfrbpq_1                 8
+     sg13g2_inv_1                    1
+     sg13g2_nand2_1                  1
+     sg13g2_nand3_1                  1
+     sg13g2_nor2_1                   2
+     sg13g2_nor2b_1                  1
+     sg13g2_nor3_1                   3
+     sg13g2_o21ai_1                  4
+     sg13g2_tiehi                    8
+     sg13g2_tielo                   16
+
+   Chip area for module '\tt_um_floAfentaki_top': 780.192000
+     of which used for sequential elements: 391.910400 (50.23%)
+
