@@ -1,0 +1,47 @@
+169. Printing statistics.
+
+=== tt_um_piggy_top ===
+
+   Number of wires:               1932
+   Number of wire bits:           1967
+   Number of public wires:         332
+   Number of public wire bits:     367
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1948
+     sg13g2_a21o_1                   7
+     sg13g2_a21oi_1                133
+     sg13g2_a221oi_1                 9
+     sg13g2_a22oi_1                 57
+     sg13g2_and2_1                 117
+     sg13g2_and3_1                  40
+     sg13g2_and4_1                   9
+     sg13g2_buf_1                   27
+     sg13g2_dfrbpq_1               324
+     sg13g2_inv_1                   71
+     sg13g2_mux2_1                   1
+     sg13g2_mux4_1                   1
+     sg13g2_nand2_1                 92
+     sg13g2_nand2b_1                34
+     sg13g2_nand3_1                 48
+     sg13g2_nand3b_1                10
+     sg13g2_nand4_1                 11
+     sg13g2_nor2_1                 223
+     sg13g2_nor2b_1                 17
+     sg13g2_nor3_1                 125
+     sg13g2_nor4_1                  34
+     sg13g2_o21ai_1                119
+     sg13g2_or2_1                   23
+     sg13g2_or3_1                    2
+     sg13g2_or4_1                    1
+     sg13g2_tiehi                  324
+     sg13g2_tielo                   26
+     sg13g2_xnor2_1                 47
+     sg13g2_xor2_1                  16
+
+   Chip area for module '\tt_um_piggy_top': 29973.547800
+     of which used for sequential elements: 15872.371200 (52.95%)
+
