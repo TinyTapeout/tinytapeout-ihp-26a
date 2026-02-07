@@ -1,0 +1,49 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     455292974592645121       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "bad multiplexer"      # Project title
+  author:       "Jan"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "bla bla"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     3       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "dgf"
+  ui[1]: "fdgd"
+  ui[2]: "gdfg"
+  ui[3]: "hrt"
+  ui[4]: "fb"
+  ui[5]: "btg"
+  ui[6]: "fbrt"
+  ui[7]: "fb"
+
+  # Outputs
+  uo[0]: "s"
+  uo[1]: "a"
+  uo[2]: "s"
+  uo[3]: "v"
+  uo[4]: "jz"
+  uo[5]: "zthtr"
+  uo[6]: "rge"
+  uo[7]: "etfdg"
+
+  # Bidirectional pins
+  uio[0]: "bcg"
+  uio[1]: "bg"
+  uio[2]: "rtbt"
+  uio[3]: "brt"
+  uio[4]: "rw"
+  uio[5]: "ter"
+  uio[6]: "ret"
+  uio[7]: "hrt"
+
+# Do not change!
+yaml_version: 6
