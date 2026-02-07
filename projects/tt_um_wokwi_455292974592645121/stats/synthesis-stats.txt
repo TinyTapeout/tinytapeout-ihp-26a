@@ -1,0 +1,64 @@
+101. Printing statistics.
+
+=== mux_cell ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of ports:                  4
+   Number of port bits:              4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_mux2_1                   1
+
+   Chip area for module '\mux_cell': 18.144000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== tt_um_wokwi_455292974592645121 ===
+
+   Number of wires:                 17
+   Number of wire bits:             52
+   Number of public wires:          15
+   Number of public wire bits:      50
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 33
+     mux_cell                        7
+     sg13g2_buf_1                    1
+     sg13g2_tiehi                    2
+     sg13g2_tielo                   23
+
+   Area for cell type \mux_cell is unknown!
+
+   Chip area for module '\tt_um_wokwi_455292974592645121': 188.697600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   tt_um_wokwi_455292974592645121      1
+     mux_cell                        7
+
+   Number of wires:                 45
+   Number of wire bits:             80
+   Number of public wires:          43
+   Number of public wire bits:      78
+   Number of ports:                 36
+   Number of port bits:             71
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 33
+     sg13g2_buf_1                    1
+     sg13g2_mux2_1                   7
+     sg13g2_tiehi                    2
+     sg13g2_tielo                   23
+
+   Chip area for top module '\tt_um_wokwi_455292974592645121': 315.705600
+     of which used for sequential elements: 0.000000 (0.00%)
+
