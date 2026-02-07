@@ -12,3 +12,5 @@ Herald is a 32-bit CORDIC (COordinate Rotation DIgital Computer) engine implemen
 The CORDIC algorithm performs micro-rotations using only shifts and adds, making it efficient for FPGA/ASIC implementation. It operates in two modes:
 - **Rotation Mode:** Rotates a vector by a given angle (used for sin/cos)
 - **Vectoring Mode:** Rotates a vector to the x-axis and returns the angle (used for atan2)
+
+very cool
