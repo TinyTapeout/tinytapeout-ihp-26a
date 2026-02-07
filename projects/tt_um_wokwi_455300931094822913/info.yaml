@@ -1,0 +1,48 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id: 455300931094822913
+  title: "Tiny Tapeout Accumulator"
+  author: "Alp Bolukbasi"
+  discord: "karlsruhenoob"
+  description: "A simple event accumulator that counts input pulses and outputs a 4-bit activity value."
+  language: "Wokwi"
+  clock_hz: 1000000
+
+  # How many tiles your design occupies
+  tiles: "1x1"
+
+# Pin descriptions — leave unused pins blank
+pinout:
+  # Inputs
+  ui[0]: "clk"
+  ui[1]: "rst_n"
+  ui[2]: "in"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "out0"
+  uo[1]: "out1"
+  uo[2]: "out2"
+  uo[3]: "out3"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins (unused)
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
+
