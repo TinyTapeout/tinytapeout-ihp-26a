@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-clock divider 2,4,8,16
+yet to be determined
 
 ## How to test
 
-pinout 0 to 3 should be of descending clock frequency by powers of 2
+TBD
 
 ## External hardware
 
