@@ -67,7 +67,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN ena
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.725400 ;
+    ANTENNAGATEAREA 1.119300 ;
     PORT
       LAYER Metal4 ;
         RECT 190.890 153.980 191.190 154.980 ;
@@ -112,6 +112,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 167.850 153.980 168.150 154.980 ;
@@ -120,6 +121,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 164.010 153.980 164.310 154.980 ;
@@ -128,6 +130,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN ui_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 160.170 153.980 160.470 154.980 ;
@@ -136,6 +139,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 156.330 153.980 156.630 154.980 ;
@@ -360,7 +364,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.147900 ;
+    ANTENNAGATEAREA 1.209000 ;
     ANTENNADIFFAREA 2.827200 ;
     PORT
       LAYER Metal4 ;
@@ -370,7 +374,6 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.241800 ;
     ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
@@ -380,7 +383,6 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.241800 ;
     ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
@@ -399,7 +401,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.662000 ;
+    ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
         RECT 102.570 153.980 102.870 154.980 ;
@@ -408,7 +410,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.662000 ;
+    ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
         RECT 98.730 153.980 99.030 154.980 ;
@@ -417,7 +419,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.662000 ;
+    ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
         RECT 94.890 153.980 95.190 154.980 ;
@@ -426,7 +428,7 @@ MACRO tt_um_arthfink_ddmtd
   PIN uo_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.662000 ;
+    ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
         RECT 91.050 153.980 91.350 154.980 ;
@@ -438,9 +440,9 @@ MACRO tt_um_arthfink_ddmtd
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 2.780 3.635 200.265 151.345 ;
+        RECT 2.780 3.635 200.265 152.185 ;
       LAYER Metal3 ;
-        RECT 3.215 3.680 200.305 151.300 ;
+        RECT 3.215 3.680 200.305 152.145 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 154.240 ;
         RECT 30.120 153.770 33.240 154.240 ;
@@ -485,10 +487,10 @@ MACRO tt_um_arthfink_ddmtd
         RECT 179.880 153.770 183.000 154.240 ;
         RECT 183.720 153.770 186.840 154.240 ;
         RECT 187.560 153.770 190.680 154.240 ;
-        RECT 191.400 153.770 198.340 154.240 ;
-        RECT 15.560 3.635 198.340 153.770 ;
+        RECT 191.400 153.770 195.945 154.240 ;
+        RECT 15.560 3.635 195.945 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 183.985 151.510 ;
+        RECT 15.515 3.470 195.985 151.510 ;
   END
 END tt_um_arthfink_ddmtd
 END LIBRARY

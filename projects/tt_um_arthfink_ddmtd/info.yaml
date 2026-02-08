@@ -22,24 +22,24 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "a"
-  ui[1]: "b"
-  ui[2]: "c"
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
+  ui[0]: "CLK_REF_IN (reference clock-like input)"
+  ui[1]: "CLK_FB_IN (remote/feedback clock-like input)"
+  ui[2]: "SEL_CLOSE (0=use ui[1], 1=use internal helper for bring-up)"
+  ui[3]: "KP_SEL[0] (P gain select)"
+  ui[4]: "KP_SEL[1]"
+  ui[5]: "KI_SEL[0] (I gain select)"
+  ui[6]: "KI_SEL[1]"
   ui[7]: ""
 
   # Outputs
-  uo[0]: "1"
-  uo[1]: "2"
-  uo[2]: "3"
-  uo[3]: "4"
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "PHASE_VALID (new beat-domain phase error available)"
+  uo[1]: "PHASE_ERR_SIGN (1=negative)"
+  uo[2]: "PHASE_ERR[6] (beat-domain, selected bits)"
+  uo[3]: "PHASE_ERR[7]"
+  uo[4]: "PHASE_ERR[8]"
+  uo[5]: "PHASE_ERR[9]"
+  uo[6]: "PHASE_ERR[10]"
+  uo[7]: "PHASE_ERR[11]"
 
   # Bidirectional pins
   uio[0]: ""
@@ -50,6 +50,8 @@ pinout:
   uio[5]: ""
   uio[6]: ""
   uio[7]: ""
+
+
 
 # Do not change!
 yaml_version: 6
