@@ -1,0 +1,44 @@
+115. Printing statistics.
+
+=== tt_um_mattvenn_vgatest ===
+
+   Number of wires:                199
+   Number of wire bits:            234
+   Number of public wires:          37
+   Number of public wire bits:      72
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                215
+     sg13g2_a21o_1                   4
+     sg13g2_a21oi_1                 12
+     sg13g2_a221oi_1                 1
+     sg13g2_a22oi_1                  2
+     sg13g2_and2_1                   4
+     sg13g2_and3_1                   3
+     sg13g2_and4_1                   2
+     sg13g2_buf_1                    2
+     sg13g2_dfrbpq_1                29
+     sg13g2_inv_1                   11
+     sg13g2_mux2_1                   1
+     sg13g2_mux4_1                   1
+     sg13g2_nand2_1                 14
+     sg13g2_nand2b_1                13
+     sg13g2_nand3_1                  7
+     sg13g2_nand4_1                  4
+     sg13g2_nor2_1                  16
+     sg13g2_nor2b_1                  5
+     sg13g2_nor3_1                  11
+     sg13g2_nor4_1                   4
+     sg13g2_o21ai_1                 13
+     sg13g2_or2_1                    3
+     sg13g2_tiehi                   22
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                 10
+     sg13g2_xor2_1                   5
+
+   Chip area for module '\tt_um_mattvenn_vgatest': 3120.692400
+     of which used for sequential elements: 1420.675200 (45.52%)
+
