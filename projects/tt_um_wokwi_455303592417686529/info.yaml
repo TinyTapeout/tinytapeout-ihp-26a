@@ -1,12 +1,12 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
   wokwi_id:     455303592417686529       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        "Check Segment Inputs"      # Project title
+  title:        "Count Upwards"      # Project title
   author:       "Andreas Noebel"      # Your name
   discord:      "andreas_nl"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Directly maps the inputs to the segment display"      # One line description of what your project does
+  description:  "Count upwards from 0 to 9 and loop back"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     1       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -23,17 +23,17 @@ pinout:
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
-  ui[7]: "Enable/Disable all"
+  ui[7]: ""
 
   # Outputs
-  uo[0]: "Todo"
-  uo[1]: "Todo"
-  uo[2]: "Todo"
-  uo[3]: "Todo"
-  uo[4]: "Todo"
-  uo[5]: "Todo"
-  uo[6]: "Todo"
-  uo[7]: "Todo"
+  uo[0]: "7-Segment a"
+  uo[1]: "7-Segment b"
+  uo[2]: "7-Segment c"
+  uo[3]: "7-Segment d"
+  uo[4]: "7-Segment e"
+  uo[5]: "7-Segment f"
+  uo[6]: "7-Segment g"
+  uo[7]: "7-Segment h"
 
   # Bidirectional pins
   uio[0]: ""
