@@ -1,0 +1,46 @@
+191. Printing statistics.
+
+=== tt_um_tt_tinyQV ===
+
+   Number of wires:              10093
+   Number of wire bits:          10128
+   Number of public wires:        1435
+   Number of public wire bits:    1470
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              10109
+     sg13g2_a21o_1                 151
+     sg13g2_a21oi_1                958
+     sg13g2_a221oi_1               173
+     sg13g2_a22oi_1                430
+     sg13g2_and2_1                 209
+     sg13g2_and3_1                  44
+     sg13g2_and4_1                  15
+     sg13g2_buf_1                   11
+     sg13g2_dfrbpq_1              1421
+     sg13g2_inv_1                  422
+     sg13g2_mux2_1                 557
+     sg13g2_mux4_1                  43
+     sg13g2_nand2_1                889
+     sg13g2_nand2b_1               186
+     sg13g2_nand3_1                249
+     sg13g2_nand3b_1                27
+     sg13g2_nand4_1                 62
+     sg13g2_nor2_1                 793
+     sg13g2_nor2b_1                137
+     sg13g2_nor3_1                 232
+     sg13g2_nor4_1                  62
+     sg13g2_o21ai_1               1053
+     sg13g2_or2_1                  101
+     sg13g2_or3_1                   26
+     sg13g2_or4_1                   11
+     sg13g2_tiehi                 1420
+     sg13g2_xnor2_1                275
+     sg13g2_xor2_1                 152
+
+   Chip area for module '\tt_um_tt_tinyQV': 152848.760400
+     of which used for sequential elements: 69613.084800 (45.54%)
+
