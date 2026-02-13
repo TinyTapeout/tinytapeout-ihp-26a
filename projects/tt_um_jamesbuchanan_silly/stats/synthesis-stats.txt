@@ -1,0 +1,24 @@
+109. Printing statistics.
+
+=== tt_um_jamesbuchanan_silly ===
+
+   Number of wires:                 64
+   Number of wire bits:             99
+   Number of public wires:          24
+   Number of public wire bits:      59
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 80
+     sg13g2_dfrbpq_1                24
+     sg13g2_inv_1                   16
+     sg13g2_nand3_1                  8
+     sg13g2_o21ai_1                  8
+     sg13g2_tiehi                    8
+     sg13g2_tielo                   16
+
+   Chip area for module '\tt_um_jamesbuchanan_silly': 1582.156800
+     of which used for sequential elements: 1175.731200 (74.31%)
+
