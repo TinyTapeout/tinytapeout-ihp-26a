@@ -2,45 +2,44 @@
 
 === tt_um_dranoel06_SAP1 ===
 
-   Number of wires:                949
-   Number of wire bits:            984
-   Number of public wires:         171
-   Number of public wire bits:     206
+   Number of wires:                936
+   Number of wire bits:            971
+   Number of public wires:         172
+   Number of public wire bits:     207
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                965
-     sg13g2_a21o_1                  13
-     sg13g2_a21oi_1                 72
-     sg13g2_a221oi_1                 8
-     sg13g2_a22oi_1                 11
-     sg13g2_and2_1                   6
-     sg13g2_and3_1                   2
-     sg13g2_and4_1                   1
-     sg13g2_dfrbpq_1               175
-     sg13g2_inv_1                   31
-     sg13g2_mux2_1                 133
-     sg13g2_mux4_1                  13
-     sg13g2_nand2_1                 44
-     sg13g2_nand2b_1                14
-     sg13g2_nand3_1                 23
-     sg13g2_nand3b_1                 2
+   Number of cells:                952
+     sg13g2_a21o_1                   5
+     sg13g2_a21oi_1                 74
+     sg13g2_a221oi_1                11
+     sg13g2_a22oi_1                  4
+     sg13g2_and2_1                  10
+     sg13g2_and3_1                   3
+     sg13g2_dfrbpq_1               176
+     sg13g2_inv_1                   23
+     sg13g2_mux2_1                 140
+     sg13g2_mux4_1                  12
+     sg13g2_nand2_1                 57
+     sg13g2_nand2b_1                17
+     sg13g2_nand3_1                 13
+     sg13g2_nand3b_1                 1
      sg13g2_nand4_1                  2
-     sg13g2_nor2_1                  61
-     sg13g2_nor2b_1                 19
-     sg13g2_nor3_1                  12
-     sg13g2_nor4_1                   4
-     sg13g2_o21ai_1                 95
-     sg13g2_or2_1                   14
-     sg13g2_or3_1                    1
+     sg13g2_nor2_1                  43
+     sg13g2_nor2b_1                 20
+     sg13g2_nor3_1                  11
+     sg13g2_nor4_1                   2
+     sg13g2_o21ai_1                 99
+     sg13g2_or2_1                   11
+     sg13g2_or3_1                    4
      sg13g2_or4_1                    1
-     sg13g2_tiehi                  175
+     sg13g2_tiehi                  176
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                 12
-     sg13g2_xor2_1                   5
+     sg13g2_xnor2_1                 13
+     sg13g2_xor2_1                   8
 
-   Chip area for module '\tt_um_dranoel06_SAP1': 16917.049800
-     of which used for sequential elements: 8573.040000 (50.68%)
+   Chip area for module '\tt_um_dranoel06_SAP1': 16908.242400
+     of which used for sequential elements: 8622.028800 (50.99%)
 
