@@ -1,4 +1,4 @@
-160. Printing statistics.
+159. Printing statistics.
 
 === tt_um_herald ===
 
@@ -11,8 +11,7 @@
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               6335
-     PRAWNS_ART                      1
+   Number of cells:               6334
      sg13g2_a21o_1                 159
      sg13g2_a21oi_1                497
      sg13g2_a221oi_1                52
@@ -41,8 +40,6 @@
      sg13g2_tielo                   16
      sg13g2_xnor2_1                642
      sg13g2_xor2_1                 391
-
-   Area for cell type \PRAWNS_ART is unknown!
 
    Chip area for module '\tt_um_herald': 79642.483200
      of which used for sequential elements: 20085.408000 (25.22%)
