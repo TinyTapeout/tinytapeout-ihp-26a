@@ -1,0 +1,31 @@
+123. Printing statistics.
+
+=== tt_um_ezrawolf_tinydcim_ihp26a ===
+
+   Number of wires:                 61
+   Number of wire bits:             96
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 77
+     sg13g2_a21o_1                   1
+     sg13g2_a21oi_1                 10
+     sg13g2_a221oi_1                 1
+     sg13g2_dfrbpq_1                 8
+     sg13g2_inv_1                    2
+     sg13g2_nand2_1                  2
+     sg13g2_nor2_1                   1
+     sg13g2_nor2b_1                  3
+     sg13g2_o21ai_1                 11
+     sg13g2_tiehi                    8
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                 11
+     sg13g2_xor2_1                   3
+
+   Chip area for module '\tt_um_ezrawolf_tinydcim_ihp26a': 1046.908800
+     of which used for sequential elements: 391.910400 (37.44%)
+

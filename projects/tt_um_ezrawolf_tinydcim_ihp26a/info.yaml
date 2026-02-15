@@ -1,0 +1,57 @@
+project:
+  title:        "TinyDCIM: RISC-V CPU with Digital Compute-in-Memory Accelerator"
+  author:       "Ezra Wolf"
+  discord:      "erstfeld" # Optional
+  description:  "Simple 8-bit counter test for sanity check. Increments on each clock cycle."
+  language:     "Verilog" # Valid: Verilog, SystemVerilog, Amaranth, VHDL, etc.
+  clock_hz:     50000000 # Clock Hz (or 0 if N/A)
+
+  # A single tile is about 167x108 uM
+  # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "8x2"
+
+  # Top module name - must start with "tt_um_"
+  # Make it unique with your GitHub username.
+  top_module:  "tt_um_ezrawolf_tinydcim_ihp26a"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "enable"
+  ui[1]: "up_down"
+  ui[2]: "clk"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "q[0]"
+  uo[1]: "q[1]"
+  uo[2]: "q[2]"
+  uo[3]: "q[3]"
+  uo[4]: "q[4]"
+  uo[5]: "q[5]"
+  uo[6]: "q[6]"
+  uo[7]: "q[7]"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# DO NOT CHANGE
+yaml_version: 6
