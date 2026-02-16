@@ -1,6 +1,6 @@
 123. Printing statistics.
 
-=== tt_um_ezrawolf_tinydcim_ihp26a ===
+=== tt_um_tinymoa_ihp26a ===
 
    Number of wires:                 61
    Number of wire bits:             96
@@ -26,6 +26,6 @@
      sg13g2_xnor2_1                 11
      sg13g2_xor2_1                   3
 
-   Chip area for module '\tt_um_ezrawolf_tinydcim_ihp26a': 1046.908800
+   Chip area for module '\tt_um_tinymoa_ihp26a': 1046.908800
      of which used for sequential elements: 391.910400 (37.44%)
 

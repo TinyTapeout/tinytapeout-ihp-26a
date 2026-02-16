@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_ezrawolf_tinydcim_ihp26a
+MACRO tt_um_tinymoa_ihp26a
   CLASS BLOCK ;
-  FOREIGN tt_um_ezrawolf_tinydcim_ihp26a ;
+  FOREIGN tt_um_tinymoa_ihp26a ;
   ORIGIN 0.000 0.000 ;
   SIZE 1724.160 BY 313.740 ;
   PIN VGND
@@ -805,6 +805,6 @@ MACRO tt_um_ezrawolf_tinydcim_ihp26a
       LAYER Metal5 ;
         RECT 15.515 3.470 1695.055 310.270 ;
   END
-END tt_um_ezrawolf_tinydcim_ihp26a
+END tt_um_tinymoa_ihp26a
 END LIBRARY
 

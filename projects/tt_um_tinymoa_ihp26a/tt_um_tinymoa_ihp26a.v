@@ -1,4 +1,4 @@
-module tt_um_ezrawolf_tinydcim_ihp26a (clk,
+module tt_um_tinymoa_ihp26a (clk,
     ena,
     rst_n,
     ui_in,
@@ -305,21 +305,21 @@ module tt_um_ezrawolf_tinydcim_ihp26a (clk,
  sg13g2_tiehi _099__27 (.L_HI(net30));
  sg13g2_buf_8 clkbuf_0_clk (.A(clk),
     .X(clknet_0_clk));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_5 (.L_LO(net8));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_6 (.L_LO(net9));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_7 (.L_LO(net10));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_8 (.L_LO(net11));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_9 (.L_LO(net12));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_10 (.L_LO(net13));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_11 (.L_LO(net14));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_12 (.L_LO(net15));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_13 (.L_LO(net16));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_14 (.L_LO(net17));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_15 (.L_LO(net18));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_16 (.L_LO(net19));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_17 (.L_LO(net20));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_18 (.L_LO(net21));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_19 (.L_LO(net22));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_5 (.L_LO(net8));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_6 (.L_LO(net9));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_7 (.L_LO(net10));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_8 (.L_LO(net11));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_9 (.L_LO(net12));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_10 (.L_LO(net13));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_11 (.L_LO(net14));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_12 (.L_LO(net15));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_13 (.L_LO(net16));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_14 (.L_LO(net17));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_15 (.L_LO(net18));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_16 (.L_LO(net19));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_17 (.L_LO(net20));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_18 (.L_LO(net21));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_19 (.L_LO(net22));
  sg13g2_tiehi _098__20 (.L_HI(net23));
  sg13g2_buf_8 fanout4 (.A(net3),
     .X(net4));
@@ -333,7 +333,7 @@ module tt_um_ezrawolf_tinydcim_ihp26a (clk,
     .X(net2));
  sg13g2_buf_2 input3 (.A(ui_in[1]),
     .X(net3));
- sg13g2_tielo tt_um_ezrawolf_tinydcim_ihp26a_4 (.L_LO(net7));
+ sg13g2_tielo tt_um_tinymoa_ihp26a_4 (.L_LO(net7));
  sg13g2_buf_8 clkbuf_1_0__f_clk (.A(clknet_0_clk),
     .X(clknet_1_0__leaf_clk));
  sg13g2_buf_8 clkbuf_1_1__f_clk (.A(clknet_0_clk),
