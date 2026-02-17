@@ -52,19 +52,17 @@ restart  | ui_in[5] | yes (if 0)
 The game starts once the button of a valid input direction has been pressed.
 
 The game speed can be changed by pressing up/down while asserting restart.
-It is linked to the VGA display refresh rate with a controllable factor (1-32), which slows down the game speed accordingly.
-Default is 15, which results in 4 updates per second.
+It is linked to the VGA display refresh rate with a controllable factor (0-7), which slows down the game speed accordingly.
+Default is 7, which results in 4 updates per second.
 
-Colorblind mode can be enabled by pressing right while asserting restart.
-This swaps the green and blue color channel, resulting in a blue snake.
-
-Additionally, the game exposes three signals about the game state that could be used to e.g. add external sound effects.
+Additionally, the game exposes four signals about the game state that could be used to e.g. add external sound effects.
 
 function | uio_out    | duration
 ---------|------------|-----------------
 failure  | uio_out[0] | until restart
 success  | uio_out[1] | until restart
-eat      | uio_out[2] | one clock cycle
+eat      | uio_out[2] | > 100 cycles high & low
+tick     | uio_out[3] | > 100 cycles high & low
 
 ## External hardware
 

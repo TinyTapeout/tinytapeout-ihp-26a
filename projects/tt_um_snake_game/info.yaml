@@ -56,7 +56,7 @@ pinout:
   uio[0]: "failure"
   uio[1]: "success"
   uio[2]: "eat"
-  uio[3]: ""
+  uio[3]: "tick"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
