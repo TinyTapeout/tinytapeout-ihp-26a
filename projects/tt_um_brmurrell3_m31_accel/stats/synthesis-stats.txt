@@ -1,0 +1,46 @@
+128. Printing statistics.
+
+=== tt_um_brmurrell3_m31_accel ===
+
+   Number of wires:               2605
+   Number of wire bits:           2640
+   Number of public wires:         238
+   Number of public wire bits:     273
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2621
+     sg13g2_a21o_1                  56
+     sg13g2_a21oi_1                298
+     sg13g2_a221oi_1                37
+     sg13g2_a22oi_1                115
+     sg13g2_and2_1                  78
+     sg13g2_and3_1                  11
+     sg13g2_and4_1                   7
+     sg13g2_buf_1                    1
+     sg13g2_dfrbpq_1               229
+     sg13g2_inv_1                  117
+     sg13g2_mux2_1                  19
+     sg13g2_nand2_1                284
+     sg13g2_nand2b_1                80
+     sg13g2_nand3_1                 76
+     sg13g2_nand3b_1                11
+     sg13g2_nand4_1                 23
+     sg13g2_nor2_1                 295
+     sg13g2_nor2b_1                 68
+     sg13g2_nor3_1                 102
+     sg13g2_nor4_1                  30
+     sg13g2_o21ai_1                270
+     sg13g2_or2_1                   44
+     sg13g2_or3_1                   17
+     sg13g2_or4_1                    7
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   14
+     sg13g2_xnor2_1                213
+     sg13g2_xor2_1                 118
+
+   Chip area for module '\tt_um_brmurrell3_m31_accel': 34311.400200
+     of which used for sequential elements: 11218.435200 (32.70%)
+

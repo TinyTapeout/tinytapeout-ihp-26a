@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "M31 Mersenne-31 Arithmetic Accelerator"
+  author:       "Brendan Murrell"
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Hardware accelerator for modular arithmetic over the Mersenne-31 prime field"
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     66000000    # 66 MHz (TT board max)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_brmurrell3_m31_accel"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs - DATA/OPCODE bus
+  ui[0]: "DATA0/OPCODE0"
+  ui[1]: "DATA1/OPCODE1"
+  ui[2]: "DATA2/OPCODE2"
+  ui[3]: "DATA3/OPCODE3"
+  ui[4]: "DATA4"
+  ui[5]: "DATA5"
+  ui[6]: "DATA6"
+  ui[7]: "DATA7"
+
+  # Outputs - Result byte
+  uo[0]: "RESULT0"
+  uo[1]: "RESULT1"
+  uo[2]: "RESULT2"
+  uo[3]: "RESULT3"
+  uo[4]: "RESULT4"
+  uo[5]: "RESULT5"
+  uo[6]: "RESULT6"
+  uo[7]: "RESULT7"
+
+  # Bidirectional pins - Control signals
+  uio[0]: "CMD_EN (in) / BUSY (out)"
+  uio[1]: "REG_SEL[0] (input)"
+  uio[2]: "RW (input)"
+  uio[3]: "REG_SEL[1] (input)"
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
