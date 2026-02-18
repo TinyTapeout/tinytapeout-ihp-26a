@@ -19,24 +19,36 @@ The design implements standard VGA 640x480 @ 60Hz timing using a state machine t
 Characters are generated using combinational logic that defines primitive shapes (bars, corners) and combines them to form letters. Each character occupies a 32x40 pixel slot, and the text "EMBEDDEDINN" is rendered by selecting appropriate shape primitives based on the current character index.
 
 ### Animation System
-A frame counter synchronized to VSYNC drives the animation. The text position (`tx`, `ty`) updates each frame with velocity and direction, bouncing off screen boundaries. This creates smooth, stable motion without requiring external control.
+A frame counter synchronized to VSYNC drives the animation. The text position (`tx`, `ty`) updates each frame based on a selectable speed. The text bounces off screen boundaries, creating smooth, stable motion.
+
+### Interactive Controls
+The design features interactive controls via the `ui_in` pins:
+- **Speed Control (`ui_in[1:0]`)**:
+    - `00`: Normal speed
+    - `01`: Fast speed (2x)
+    - `10`: Slow speed (0.5x)
+    - `11`: Pause animation
+- **Color Palettes (`ui_in[3:2]`)**:
+    - `00`: Classic (Deep Blue/Purple)
+    - `01`: Cyberpunk (Neon Pink/Cyan)
+    - `10`: Forest (Green/Emerald)
+    - `11`: Monochrome (Grayscale)
+- **Scanline Toggle (`ui_in[4]`)**: Toggle the retro scanline effect (OFF when pin is high).
 
 ### Parallax Starfield
-The background features a moving starfield created using XOR patterns that change with the frame counter, giving a sense of depth and motion parallax.
+The background features a two-layer parallax starfield created using XOR patterns that change with the frame counter, giving a sense of depth and motion.
 
 ### Color Mixing
-The design outputs 2-bit color (4 levels) for red, green, and blue channels:
-- Text: White (R=11, G=11, B=11)
-- Stars: Purple/blue tones
-- Background: Deep blue with scanlines
+The design outputs 2-bit color (4 levels) for red, green, and blue channels. Text and background colors are adjustable via the interactive controls.
 
 ## How to test
 
-Connect the TinyVGA PMOD to the output pins and a VGA monitor. The design will automatically start displaying bouncing text when powered on.
+Connect the TinyVGA PMOD to the output pins and a VGA monitor. The design will automatically start displaying bouncing text.
 
-- **Expected output**: Bouncing "EMBEDDEDINN" text with animated starfield
+- **Expected output**: Bouncing "EMBEDDEDINN" text with parallax starfield
+- **Controls**: Toggle `ui_in` pins to change speed, colors, and scanlines.
 - **Timing**: 640x480 @ 60Hz (25.175 MHz pixel clock)
-- **No external inputs required** - animation runs automatically
+- **Inputs**: `ui_in[1:0]` speed, `ui_in[3:2]` palette, `ui_in[4]` scanline toggle
 
 The cocotb tests verify:
 - VGA timing compliance (HSYNC/VSYNC periods)
