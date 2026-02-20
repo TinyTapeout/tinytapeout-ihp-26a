@@ -20,6 +20,8 @@ project:
     - "byang_pkg.vh"
     - "byang_divstep.v"
     - "byang_inv.v"
+    - "ring_osc.v"
+    - "trng.v"
     - "tt_um_corey.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
@@ -50,9 +52,9 @@ pinout:
   uio[1]: "valid (output)"
   uio[2]: "wr (input)"
   uio[3]: "rd (input)"
-  uio[4]: ""
+  uio[4]: "parity_error (output)"
   uio[5]: ""
-  uio[6]: ""
+  uio[6]: "trng_ready (output)"
   uio[7]: ""
 
 # Do not change!

@@ -1,46 +1,46 @@
-160. Printing statistics.
+162. Printing statistics.
 
 === tt_um_corey ===
 
-   Number of wires:              22747
-   Number of wire bits:          22782
-   Number of public wires:        1868
-   Number of public wire bits:    1903
+   Number of wires:              26632
+   Number of wire bits:          26667
+   Number of public wires:        1941
+   Number of public wire bits:    1976
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              22763
-     sg13g2_a21o_1                 681
-     sg13g2_a21oi_1               2978
-     sg13g2_a221oi_1               231
-     sg13g2_a22oi_1               1148
-     sg13g2_and2_1                 760
-     sg13g2_and3_1                  97
-     sg13g2_and4_1                  60
-     sg13g2_buf_1                    9
-     sg13g2_dfrbpq_1              1859
-     sg13g2_inv_1                 1430
-     sg13g2_mux2_1                 291
-     sg13g2_nand2_1               2343
-     sg13g2_nand2b_1               414
-     sg13g2_nand3_1                640
-     sg13g2_nand3b_1                75
-     sg13g2_nand4_1                186
-     sg13g2_nor2_1                1826
-     sg13g2_nor2b_1                347
-     sg13g2_nor3_1                 344
-     sg13g2_nor4_1                 178
-     sg13g2_o21ai_1               3010
-     sg13g2_or2_1                  250
-     sg13g2_or3_1                  105
-     sg13g2_or4_1                   58
-     sg13g2_tiehi                 1040
-     sg13g2_tielo                   12
-     sg13g2_xnor2_1               1812
-     sg13g2_xor2_1                 579
+   Number of cells:              26648
+     sg13g2_a21o_1                 575
+     sg13g2_a21oi_1               3452
+     sg13g2_a221oi_1               544
+     sg13g2_a22oi_1               1022
+     sg13g2_and2_1                 566
+     sg13g2_and3_1                 178
+     sg13g2_and4_1                  69
+     sg13g2_buf_1                    3
+     sg13g2_dfrbpq_1              1907
+     sg13g2_inv_1                 1416
+     sg13g2_mux2_1                 319
+     sg13g2_nand2_1               2356
+     sg13g2_nand2b_1               597
+     sg13g2_nand3_1               1021
+     sg13g2_nand3b_1               143
+     sg13g2_nand4_1                188
+     sg13g2_nor2_1                2751
+     sg13g2_nor2b_1                401
+     sg13g2_nor3_1                 426
+     sg13g2_nor4_1                 220
+     sg13g2_o21ai_1               3624
+     sg13g2_or2_1                  313
+     sg13g2_or3_1                  145
+     sg13g2_or4_1                   60
+     sg13g2_tiehi                 1043
+     sg13g2_tielo                    7
+     sg13g2_xnor2_1               2483
+     sg13g2_xor2_1                 819
 
-   Chip area for module '\tt_um_corey': 289763.460000
-     of which used for sequential elements: 91070.179200 (31.43%)
+   Chip area for module '\tt_um_corey': 332421.138000
+     of which used for sequential elements: 93421.641600 (28.10%)
 
