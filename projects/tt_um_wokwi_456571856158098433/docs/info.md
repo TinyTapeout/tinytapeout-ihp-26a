@@ -9,11 +9,15 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-You set the inputs, the display shows decimal conversion.
+The value of inputs 1 and 2 are read, and the corresponding value is shown in decimal on the display.
+If both 1 and 2 are set, the display shows nothing.
 
 ## How to test
 
-Set inputs 1 and 2 - Display should read 3.
+Set none of the inputs - The display is off.
+Set input 1 - Display should read 1.
+Set input 2 - Display should read 2.
+Set both of the inputs - The display is off.
 
 ## External hardware
 

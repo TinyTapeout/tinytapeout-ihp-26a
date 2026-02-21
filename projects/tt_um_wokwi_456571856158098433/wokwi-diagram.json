@@ -75,8 +75,7 @@
     { "type": "wokwi-gate-and-2", "id": "and1", "top": -278.4, "left": 297.6, "attrs": {} },
     { "type": "wokwi-gate-xor-2", "id": "xor1", "top": -144, "left": 249.6, "attrs": {} },
     { "type": "wokwi-gate-and-2", "id": "and2", "top": -67.2, "left": 288, "attrs": {} },
-    { "type": "wokwi-gate-or-2", "id": "or1", "top": -259.2, "left": 441.6, "attrs": {} },
-    { "type": "wokwi-gate-xor-2", "id": "xor2", "top": 0, "left": 259.2, "attrs": {} }
+    { "type": "wokwi-gate-or-2", "id": "or1", "top": -259.2, "left": 441.6, "attrs": {} }
   ],
   "connections": [
     [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
@@ -130,10 +129,7 @@
     [ "ttout:OUT3", "and2:OUT", "green", [ "h0" ] ],
     [ "or1:A", "and1:OUT", "green", [ "h0" ] ],
     [ "or1:OUT", "ttout:OUT1", "green", [ "v57.6", "h38.4" ] ],
-    [ "or1:B", "and2:OUT", "green", [ "h-57.6", "v172.8" ] ],
-    [ "xor2:B", "ttin:IN2", "green", [ "h0" ] ],
-    [ "ttin:IN1", "xor2:A", "green", [ "h0" ] ],
-    [ "xor2:OUT", "ttout:OUT5", "green", [ "v0" ] ]
+    [ "or1:B", "and2:OUT", "green", [ "h-57.6", "v172.8" ] ]
   ],
   "dependencies": {}
 }
