@@ -3,7 +3,7 @@ project:
   title:        "SotaSoC"      # Project title
   author:       "SotaTek"      # Your name
   discord:      "sotatek_thanhtran"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "RISC-V 32-bit embedded SoC with RV32EC_Zicsr_Zifencei core featuring SPI, I2C, UART, PWM, and GPIO peripherals"      # One line description of what your project does
+  description:  "RISC-V 32-bit embedded SoC with RV32IC_Zicsr_Zifencei core featuring SPI, I2C, UART, PWM, and GPIO peripherals"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     64000000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -40,18 +40,18 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "UART0_RX"
-  ui[1]: "SPI_MISO"
-  ui[2]: "GPIO_IN[0]"
-  ui[3]: "GPIO_IN[1]"
-  ui[4]: "GPIO_IN[2]"
-  ui[5]: "GPIO_IN[3]"
-  ui[6]: "GPIO_IN[4]"
-  ui[7]: "GPIO_IN[5]"
+  ui[0]: "SPI_MISO"
+  ui[1]: "GPIO_IN[0]"
+  ui[2]: "GPIO_IN[1]"
+  ui[3]: "GPIO_IN[2]"
+  ui[4]: "GPIO_IN[3]"
+  ui[5]: "GPIO_IN[4]"
+  ui[6]: "GPIO_IN[5]"
+  ui[7]: "UART0_RX"
 
   # Outputs
-  uo[0]: "ERROR_FLAG"
-  uo[1]: "UART0_TX"
+  uo[0]: "UART0_TX"
+  uo[1]: "ERROR_FLAG"
   uo[2]: "GPIO_OUT[0]/I2C_SCL"
   uo[3]: "GPIO_OUT[1]/SPI_CS_N"
   uo[4]: "GPIO_OUT[2]/SPI_SCLK"

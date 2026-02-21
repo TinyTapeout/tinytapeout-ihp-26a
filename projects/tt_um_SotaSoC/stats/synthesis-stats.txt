@@ -1,46 +1,46 @@
-193. Printing statistics.
+186. Printing statistics.
 
 === tt_um_SotaSoC ===
 
-   Number of wires:              12241
-   Number of wire bits:          12276
-   Number of public wires:        1961
-   Number of public wire bits:    1996
+   Number of wires:              14286
+   Number of wire bits:          14321
+   Number of public wires:        2448
+   Number of public wire bits:    2483
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              12257
-     sg13g2_a21o_1                 267
-     sg13g2_a21oi_1               1598
-     sg13g2_a221oi_1               384
-     sg13g2_a22oi_1               1065
-     sg13g2_and2_1                 203
-     sg13g2_and3_1                  63
+   Number of cells:              14302
+     sg13g2_a21o_1                 248
+     sg13g2_a21oi_1               1760
+     sg13g2_a221oi_1               330
+     sg13g2_a22oi_1               1476
+     sg13g2_and2_1                 225
+     sg13g2_and3_1                  88
      sg13g2_and4_1                  34
-     sg13g2_buf_1                    9
-     sg13g2_dfrbpq_1              2067
-     sg13g2_inv_1                  745
-     sg13g2_mux2_1                 379
-     sg13g2_mux4_1                  11
-     sg13g2_nand2_1                882
-     sg13g2_nand2b_1               180
-     sg13g2_nand3_1                300
-     sg13g2_nand3b_1                14
-     sg13g2_nand4_1                202
-     sg13g2_nor2_1                1574
-     sg13g2_nor2b_1                147
-     sg13g2_nor3_1                 322
-     sg13g2_nor4_1                 115
-     sg13g2_o21ai_1               1188
-     sg13g2_or2_1                  121
-     sg13g2_or3_1                   19
-     sg13g2_or4_1                   23
-     sg13g2_tiehi                   65
-     sg13g2_xnor2_1                167
-     sg13g2_xor2_1                 113
+     sg13g2_buf_1                   10
+     sg13g2_dfrbpq_1              2538
+     sg13g2_inv_1                  653
+     sg13g2_mux2_1                 366
+     sg13g2_mux4_1                  15
+     sg13g2_nand2_1               1388
+     sg13g2_nand2b_1               210
+     sg13g2_nand3_1                302
+     sg13g2_nand3b_1                21
+     sg13g2_nand4_1                357
+     sg13g2_nor2_1                1559
+     sg13g2_nor2b_1                160
+     sg13g2_nor3_1                 340
+     sg13g2_nor4_1                 124
+     sg13g2_o21ai_1               1580
+     sg13g2_or2_1                  150
+     sg13g2_or3_1                   20
+     sg13g2_or4_1                   13
+     sg13g2_tiehi                   66
+     sg13g2_xnor2_1                162
+     sg13g2_xor2_1                 107
 
-   Chip area for module '\tt_um_SotaSoC': 197876.309400
-     of which used for sequential elements: 101259.849600 (51.17%)
+   Chip area for module '\tt_um_SotaSoC': 235337.205600
+     of which used for sequential elements: 124333.574400 (52.83%)
 

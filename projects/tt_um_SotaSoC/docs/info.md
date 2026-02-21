@@ -4,7 +4,7 @@
 
 ### Supported ISA Extensions
 
-- **E** — RV32E: 32-bit RISC-V with 16 general-purpose registers (embedded profile).
+- **I** — RV32I: 32-bit RISC-V base integer instruction set with 32 general-purpose registers.
 - **C** — RISC-V Compressed instructions.
 - **Zicsr** — Control and Status Register extension.
 - **Zifencei** — Instruction-fetch fence extension.
@@ -15,7 +15,7 @@
 - **UART** — programmable baud rate via 10-bit clock divider; default 115200 at 64 MHz
 - **48-bit timer** (mtime)
 - **13× GPIO** — 1 bidirectional (in/out), 6 input (with interrupt), 6 output
-- **2× PWM** — 2 independent channels; 16-bit period and duty (in clock cycles), configurable frequency and duty cycle per channel
+- **PWM** — 16-bit period and duty (in clock cycles), configurable frequency and duty cycle per channel
 - **SPI** — master; full mode support (CPOL/CPHA), clock up to 16 MHz, configurable; 4-byte buffer
 - **I2C** — master; clock configurable via 8-bit prescaler — 100 kHz, 400 kHz, 1 MHz, and others; START, STOP, repeated START, byte read/write with ACK/NACK
 
@@ -23,8 +23,8 @@
 
 A BSP is available for **FreeRTOS** and **bare-metal** development:
 
-- [FreeRTOS BSP](https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples-freertos)
-- [Bare-Metal BSP](https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples-baremetal)
+- FreeRTOS BSP: https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples-freertos
+- Bare-Metal BSP: https://github.com/sotatek-dev/SotaSoC-BSP/tree/main/examples-baremetal
 
 ### Demo
 
@@ -33,29 +33,72 @@ SotaSoC is capable of driving real-world applications such as a **320×240 ST778
 ![LCD demo (320×240 ST7789)](st7789-demo.jpeg)
 *The photo above was taken from a test on an Artix 7 FPGA; the tapeout chip is not yet available.*
 
-More examples and demos are available in the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
+More examples and demos are available in the SotaSoC-BSP (https://github.com/sotatek-dev/SotaSoC-BSP) repository.
 
-For more detailed technical information, see [https://github.com/sotatek-dev/SotaSoC](https://github.com/sotatek-dev/SotaSoC).
+For more detailed technical information, see https://github.com/sotatek-dev/SotaSoC.
 
 
 
 ## How to test
 
-### 1. Write firmware to Flash
+**Before testing**, please ensure the following:
 
-Download the blink firmware: [blink.bin](https://github.com/sotatek-dev/rv32e-bsp/blob/main/examples-baremetal/blink/build/blink.bin), then write it to Flash at address **0x0000_0000**.
+- You need a **QSPI Pmod**, and the **RAM B trace must be cut** (in this design, uio[7] is not used for PSRAM B CS but for I2C SDA/GPIO).
+- **System clock** is set to **32 MHz**.
+- Pins **ui[5]** and **ui[6]** are **pulled down**.
 
-You can also use any other example from the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
+### Blink
 
-### 2. Connect an LED to uio[7]
+This test verifies the basic functionality of the board by blinking an LED.
 
-SotaSoC only supports **RAM A** on the [QSPI Pmod](https://github.com/mole99/qspi-pmod). Cut the trace for **RAM B** and use **uio[7]** as a GPIO pin.
+1. **Write firmware to Flash**
 
-Connect one LED (with a suitable series resistor) to pin **uio[7]**.
+   Download the blink firmware: https://github.com/sotatek-dev/SotaSoC-BSP/blob/main/examples-baremetal/blink/build/blink.bin, then write it to Flash at address **0x0000_0000**.
 
-### 3. Reset and run
 
-Reset the board. The LED should blink.
+
+2. **Connect an LED to uio[7]**
+
+   SotaSoC only supports **RAM A** on the [QSPI Pmod](https://github.com/mole99/qspi-pmod). Cut the trace for **RAM B** and use **uio[7]** as a GPIO pin.
+
+   Connect one LED (with a suitable series resistor) to pin **uio[7]**.
+
+3. **Reset and run**
+
+   Reset the board. The LED should blink.
+
+### ST7789 LCD test
+
+This test verifies the ability to drive the ST7789 LCD via SPI. Follow the instructions below:
+
+1. **Write firmware to Flash**
+
+   Download the firmware from https://github.com/sotatek-dev/SotaSoC-BSP/blob/main/examples-baremetal/spi-st7789/build/spi-st7789.bin, then write it to Flash at address **0x0000_0000**.
+
+2. **Wiring**
+
+   Connect the LCD to the development board as follows:
+
+   | LCD Pin     | Development Board Pin |
+   | :---------- | :-------------------- |
+   | VCC         | VCC                   |
+   | GND         | GND                   |
+   | CS          | uo[3]                 |
+   | SCK         | uo[4]                 |
+   | SDI (MOSI)  | uo[5]                 |
+   | DC          | uo[6]                 |
+   | RST         | uo[7]                 |
+   | LED         | VCC                   |
+
+3. **Expected Result**
+
+   After reset, you will see some content displayed on the LCD as shown in the figure below:
+
+   ![LCD demo (320×240 ST7789)](st7789-demo.jpeg)
+
+### Other examples
+
+The https://github.com/sotatek-dev/SotaSoC-BSP repository provides other sample firmware (e.g. UART, PWM, I2C). You can download any of them and write the binary to flash at address **0x0000_0000** to run different demos or test other peripherals.
 
 ---
 
@@ -63,4 +106,6 @@ Reset the board. The LED should blink.
 
 To test **blink**: you need a **[QSPI Pmod](https://github.com/mole99/qspi-pmod)** (cut the trace for **RAM B** / **PMOD8** so that uio[7] can be used as GPIO) and **one LED** connected to pin **uio[7]** as described in How to test above.
 
-To test **other peripherals** (UART, PWM, SPI, I2C, etc.), refer to the specific examples in the [SotaSoC-BSP](https://github.com/sotatek-dev/SotaSoC-BSP) repository.
+To test **ST7789 LCD**: you need a **320×240 ST7789 LCD** (SPI). Connect it to the development board as described in the ST7789 LCD test section above.
+
+To test **other peripherals** (UART, PWM, SPI, I2C, etc.), refer to the specific examples in the https://github.com/sotatek-dev/SotaSoC-BSP repository.
