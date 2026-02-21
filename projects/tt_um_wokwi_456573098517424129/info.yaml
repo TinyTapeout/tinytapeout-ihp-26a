@@ -1,0 +1,49 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     456573098517424129       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "2 Digit Display"      # Project title
+  author:       "Mathias Sørensen"      # Your name
+  discord:      "warlour"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Uses input 1 and 2 to display a 2-digit number on a 7-segment display"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Connects to an and gate that checks if input 1 is not active and then switches on output pins for digit '1'. Also connects to a not gate for checking if input 1 is active and thus stops displaying a number."
+  ui[1]: "Connects to an and gate that checks if input 0 is not active and then switches on output pins for digit '2'. Also connects to a not gate for checking if input 0 is active and thus stops displaying a number."
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Toggled by input 0 to display segment A on the 7-segment display."
+  uo[1]: "Toggled by input 0 and 1 to display segment B on the 7-segment display."
+  uo[2]: "Toggled by input 0 and 1 to display segment C on the 7-segment display."
+  uo[3]: "Toggled by input 0 to display segment D on the 7-segment display."
+  uo[4]: "Toggled by input 0 to display segment E on the 7-segment display."
+  uo[5]: ""
+  uo[6]: "Toggled by input 0 to display segment G on the 7-segment display."
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
