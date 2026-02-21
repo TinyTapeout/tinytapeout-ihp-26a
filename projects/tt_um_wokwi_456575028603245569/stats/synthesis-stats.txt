@@ -1,0 +1,87 @@
+101. Printing statistics.
+
+=== dff_cell ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of ports:                  4
+   Number of port bits:              4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    1
+     sg13g2_tiehi                    1
+
+   Chip area for module '\dff_cell': 61.689600
+     of which used for sequential elements: 48.988800 (79.41%)
+
+=== tt_um_wokwi_456575028603245569 ===
+
+   Number of wires:                 11
+   Number of wire bits:             46
+   Number of public wires:          11
+   Number of public wire bits:      46
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 26
+     dff_cell                        1
+     sg13g2_buf_1                    7
+     sg13g2_tielo                   17
+     xor_cell                        1
+
+   Area for cell type \xor_cell is unknown!
+   Area for cell type \dff_cell is unknown!
+
+   Chip area for module '\tt_um_wokwi_456575028603245569': 174.182400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== xor_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_xor2_1                   1
+
+   Chip area for module '\xor_cell': 14.515200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   tt_um_wokwi_456575028603245569      1
+     dff_cell                        1
+     xor_cell                        1
+
+   Number of wires:                 19
+   Number of wire bits:             54
+   Number of public wires:          18
+   Number of public wire bits:      53
+   Number of ports:                 15
+   Number of port bits:             50
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 28
+     sg13g2_buf_1                    7
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    1
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   17
+     sg13g2_xor2_1                   1
+
+   Chip area for top module '\tt_um_wokwi_456575028603245569': 250.387200
+     of which used for sequential elements: 48.988800 (19.57%)
+
