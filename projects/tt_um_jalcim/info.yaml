@@ -1,0 +1,61 @@
+# Tiny Tapeout project information
+project:
+  title:        "tiny_tester"      # Project title
+  author:       "jalcim"      # Your name
+  discord:      "tisse2274"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "multiple_tester_for_ihp"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_jalcim"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "top.v"
+    - "mux.v"
+    - "brent-kung.v"
+    - "1half_latch.v"
+    - "vga.v"
+    - "cam.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "in"
+  ui[1]: "in"
+  ui[2]: "in"
+  ui[3]: "in"
+  ui[4]: "in"
+  ui[5]: "in"
+  ui[6]: "mux"
+  ui[7]: "mux"
+
+  # Outputs
+  uo[0]: "out"
+  uo[1]: "out"
+  uo[2]: "out"
+  uo[3]: "out"
+  uo[4]: "out"
+  uo[5]: "out"
+  uo[6]: "out"
+  uo[7]: "out"
+
+  # Bidirectional pins
+  uio[0]: "in"
+  uio[1]: "in"
+  uio[2]: "in"
+  uio[3]: "in"
+  uio[4]: "in"
+  uio[5]: "in"
+  uio[6]: "opt"
+  uio[7]: "opt"
+
+# Do not change!
+yaml_version: 6
