@@ -1,0 +1,45 @@
+170. Printing statistics.
+
+=== tt_um_tomolt_rasterizer ===
+
+   Number of wires:                833
+   Number of wire bits:            868
+   Number of public wires:          79
+   Number of public wire bits:     114
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                849
+     sg13g2_a21o_1                  19
+     sg13g2_a21oi_1                 68
+     sg13g2_a221oi_1                22
+     sg13g2_a22oi_1                 26
+     sg13g2_and2_1                  26
+     sg13g2_and3_1                   4
+     sg13g2_and4_1                   5
+     sg13g2_buf_1                    4
+     sg13g2_dfrbpq_1                71
+     sg13g2_inv_1                   43
+     sg13g2_mux2_1                  10
+     sg13g2_nand2_1                 80
+     sg13g2_nand2b_1                22
+     sg13g2_nand3_1                 24
+     sg13g2_nand3b_1                 3
+     sg13g2_nand4_1                  7
+     sg13g2_nor2_1                  67
+     sg13g2_nor2b_1                 17
+     sg13g2_nor3_1                  26
+     sg13g2_nor4_1                  11
+     sg13g2_o21ai_1                 96
+     sg13g2_or2_1                   12
+     sg13g2_or3_1                    5
+     sg13g2_tiehi                   67
+     sg13g2_tielo                   18
+     sg13g2_xnor2_1                 69
+     sg13g2_xor2_1                  27
+
+   Chip area for module '\tt_um_tomolt_rasterizer': 10903.561200
+     of which used for sequential elements: 3478.204800 (31.90%)
+
