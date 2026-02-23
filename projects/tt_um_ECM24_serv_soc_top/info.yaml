@@ -1,0 +1,79 @@
+# Tiny Tapeout project information
+project:
+  title:        "FH Joanneum TinyTapeout"      # Project title
+  author:       "FH Joanneum"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "FH Joanneum"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ECM24_serv_soc_top"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_ECM24_serv_soc_top.sv"
+    - "serv_ram32_if.sv"
+    - "spi_sram.sv"
+    - "RAM32.v"
+    - "gpio_if.sv"
+    - "serv/serv_aligner.v"
+    - "serv/serv_alu.v"
+    - "serv/serv_bufreg.v"
+    - "serv/serv_bufreg2.v"
+    - "serv/serv_compdec.v"
+    - "serv/serv_csr.v"
+    - "serv/serv_ctrl.v"
+    - "serv/serv_debug.v"
+    - "serv/serv_decode.v"
+    - "serv/serv_immdec.v"
+    - "serv/serv_mem_if.v"
+    - "serv/serv_rf_if.v"
+    - "serv/serv_rf_ram_if.v"
+    - "serv/serv_state.v"
+    - "serv/serv_top.v"
+    - "serv/servile_arbiter.v"
+    - "serv/servile_mux.v"
+    - "serv/servile.v"
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "SPI_MISO"
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: "GPIO_IN[0]"
+  ui[5]: "GPIO_IN[1]"
+  ui[6]: "GPIO_IN[2]"
+  ui[7]: "GPIO_IN[3]"
+  
+  # Outputs
+  uo[0]: "SPI_MOSI"
+  uo[1]: "SPI_CLK"
+  uo[2]: "SPI_CS1_N"
+  uo[3]: "SPI_CS2_N"
+  uo[4]: "GPIO_OUT[0]"
+  uo[5]: "GPIO_OUT[1]"
+  uo[6]: "GPIO_OUT[2]"
+  uo[7]: "GPIO_OUT[3]"
+  
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+
+
+# Do not change!
+yaml_version: 6
