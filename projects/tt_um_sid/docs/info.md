@@ -9,53 +9,60 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This is a single-voice SID (MOS 6581) synthesizer implemented in Verilog. It receives register writes over SPI and produces a 1-bit PDM audio output via a first-order delta-sigma DAC.
+This is a triple-voice SID (MOS 6581-inspired) synthesizer implemented in a single Verilog module. A host microcontroller writes per-voice registers through a flat memory-mapped parallel interface and the chip produces an 8-bit PWM audio output on `uo_out[0]`.
 
 **Architecture:**
 
-- **SPI slave** (`spi_regs`) — CPOL=0/CPHA=0, 16-bit write-only transactions. Drives a 7-register byte-addressed bank controlling frequency, pulse width, ADSR rates, and waveform selection.
-- **SID voice** (`sid_voice`) — 24-bit phase accumulator with four waveform generators (sawtooth, triangle, pulse, noise via 23-bit LFSR). Waveforms are OR-combined and shaped by an 8-bit ADSR envelope.
-- **ADSR envelope** (`sid_asdr_generator`) — Linear attack/decay/sustain/release with power-of-2 rate prescalers, matching the original SID timing.
-- **Delta-sigma DAC** (`delta_sigma_dac`) — First-order modulator converting the 12-bit audio sample to a 1-bit PDM stream at the system clock rate (50 MHz).
+- **Flat register interface** -- rising-edge-triggered writes via `ui_in[7]` (WE), `ui_in[4:3]` (voice select), `ui_in[2:0]` (register address), `uio_in[7:0]` (data). No SPI or I2C overhead.
+- **3-voice time-multiplexed pipeline** -- a single shared compute pipeline cycles through voices 0/1/2 every clock at 5 MHz (1.667 MHz per voice). 16-bit phase accumulators with no prescaler provide ~25.4 Hz frequency resolution.
+- **Waveform generation** -- four waveform types (sawtooth, triangle, variable-width pulse, noise via shared 8-bit LFSR), OR-combined per voice.
+- **ADSR envelope** -- 4-bit linear envelope per voice with shared 18-bit prescaler. 13 distinct rate settings from ~205 us to ~839 ms per full traverse.
+- **3-voice mixer** -- accumulates the three 12-bit voice outputs (waveform x envelope) over 3 clock cycles and shifts right by 2 to produce an 8-bit mix.
+- **PWM audio** (`pwm_audio`) -- 8-bit PWM with a 255-clock period (~19.6 kHz at 5 MHz).
 
-**SPI frame format (16-bit, MSB first):**
-
-```
-[15:13] = addr[2:0]   (register address 0-6)
-[12:8]  = reserved    (ignored)
-[7:0]   = data[7:0]   (8-bit register data)
-```
-
-**Register map:**
+**Register map (per voice, selected by `ui_in[4:3]`):**
 
 | Addr | Register | Description |
 |------|----------|-------------|
-| 0 | freq_lo | Frequency low byte — sid_frequency[7:0] |
-| 1 | freq_hi | Frequency high byte — sid_frequency[15:8] |
-| 2 | pw_lo | Pulse width low byte — sid_duration[7:0] |
-| 3 | pw_hi | Pulse width high byte — sid_duration[15:8] |
-| 4 | attack | attack[3:0] / decay[7:4] rate indices |
-| 5 | sustain | sustain[3:0] / release[7:4] levels/rates |
+| 0 | freq_lo | Frequency low byte -- frequency[7:0] |
+| 1 | freq_hi | Frequency high byte -- frequency[15:8] |
+| 2 | pw | Pulse width[7:0] (duty cycle threshold) |
+| 3 | -- | Reserved |
+| 4 | attack | attack_rate[3:0] / decay_rate[7:4] |
+| 5 | sustain | sustain_level[3:0] / release_rate[7:4] |
 | 6 | waveform | {noise, pulse, saw, tri, test, ring, sync, gate} |
+
+**Frequency formula:**
+
+```
+freq_reg = round(desired_Hz * 65536 / 1666667)  ≈  desired_Hz * 0.03932
+```
+
+Attack and sustain registers are shared across all voices (written by any voice select).
 
 ## How to test
 
-Connect an SPI master (e.g. microcontroller or Raspberry Pi) to `ui_in[0:2]` (CS_n on bit 0, CLK on bit 1, MOSI on bit 2):
+Connect a microcontroller to the parallel interface pins and the PWM output to a low-pass filter:
 
-1. Write frequency: register 0 = low byte, register 1 = high byte (e.g. 4291 = 0x10C3 → write 0xC3 to addr 0, 0x10 to addr 1 for ~C4 at 50 MHz)
-2. Write attack/decay to register 4 (e.g. 0x09 for fast attack, medium decay)
-3. Write sustain/release to register 5 (e.g. 0x0F for full sustain, fast release)
-4. Write waveform to register 6 with gate bit set (e.g. 0x21 for sawtooth + gate)
-5. Listen to the PDM output on `uo_out[1]` through a reconstruction filter
+1. Set frequency: write `freq_lo` (reg 0) and `freq_hi` (reg 1) for the desired voice
+2. Set pulse width if using pulse waveform: write `pw` (reg 2)
+3. Set ADSR: write attack/decay rates (reg 4) and sustain level/release rate (reg 5)
+4. Start the note: write waveform register (reg 6) with the desired waveform bit(s) and gate=1
+5. Stop the note: write waveform register with gate=0 to trigger release
+6. Repeat for voices 1 and 2 (`ui_in[4:3]` = 01, 10) for polyphony
+
+The write sequence for each register: set `ui_in[2:0]` = address, `ui_in[4:3]` = voice, `uio_in` = data, then pulse `ui_in[7]` high for one clock cycle.
 
 ## External hardware
 
-An RC low-pass reconstruction filter is needed on the PDM output (`uo_out[1]`) to recover the analog audio signal:
+A second-order (two-stage) RC low-pass filter on `uo_out[0]` recovers the analog audio:
 
-- **R1** = 1.0 kOhm (series)
-- **C1** = 4.7 nF (shunt to ground) — gives fc ~ 34 kHz
-- **C2** = 1 uF (optional AC-coupling cap for amplifier input)
+```
+uo_out[0] ---[3.3k]---+---[3.3k]---+---[1uF]---> Audio Out
+                       |            |
+                    [4.7nF]      [4.7nF]
+                       |            |
+                      GND          GND
+```
 
-Connect the filter output to headphones or an audio amplifier.
-
-![RC reconstruction filter](rc_filter.png)
+Connect the output to headphones (via op-amp buffer) or a line-level amplifier input.

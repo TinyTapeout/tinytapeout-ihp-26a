@@ -2,13 +2,13 @@
 project:
   title:        "SID Voice Synthesizer"
   author:       "shue"
-  discord:      ""
-  description:  "Single SID voice with SPI control and delta-sigma PDM audio output"
+  discord:      "rrrh"
+  description:  "Dual SID voice synthesizer with flat memory-mapped control and 8-bit PWM audio output"
   language:     "Verilog"
-  clock_hz:     50000000  # 50 MHz
+  clock_hz:     5000000  # 5 MHz
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"
+  tiles: "1x2"
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_sid"
@@ -17,26 +17,23 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   source_files:
     - "tt_um_sid.v"
-    - "spi_regs.v"
-    - "sid_voice.v"
-    - "sid_asdr_generator.v"
-    - "delta_sigma_dac.v"
+    - "pwm_audio.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "spi_cs_n"
-  ui[1]: "spi_clk"
-  ui[2]: "spi_mosi"
-  ui[3]: ""
-  ui[4]: ""
+  ui[0]: "reg_addr[0]"
+  ui[1]: "reg_addr[1]"
+  ui[2]: "reg_addr[2]"
+  ui[3]: "voice_select[0]"
+  ui[4]: "voice_select[1]"
   ui[5]: ""
   ui[6]: ""
-  ui[7]: ""
+  ui[7]: "write_enable"
 
   # Outputs
-  uo[0]: "spi_miso (tied low)"
-  uo[1]: "pdm_out"
+  uo[0]: "pwm_out"
+  uo[1]: ""
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
@@ -45,14 +42,14 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "data_in[0]"
+  uio[1]: "data_in[1]"
+  uio[2]: "data_in[2]"
+  uio[3]: "data_in[3]"
+  uio[4]: "data_in[4]"
+  uio[5]: "data_in[5]"
+  uio[6]: "data_in[6]"
+  uio[7]: "data_in[7]"
 
 # Do not change!
 yaml_version: 6
