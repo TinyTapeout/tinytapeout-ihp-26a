@@ -55,15 +55,16 @@ The game speed can be changed by pressing up/down while asserting restart.
 It is linked to the VGA display refresh rate with a controllable factor (0-7), which slows down the game speed accordingly.
 Default is 7, which results in 4 updates per second.
 
-Additionally, the game exposes four signals about the game state that could be used to e.g. add external sound effects.
+Additionally, the game provides an audio output and exposes four signals about the game state that can be used to add external hardware, e.g. a scoreboard or timer.
 
-function | uio_out    | duration
+function | uio_out    | info
 ---------|------------|-----------------
-failure  | uio_out[0] | until restart
-success  | uio_out[1] | until restart
+failure  | uio_out[0] | high until restart
+success  | uio_out[1] | high until restart
 eat      | uio_out[2] | > 100 cycles high & low
 tick     | uio_out[3] | > 100 cycles high & low
+audio    | uio_out[7] | pwm audio output
 
 ## External hardware
 
-Playing the game requires the VGA PMOD, four buttons for movement controls and two optional buttons for pause and restart.
+Playing the game requires the VGA PMOD, Audio PMOD (optional), four buttons for movement controls, and two optional buttons for pause and restart.
