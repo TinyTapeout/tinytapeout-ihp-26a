@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout main d28b2043",
+  "app": "custom_gds action",
   "repo": "https://github.com/StaCu/ttihp-snake-game",
-  "commit": "37cc8469a190943e59716dd23ff319b152e681af",
-  "workflow_url": "https://github.com/StaCu/ttihp-snake-game/actions/runs/22130879214",
+  "commit": "d59322350d78f0dcd6f9763bded503779c7e37b4",
+  "workflow_url": "https://github.com/StaCu/ttihp-snake-game/actions/runs/22360263855",
   "project_id": 3514,
   "sort_id": 1766660346672
 }
