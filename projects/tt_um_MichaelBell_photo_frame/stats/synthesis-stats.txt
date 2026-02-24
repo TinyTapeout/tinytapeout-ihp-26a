@@ -1,0 +1,45 @@
+154. Printing statistics.
+
+=== tt_um_MichaelBell_photo_frame ===
+
+   Number of wires:                990
+   Number of wire bits:           1025
+   Number of public wires:         199
+   Number of public wire bits:     234
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1006
+     sg13g2_a21o_1                   5
+     sg13g2_a21oi_1                 77
+     sg13g2_a221oi_1                 7
+     sg13g2_a22oi_1                 42
+     sg13g2_and2_1                  21
+     sg13g2_and3_1                   4
+     sg13g2_and4_1                   3
+     sg13g2_buf_1                    6
+     sg13g2_dfrbpq_1               192
+     sg13g2_inv_1                   25
+     sg13g2_mux2_1                  78
+     sg13g2_mux4_1                   9
+     sg13g2_nand2_1                 75
+     sg13g2_nand2b_1                23
+     sg13g2_nand3_1                  7
+     sg13g2_nand4_1                  3
+     sg13g2_nor2_1                  65
+     sg13g2_nor2b_1                 36
+     sg13g2_nor3_1                  16
+     sg13g2_nor4_1                   5
+     sg13g2_o21ai_1                 66
+     sg13g2_or2_1                    4
+     sg13g2_or3_1                    1
+     sg13g2_tiehi                  194
+     sg13g2_tielo                    2
+     sg13g2_xnor2_1                 16
+     sg13g2_xor2_1                  24
+
+   Chip area for module '\tt_um_MichaelBell_photo_frame': 17445.682800
+     of which used for sequential elements: 9405.849600 (53.92%)
+
