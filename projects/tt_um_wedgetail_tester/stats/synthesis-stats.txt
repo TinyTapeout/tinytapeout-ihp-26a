@@ -1,0 +1,27 @@
+101. Printing statistics.
+
+=== tt_um_wedgetail_tester ===
+
+   Number of wires:                360
+   Number of wire bits:            395
+   Number of public wires:         351
+   Number of public wire bits:     386
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                376
+     sg13g2_a21o_1                   1
+     sg13g2_a21oi_1                  2
+     sg13g2_a22oi_1                  1
+     sg13g2_buf_1                    3
+     sg13g2_inv_1                  344
+     sg13g2_mux2_1                   2
+     sg13g2_nand2_1                  1
+     sg13g2_nand3b_1                 1
+     sg13g2_tielo                   21
+
+   Chip area for module '\tt_um_wedgetail_tester': 2144.583000
+     of which used for sequential elements: 0.000000 (0.00%)
+
