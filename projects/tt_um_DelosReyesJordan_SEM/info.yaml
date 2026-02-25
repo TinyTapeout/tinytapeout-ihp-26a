@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "8-bit SEM Floating-Point Multiplier"
+  author:       "Jordan Delos Reyes"
+  discord:      "the_clasher"  
+  description:  "Custom 8-bit Sign-Exponent-Mantissa floating-point multiplier with NaN and zero handling."
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  # How many tiles your design occupies?
+  tiles: "1x1"
+
+  # Top module name
+  top_module:  "tt_um_DelosReyesJordan_SEM"
+
+  # List all source files inside ./src
+  source_files:
+    - "tt_um_DelosReyesJordan_SEM.v"
+    - "top.v"
+    - "sign.v"
+    - "mantissa.v"
+    - "exponent.v"
+
+
+# Pinout definition for documentation (do not remove pins)
+pinout:
+  # Inputs (Operand A)
+  ui[0]: "A_M0"
+  ui[1]: "A_M1"
+  ui[2]: "A_M2"
+  ui[3]: "A_E0"
+  ui[4]: "A_E1"
+  ui[5]: "A_E2"
+  ui[6]: "A_E3"
+  ui[7]: "A_S"
+
+  # Outputs (Result)
+  uo[0]: "R_M0"
+  uo[1]: "R_M1"
+  uo[2]: "R_M2"
+  uo[3]: "R_E0"
+  uo[4]: "R_E1"
+  uo[5]: "R_E2"
+  uo[6]: "R_E3"
+  uo[7]: "R_S"
+
+  # Bidirectional pins (Operand B used as input)
+  uio[0]: "B_M0"
+  uio[1]: "B_M1"
+  uio[2]: "B_M2"
+  uio[3]: "B_E0"
+  uio[4]: "B_E1"
+  uio[5]: "B_E2"
+  uio[6]: "B_E3"
+  uio[7]: "B_S"
+  
+# Do not change!
+yaml_version: 6

@@ -1,0 +1,41 @@
+126. Printing statistics.
+
+=== tt_um_DelosReyesJordan_SEM ===
+
+   Number of wires:                169
+   Number of wire bits:            204
+   Number of public wires:          19
+   Number of public wire bits:      54
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                185
+     sg13g2_a21o_1                  14
+     sg13g2_a21oi_1                 15
+     sg13g2_a22oi_1                  2
+     sg13g2_and2_1                   4
+     sg13g2_and4_1                   1
+     sg13g2_dfrbpq_1                19
+     sg13g2_inv_1                    5
+     sg13g2_mux2_1                   4
+     sg13g2_nand2_1                 18
+     sg13g2_nand2b_1                 7
+     sg13g2_nand3_1                 12
+     sg13g2_nand3b_1                 1
+     sg13g2_nand4_1                  6
+     sg13g2_nor2_1                  10
+     sg13g2_nor2b_1                  1
+     sg13g2_nor3_1                   6
+     sg13g2_nor4_1                   2
+     sg13g2_o21ai_1                 10
+     sg13g2_or2_1                    2
+     sg13g2_or4_1                    2
+     sg13g2_tielo                   17
+     sg13g2_xnor2_1                 15
+     sg13g2_xor2_1                  12
+
+   Chip area for module '\tt_um_DelosReyesJordan_SEM': 2609.031600
+     of which used for sequential elements: 930.787200 (35.68%)
+
