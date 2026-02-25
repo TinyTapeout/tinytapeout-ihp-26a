@@ -19,6 +19,7 @@ project:
   source_files:
     - "project.sv"
     - "ring_osc_ihp130.sv"
+    - "dpll.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
@@ -27,7 +28,7 @@ pinout:
   ui[0]: "ROSC SEL 0"
   ui[1]: "ROSC SEL 1"
   ui[2]: "ROSC SEL 2"
-  ui[3]: ""
+  ui[3]: "DPLL CLK 300 KHz"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
@@ -37,8 +38,8 @@ pinout:
   uo[0]: "ROSC MUX OUT"
   uo[1]: "CLK RAW"
   uo[2]: "RAW ROSC 16" # no mux
-  uo[3]: ""
-  uo[4]: ""
+  uo[3]: "DPLL CLK"
+  uo[4]: "DPLL CLK FMULT"
   uo[5]: ""
   uo[6]: ""
   uo[7]: ""

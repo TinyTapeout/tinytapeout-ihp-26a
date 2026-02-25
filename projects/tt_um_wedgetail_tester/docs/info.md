@@ -32,11 +32,11 @@ Currently, the selectable options are:
 |-----------------|-----------|--------------------|
 | 0 | ROSC_32_1 | First 32 stage osc |
 | 1 | ROSC_32_2 | Second 32 stage osc                   |
-| 2 | ROSC64    | 64 stage osc                   |
-| 3 | ROSC16    | 16 stage osc |
-| 4 | ROSC32_OR | ROSC_32_1 and ROSC\_32_2 OR'd together |
-| 5 | ROSC31    | 31-stage oscillator |
-| 6 | ROSC128   | 128-stage oscillator|
+| 2 | ROSC_64    | 64 stage osc                   |
+| 3 | ROSC_16    | 16 stage osc |
+| 4 | ROSC_32_OR | ROSC_32_1 and ROSC\_32_2 OR'd together |
+| 5 | ROSC_31    | 31-stage oscillator |
+| 6 | ROSC_128   | 128-stage oscillator|
 
 **Note:** Before you get mad at me for saying it won't oscillate because it's even, in all of these designs,
 there is an extra +1 inverter from the feedback tap. So a 32-stage oscillator has 32 inverters in the loop,
