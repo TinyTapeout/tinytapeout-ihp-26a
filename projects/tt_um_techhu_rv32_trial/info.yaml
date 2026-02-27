@@ -1,0 +1,76 @@
+# Tiny Tapeout project information
+project:
+  title:        "LoRa Edge SoC"
+  author:       "TechHU-GS"
+  discord:      ""
+  description:  "RISC-V LoRa node SoC with CRC16, I2C, WDT, RTC, Seal peripherals"
+  language:     "Verilog"
+  clock_hz:     25000000       # 25MHz
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "4x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_techhu_rv32_trial"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "latch_mem.v"
+    - "crc16_engine.v"
+    - "crc16_peripheral.v"
+    - "i2c_master.v"
+    - "i2c_peripheral.v"
+    - "watchdog.v"
+    - "rtc_counter.v"
+    - "seal_register.v"
+    - "tinyQV/cpu/tinyqv.v"
+    - "tinyQV/cpu/alu.v"
+    - "tinyQV/cpu/core.v"
+    - "tinyQV/cpu/counter.v"
+    - "tinyQV/cpu/cpu.v"
+    - "tinyQV/cpu/decode.v"
+    - "tinyQV/cpu/mem_ctrl.v"
+    - "tinyQV/cpu/qspi_ctrl.v"
+    - "tinyQV/cpu/register.v"
+    - "tinyQV/cpu/latch_reg.v"
+    - "tinyQV/peri/uart/uart_tx.v"
+    - "tinyQV/peri/uart/uart_rx.v"
+    - "tinyQV/peri/spi/spi.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "SX1268 DIO1 (IRQ)"
+  ui[1]: "SX1268 BUSY"
+  ui[2]: "SPI MISO"
+  ui[3]: "I2C SDA in"
+  ui[4]: "1PPS input"
+  ui[5]: "GPIO in (spare)"
+  ui[6]: "GPIO in (spare)"
+  ui[7]: "UART RX"
+
+  # Outputs
+  uo[0]: "UART TX"
+  uo[1]: "SX1268 RESET"
+  uo[2]: "I2C SCL"
+  uo[3]: "SPI MOSI"
+  uo[4]: "SPI CS"
+  uo[5]: "SPI SCK"
+  uo[6]: "I2C SDA out"
+  uo[7]: "LED GPIO"
+
+  # Bidirectional pins
+  uio[0]: "Flash CS"
+  uio[1]: "SD0"
+  uio[2]: "SD1"
+  uio[3]: "SCK"
+  uio[4]: "SD2"
+  uio[5]: "SD3"
+  uio[6]: "RAM A CS"
+  uio[7]: "RAM B CS"
+
+# Do not change!
+yaml_version: 6
