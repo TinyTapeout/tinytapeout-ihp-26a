@@ -1,0 +1,85 @@
+# Tiny Tapeout project information
+project:
+  title:        "ttihp-26a-risc-v-wg-swc1"      # Project title
+  author:       "risc-v-wg"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "RISCV rv32i"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "8x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_risc_v_wg_swc1"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_risc-v-wg_swc1.v"
+    - "bus_gather.v"
+    - "cpu_status.v"
+    - "cpu_top.v"
+    - "csr_array.v"
+    - "data_rw_mem.v"
+    - "decoder.v"
+    - "exception.v"
+    - "execution.v"
+    - "fpga_top.v"
+    - "inst_read_mem.v"
+    - "interrupter.v"
+    - "io_frc.v"
+    - "io_led.v"
+    - "io_uart_out.v"
+    - "pc_stage.v"
+    - "qspi_if.v"
+    - "register_file.v"
+    - "rf_1r1w.v"
+    - "sequencer.v"
+    - "uart_1r1w.v"
+    - "uart_if.v"
+    - "uart_logics.v"
+    - "uart_loop.v"
+    - "uart_rec_char.v"
+    - "uart_send_char.v"
+    - "uart_top.v"
+    - "io_spi_lite.v"
+    - "sfifo_withr.v"
+    - "sfifo_1r1w.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "rx"
+  ui[1]: "interrupt_0"
+  ui[2]: "init_qspicmd"
+  ui[3]: "init_latency[0]"
+  ui[4]: "init_latency[1]"
+  ui[5]: "init_cpu_start"
+  ui[6]: "init_uart[0]"
+  ui[7]: "init_uart[1]"
+
+  # Outputs
+  uo[0]: "tx"
+  uo[1]: "ce_n[0]"
+  uo[2]: "ce_n[1]"
+  uo[3]: "ce_n[2]"
+  uo[4]: "sck"
+  uo[5]: "rgb_led[0]"
+  uo[6]: "rgb_led[1]"
+  uo[7]: "rgb_led[2]"
+
+  # Bidirectional pins
+  uio[0]: "sio[0]"
+  uio[1]: "sio[1]"
+  uio[2]: "sio[2]"
+  uio[3]: "sio[3]"
+  uio[4]: "gpio[0]"
+  uio[5]: "gpio[1]"
+  uio[6]: "gpio[2]"
+  uio[7]: "gpio[3]"
+
+# Do not change!
+yaml_version: 6

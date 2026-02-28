@@ -1,0 +1,46 @@
+181. Printing statistics.
+
+=== tt_um_risc_v_wg_swc1 ===
+
+   Number of wires:              14967
+   Number of wire bits:          15002
+   Number of public wires:        2671
+   Number of public wire bits:    2706
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              14983
+     sg13g2_a21o_1                 226
+     sg13g2_a21oi_1               1487
+     sg13g2_a221oi_1               355
+     sg13g2_a22oi_1                451
+     sg13g2_and2_1                 188
+     sg13g2_and3_1                  49
+     sg13g2_and4_1                  28
+     sg13g2_buf_1                   20
+     sg13g2_dfrbpq_1              2644
+     sg13g2_inv_1                  639
+     sg13g2_mux2_1                1458
+     sg13g2_mux4_1                 349
+     sg13g2_nand2_1               1056
+     sg13g2_nand2b_1               269
+     sg13g2_nand3_1                280
+     sg13g2_nand3b_1                37
+     sg13g2_nand4_1                 85
+     sg13g2_nor2_1                1213
+     sg13g2_nor2b_1                215
+     sg13g2_nor3_1                 303
+     sg13g2_nor4_1                 103
+     sg13g2_o21ai_1               1689
+     sg13g2_or2_1                  146
+     sg13g2_or3_1                   34
+     sg13g2_or4_1                   16
+     sg13g2_tiehi                 1298
+     sg13g2_xnor2_1                241
+     sg13g2_xor2_1                 104
+
+   Chip area for module '\tt_um_risc_v_wg_swc1': 262444.984200
+     of which used for sequential elements: 129526.387200 (49.35%)
+
