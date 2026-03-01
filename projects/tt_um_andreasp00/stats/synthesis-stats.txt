@@ -1,0 +1,47 @@
+154. Printing statistics.
+
+=== tt_um_andreasp00 ===
+
+   Number of wires:               5163
+   Number of wire bits:           5198
+   Number of public wires:         712
+   Number of public wire bits:     747
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5179
+     sg13g2_a21o_1                 136
+     sg13g2_a21oi_1                434
+     sg13g2_a221oi_1                93
+     sg13g2_a22oi_1                288
+     sg13g2_and2_1                 134
+     sg13g2_and3_1                  25
+     sg13g2_and4_1                   6
+     sg13g2_buf_1                    2
+     sg13g2_dfrbpq_1               775
+     sg13g2_inv_1                  300
+     sg13g2_mux2_1                 402
+     sg13g2_mux4_1                   1
+     sg13g2_nand2_1                414
+     sg13g2_nand2b_1               109
+     sg13g2_nand3_1                123
+     sg13g2_nand3b_1                19
+     sg13g2_nand4_1                 46
+     sg13g2_nor2_1                 585
+     sg13g2_nor2b_1                 65
+     sg13g2_nor3_1                 121
+     sg13g2_nor4_1                  32
+     sg13g2_o21ai_1                518
+     sg13g2_or2_1                   61
+     sg13g2_or3_1                   30
+     sg13g2_or4_1                    9
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   21
+     sg13g2_xnor2_1                305
+     sg13g2_xor2_1                 124
+
+   Chip area for module '\tt_um_andreasp00': 82988.841600
+     of which used for sequential elements: 37966.320000 (45.75%)
+
