@@ -43,7 +43,7 @@ pinout:
   uo[2]: "Target Reset"
   uo[3]: "Pulse EN"
   uo[4]: "Busy"
-  uo[5]: ""
+  uo[5]: "Armed"
   uo[6]: ""
   uo[7]: ""
 

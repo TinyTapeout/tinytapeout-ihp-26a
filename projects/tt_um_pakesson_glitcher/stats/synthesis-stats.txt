@@ -1,46 +1,45 @@
-152. Printing statistics.
+153. Printing statistics.
 
 === tt_um_pakesson_glitcher ===
 
-   Number of wires:               1121
-   Number of wire bits:           1156
-   Number of public wires:         189
-   Number of public wire bits:     224
+   Number of wires:               1288
+   Number of wire bits:           1323
+   Number of public wires:         186
+   Number of public wire bits:     221
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1137
-     sg13g2_a21o_1                   8
-     sg13g2_a21oi_1                140
-     sg13g2_a221oi_1                10
-     sg13g2_a22oi_1                 19
-     sg13g2_and2_1                  27
-     sg13g2_and3_1                   8
-     sg13g2_and4_1                   7
-     sg13g2_buf_1                    5
-     sg13g2_dfrbpq_1               179
-     sg13g2_inv_1                   87
-     sg13g2_mux2_1                   1
-     sg13g2_nand2_1                 48
-     sg13g2_nand2b_1                17
-     sg13g2_nand3_1                 26
+   Number of cells:               1304
+     sg13g2_a21o_1                  13
+     sg13g2_a21oi_1                156
+     sg13g2_a221oi_1                 2
+     sg13g2_a22oi_1                 32
+     sg13g2_and2_1                  51
+     sg13g2_and3_1                   7
+     sg13g2_and4_1                  13
+     sg13g2_buf_1                    6
+     sg13g2_dfrbpq_1               174
+     sg13g2_inv_1                   56
+     sg13g2_nand2_1                 84
+     sg13g2_nand2b_1                21
+     sg13g2_nand3_1                 32
      sg13g2_nand3b_1                 5
-     sg13g2_nand4_1                 16
-     sg13g2_nor2_1                  61
-     sg13g2_nor2b_1                 30
-     sg13g2_nor3_1                  31
-     sg13g2_nor4_1                  17
-     sg13g2_o21ai_1                128
+     sg13g2_nand4_1                 23
+     sg13g2_nor2_1                  81
+     sg13g2_nor2b_1                 23
+     sg13g2_nor3_1                  29
+     sg13g2_nor4_1                  31
+     sg13g2_o21ai_1                166
      sg13g2_or2_1                   11
-     sg13g2_or3_1                    2
-     sg13g2_or4_1                    1
-     sg13g2_tiehi                  179
-     sg13g2_tielo                   19
-     sg13g2_xnor2_1                 42
-     sg13g2_xor2_1                  13
+     sg13g2_or3_1                    7
+     sg13g2_or4_1                    9
+     sg13g2_tiehi                  174
+     sg13g2_tielo                   18
+     sg13g2_xnor2_1                 48
+     sg13g2_xor2_1                  32
 
-   Chip area for module '\tt_um_pakesson_glitcher': 17161.691400
-     of which used for sequential elements: 8768.995200 (51.10%)
+   Chip area for module '\tt_um_pakesson_glitcher': 18750.614400
+     of which used for sequential elements: 8524.051200 (45.46%)
 
