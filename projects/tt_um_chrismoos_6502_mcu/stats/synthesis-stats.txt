@@ -1,0 +1,45 @@
+177. Printing statistics.
+
+=== tt_um_chrismoos_6502_mcu ===
+
+   Number of wires:               5390
+   Number of wire bits:           5425
+   Number of public wires:         512
+   Number of public wire bits:     547
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5406
+     sg13g2_a21o_1                 101
+     sg13g2_a21oi_1                646
+     sg13g2_a221oi_1               247
+     sg13g2_a22oi_1                368
+     sg13g2_and2_1                 133
+     sg13g2_and3_1                  44
+     sg13g2_and4_1                   6
+     sg13g2_buf_1                   15
+     sg13g2_dfrbpq_1               510
+     sg13g2_inv_1                  233
+     sg13g2_mux2_1                 196
+     sg13g2_nand2_1                515
+     sg13g2_nand2b_1                82
+     sg13g2_nand3_1                186
+     sg13g2_nand3b_1                24
+     sg13g2_nand4_1                 71
+     sg13g2_nor2_1                 480
+     sg13g2_nor2b_1                 65
+     sg13g2_nor3_1                 163
+     sg13g2_nor4_1                  62
+     sg13g2_o21ai_1                981
+     sg13g2_or2_1                   67
+     sg13g2_or3_1                    8
+     sg13g2_or4_1                   11
+     sg13g2_tiehi                   54
+     sg13g2_xnor2_1                111
+     sg13g2_xor2_1                  27
+
+   Chip area for module '\tt_um_chrismoos_6502_mcu': 72128.448000
+     of which used for sequential elements: 24984.288000 (34.64%)
+

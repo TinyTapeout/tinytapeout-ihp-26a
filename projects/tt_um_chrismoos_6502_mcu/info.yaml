@@ -1,0 +1,72 @@
+# Tiny Tapeout project information
+project:
+  title:        "m6502 Microcontroller"      # Project title
+  author:       "Chris Moos"      # Your name
+  discord:      "xoclipse"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Complete 6502 CPU with bus multiplexer, GPIO, Timer, UART, and SK6812 LED controller"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_chrismoos_6502_mcu"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "cpu_6502_instructions.vh"
+    - "cpu_6502.sv"
+    - "cpu_6502_alu.sv"
+    - "cpu_6502_ir_decoder.sv"
+    - "cpu_6502_microcode.sv"
+    - "mcu.sv"
+    - "bus_multiplexer.sv"
+    - "clock_control.sv"
+    - "gpio.sv"
+    - "timer.sv"
+    - "sk6812rgbw_peripheral.sv"
+    - "sk6812rgbw.sv"
+    - "uart.sv"
+    - "uart_tx.sv"
+    - "uart_rx.sv"
+    - "fifo.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "MUX_SEL[0] - Bus phase select bit 0"
+  ui[1]: "MUX_SEL[1] - Bus phase select bit 1"
+  ui[2]: "RDY - CPU ready signal"
+  ui[3]: "NMI_N - Non-maskable interrupt"
+  ui[4]: "IRQ_N - Interrupt request"
+  ui[5]: "SO_N - Set overflow flag"
+  ui[6]: "GPIOA0 - GPIO pin 0 input (unidirectional)"
+  ui[7]: "GPIOA1 - GPIO pin 1 input (unidirectional)"
+
+  # Outputs
+  uo[0]: "PHI1 - CPU phase 1 clock"
+  uo[1]: "PHI2 - CPU phase 2 clock"
+  uo[2]: "R/W - Read/write signal (1=read, 0=write)"
+  uo[3]: "SYNC - Opcode fetch indicator"
+  uo[4]: "GPIOA2 - GPIO pin 2 output (unidirectional)"
+  uo[5]: "GPIOA3 - GPIO pin 3 output (unidirectional)"
+  uo[6]: "GPIOA4 - GPIO pin 4 output (unidirectional)"
+  uo[7]: "GPIOA5 - GPIO pin 5 output (unidirectional)"
+
+  # Bidirectional pins
+  uio[0]: "MUX_DATA[0] - Multiplexed address/data bus"
+  uio[1]: "MUX_DATA[1] - Multiplexed address/data bus"
+  uio[2]: "MUX_DATA[2] - Multiplexed address/data bus"
+  uio[3]: "MUX_DATA[3] - Multiplexed address/data bus"
+  uio[4]: "MUX_DATA[4] - Multiplexed address/data bus"
+  uio[5]: "MUX_DATA[5] - Multiplexed address/data bus"
+  uio[6]: "MUX_DATA[6] - Multiplexed address/data bus"
+  uio[7]: "MUX_DATA[7] - Multiplexed address/data bus"
+
+# Do not change!
+yaml_version: 6
