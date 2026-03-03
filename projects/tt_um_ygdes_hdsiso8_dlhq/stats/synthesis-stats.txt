@@ -2,31 +2,35 @@
 
 === tt_um_ygdes_hdsiso8_dlhq ===
 
-   Number of wires:                100
-   Number of wire bits:            135
-   Number of public wires:         100
-   Number of public wire bits:     135
+   Number of wires:                997
+   Number of wire bits:           1032
+   Number of public wires:         997
+   Number of public wire bits:    1032
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                110
+   Number of cells:               1005
+     sg13g2_a22oi_1                  4
      sg13g2_and2_2                   2
      sg13g2_and4_2                   2
      sg13g2_buf_1                    4
      sg13g2_dfrbp_2                  6
      sg13g2_dfrbpq_2                 7
-     sg13g2_dlhq_1                  32
-     sg13g2_inv_4                   27
+     sg13g2_dlhq_1                 672
+     sg13g2_inv_4                  273
      sg13g2_mux2_2                   9
+     sg13g2_nand2_1                  2
      sg13g2_nand3_1                  8
+     sg13g2_nor4_1                   1
+     sg13g2_sdfrbp_1                 2
      sg13g2_sdfrbpq_1                2
      sg13g2_tiehi                    8
      sg13g2_xor2_1                   3
 
    Area for cell type \sg13g2_dfrbp_2 is unknown!
 
-   Chip area for module '\tt_um_ygdes_hdsiso8_dlhq': 2200.867200
-     of which used for sequential elements: 482.630400 (21.93%)
+   Chip area for module '\tt_um_ygdes_hdsiso8_dlhq': 24826.284000
+     of which used for sequential elements: 620.524800 (2.50%)
 
