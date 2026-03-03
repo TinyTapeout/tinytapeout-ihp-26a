@@ -12,9 +12,8 @@ A complete MOS Technology 6502-compatible CPU with integrated peripherals, desig
   - **GPIO**: 6 pins (2 input-only, 4 output-only on TinyTapeout)
   - **UART**: 8N1 serial with 4-byte TX/RX FIFOs, configurable baud rate
   - **Timer**: 16-bit timer with prescaler, auto-reload, and interrupt support
-  - **SK6812**: Hardware RGB LED controller with precise timing
   - **Clock Control**: Runtime CPU clock division for power management
-- **Pin Multiplexing**: UART and SK6812 can be routed to any GPIO pin via mode registers
+- **Pin Multiplexing**: UART can be routed to any GPIO pin via mode registers
 - **TinyTapeout Optimized**: Fits in 2×2 tile allocation (~2,900 lines RTL)
 
 ## How it Works
@@ -48,7 +47,7 @@ The external controller (RP2040 on TinyTapeout demo board) monitors PHI2 and seq
 |--------------|------|-------------|
 | 0x0000-0x9FFF | 40KB | External memory |
 | 0xA000-0xA00B | 12B | GPIO registers |
-| 0xA010-0xA017 | 8B | SK6812 LED controller |
+| 0xA010-0xA017 | 8B | Reserved |
 | 0xA020-0xA027 | 8B | Timer |
 | 0xA030-0xA033 | 4B | Clock control |
 | 0xA040-0xA047 | 8B | UART |
@@ -109,14 +108,8 @@ Typical configuration: RAM at 0x0000-0x7FFF, ROM at 0x8000-0xFFFF with reset vec
 - **0xA001**: OUT - Output Data
 - **0xA002**: IN - Input Data (read-only)
 - **0xA004-0xA00B**: MODE_PIN0-7 - Pin function select
-  - 0x00 = GPIO, 0x01 = UART_TX, 0x02 = UART_RX, 0x03 = SK6812_DATA
+  - 0x00 = GPIO, 0x01 = UART_TX, 0x02 = UART_RX
   - On TinyTapeout only PIN0-5 are connected to physical pins
-
-### SK6812 LED (0xA010-0xA017)
-- **0xA010**: CONTROL - Write 1 to start
-- **0xA011**: CLKDIV - Clock divider
-- **0xA012-0xA015**: RED, GREEN, BLUE, WHITE (0-255)
-- **0xA016**: STATUS - Bit 0 = BUSY
 
 ### Timer (0xA020-0xA027)
 - **0xA020**: CTRL - Control (ENABLE | AUTO_RELOAD | IRQ_ENABLE | LOAD)
