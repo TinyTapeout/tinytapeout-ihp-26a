@@ -20,6 +20,7 @@ project:
     - "project.sv"
     - "ring_osc_ihp130.sv"
     - "dpll.v"
+    - "logo.sv"
     - "spi_decoder.sv"
     - "wedgetail_spi_rf.sv"
     - "inv_en_ihp130.sv"
