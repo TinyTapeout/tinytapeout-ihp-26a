@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: © 2026 FABulous Contributors
+// SPDX-License-Identifier: Apache-2.0
+
 module tt_um_fabulous_ihp_26a (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -9,50 +12,45 @@ module tt_um_fabulous_ihp_26a (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    parameter FABRIC_NUM_COLUMNS = 4;
+    parameter FABRIC_NUM_COLUMNS = 5;
     parameter FABRIC_NUM_ROWS = 5;
+    
+    parameter FRAME_BITS_PER_ROW = 32;
+    parameter MAX_FRAMES_PER_COL = 20;
 
-    wire [159:0] frame_data;
-    wire [ 79:0] frame_strobe;
-
-    wire [9:0] GPIO_OUT;
-    wire [9:0] GPIO_IN;
-    wire [9:0] GPIO_EN;
+    wire [(FRAME_BITS_PER_ROW*FABRIC_NUM_ROWS)-1:0]    frame_data;
+    wire [(MAX_FRAMES_PER_COL*FABRIC_NUM_COLUMNS)-1:0] frame_strobe;
     
     wire [31:0] bitstream_data;
     wire        bitstream_valid;
 
-    fabric_spi_receiver fabric_spi_receiver (
+    fabric_bitbang fabric_bitbang (
         .clk_i   (clk),
-        .rst_ni  (rst_n),
-        
+        .rst_ni  (!rst_n), // inverted polarity: config is active when the design is not
+
+        .sample_i (ui_in[0]),
+        .data_i   (ui_in[1]),
+
         // Bitstream data
         .bitstream_data_o   (bitstream_data),
-        .bitstream_valid_o  (bitstream_valid),
-        
-        // Enable the SPI receiver
-        .enable_i (1'b1),
-        
-        // SPI
-        .sclk_i (ui_in[0]),
-        .cs_ni  (ui_in[1]),
-        .mosi_i (ui_in[2]),
-        .miso_o (uo_out[0])
+        .bitstream_valid_o  (bitstream_valid)
     );
+
+    wire fabric_sys_reset;
 
     fabric_config #(
         .FABRIC_NUM_COLUMNS (FABRIC_NUM_COLUMNS),
         .FABRIC_NUM_ROWS    (FABRIC_NUM_ROWS)
     ) fabric_config (
         .clk_i   (clk),
-        .rst_ni  (rst_n),
+        .rst_ni  (!rst_n), // inverted polarity: config is active when the design is not
         
         // Bitstream data
         .bitstream_data_i   (bitstream_data),
         .bitstream_valid_i  (bitstream_valid),
         
         // Configuration in progress
-        .busy_o         (),
+        .busy_o         (fabric_sys_reset),
         
         // Fabric is configured
         .configured_o   (),
@@ -62,46 +60,119 @@ module tt_um_fabulous_ihp_26a (
         .frame_strobe_o (frame_strobe)
     );
 
-    (* keep *) eFPGA eFPGA (
-        .Tile_X0Y1_A_EN_top   (GPIO_EN[0]),
-        .Tile_X0Y1_A_IN_top   (GPIO_IN[0]),
-        .Tile_X0Y1_A_OUT_top  (GPIO_OUT[0]),
-        .Tile_X0Y2_A_EN_top   (GPIO_EN[1]),
-        .Tile_X0Y2_A_IN_top   (GPIO_IN[1]),
-        .Tile_X0Y2_A_OUT_top  (GPIO_OUT[1]),
-        .Tile_X1Y0_A_EN_top   (GPIO_EN[2]),
-        .Tile_X1Y0_A_IN_top   (GPIO_IN[2]),
-        .Tile_X1Y0_A_OUT_top  (GPIO_OUT[2]),
-        .Tile_X1Y3_A_EN_top   (GPIO_EN[3]),
-        .Tile_X1Y3_A_IN_top   (GPIO_IN[3]),
-        .Tile_X1Y3_A_OUT_top  (GPIO_OUT[3]),
-        .Tile_X2Y0_A_EN_top   (GPIO_EN[4]),
-        .Tile_X2Y0_A_IN_top   (GPIO_IN[4]),
-        .Tile_X2Y0_A_OUT_top  (GPIO_OUT[4]),
-        .Tile_X2Y3_A_EN_top   (GPIO_EN[5]),
-        .Tile_X2Y3_A_IN_top   (GPIO_IN[5]),
-        .Tile_X2Y3_A_OUT_top  (GPIO_OUT[5]),
-        .Tile_X3Y0_A_EN_top   (GPIO_EN[6]),
-        .Tile_X3Y0_A_IN_top   (GPIO_IN[6]),
-        .Tile_X3Y0_A_OUT_top  (GPIO_OUT[6]),
-        .Tile_X3Y3_A_EN_top   (GPIO_EN[7]),
-        .Tile_X3Y3_A_IN_top   (GPIO_IN[7]),
-        .Tile_X3Y3_A_OUT_top  (GPIO_OUT[7]),
-        .Tile_X4Y1_A_EN_top   (GPIO_EN[8]),
-        .Tile_X4Y1_A_IN_top   (GPIO_IN[8]),
-        .Tile_X4Y1_A_OUT_top  (GPIO_OUT[8]),
-        .Tile_X4Y2_A_EN_top   (GPIO_EN[9]),
-        .Tile_X4Y2_A_IN_top   (GPIO_IN[9]),
-        .Tile_X4Y2_A_OUT_top  (GPIO_OUT[9]),
+    wire       fabric_clk;
+    wire       fabric_rst_n;
+    wire [7:0] fabric_ui_in;
+    wire [7:0] fabric_uo_out;
+    wire [7:0] fabric_uio_in;
+    wire [7:0] fabric_uio_out;
+    wire [7:0] fabric_uio_oe;
+
+    assign fabric_clk = clk;
+    assign fabric_rst_n = rst_n;
+    assign fabric_ui_in = ui_in;
+    assign fabric_uio_in = uio_in;
+    
+    assign uo_out = fabric_uo_out;
+    assign uio_out = fabric_uio_out;
+    assign uio_oe = fabric_uio_oe;
+
+    eFPGA eFPGA (
+        // IN/OUT is from the PoV of the fabric
+
+        // clk
+        .Tile_X0Y2_A_EN_top   (),
+        .Tile_X0Y2_A_IN_top   (),
+        .Tile_X0Y2_A_OUT_top  (fabric_clk),
+    
+        // rst_n
+        .Tile_X0Y2_B_EN_top   (),
+        .Tile_X0Y2_B_IN_top   (),
+        .Tile_X0Y2_B_OUT_top  (fabric_rst_n),
+
+        // ui
+        .Tile_X0Y3_A_EN_top   (),
+        .Tile_X0Y3_A_IN_top   (),
+        .Tile_X0Y3_A_OUT_top  (fabric_ui_in[0]),
+        .Tile_X0Y3_B_EN_top   (),
+        .Tile_X0Y3_B_IN_top   (),
+        .Tile_X0Y3_B_OUT_top  (fabric_ui_in[1]),
+        .Tile_X0Y3_C_EN_top   (),
+        .Tile_X0Y3_C_IN_top   (),
+        .Tile_X0Y3_C_OUT_top  (fabric_ui_in[2]),
+        .Tile_X0Y3_D_EN_top   (),
+        .Tile_X0Y3_D_IN_top   (),
+        .Tile_X0Y3_D_OUT_top  (fabric_ui_in[3]),
+        .Tile_X0Y1_A_EN_top   (),
+        .Tile_X0Y1_A_IN_top   (),
+        .Tile_X0Y1_A_OUT_top  (fabric_ui_in[4]),
+        .Tile_X0Y1_B_EN_top   (),
+        .Tile_X0Y1_B_IN_top   (),
+        .Tile_X0Y1_B_OUT_top  (fabric_ui_in[5]),
+        .Tile_X0Y1_C_EN_top   (),
+        .Tile_X0Y1_C_IN_top   (),
+        .Tile_X0Y1_C_OUT_top  (fabric_ui_in[6]),
+        .Tile_X0Y1_D_EN_top   (),
+        .Tile_X0Y1_D_IN_top   (),
+        .Tile_X0Y1_D_OUT_top  (fabric_ui_in[7]),
+
+        // uo
+        .Tile_X4Y3_A_EN_top   (),
+        .Tile_X4Y3_A_IN_top   (fabric_uo_out[0]),
+        .Tile_X4Y3_A_OUT_top  (1'b0),
+        .Tile_X4Y3_B_EN_top   (),
+        .Tile_X4Y3_B_IN_top   (fabric_uo_out[1]),
+        .Tile_X4Y3_B_OUT_top  (1'b0),
+        .Tile_X4Y3_C_EN_top   (),
+        .Tile_X4Y3_C_IN_top   (fabric_uo_out[2]),
+        .Tile_X4Y3_C_OUT_top  (1'b0),
+        .Tile_X4Y3_D_EN_top   (),
+        .Tile_X4Y3_D_IN_top   (fabric_uo_out[3]),
+        .Tile_X4Y3_D_OUT_top  (1'b0),
+        .Tile_X4Y1_A_EN_top   (),
+        .Tile_X4Y1_A_IN_top   (fabric_uo_out[4]),
+        .Tile_X4Y1_A_OUT_top  (1'b0),
+        .Tile_X4Y1_B_EN_top   (),
+        .Tile_X4Y1_B_IN_top   (fabric_uo_out[5]),
+        .Tile_X4Y1_B_OUT_top  (1'b0),
+        .Tile_X4Y1_C_EN_top   (),
+        .Tile_X4Y1_C_IN_top   (fabric_uo_out[6]),
+        .Tile_X4Y1_C_OUT_top  (1'b0),
+        .Tile_X4Y1_D_EN_top   (),
+        .Tile_X4Y1_D_IN_top   (fabric_uo_out[7]),
+        .Tile_X4Y1_D_OUT_top  (1'b0),
+
+        // uio
+        .Tile_X1Y4_A_EN_top   (fabric_uio_oe[0]),
+        .Tile_X1Y4_A_IN_top   (fabric_uio_out[0]),
+        .Tile_X1Y4_A_OUT_top  (fabric_uio_in[0]),
+        .Tile_X1Y4_B_EN_top   (fabric_uio_oe[1]),
+        .Tile_X1Y4_B_IN_top   (fabric_uio_out[1]),
+        .Tile_X1Y4_B_OUT_top  (fabric_uio_in[1]),
+        .Tile_X1Y4_C_EN_top   (fabric_uio_oe[2]),
+        .Tile_X1Y4_C_IN_top   (fabric_uio_out[2]),
+        .Tile_X1Y4_C_OUT_top  (fabric_uio_in[2]),
+        .Tile_X1Y4_D_EN_top   (fabric_uio_oe[3]),
+        .Tile_X1Y4_D_IN_top   (fabric_uio_out[3]),
+        .Tile_X1Y4_D_OUT_top  (fabric_uio_in[3]),
+        .Tile_X3Y4_A_EN_top   (fabric_uio_oe[4]),
+        .Tile_X3Y4_A_IN_top   (fabric_uio_out[4]),
+        .Tile_X3Y4_A_OUT_top  (fabric_uio_in[4]),
+        .Tile_X3Y4_B_EN_top   (fabric_uio_oe[5]),
+        .Tile_X3Y4_B_IN_top   (fabric_uio_out[5]),
+        .Tile_X3Y4_B_OUT_top  (fabric_uio_in[5]),
+        .Tile_X3Y4_C_EN_top   (fabric_uio_oe[6]),
+        .Tile_X3Y4_C_IN_top   (fabric_uio_out[6]),
+        .Tile_X3Y4_C_OUT_top  (fabric_uio_in[6]),
+        .Tile_X3Y4_D_EN_top   (fabric_uio_oe[7]),
+        .Tile_X3Y4_D_IN_top   (fabric_uio_out[7]),
+        .Tile_X3Y4_D_OUT_top  (fabric_uio_in[7]),
+
+        // SYS_RESET
+        .Tile_X0Y4_SYS_RESET_RESET_top (fabric_sys_reset),
 
         .FrameData            (frame_data),
         .FrameStrobe          (frame_strobe)
     );
-
-    assign GPIO_OUT = {2'b0, uio_in};
-    assign uio_oe = GPIO_EN[7:0];
-    assign uio_out = GPIO_IN[7:0];
-    
-    assign uo_out[7:1] = '0;
 
 endmodule
