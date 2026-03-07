@@ -67,7 +67,7 @@ MACRO tt_um_calonso88_spi_i2c_reg_bank
   PIN ena
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.664000 ;
+    ANTENNAGATEAREA 1.450800 ;
     PORT
       LAYER Metal4 ;
         RECT 190.890 153.980 191.190 154.980 ;
@@ -76,7 +76,7 @@ MACRO tt_um_calonso88_spi_i2c_reg_bank
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.725400 ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -233,7 +233,7 @@ MACRO tt_um_calonso88_spi_i2c_reg_bank
   PIN uio_oe[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.706800 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 52.650 153.980 52.950 154.980 ;
@@ -443,11 +443,11 @@ MACRO tt_um_calonso88_spi_i2c_reg_bank
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 0.375 3.635 198.825 152.605 ;
+        RECT 2.295 3.635 199.300 152.185 ;
       LAYER Metal3 ;
-        RECT 0.335 3.680 198.865 152.565 ;
+        RECT 2.255 3.680 198.865 152.145 ;
       LAYER Metal4 ;
-        RECT 0.860 153.770 29.400 153.980 ;
+        RECT 7.095 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
         RECT 33.960 153.770 37.080 153.980 ;
         RECT 37.800 153.770 40.920 153.980 ;
@@ -490,9 +490,10 @@ MACRO tt_um_calonso88_spi_i2c_reg_bank
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
         RECT 187.560 153.770 190.680 153.980 ;
-        RECT 0.860 3.635 191.145 153.770 ;
+        RECT 191.400 153.770 193.545 153.980 ;
+        RECT 7.095 3.635 193.545 153.770 ;
       LAYER Metal5 ;
-        RECT 5.615 3.470 191.185 151.510 ;
+        RECT 7.055 3.470 193.585 151.510 ;
   END
 END tt_um_calonso88_spi_i2c_reg_bank
 END LIBRARY
