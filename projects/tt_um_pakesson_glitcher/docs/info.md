@@ -35,7 +35,8 @@ Configuration:
 Actions:
 - Trigger pulse: 0x74 (`t`)
     - Manually trigger pulse with the current settings
-- Arm trigger: 0x61 (`a`)
+- Arm/disarm trigger: 0x61 (`a`)
+    - This toggles the armed/disarmed state
 - Target reset: 0x70 (`p`)
     - Power cycle target, using the configured target reset length
 
@@ -55,7 +56,16 @@ Unhandled command bytes are echoed back over UART.
 
 ## How to test
 
-The project can be tested by connecting a microcontroller or UART USB adapter to the UART RX and TX pins.
+The project can be tested by connecting a microcontroller or UART USB adapter to the UART RX and TX pins (input pin 1 and output pin 0, respectively).
+
+First test that the UART works by sending `x` (`78` in hexadecimal), which should be echoed back as it's an unknown command, or `h` which should return the string `Erika`.
+
+To test a basic pulse, set the pulse width to 100 clock cycles with `w\x00\x64` (`770064` in hexadecimal) and trigger the pulse with `t` (`74` in hexadecimal). This should result in a pulse on the pulse out pin (output pin 1).
+
+To test trigger arming, send `a` (`61` in hexadecimal). This should make the armed pin (output pin 5) go high.
+Sending `a` again should disarm the trigger. While armed, setting the trigger input pin (input pin 0) to high will trigger a pulse.
+
+See the cocotb tests for more examples.
 
 Alternatively, the RP2350 running MicroPython on the demo board can be used to test some of the functionality.
 First, set `mode = ASIC_RP_CONTROL` in `config.ini` (or manually in the REPL) to drive all inputs from the RP2350.
