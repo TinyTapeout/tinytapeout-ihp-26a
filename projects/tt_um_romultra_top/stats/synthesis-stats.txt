@@ -1,0 +1,35 @@
+142. Printing statistics.
+
+=== tt_um_romultra_top ===
+
+   Number of wires:                 48
+   Number of wire bits:             83
+   Number of public wires:          11
+   Number of public wire bits:      46
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 64
+     sg13g2_a21o_1                   4
+     sg13g2_a21oi_1                  5
+     sg13g2_a221oi_1                 1
+     sg13g2_and4_1                   1
+     sg13g2_buf_1                    3
+     sg13g2_dfrbpq_1                 8
+     sg13g2_inv_1                    6
+     sg13g2_nand2_1                  3
+     sg13g2_nand3_1                  2
+     sg13g2_nand4_1                  1
+     sg13g2_nor2_1                   1
+     sg13g2_nor2b_1                  1
+     sg13g2_o21ai_1                  4
+     sg13g2_tiehi                    3
+     sg13g2_tielo                   18
+     sg13g2_xnor2_1                  1
+     sg13g2_xor2_1                   2
+
+   Chip area for module '\tt_um_romultra_top': 870.912000
+     of which used for sequential elements: 391.910400 (45.00%)
+
