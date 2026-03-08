@@ -213,7 +213,7 @@ MACRO tt_um_anujic_rng
   PIN uio_oe[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.299200 ;
+    ANTENNADIFFAREA 0.392700 ;
     PORT
       LAYER Metal4 ;
         RECT 56.490 153.980 56.790 154.980 ;

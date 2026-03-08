@@ -2,7 +2,7 @@
 
 ## How it works
 
-This project implements a fully digital True Random Number Generator (TRNG) designed to fit within a single Tiny Tapeout tile. Since analog components are not available in a standard cell digital flow, this design harvests quantum-level physical entropy from the phase noise (jitter) of free-running, unconstrained ring oscillators. 
+This project implements a fully digital True Random Number Generator (TRNG) designed to fit within a single Tiny Tapeout tile. Since analog components are not available in a standard cell digital flow, this design harvests entropy from the phase noise (jitter) of free-running, unconstrained ring oscillators. 
 
 
 
@@ -14,39 +14,29 @@ The raw, asynchronous bitstream is sampled by the synchronous system clock, whit
 The module communicates using a standard valid/ready handshake protocol to ensure the receiving system only reads fully assembled, valid random bytes.
 
 ~~~verilog
-    input  logic       clk_i,   // System Clock
-    input  logic       rst_ni,  // System Reset (Active Low)
-    input  logic       ena_i,   // System enable signal
-    input  logic       ready_i, // Ready Handshake signal (Receiver is ready)
+   
+    input  logic [7:0] ui_in,    // ui_in[0] is used for ready_i signal, rest is UNUSED
+    output logic [7:0] uo_out,   // 8-bit Random Byte payload
+    input  logic [7:0] uio_in,   // UNUSED
+    output logic [7:0] uio_out,  // uio_out[0] is used for valid_o signal, rest is UNUSED
+    output logic [7:0] uio_oe,   // uio_oe[0] is 1'b1, rest is UNUSED
+    input  logic       ena,      // always 1 when the design is powered, so you can ignore it
+    input  logic       clk,      // clock
+    input  logic       rst_n     // reset_n - low to reset
 
-    output logic [7:0] byte_o,  // 8-bit Random Byte payload
-    output logic       valid_o  // Valid Handshake signal (Payload is ready)
 ~~~
 
 #### Ring Oscillator (Entropy Source)
-To guarantee entropy without risking injection locking, the source consists of multiple mutually prime length ring oscillators (e.g., lengths of 3, 5, and 7). 
+To guarantee entropy, the source consists of multiple mutually prime length ring oscillators (e.g., lengths of 3, 5, and 7). 
 
-Each ring oscillator is built with `2*DEPTH + 1` standard IHP 130nm (`sg130G`) inverter cells (e.g., `sg130_inv_1`). These standard cells must be manually instantiated with `(* keep = "true" *)` attributes to prevent the synthesis tool (Yosys) from optimizing away the combinatorial loops.
+Each ring oscillator is built with `2*DEPTH + 1` standard IHP 130nm (`sg13g2_inv_1`) inverter cells. These standard cells are manually instantiated with `(* keep = "true" *)` attributes to prevent the synthesis tool (Yosys) from optimizing away the combinatorial loops.
 
 
 
-The asynchronous outputs from these rings are captured by D-Flip-Flops clocked by `clk_i` to purposefully induce metastability and sample the phase drift. These sampled streams are then XOR'd together into a single raw bitstream.
+The asynchronous outputs from these rings are XOR'd together into a single raw bitstream which is captured by D-Flip-Flops clocked by `clk_i`.
 
 #### Von Neumann Whitener
 Raw ring oscillators often exhibit a slight bias (e.g., naturally preferring `1`s over `0`s due to microscopic process variations). The Von Neumann extractor eliminates this bias by reading the raw bits in non-overlapping pairs.
-
-
-
-**I/O:**
-~~~verilog
-    input  logic clk_i,   // System Clock
-    input  logic rst_ni,  // System Reset
-    input  logic ena_i,   // System enable signal
-    input  logic bit_i,   // Raw, unwhitened input bit sequence
-
-    output logic bit_o,   // Whitened Bit
-    output logic valid_o  // Pulses HIGH for 1 cycle when a bit is successfully extracted
-~~~
 
 **Extraction Logic:**
 The whitener generates a bit according to the following truth table. Discarded bits yield no output (`valid_o` remains LOW).
@@ -63,7 +53,7 @@ Because the Von Neumann extractor drops `00` and `11` pairs, there is a statisti
 
 To prevent the system from hanging indefinitely:
 * A Watchdog Timer increments on every `clk_i` cycle.
-* It resets to `0` every time the whitener successfully outputs a `valid_o` bit.
+* It resets to `0` every time the whitener successfully outputs a `valid` bit.
 * **Timeout:** If the counter reaches **1024 clock cycles** without seeing a valid bit, it triggers a timeout.
 * **Reset Mechanism:** Upon timeout, the watchdog pulls an internal soft-reset line. This flushes the whitener's state machine and clears the current shift register progress, restarting the byte generation process from scratch to recover from the stall.
 
@@ -78,7 +68,18 @@ Testing the physical silicon requires observing the handshake protocol.
 5. On the clock cycle where `valid_o` is HIGH, read the 8-bit value on `byte_o`. This is your true random byte.
 6. To verify randomness, capture several megabytes of output data and process it using a statistical test suite like **NIST SP 800-22** or **Dieharder**.
 
-*Note on RTL Simulation:* Pure digital simulators (like Verilator or Icarus Verilog) cannot simulate physical phase noise. To run pre-silicon tests, you must inject artificial delays (`#delay`) into the simulated inverter loops or feed a pre-generated pseudo-random bitstream directly into the whitener's testbench to verify the digital logic.
+### Design Verification (DV) Plan
+
+Pre-silicon verification is handled via a Python-based Cocotb testbench. Because digital simulators cannot natively process analog phase noise, the RTL leverages a `\`ifdef SIM\`` block to model the oscillators using fractional `#` delays. 
+
+The DV suite verifies the digital plumbing using two main tests:
+1. **Continuous Generation Check:** The testbench drives the `ready_i` signal HIGH and loops 100 times, waiting for the `valid_o` edge to capture sequential random bytes and confirming the handshake can operate continuously.
+2. **Statistical Sanity Checks (Variance):** Validates the behavioral entropy by checking for output uniqueness. Out of the 100 sampled bytes, the test ensures that more than 5 unique values are generated, proving the simulated oscillators are drifting and the FSM is not stuck emitting a constant value.
+
+#### Gate-Level Simulation (GLS) Limitations
+**Note:** Simulating this design at the gate level (GLS) presents a fundamental EDA challenge. Synthesis tools generate a physical netlist for the combinatorial inverter loops without an initial value. Digital simulators evaluate this unknown initial state as `X`. 
+
+Because a pure combinatorial loop has no reset pin, the `X` state remains permanently locked, propagating through the synchronizer flip-flops and crashing the Von Neumann logic. Consequently, our Cocotb testbench actively monitors the output bus for unresolvable `X` states. If an `X` state is detected (indicating a GLS environment where the oscillator failed to initialize), the testbench logs the limitation and gracefully skips the remainder of the simulation to prevent CI pipeline failures.
 
 ## External hardware
 

@@ -32,7 +32,8 @@
      sg13g2_nor3_1                   6
      sg13g2_o21ai_1                  5
      sg13g2_or2_1                    2
-     sg13g2_tielo                   15
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   14
      sg13g2_xnor2_1                  3
 
    Chip area for module '\tt_um_anujic_rng': 2360.496600
