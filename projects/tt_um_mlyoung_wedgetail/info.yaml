@@ -25,6 +25,7 @@ project:
     - "wedgetail_spi_rf.sv"
     - "inv_en_ihp130.sv"
     - "programmable_ring_osc_ihp130.sv"
+    - "lfsr.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
@@ -41,7 +42,7 @@ pinout:
 
   # Outputs
   uo[0]: "ROSC MUX OUT"
-  uo[1]: ""
+  uo[1]: "LFSR"
   uo[2]: "ROSC 32 NO MUX" # no mux, 32 ROSC
   uo[3]: "DPLL CLK" # 300 KHz clock through DPLL
   uo[4]: "DPLL CLK FMULT" # 300 KHz clock through DPLL, with 8x frequency multiplier

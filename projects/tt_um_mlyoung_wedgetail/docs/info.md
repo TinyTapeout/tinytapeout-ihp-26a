@@ -10,7 +10,7 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 Wedgetail is a project that is part of my PhD thesis. This particular design is for Test, Calibration and
-Design Exploration (TCDE), to assess the effectiveness of the project in high-radiation environments.
+Design Exploration (TCDE), to assess the effectiveness of the project on real silicon.
 
 The design consists of a configurable array of ring oscillators, a Digital Phase Locked Loop (DPLL),
 and an SPI register file generated with SystemRDL.
@@ -30,15 +30,17 @@ Currently, the selectable options are:
 
 | **Binary value**    | **Name**      | **Description**    |
 |-----------------|-----------|--------------------|
-| 0 | ROSC_32_1 | First 32 stage osc |
-| 1 | ROSC_32_2 | Second 32 stage osc                   |
-| 2 | ROSC_64    | 64 stage osc                   |
-| 3 | ROSC_16    | 16 stage osc |
-| 4 | ROSC_32_OR | ROSC_32_1 and ROSC\_32_2 OR'd together |
-| 5 | ROSC_31    | 31 stage osc |
-| 6 | ROSC_128   | 128 stage osc |
-| 7 | ROSC_32_AND | ROSC_32_1 and ROSC\_32_2 AND'ed together |
-| 8 | ROSC_32_DRIVE\_4 | 32 stage osc with 4x drive current inverter |
+| 0 | ROSC_NONE | No output |
+| 1 | ROSC_32_1 | First 32 stage osc |
+| 2 | ROSC_32_2 | Second 32 stage osc                   |
+| 3 | ROSC_64    | 64 stage osc                   |
+| 4 | ROSC_16    | 16 stage osc |
+| 5 | ROSC_32_OR | ROSC_32_1 and ROSC\_32_2 OR'd together |
+| 6 | ROSC_31    | 31 stage osc |
+| 7 | ROSC_128   | 128 stage osc |
+| 8 | ROSC_32_AND | ROSC_32_1 and ROSC\_32_2 AND'ed together |
+| 9 | ROSC_32_DRIVE\_8 | 32 stage osc with 8x drive current inverter |
+| 10 | ROSC_32_DRIVE\_16 | 32 stage osc with 16x drive current inverter |
 
 **Note:** Before you get mad at me for saying it won't oscillate because it's even, in all of these designs,
 there is an extra +1 inverter from the feedback tap. So a 32-stage oscillator has 32 inverters in the loop,
@@ -48,8 +50,8 @@ oscillate.
 
 ### DPLL
 A digital-phased lock loop is included, written by [jsloan256](https://github.com/jsloan256/dpll). Clock the
-main module at 2 MHz, then pass a 300 KHz signal into the "DPLL CLK 300 KHz" input port. The output port "DPLL
-CLK" will have the signal passing through the DPLL, and the port "DPLL CLK FMULT" will have the signal passing
+main module at 2 MHz, then pass a 300 KHz signal into the `DPLL CLK 300 KHz` input port. The output port `DPLL
+CLK` will have the signal passing through the DPLL, and the port `DPLL CLK FMULT` will have the signal passing
 through an 8x frequency multiplier.
 
 ### SPI
@@ -65,14 +67,18 @@ For the register file documentation, see the end of this document.
 
 ### SPI Programmable Ring Oscillator
 A ring oscillator is included that can be programmed on the fly by SPI. Write to the `ROSC_EN_SEL` register to
-configure the "coding" of the ring oscillator. This coding is 1-hot coded, i.e. setting a bit will either
-enable that inverter, or pass it through. For example, if `ROSC_EN_SEL[1]` is set to `1`, the second inverter
-will be enabled, and if set to `0`, it will be passed through.
+configure the "coding" of the ring oscillator. In this coding, each bit in `ROSC_EN_SEL` represents two
+inverters in the ring oscillator. For example, if `ROSC_EN_SEL[0] == 1`, then `inverter[0]` AND `inverter[1]`
+will be powered on.
 
-The ring oscillator output is routed to "ROSC SPI OUT".
+The ring oscillator output is routed to `ROSC SPI OUT`.
+
+### LFSR
+The pin `LFSR` is the 1-bit output of a 16-bit LFSR. It cannot be turned off, lol, sorry. But you can reset it
+with the TinyTapeout system reset.
 
 ### Warnings
-- Do not test the DPLL and SPI at the same time, as they run off the same clock
+- Do not test the DPLL and SPI at the same time, as they run off the same clock.
 
 ## External hardware
 - None required
