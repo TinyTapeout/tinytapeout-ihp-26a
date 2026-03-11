@@ -306,18 +306,29 @@ module tt_um_miniMAC (clk,
  wire net39;
  wire net40;
  wire net41;
+ wire net42;
+ wire net43;
  wire net44;
+ wire net45;
+ wire net46;
  wire net47;
+ wire net48;
+ wire net76;
  wire net77;
  wire net78;
  wire net79;
  wire net80;
  wire net81;
+ wire net82;
+ wire net83;
  wire net84;
+ wire net85;
  wire net86;
  wire net87;
  wire net88;
  wire net89;
+ wire net90;
+ wire net91;
  wire net92;
  wire net93;
  wire net94;
@@ -325,6 +336,7 @@ module tt_um_miniMAC (clk,
  wire net96;
  wire net97;
  wire net98;
+ wire net99;
  wire net100;
  wire net101;
  wire net102;
@@ -338,6 +350,7 @@ module tt_um_miniMAC (clk,
  wire net110;
  wire net111;
  wire net112;
+ wire net113;
  wire net114;
  wire net115;
  wire net116;
@@ -345,54 +358,33 @@ module tt_um_miniMAC (clk,
  wire net118;
  wire net119;
  wire net120;
- wire net121;
- wire net123;
- wire net125;
- wire net126;
- wire net127;
- wire net128;
- wire net129;
- wire net130;
- wire net131;
- wire net132;
- wire net133;
- wire net134;
- wire net135;
- wire net136;
- wire net138;
- wire net140;
- wire net141;
- wire net142;
- wire net143;
- wire net144;
- wire net145;
 
- sg13g2_dfrbpq_1 DFF_QEN1 (.RESET_B(net57),
+ sg13g2_dfrbpq_2 DFF_QEN1 (.RESET_B(net57),
     .D(net52),
     .Q(QEN1),
-    .CLK(clknet_4_0_0_clk_regs));
+    .CLK(clknet_4_1_0_clk_regs));
  sg13g2_dfrbpq_2 DFF_QEN2 (.RESET_B(net55),
     .D(net69),
     .Q(QEN),
-    .CLK(clknet_4_5_0_clk_regs));
- sg13g2_dfrbpq_1 DFF_den0 (.RESET_B(net60),
+    .CLK(clknet_4_7_0_clk_regs));
+ sg13g2_dfrbpq_1 DFF_den0 (.RESET_B(net61),
     .D(net11),
     .Q(Den_In0),
-    .CLK(clknet_4_12_0_clk_regs));
- sg13g2_dfrbp_1 DFF_den1 (.RESET_B(net63),
-    .D(net38),
+    .CLK(clknet_4_15_0_clk_regs));
+ sg13g2_dfrbp_1 DFF_den1 (.RESET_B(net64),
+    .D(net27),
     .Q_N(Den_In1),
-    .CLK(clknet_4_12_0_clk_regs));
+    .CLK(clknet_4_15_0_clk_regs));
  sg13g2_dfrbpq_1 DFF_reset (.RESET_B(net2),
     .D(net1),
     .Q(INT_RESET),
-    .CLK(clknet_4_9_0_clk_regs));
+    .CLK(clknet_4_15_0_clk_regs));
  sg13g2_dfrbpq_1 DFF_sero (.RESET_B(net55),
     .D(Zero_value),
     .Q(Zero),
     .CLK(clknet_4_6_0_clk_regs));
- sg13g2_and2_1 Den_OK_and2 (.A(net38),
-    .B(net119),
+ sg13g2_and2_1 Den_OK_and2 (.A(net27),
+    .B(net112),
     .X(Den_OK));
  sg13g2_xor2_1 \Ham.xor_L1_0  (.B(\Ham.L1[1] ),
     .A(\Ham.I[0] ),
@@ -424,8 +416,8 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \Ham.xor_L1_2  (.B(\Ham.L1[3] ),
     .A(\Ham.I[2] ),
     .X(\Ham.L1[2] ));
- sg13g2_xor2_1 \Ham.xor_L1_3  (.B(\Ham.I[3] ),
-    .A(\Ham.I[4] ),
+ sg13g2_xor2_1 \Ham.xor_L1_3  (.B(\Ham.I[4] ),
+    .A(\Ham.I[3] ),
     .X(\Ham.L1[3] ));
  sg13g2_xor2_1 \Ham.xor_L1_5  (.B(\Ham.I[4] ),
     .A(\Ham.I[5] ),
@@ -454,8 +446,8 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \Ham.xor_L2_11  (.B(\Ham.L1[16] ),
     .A(\Ham.L1[8] ),
     .X(\Ham.L2[11] ));
- sg13g2_xor2_1 \Ham.xor_L2_12  (.B(\Ham.L1[16] ),
-    .A(\Ham.L1[5] ),
+ sg13g2_xor2_1 \Ham.xor_L2_12  (.B(\Ham.L1[5] ),
+    .A(\Ham.L1[16] ),
     .X(\Ham.L2[12] ));
  sg13g2_xor2_1 \Ham.xor_L2_14  (.B(\Ham.L1[5] ),
     .A(\Ham.L1[2] ),
@@ -463,8 +455,8 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \Ham.xor_L2_15  (.B(\Ham.L1[5] ),
     .A(\Ham.L1[12] ),
     .X(\Ham.L2[15] ));
- sg13g2_xor2_1 \Ham.xor_L2_16  (.B(\Ham.I[13] ),
-    .A(\Ham.L1[5] ),
+ sg13g2_xor2_1 \Ham.xor_L2_16  (.B(\Ham.L1[5] ),
+    .A(\Ham.I[13] ),
     .X(\Ham.L2[16] ));
  sg13g2_xor2_1 \Ham.xor_L2_17  (.B(\Ham.L1[5] ),
     .A(\Ham.L1[17] ),
@@ -476,7 +468,7 @@ module tt_um_miniMAC (clk,
     .A(\Ham.L1[9] ),
     .X(\Ham.L2[3] ));
  sg13g2_xor2_1 \Ham.xor_L2_5  (.B(\Ham.L1[7] ),
-    .A(net33),
+    .A(\Ham.L1[3] ),
     .X(\Ham.L2[5] ));
  sg13g2_xor2_1 \Ham.xor_L2_6  (.B(\Ham.L1[7] ),
     .A(\Ham.I[4] ),
@@ -490,14 +482,14 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \Ham.xor_L2_9  (.B(\Ham.L1[15] ),
     .A(\Ham.L1[11] ),
     .X(\Ham.L2[9] ));
- sg13g2_xor2_1 \Ham.xor_L3_0  (.B(\Ham.L2[3] ),
-    .A(\Ham.L3[1] ),
+ sg13g2_xor2_1 \Ham.xor_L3_0  (.B(\Ham.L3[1] ),
+    .A(\Ham.L2[3] ),
     .X(\Ham.L3[0] ));
- sg13g2_xor2_1 \Ham.xor_L3_1  (.B(\Ham.L2[10] ),
-    .A(\Ham.L3[2] ),
+ sg13g2_xor2_1 \Ham.xor_L3_1  (.B(\Ham.L3[2] ),
+    .A(\Ham.L2[10] ),
     .X(\Ham.L3[1] ));
- sg13g2_xor2_1 \Ham.xor_L3_10  (.B(\Ham.L2[7] ),
-    .A(\Ham.L3[11] ),
+ sg13g2_xor2_1 \Ham.xor_L3_10  (.B(\Ham.L3[11] ),
+    .A(\Ham.L2[7] ),
     .X(\Ham.L3[10] ));
  sg13g2_xor2_1 \Ham.xor_L3_11  (.B(\Ham.L3[12] ),
     .A(\Ham.L2[2] ),
@@ -505,16 +497,16 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \Ham.xor_L3_12  (.B(\Ham.L2[12] ),
     .A(\Ham.L2[17] ),
     .X(\Ham.L3[12] ));
- sg13g2_xor2_1 \Ham.xor_L3_14  (.B(net27),
+ sg13g2_xor2_1 \Ham.xor_L3_14  (.B(\Ham.L2[12] ),
     .A(\Ham.L2[0] ),
     .X(\Ham.L3[14] ));
- sg13g2_xor2_1 \Ham.xor_L3_15  (.B(net27),
+ sg13g2_xor2_1 \Ham.xor_L3_15  (.B(\Ham.L2[12] ),
     .A(\Ham.L2[8] ),
     .X(\Ham.L3[15] ));
- sg13g2_xor2_1 \Ham.xor_L3_16  (.B(net27),
+ sg13g2_xor2_1 \Ham.xor_L3_16  (.B(\Ham.L2[12] ),
     .A(\Ham.L2[9] ),
     .X(\Ham.L3[16] ));
- sg13g2_xor2_1 \Ham.xor_L3_17  (.B(net27),
+ sg13g2_xor2_1 \Ham.xor_L3_17  (.B(\Ham.L2[12] ),
     .A(\Ham.L2[14] ),
     .X(\Ham.L3[17] ));
  sg13g2_xor2_1 \Ham.xor_L3_2  (.B(\Ham.L3[3] ),
@@ -523,20 +515,20 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \Ham.xor_L3_3  (.B(\Ham.L2[16] ),
     .A(\Ham.L2[15] ),
     .X(\Ham.L3[3] ));
- sg13g2_xor2_1 \Ham.xor_L3_5  (.B(net29),
+ sg13g2_xor2_1 \Ham.xor_L3_5  (.B(\Ham.L2[16] ),
     .A(\Ham.L1[7] ),
     .X(\Ham.L3[5] ));
- sg13g2_xor2_1 \Ham.xor_L3_6  (.B(net29),
+ sg13g2_xor2_1 \Ham.xor_L3_6  (.B(\Ham.L2[16] ),
     .A(\Ham.L2[5] ),
     .X(\Ham.L3[6] ));
- sg13g2_xor2_1 \Ham.xor_L3_7  (.B(net29),
+ sg13g2_xor2_1 \Ham.xor_L3_7  (.B(\Ham.L2[16] ),
     .A(\Ham.L2[11] ),
     .X(\Ham.L3[7] ));
- sg13g2_xor2_1 \Ham.xor_L3_8  (.B(net28),
+ sg13g2_xor2_1 \Ham.xor_L3_8  (.B(\Ham.L2[16] ),
     .A(\Ham.L1[5] ),
     .X(\Ham.L3[8] ));
- sg13g2_xor2_1 \Ham.xor_L3_9  (.B(\Ham.L2[6] ),
-    .A(\Ham.L3[10] ),
+ sg13g2_xor2_1 \Ham.xor_L3_9  (.B(\Ham.L3[10] ),
+    .A(\Ham.L2[6] ),
     .X(\Ham.L3[9] ));
  sg13g2_xor2_1 \Ham.xor_O_0  (.B(\Ham.L3[12] ),
     .A(\Ham.L3[11] ),
@@ -545,46 +537,46 @@ module tt_um_miniMAC (clk,
     .A(\Ham.L3[12] ),
     .X(\Ham.O[1] ));
  sg13g2_xor2_1 \Ham.xor_O_10  (.B(\Ham.L3[17] ),
-    .A(net36),
+    .A(\Ham.L3[10] ),
     .X(\Ham.O[10] ));
  sg13g2_xor2_1 \Ham.xor_O_11  (.B(\Ham.L3[15] ),
     .A(\Ham.L3[17] ),
     .X(\Ham.O[11] ));
- sg13g2_xor2_1 \Ham.xor_O_12  (.B(net31),
+ sg13g2_xor2_1 \Ham.xor_O_12  (.B(\Ham.L3[0] ),
     .A(\Ham.L3[15] ),
     .X(\Ham.O[12] ));
- sg13g2_xor2_1 \Ham.xor_O_14  (.B(net31),
+ sg13g2_xor2_1 \Ham.xor_O_14  (.B(\Ham.L3[0] ),
     .A(\Ham.L3[3] ),
     .X(\Ham.O[14] ));
- sg13g2_xor2_1 \Ham.xor_O_15  (.B(net30),
-    .A(net37),
+ sg13g2_xor2_1 \Ham.xor_O_15  (.B(\Ham.L3[0] ),
+    .A(\Ham.L3[2] ),
     .X(\Ham.O[15] ));
- sg13g2_xor2_1 \Ham.xor_O_16  (.B(net30),
+ sg13g2_xor2_1 \Ham.xor_O_16  (.B(\Ham.L3[0] ),
     .A(\Ham.L3[5] ),
     .X(\Ham.O[16] ));
- sg13g2_xor2_1 \Ham.xor_O_17  (.B(net30),
+ sg13g2_xor2_1 \Ham.xor_O_17  (.B(\Ham.L3[0] ),
     .A(\Ham.L2[12] ),
     .X(\Ham.O[17] ));
  sg13g2_xor2_1 \Ham.xor_O_2  (.B(\Ham.L3[16] ),
     .A(\Ham.L3[14] ),
     .X(\Ham.O[2] ));
- sg13g2_xor2_1 \Ham.xor_O_3  (.B(net32),
+ sg13g2_xor2_1 \Ham.xor_O_3  (.B(\Ham.L3[9] ),
     .A(\Ham.L3[16] ),
     .X(\Ham.O[3] ));
- sg13g2_xor2_1 \Ham.xor_O_5  (.B(net32),
-    .A(net34),
+ sg13g2_xor2_1 \Ham.xor_O_5  (.B(\Ham.L3[9] ),
+    .A(\Ham.L3[1] ),
     .X(\Ham.O[5] ));
- sg13g2_xor2_1 \Ham.xor_O_6  (.B(net32),
+ sg13g2_xor2_1 \Ham.xor_O_6  (.B(\Ham.L3[9] ),
     .A(\Ham.L3[6] ),
     .X(\Ham.O[6] ));
- sg13g2_xor2_1 \Ham.xor_O_7  (.B(net32),
+ sg13g2_xor2_1 \Ham.xor_O_7  (.B(\Ham.L3[9] ),
     .A(\Ham.L3[7] ),
     .X(\Ham.O[7] ));
- sg13g2_xor2_1 \Ham.xor_O_8  (.B(net32),
+ sg13g2_xor2_1 \Ham.xor_O_8  (.B(\Ham.L3[9] ),
     .A(\Ham.L3[8] ),
     .X(\Ham.O[8] ));
- sg13g2_xor2_1 \Ham.xor_O_9  (.B(net35),
-    .A(net28),
+ sg13g2_xor2_1 \Ham.xor_O_9  (.B(\Ham.L3[10] ),
+    .A(\Ham.L2[16] ),
     .X(\Ham.O[9] ));
  sg13g2_or2_1 OrSel (.X(DecOrEnc),
     .B(net75),
@@ -602,120 +594,120 @@ module tt_um_miniMAC (clk,
  sg13g2_tielo tt_um_miniMAC_20 (.L_LO(net20));
  sg13g2_tielo tt_um_miniMAC_21 (.L_LO(net21));
  sg13g2_tiehi tt_um_miniMAC_22 (.L_HI(net22));
- sg13g2_buf_1 _12_ (.A(net67),
+ sg13g2_buf_1 _12_ (.A(net68),
     .X(uio_out[1]));
  sg13g2_buf_1 _13_ (.A(net26),
     .X(uio_out[2]));
  sg13g2_buf_1 _14_ (.A(Zero),
     .X(uio_out[3]));
  sg13g2_sdfrbpq_1 \delayHam.dffe00  (.Q(\Hammer_delayed[0] ),
-    .CLK(clknet_4_9_0_clk_regs),
+    .CLK(clknet_4_2_0_clk_regs),
     .RESET_B(net61),
     .SCD(\Ham.O[0] ),
-    .D(net100),
-    .SCE(net70));
+    .D(net86),
+    .SCE(net71));
  sg13g2_sdfrbpq_1 \delayHam.dffe01  (.Q(\Hammer_delayed[1] ),
-    .CLK(clknet_4_9_0_clk_regs),
-    .RESET_B(net61),
-    .SCD(\Ham.O[1] ),
-    .D(net103),
-    .SCE(net70));
- sg13g2_sdfrbpq_1 \delayHam.dffe02  (.Q(\Hammer_delayed[2] ),
-    .CLK(clknet_4_11_0_clk_regs),
-    .RESET_B(net62),
-    .SCD(\Ham.O[2] ),
-    .D(net98),
-    .SCE(net70));
- sg13g2_sdfrbpq_1 \delayHam.dffe03  (.Q(\Hammer_delayed[3] ),
-    .CLK(clknet_4_11_0_clk_regs),
-    .RESET_B(net62),
-    .SCD(\Ham.O[3] ),
-    .D(net111),
-    .SCE(net71));
- sg13g2_sdfrbpq_1 \delayHam.dffe04  (.Q(\Hammer_delayed[4] ),
-    .CLK(clknet_4_13_0_clk_regs),
+    .CLK(clknet_4_8_0_clk_regs),
     .RESET_B(net63),
-    .SCD(net32),
-    .D(net114),
+    .SCD(\Ham.O[1] ),
+    .D(net85),
     .SCE(net71));
+ sg13g2_sdfrbpq_1 \delayHam.dffe02  (.Q(\Hammer_delayed[2] ),
+    .CLK(clknet_4_9_0_clk_regs),
+    .RESET_B(net63),
+    .SCD(\Ham.O[2] ),
+    .D(net83),
+    .SCE(net71));
+ sg13g2_sdfrbpq_1 \delayHam.dffe03  (.Q(\Hammer_delayed[3] ),
+    .CLK(clknet_4_9_0_clk_regs),
+    .RESET_B(net63),
+    .SCD(\Ham.O[3] ),
+    .D(net91),
+    .SCE(net72));
+ sg13g2_sdfrbpq_1 \delayHam.dffe04  (.Q(\Hammer_delayed[4] ),
+    .CLK(clknet_4_12_0_clk_regs),
+    .RESET_B(net64),
+    .SCD(\Ham.L3[9] ),
+    .D(net93),
+    .SCE(net72));
  sg13g2_sdfrbpq_1 \delayHam.dffe05  (.Q(\Hammer_delayed[5] ),
     .CLK(clknet_4_6_0_clk_regs),
     .RESET_B(net61),
     .SCD(\Ham.O[5] ),
-    .D(net112),
-    .SCE(net71));
+    .D(net96),
+    .SCE(net72));
  sg13g2_sdfrbpq_1 \delayHam.dffe06  (.Q(\Hammer_delayed[6] ),
     .CLK(clknet_4_6_0_clk_regs),
-    .RESET_B(net60),
+    .RESET_B(net62),
     .SCD(\Ham.O[6] ),
-    .D(net108),
-    .SCE(net71));
+    .D(net99),
+    .SCE(net72));
  sg13g2_sdfrbpq_1 \delayHam.dffe07  (.Q(\Hammer_delayed[7] ),
     .CLK(clknet_4_4_0_clk_regs),
     .RESET_B(net59),
     .SCD(\Ham.O[7] ),
-    .D(net110),
-    .SCE(net68));
+    .D(net94),
+    .SCE(net69));
  sg13g2_sdfrbpq_1 \delayHam.dffe08  (.Q(\Hammer_delayed[8] ),
-    .CLK(clknet_4_1_0_clk_regs),
-    .RESET_B(net58),
+    .CLK(clknet_4_0_0_clk_regs),
+    .RESET_B(net57),
     .SCD(\Ham.O[8] ),
-    .D(net105),
-    .SCE(net72));
+    .D(net92),
+    .SCE(net70));
  sg13g2_sdfrbpq_1 \delayHam.dffe09  (.Q(\Hammer_delayed[9] ),
-    .CLK(clknet_4_2_0_clk_regs),
+    .CLK(clknet_4_3_0_clk_regs),
     .RESET_B(net58),
     .SCD(\Ham.O[9] ),
-    .D(net106),
-    .SCE(net70));
+    .D(net84),
+    .SCE(net71));
  sg13g2_sdfrbpq_1 \delayHam.dffe10  (.Q(\Hammer_delayed[10] ),
-    .CLK(clknet_4_9_0_clk_regs),
+    .CLK(clknet_4_2_0_clk_regs),
     .RESET_B(net61),
     .SCD(\Ham.O[10] ),
-    .D(net101),
-    .SCE(net70));
+    .D(net87),
+    .SCE(net71));
  sg13g2_sdfrbpq_1 \delayHam.dffe11  (.Q(\Hammer_delayed[11] ),
     .CLK(clknet_4_8_0_clk_regs),
     .RESET_B(net61),
     .SCD(\Ham.O[11] ),
-    .D(net102),
-    .SCE(net70));
+    .D(net90),
+    .SCE(net71));
  sg13g2_sdfrbpq_1 \delayHam.dffe12  (.Q(\Hammer_delayed[12] ),
-    .CLK(clknet_4_11_0_clk_regs),
+    .CLK(clknet_4_9_0_clk_regs),
     .RESET_B(net61),
     .SCD(\Ham.O[12] ),
-    .D(net143),
-    .SCE(net70));
+    .D(net82),
+    .SCE(net71));
  sg13g2_sdfrbpq_1 \delayHam.dffe13  (.Q(\Hammer_delayed[13] ),
     .CLK(clknet_4_13_0_clk_regs),
-    .RESET_B(net60),
-    .SCD(net31),
-    .D(net142),
-    .SCE(net71));
+    .RESET_B(net62),
+    .SCD(\Ham.L3[0] ),
+    .D(net98),
+    .SCE(net72));
  sg13g2_sdfrbpq_1 \delayHam.dffe14  (.Q(\Hammer_delayed[14] ),
     .CLK(clknet_4_6_0_clk_regs),
-    .RESET_B(net60),
+    .RESET_B(net62),
     .SCD(\Ham.O[14] ),
-    .D(net115),
-    .SCE(net70));
- sg13g2_sdfrbpq_1 \delayHam.dffe15  (.Q(\Hammer_delayed[15] ),
-    .CLK(clknet_4_13_0_clk_regs),
-    .RESET_B(net60),
-    .SCD(\Ham.O[15] ),
-    .D(net107),
+    .D(net97),
     .SCE(net71));
- sg13g2_sdfrbpq_1 \delayHam.dffe16  (.Q(\Hammer_delayed[16] ),
+ sg13g2_sdfrbpq_1 \delayHam.dffe15  (.Q(\Hammer_delayed[15] ),
     .CLK(clknet_4_4_0_clk_regs),
+    .RESET_B(net59),
+    .SCD(\Ham.O[15] ),
+    .D(net95),
+    .SCE(net72));
+ sg13g2_sdfrbpq_1 \delayHam.dffe16  (.Q(\Hammer_delayed[16] ),
+    .CLK(clknet_4_5_0_clk_regs),
     .RESET_B(net55),
     .SCD(\Ham.O[16] ),
-    .D(net104),
+    .D(net88),
     .SCE(net69));
  sg13g2_sdfrbpq_1 \delayHam.dffe17  (.Q(\Hammer_delayed[17] ),
     .CLK(clknet_4_0_0_clk_regs),
     .RESET_B(net57),
     .SCD(\Ham.O[17] ),
-    .D(net109),
-    .SCE(net72));
+    .D(net89),
+    .SCE(net70));
  sg13g2_dfrbpq_1 \dffMSB.dff0  (.RESET_B(net58),
     .D(\LastWord[9] ),
     .Q(\LastMSB[0] ),
@@ -723,19 +715,19 @@ module tt_um_miniMAC (clk,
  sg13g2_dfrbpq_1 \dffMSB.dff1  (.RESET_B(net58),
     .D(\LastWord[10] ),
     .Q(\LastMSB[1] ),
-    .CLK(clknet_4_2_0_clk_regs));
+    .CLK(clknet_4_3_0_clk_regs));
  sg13g2_dfrbpq_1 \dffMSB.dff2  (.RESET_B(net58),
     .D(\LastWord[11] ),
     .Q(\LastMSB[2] ),
-    .CLK(clknet_4_3_0_clk_regs));
+    .CLK(clknet_4_0_0_clk_regs));
  sg13g2_dfrbpq_1 \dffMSB.dff3  (.RESET_B(net58),
     .D(\LastWord[12] ),
     .Q(\LastMSB[3] ),
-    .CLK(clknet_4_3_0_clk_regs));
+    .CLK(clknet_4_0_0_clk_regs));
  sg13g2_dfrbpq_1 \dffMSB.dff4  (.RESET_B(net56),
     .D(\LastWord[13] ),
     .Q(\LastMSB[4] ),
-    .CLK(clknet_4_5_0_clk_regs));
+    .CLK(clknet_4_7_0_clk_regs));
  sg13g2_dfrbpq_1 \dffMSB.dff5  (.RESET_B(net56),
     .D(\LastWord[14] ),
     .Q(\LastMSB[5] ),
@@ -743,11 +735,11 @@ module tt_um_miniMAC (clk,
  sg13g2_dfrbpq_1 \dffMSB.dff6  (.RESET_B(net56),
     .D(\LastWord[15] ),
     .Q(\LastMSB[6] ),
-    .CLK(clknet_4_5_0_clk_regs));
+    .CLK(clknet_4_7_0_clk_regs));
  sg13g2_dfrbpq_1 \dffMSB.dff7  (.RESET_B(net56),
     .D(\LastWord[16] ),
     .Q(\LastMSB[7] ),
-    .CLK(clknet_4_4_0_clk_regs));
+    .CLK(clknet_4_5_0_clk_regs));
  sg13g2_dfrbpq_1 \dffMSB.dff8  (.RESET_B(net57),
     .D(\LastWord[17] ),
     .Q(\LastMSB[8] ),
@@ -771,15 +763,15 @@ module tt_um_miniMAC (clk,
  sg13g2_dfrbpq_1 \dffOut.dff4  (.RESET_B(net55),
     .D(\LastHalfWord[4] ),
     .Q(uo_out[4]),
-    .CLK(clknet_4_7_0_clk_regs));
+    .CLK(clknet_4_13_0_clk_regs));
  sg13g2_dfrbpq_1 \dffOut.dff5  (.RESET_B(net55),
     .D(\LastHalfWord[5] ),
     .Q(uo_out[5]),
-    .CLK(clknet_4_7_0_clk_regs));
+    .CLK(clknet_4_13_0_clk_regs));
  sg13g2_dfrbpq_1 \dffOut.dff6  (.RESET_B(net55),
     .D(\LastHalfWord[6] ),
     .Q(uo_out[6]),
-    .CLK(clknet_4_7_0_clk_regs));
+    .CLK(clknet_4_13_0_clk_regs));
  sg13g2_dfrbpq_1 \dffOut.dff7  (.RESET_B(net55),
     .D(\LastHalfWord[7] ),
     .Q(uo_out[7]),
@@ -787,150 +779,150 @@ module tt_um_miniMAC (clk,
  sg13g2_dfrbpq_1 \dffOut.dff8  (.RESET_B(net55),
     .D(\LastHalfWord[8] ),
     .Q(uio_out[0]),
-    .CLK(clknet_4_4_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff0  (.RESET_B(net62),
+    .CLK(clknet_4_5_0_clk_regs));
+ sg13g2_dfrbpq_1 \fhw.dff0  (.RESET_B(net63),
     .D(net3),
     .Q(\FirstHalfWord[0] ),
-    .CLK(clknet_4_8_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff1  (.RESET_B(net62),
+    .CLK(clknet_4_10_0_clk_regs));
+ sg13g2_dfrbpq_1 \fhw.dff1  (.RESET_B(net63),
     .D(net4),
     .Q(\FirstHalfWord[1] ),
     .CLK(clknet_4_8_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff2  (.RESET_B(net63),
+ sg13g2_dfrbpq_1 \fhw.dff2  (.RESET_B(net64),
     .D(net5),
     .Q(\FirstHalfWord[2] ),
     .CLK(clknet_4_11_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff3  (.RESET_B(net64),
+ sg13g2_dfrbpq_1 \fhw.dff3  (.RESET_B(net65),
     .D(net6),
     .Q(\FirstHalfWord[3] ),
     .CLK(clknet_4_14_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff4  (.RESET_B(net63),
+ sg13g2_dfrbpq_1 \fhw.dff4  (.RESET_B(net64),
     .D(net7),
     .Q(\FirstHalfWord[4] ),
-    .CLK(clknet_4_13_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff5  (.RESET_B(net63),
+    .CLK(clknet_4_12_0_clk_regs));
+ sg13g2_dfrbpq_1 \fhw.dff5  (.RESET_B(net64),
     .D(net8),
     .Q(\FirstHalfWord[5] ),
-    .CLK(clknet_4_15_0_clk_regs));
- sg13g2_dfrbpq_1 \fhw.dff6  (.RESET_B(net60),
+    .CLK(clknet_4_14_0_clk_regs));
+ sg13g2_dfrbpq_1 \fhw.dff6  (.RESET_B(net61),
     .D(net9),
     .Q(\FirstHalfWord[6] ),
-    .CLK(clknet_4_12_0_clk_regs));
+    .CLK(clknet_4_15_0_clk_regs));
  sg13g2_dfrbpq_1 \fhw.dff7  (.RESET_B(net58),
     .D(net10),
     .Q(\FirstHalfWord[7] ),
-    .CLK(clknet_4_1_0_clk_regs));
+    .CLK(clknet_4_4_0_clk_regs));
  sg13g2_dfrbpq_1 \fhw.dff8  (.RESET_B(net57),
     .D(net13),
     .Q(\FirstHalfWord[8] ),
     .CLK(clknet_4_0_0_clk_regs));
- sg13g2_sdfrbpq_1 \fw.dffe00  (.Q(\FirstWord[0] ),
-    .CLK(clknet_4_8_0_clk_regs),
-    .RESET_B(net62),
-    .SCD(net88),
-    .D(net131),
+ sg13g2_sdfrbpq_2 \fw.dffe00  (.Q(\FirstWord[0] ),
+    .CLK(clknet_4_10_0_clk_regs),
+    .RESET_B(net63),
+    .SCD(net45),
+    .D(net113),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe01  (.Q(\FirstWord[1] ),
-    .CLK(clknet_4_10_0_clk_regs),
-    .RESET_B(net62),
-    .SCD(net97),
-    .D(net126),
+    .CLK(clknet_4_8_0_clk_regs),
+    .RESET_B(net63),
+    .SCD(net40),
+    .D(net108),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe02  (.Q(\FirstWord[2] ),
-    .CLK(clknet_4_10_0_clk_regs),
-    .RESET_B(net62),
-    .SCD(net86),
-    .D(net121),
+    .CLK(clknet_4_11_0_clk_regs),
+    .RESET_B(net63),
+    .SCD(net41),
+    .D(net107),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe03  (.Q(\FirstWord[3] ),
-    .CLK(clknet_4_14_0_clk_regs),
-    .RESET_B(net64),
-    .SCD(net93),
-    .D(net125),
+    .CLK(clknet_4_11_0_clk_regs),
+    .RESET_B(net65),
+    .SCD(net44),
+    .D(net103),
     .SCE(net50));
  sg13g2_sdfrbpq_1 \fw.dffe04  (.Q(\FirstWord[4] ),
-    .CLK(clknet_4_15_0_clk_regs),
-    .RESET_B(net63),
-    .SCD(net94),
-    .D(net134),
+    .CLK(clknet_4_14_0_clk_regs),
+    .RESET_B(net64),
+    .SCD(net46),
+    .D(net110),
     .SCE(net50));
  sg13g2_sdfrbpq_1 \fw.dffe05  (.Q(\FirstWord[5] ),
-    .CLK(clknet_4_15_0_clk_regs),
-    .RESET_B(net64),
-    .SCD(net87),
-    .D(net133),
+    .CLK(clknet_4_14_0_clk_regs),
+    .RESET_B(net65),
+    .SCD(net38),
+    .D(net117),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe06  (.Q(\FirstWord[6] ),
     .CLK(clknet_4_12_0_clk_regs),
-    .RESET_B(net63),
-    .SCD(net92),
-    .D(net130),
+    .RESET_B(net64),
+    .SCD(net39),
+    .D(net118),
     .SCE(net50));
  sg13g2_sdfrbpq_1 \fw.dffe07  (.Q(\FirstWord[7] ),
     .CLK(clknet_4_4_0_clk_regs),
     .RESET_B(net58),
-    .SCD(net95),
-    .D(net118),
+    .SCD(net42),
+    .D(net105),
     .SCE(net52));
  sg13g2_sdfrbpq_1 \fw.dffe08  (.Q(\FirstWord[8] ),
-    .CLK(clknet_4_0_0_clk_regs),
+    .CLK(clknet_4_1_0_clk_regs),
     .RESET_B(net57),
-    .SCD(net96),
-    .D(net116),
+    .SCD(net43),
+    .D(net100),
     .SCE(net52));
  sg13g2_sdfrbpq_2 \fw.dffe09  (.Q(\FirstWord[9] ),
-    .CLK(clknet_4_8_0_clk_regs),
-    .RESET_B(net62),
+    .CLK(clknet_4_9_0_clk_regs),
+    .RESET_B(net66),
     .SCD(net3),
-    .D(net132),
+    .D(net115),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe10  (.Q(\FirstWord[10] ),
-    .CLK(clknet_4_10_0_clk_regs),
-    .RESET_B(net65),
+    .CLK(clknet_4_8_0_clk_regs),
+    .RESET_B(net66),
     .SCD(net4),
-    .D(net127),
+    .D(net109),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe11  (.Q(\FirstWord[11] ),
     .CLK(clknet_4_10_0_clk_regs),
-    .RESET_B(net65),
+    .RESET_B(net66),
     .SCD(net5),
-    .D(net120),
+    .D(net106),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe12  (.Q(\FirstWord[12] ),
-    .CLK(clknet_4_14_0_clk_regs),
-    .RESET_B(net64),
+    .CLK(clknet_4_10_0_clk_regs),
+    .RESET_B(net65),
     .SCD(net6),
-    .D(net144),
+    .D(net102),
     .SCE(net49));
  sg13g2_sdfrbpq_1 \fw.dffe13  (.Q(\FirstWord[13] ),
     .CLK(clknet_4_12_0_clk_regs),
-    .RESET_B(net63),
+    .RESET_B(net64),
     .SCD(net7),
-    .D(net145),
+    .D(net116),
     .SCE(net50));
  sg13g2_sdfrbpq_1 \fw.dffe14  (.Q(\FirstWord[14] ),
-    .CLK(clknet_4_14_0_clk_regs),
-    .RESET_B(net60),
+    .CLK(clknet_4_11_0_clk_regs),
+    .RESET_B(net61),
     .SCD(net8),
-    .D(net129),
+    .D(net111),
     .SCE(net51));
- sg13g2_sdfrbpq_1 \fw.dffe15  (.Q(\FirstWord[15] ),
-    .CLK(clknet_4_15_0_clk_regs),
-    .RESET_B(net60),
+ sg13g2_sdfrbpq_2 \fw.dffe15  (.Q(\FirstWord[15] ),
+    .CLK(clknet_4_12_0_clk_regs),
+    .RESET_B(net62),
     .SCD(net9),
-    .D(net128),
+    .D(net114),
     .SCE(net51));
  sg13g2_sdfrbpq_1 \fw.dffe16  (.Q(\FirstWord[16] ),
-    .CLK(clknet_4_1_0_clk_regs),
-    .RESET_B(net59),
+    .CLK(clknet_4_4_0_clk_regs),
+    .RESET_B(net58),
     .SCD(net10),
-    .D(net123),
+    .D(net101),
     .SCE(net52));
  sg13g2_sdfrbpq_1 \fw.dffe17  (.Q(\FirstWord[17] ),
-    .CLK(clknet_4_0_0_clk_regs),
+    .CLK(clknet_4_1_0_clk_regs),
     .RESET_B(net57),
     .SCD(net13),
-    .D(net117),
+    .D(net104),
     .SCE(net52));
  sg13g2_xor2_1 \mixData.x00  (.B(\Hammer_delayed[0] ),
     .A(\FirstWord[0] ),
@@ -959,98 +951,98 @@ module tt_um_miniMAC (clk,
  sg13g2_xor2_1 \mixData.x08  (.B(\Hammer_delayed[8] ),
     .A(\FirstWord[8] ),
     .X(\Hammer_mixed[8] ));
- sg13g2_xor2_1 \mixData.x09  (.B(net106),
-    .A(net132),
+ sg13g2_xor2_1 \mixData.x09  (.B(net84),
+    .A(net115),
     .X(\Hammer_mixed[9] ));
- sg13g2_xor2_1 \mixData.x10  (.B(net101),
-    .A(net127),
+ sg13g2_xor2_1 \mixData.x10  (.B(net87),
+    .A(net109),
     .X(\Hammer_mixed[10] ));
- sg13g2_xor2_1 \mixData.x11  (.B(net102),
-    .A(net120),
+ sg13g2_xor2_1 \mixData.x11  (.B(net90),
+    .A(net106),
     .X(\Hammer_mixed[11] ));
- sg13g2_xor2_1 \mixData.x12  (.B(\Hammer_delayed[12] ),
-    .A(\FirstWord[12] ),
+ sg13g2_xor2_1 \mixData.x12  (.B(net82),
+    .A(net102),
     .X(\Hammer_mixed[12] ));
- sg13g2_xor2_1 \mixData.x13  (.B(\Hammer_delayed[13] ),
-    .A(\FirstWord[13] ),
+ sg13g2_xor2_1 \mixData.x13  (.B(net98),
+    .A(net116),
     .X(\Hammer_mixed[13] ));
- sg13g2_xor2_1 \mixData.x14  (.B(net115),
-    .A(net129),
+ sg13g2_xor2_1 \mixData.x14  (.B(net97),
+    .A(net111),
     .X(\Hammer_mixed[14] ));
- sg13g2_xor2_1 \mixData.x15  (.B(net107),
-    .A(net128),
+ sg13g2_xor2_1 \mixData.x15  (.B(net95),
+    .A(net114),
     .X(\Hammer_mixed[15] ));
- sg13g2_xor2_1 \mixData.x16  (.B(net104),
-    .A(net123),
+ sg13g2_xor2_1 \mixData.x16  (.B(net88),
+    .A(net101),
     .X(\Hammer_mixed[16] ));
- sg13g2_xor2_1 \mixData.x17  (.B(net109),
-    .A(net117),
+ sg13g2_xor2_1 \mixData.x17  (.B(net89),
+    .A(net104),
     .X(\Hammer_mixed[17] ));
  sg13g2_buf_8 clkbuf_regs_0_clk (.A(clk),
     .X(clk_regs));
  sg13g2_a22oi_1 \sel2.a22oi_0  (.Y(\sel2.t[0] ),
-    .B1(net67),
-    .B2(net39),
+    .B1(net68),
+    .B2(net28),
     .A2(\LastWord[0] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_1  (.Y(\sel2.t[1] ),
-    .B1(net67),
-    .B2(net79),
-    .A2(\LastWord[1] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_2  (.Y(\sel2.t[2] ),
-    .B1(net67),
-    .B2(net77),
-    .A2(\LastWord[2] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_3  (.Y(\sel2.t[3] ),
-    .B1(net67),
-    .B2(net44),
-    .A2(\LastWord[3] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_4  (.Y(\sel2.t[4] ),
-    .B1(net67),
-    .B2(net81),
-    .A2(\LastWord[4] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_5  (.Y(\sel2.t[5] ),
-    .B1(net67),
-    .B2(net84),
-    .A2(\LastWord[5] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_6  (.Y(\sel2.t[6] ),
-    .B1(net141),
-    .B2(net47),
-    .A2(\LastWord[6] ),
-    .A1(net68));
- sg13g2_a22oi_1 \sel2.a22oi_7  (.Y(\sel2.t[7] ),
-    .B1(net141),
-    .B2(net89),
-    .A2(\LastWord[7] ),
     .A1(net69));
+ sg13g2_a22oi_1 \sel2.a22oi_1  (.Y(\sel2.t[1] ),
+    .B1(net68),
+    .B2(net30),
+    .A2(\LastWord[1] ),
+    .A1(net72));
+ sg13g2_a22oi_1 \sel2.a22oi_2  (.Y(\sel2.t[2] ),
+    .B1(net68),
+    .B2(net36),
+    .A2(\LastWord[2] ),
+    .A1(net69));
+ sg13g2_a22oi_1 \sel2.a22oi_3  (.Y(\sel2.t[3] ),
+    .B1(net68),
+    .B2(net32),
+    .A2(\LastWord[3] ),
+    .A1(net69));
+ sg13g2_a22oi_1 \sel2.a22oi_4  (.Y(\sel2.t[4] ),
+    .B1(net68),
+    .B2(net76),
+    .A2(\LastWord[4] ),
+    .A1(net69));
+ sg13g2_a22oi_1 \sel2.a22oi_5  (.Y(\sel2.t[5] ),
+    .B1(QEN),
+    .B2(net80),
+    .A2(\LastWord[5] ),
+    .A1(net70));
+ sg13g2_a22oi_1 \sel2.a22oi_6  (.Y(\sel2.t[6] ),
+    .B1(QEN),
+    .B2(net78),
+    .A2(\LastWord[6] ),
+    .A1(net70));
+ sg13g2_a22oi_1 \sel2.a22oi_7  (.Y(\sel2.t[7] ),
+    .B1(net68),
+    .B2(net34),
+    .A2(\LastWord[7] ),
+    .A1(net70));
  sg13g2_a22oi_1 \sel2.a22oi_8  (.Y(\sel2.t[8] ),
-    .B1(net67),
-    .B2(net41),
+    .B1(net68),
+    .B2(net47),
     .A2(\LastWord[8] ),
     .A1(net69));
  sg13g2_inv_1 \sel2.in0  (.Y(\LastHalfWord[0] ),
-    .A(net40));
+    .A(net29));
  sg13g2_inv_1 \sel2.in1  (.Y(\LastHalfWord[1] ),
-    .A(net80));
+    .A(net31));
  sg13g2_inv_1 \sel2.in2  (.Y(\LastHalfWord[2] ),
-    .A(net78));
+    .A(net37));
  sg13g2_inv_1 \sel2.in3  (.Y(\LastHalfWord[3] ),
-    .A(\sel2.t[3] ));
+    .A(net33));
  sg13g2_inv_1 \sel2.in4  (.Y(\LastHalfWord[4] ),
-    .A(\sel2.t[4] ));
+    .A(net77));
  sg13g2_inv_1 \sel2.in5  (.Y(\LastHalfWord[5] ),
-    .A(\sel2.t[5] ));
+    .A(net81));
  sg13g2_inv_1 \sel2.in6  (.Y(\LastHalfWord[6] ),
-    .A(\sel2.t[6] ));
+    .A(net79));
  sg13g2_inv_1 \sel2.in7  (.Y(\LastHalfWord[7] ),
-    .A(\sel2.t[7] ));
+    .A(net35));
  sg13g2_inv_1 \sel2.in8  (.Y(\LastHalfWord[8] ),
-    .A(\sel2.t[8] ));
+    .A(net48));
  sg13g2_mux2_1 \selOperand.mux_00  (.A0(\FirstWord[0] ),
     .A1(\Hammer_mixed[0] ),
     .S(net73),
@@ -1069,7 +1061,7 @@ module tt_um_miniMAC (clk,
     .X(\Ham.I[3] ));
  sg13g2_mux2_1 \selOperand.mux_04  (.A0(\FirstWord[4] ),
     .A1(\Hammer_mixed[4] ),
-    .S(net74),
+    .S(net73),
     .X(\Ham.I[4] ));
  sg13g2_mux2_1 \selOperand.mux_05  (.A0(\FirstWord[5] ),
     .A1(\Hammer_mixed[5] ),
@@ -1089,7 +1081,7 @@ module tt_um_miniMAC (clk,
     .X(\Ham.I[8] ));
  sg13g2_mux2_1 \selOperand.mux_09  (.A0(\FirstWord[9] ),
     .A1(\Hammer_mixed[9] ),
-    .S(net73),
+    .S(net75),
     .X(\Ham.I[9] ));
  sg13g2_mux2_1 \selOperand.mux_10  (.A0(\FirstWord[10] ),
     .A1(\Hammer_mixed[10] ),
@@ -1139,7 +1131,7 @@ module tt_um_miniMAC (clk,
     .A1(\Hammer_mixed[3] ),
     .S(net53),
     .X(\LastWord[3] ));
- sg13g2_mux2_1 \selResult.mux_04  (.A0(net32),
+ sg13g2_mux2_1 \selResult.mux_04  (.A0(\Ham.L3[9] ),
     .A1(\Hammer_mixed[4] ),
     .S(DecOrEnc),
     .X(\LastWord[4] ));
@@ -1149,7 +1141,7 @@ module tt_um_miniMAC (clk,
     .X(\LastWord[5] ));
  sg13g2_mux2_1 \selResult.mux_06  (.A0(\Ham.O[6] ),
     .A1(\Hammer_mixed[6] ),
-    .S(DecOrEnc),
+    .S(net53),
     .X(\LastWord[6] ));
  sg13g2_mux2_1 \selResult.mux_07  (.A0(\Ham.O[7] ),
     .A1(\Hammer_mixed[7] ),
@@ -1172,16 +1164,16 @@ module tt_um_miniMAC (clk,
     .S(net53),
     .X(\LastWord[11] ));
  sg13g2_mux2_1 \selResult.mux_12  (.A0(\Ham.O[12] ),
-    .A1(net140),
+    .A1(\Hammer_mixed[12] ),
     .S(net53),
     .X(\LastWord[12] ));
- sg13g2_mux2_1 \selResult.mux_13  (.A0(net30),
-    .A1(net138),
+ sg13g2_mux2_1 \selResult.mux_13  (.A0(\Ham.L3[0] ),
+    .A1(\Hammer_mixed[13] ),
     .S(net54),
     .X(\LastWord[13] ));
  sg13g2_mux2_1 \selResult.mux_14  (.A0(\Ham.O[14] ),
     .A1(\Hammer_mixed[14] ),
-    .S(net53),
+    .S(net54),
     .X(\LastWord[14] ));
  sg13g2_mux2_1 \selResult.mux_15  (.A0(\Ham.O[15] ),
     .A1(\Hammer_mixed[15] ),
@@ -1228,49 +1220,49 @@ module tt_um_miniMAC (clk,
     .X(net51));
  sg13g2_buf_8 fanout52 (.A(Den_OK),
     .X(net52));
- sg13g2_buf_8 fanout53 (.A(net54),
+ sg13g2_buf_8 fanout53 (.A(DecOrEnc),
     .X(net53));
  sg13g2_buf_8 fanout54 (.A(DecOrEnc),
     .X(net54));
- sg13g2_buf_8 fanout55 (.A(net57),
+ sg13g2_buf_8 fanout55 (.A(net60),
     .X(net55));
  sg13g2_buf_8 fanout56 (.A(net57),
     .X(net56));
- sg13g2_buf_8 fanout57 (.A(net66),
+ sg13g2_buf_8 fanout57 (.A(net60),
     .X(net57));
- sg13g2_buf_8 fanout58 (.A(net66),
+ sg13g2_buf_8 fanout58 (.A(net60),
     .X(net58));
- sg13g2_buf_8 fanout59 (.A(net66),
+ sg13g2_buf_2 fanout59 (.A(net60),
     .X(net59));
- sg13g2_buf_8 fanout60 (.A(net61),
+ sg13g2_buf_2 fanout60 (.A(net67),
     .X(net60));
- sg13g2_buf_8 fanout61 (.A(net66),
+ sg13g2_buf_8 fanout61 (.A(net67),
     .X(net61));
- sg13g2_buf_8 fanout62 (.A(net65),
+ sg13g2_buf_2 fanout62 (.A(net67),
     .X(net62));
- sg13g2_buf_8 fanout63 (.A(net65),
+ sg13g2_buf_8 fanout63 (.A(net66),
     .X(net63));
- sg13g2_buf_1 fanout64 (.A(net65),
+ sg13g2_buf_8 fanout64 (.A(net66),
     .X(net64));
- sg13g2_buf_8 fanout65 (.A(net66),
+ sg13g2_buf_1 fanout65 (.A(net66),
     .X(net65));
- sg13g2_buf_8 fanout66 (.A(net136),
+ sg13g2_buf_8 fanout66 (.A(net67),
     .X(net66));
- sg13g2_buf_8 fanout67 (.A(net141),
+ sg13g2_buf_2 fanout67 (.A(net120),
     .X(net67));
- sg13g2_buf_8 fanout68 (.A(net69),
+ sg13g2_buf_8 fanout68 (.A(QEN),
     .X(net68));
- sg13g2_buf_2 fanout69 (.A(net72),
+ sg13g2_buf_8 fanout69 (.A(net70),
     .X(net69));
- sg13g2_buf_8 fanout70 (.A(net72),
+ sg13g2_buf_8 fanout70 (.A(net119),
     .X(net70));
- sg13g2_buf_8 fanout71 (.A(net72),
+ sg13g2_buf_8 fanout71 (.A(net119),
     .X(net71));
- sg13g2_buf_8 fanout72 (.A(net135),
+ sg13g2_buf_8 fanout72 (.A(net119),
     .X(net72));
- sg13g2_buf_8 fanout73 (.A(net75),
+ sg13g2_buf_8 fanout73 (.A(uio_in[6]),
     .X(net73));
- sg13g2_buf_8 fanout74 (.A(net75),
+ sg13g2_buf_1 fanout74 (.A(net75),
     .X(net74));
  sg13g2_buf_8 fanout75 (.A(uio_in[6]),
     .X(net75));
@@ -1339,13 +1331,13 @@ module tt_um_miniMAC (clk,
     .X(clknet_4_14_0_clk_regs));
  sg13g2_buf_8 clkbuf_4_15_0_clk_regs (.A(clknet_0_clk_regs),
     .X(clknet_4_15_0_clk_regs));
- sg13g2_inv_1 clkload0 (.A(clknet_4_1_0_clk_regs));
- sg13g2_buf_1 clkload1 (.A(clknet_4_2_0_clk_regs));
- sg13g2_inv_1 clkload2 (.A(clknet_4_3_0_clk_regs));
- sg13g2_inv_1 clkload3 (.A(clknet_4_5_0_clk_regs));
- sg13g2_inv_1 clkload4 (.A(clknet_4_6_0_clk_regs));
- sg13g2_inv_1 clkload5 (.A(clknet_4_7_0_clk_regs));
- sg13g2_buf_1 clkload6 (.A(clknet_4_8_0_clk_regs));
+ sg13g2_buf_1 clkload0 (.A(clknet_4_0_0_clk_regs));
+ sg13g2_inv_1 clkload1 (.A(clknet_4_1_0_clk_regs));
+ sg13g2_buf_1 clkload2 (.A(clknet_4_2_0_clk_regs));
+ sg13g2_inv_1 clkload3 (.A(clknet_4_3_0_clk_regs));
+ sg13g2_inv_1 clkload4 (.A(clknet_4_5_0_clk_regs));
+ sg13g2_inv_1 clkload5 (.A(clknet_4_6_0_clk_regs));
+ sg13g2_inv_1 clkload6 (.A(clknet_4_7_0_clk_regs));
  sg13g2_inv_1 clkload7 (.A(clknet_4_9_0_clk_regs));
  sg13g2_inv_1 clkload8 (.A(clknet_4_10_0_clk_regs));
  sg13g2_inv_1 clkload9 (.A(clknet_4_11_0_clk_regs));
@@ -1353,156 +1345,140 @@ module tt_um_miniMAC (clk,
  sg13g2_inv_1 clkload11 (.A(clknet_4_13_0_clk_regs));
  sg13g2_inv_1 clkload12 (.A(clknet_4_14_0_clk_regs));
  sg13g2_inv_1 clkload13 (.A(clknet_4_15_0_clk_regs));
- sg13g2_buf_1 rebuffer1 (.A(\Ham.L2[12] ),
+ sg13g2_dlygate4sd3_1 hold1 (.A(Den_In0),
     .X(net27));
- sg13g2_buf_1 rebuffer2 (.A(\Ham.L2[16] ),
+ sg13g2_dlygate4sd3_1 hold2 (.A(\LastMSB[0] ),
     .X(net28));
- sg13g2_buf_1 rebuffer3 (.A(\Ham.L2[16] ),
+ sg13g2_dlygate4sd3_1 hold3 (.A(\sel2.t[0] ),
     .X(net29));
- sg13g2_buf_2 rebuffer4 (.A(\Ham.L3[0] ),
+ sg13g2_dlygate4sd3_1 hold4 (.A(\LastMSB[1] ),
     .X(net30));
- sg13g2_buf_2 rebuffer5 (.A(\Ham.L3[0] ),
+ sg13g2_dlygate4sd3_1 hold5 (.A(\sel2.t[1] ),
     .X(net31));
- sg13g2_buf_8 rebuffer6 (.A(\Ham.L3[9] ),
+ sg13g2_dlygate4sd3_1 hold6 (.A(\LastMSB[3] ),
     .X(net32));
- sg13g2_buf_1 rebuffer7 (.A(\Ham.L1[3] ),
+ sg13g2_dlygate4sd3_1 hold7 (.A(\sel2.t[3] ),
     .X(net33));
- sg13g2_buf_1 rebuffer8 (.A(\Ham.L3[1] ),
+ sg13g2_dlygate4sd3_1 hold8 (.A(\LastMSB[7] ),
     .X(net34));
- sg13g2_buf_1 rebuffer9 (.A(\Ham.L3[10] ),
+ sg13g2_dlygate4sd3_1 hold9 (.A(\sel2.t[7] ),
     .X(net35));
- sg13g2_buf_1 rebuffer10 (.A(\Ham.L3[10] ),
+ sg13g2_dlygate4sd3_1 hold10 (.A(\LastMSB[2] ),
     .X(net36));
- sg13g2_buf_1 rebuffer11 (.A(\Ham.L3[2] ),
+ sg13g2_dlygate4sd3_1 hold11 (.A(\sel2.t[2] ),
     .X(net37));
- sg13g2_dlygate4sd3_1 hold12 (.A(Den_In0),
+ sg13g2_dlygate4sd3_1 hold12 (.A(\FirstHalfWord[5] ),
     .X(net38));
- sg13g2_dlygate4sd3_1 hold13 (.A(\LastMSB[0] ),
+ sg13g2_dlygate4sd3_1 hold13 (.A(\FirstHalfWord[6] ),
     .X(net39));
- sg13g2_dlygate4sd3_1 hold14 (.A(\sel2.t[0] ),
+ sg13g2_dlygate4sd3_1 hold14 (.A(\FirstHalfWord[1] ),
     .X(net40));
- sg13g2_dlygate4sd3_1 hold15 (.A(\LastMSB[8] ),
+ sg13g2_dlygate4sd3_1 hold15 (.A(\FirstHalfWord[2] ),
     .X(net41));
- sg13g2_dlygate4sd3_1 hold18 (.A(\LastMSB[3] ),
+ sg13g2_dlygate4sd3_1 hold16 (.A(\FirstHalfWord[7] ),
+    .X(net42));
+ sg13g2_dlygate4sd3_1 hold17 (.A(\FirstHalfWord[8] ),
+    .X(net43));
+ sg13g2_dlygate4sd3_1 hold18 (.A(\FirstHalfWord[3] ),
     .X(net44));
- sg13g2_dlygate4sd3_1 hold21 (.A(\LastMSB[6] ),
+ sg13g2_dlygate4sd3_1 hold19 (.A(\FirstHalfWord[0] ),
+    .X(net45));
+ sg13g2_dlygate4sd3_1 hold20 (.A(\FirstHalfWord[4] ),
+    .X(net46));
+ sg13g2_dlygate4sd3_1 hold21 (.A(\LastMSB[8] ),
     .X(net47));
- sg13g2_dlygate4sd3_1 hold24 (.A(\LastMSB[2] ),
+ sg13g2_dlygate4sd3_1 hold22 (.A(\sel2.t[8] ),
+    .X(net48));
+ sg13g2_dlygate4sd3_1 hold23 (.A(\LastMSB[4] ),
+    .X(net76));
+ sg13g2_dlygate4sd3_1 hold24 (.A(\sel2.t[4] ),
     .X(net77));
- sg13g2_dlygate4sd3_1 hold25 (.A(\sel2.t[2] ),
+ sg13g2_dlygate4sd3_1 hold25 (.A(\LastMSB[6] ),
     .X(net78));
- sg13g2_dlygate4sd3_1 hold26 (.A(\LastMSB[1] ),
+ sg13g2_dlygate4sd3_1 hold26 (.A(\sel2.t[6] ),
     .X(net79));
- sg13g2_dlygate4sd3_1 hold27 (.A(\sel2.t[1] ),
+ sg13g2_dlygate4sd3_1 hold27 (.A(\LastMSB[5] ),
     .X(net80));
- sg13g2_dlygate4sd3_1 hold28 (.A(\LastMSB[4] ),
+ sg13g2_dlygate4sd3_1 hold28 (.A(\sel2.t[5] ),
     .X(net81));
- sg13g2_dlygate4sd3_1 hold31 (.A(\LastMSB[5] ),
+ sg13g2_dlygate4sd3_1 hold29 (.A(\Hammer_delayed[12] ),
+    .X(net82));
+ sg13g2_dlygate4sd3_1 hold30 (.A(\Hammer_delayed[2] ),
+    .X(net83));
+ sg13g2_dlygate4sd3_1 hold31 (.A(\Hammer_delayed[9] ),
     .X(net84));
- sg13g2_dlygate4sd3_1 hold33 (.A(\FirstHalfWord[2] ),
+ sg13g2_dlygate4sd3_1 hold32 (.A(\Hammer_delayed[1] ),
+    .X(net85));
+ sg13g2_dlygate4sd3_1 hold33 (.A(\Hammer_delayed[0] ),
     .X(net86));
- sg13g2_dlygate4sd3_1 hold34 (.A(\FirstHalfWord[5] ),
+ sg13g2_dlygate4sd3_1 hold34 (.A(\Hammer_delayed[10] ),
     .X(net87));
- sg13g2_dlygate4sd3_1 hold35 (.A(\FirstHalfWord[0] ),
+ sg13g2_dlygate4sd3_1 hold35 (.A(\Hammer_delayed[16] ),
     .X(net88));
- sg13g2_dlygate4sd3_1 hold36 (.A(\LastMSB[7] ),
+ sg13g2_dlygate4sd3_1 hold36 (.A(\Hammer_delayed[17] ),
     .X(net89));
- sg13g2_dlygate4sd3_1 hold39 (.A(\FirstHalfWord[6] ),
+ sg13g2_dlygate4sd3_1 hold37 (.A(\Hammer_delayed[11] ),
+    .X(net90));
+ sg13g2_dlygate4sd3_1 hold38 (.A(\Hammer_delayed[3] ),
+    .X(net91));
+ sg13g2_dlygate4sd3_1 hold39 (.A(\Hammer_delayed[8] ),
     .X(net92));
- sg13g2_dlygate4sd3_1 hold40 (.A(\FirstHalfWord[3] ),
+ sg13g2_dlygate4sd3_1 hold40 (.A(\Hammer_delayed[4] ),
     .X(net93));
- sg13g2_dlygate4sd3_1 hold41 (.A(\FirstHalfWord[4] ),
+ sg13g2_dlygate4sd3_1 hold41 (.A(\Hammer_delayed[7] ),
     .X(net94));
- sg13g2_dlygate4sd3_1 hold42 (.A(\FirstHalfWord[7] ),
+ sg13g2_dlygate4sd3_1 hold42 (.A(\Hammer_delayed[15] ),
     .X(net95));
- sg13g2_dlygate4sd3_1 hold43 (.A(\FirstHalfWord[8] ),
+ sg13g2_dlygate4sd3_1 hold43 (.A(\Hammer_delayed[5] ),
     .X(net96));
- sg13g2_dlygate4sd3_1 hold44 (.A(\FirstHalfWord[1] ),
+ sg13g2_dlygate4sd3_1 hold44 (.A(\Hammer_delayed[14] ),
     .X(net97));
- sg13g2_dlygate4sd3_1 hold45 (.A(\Hammer_delayed[2] ),
+ sg13g2_dlygate4sd3_1 hold45 (.A(\Hammer_delayed[13] ),
     .X(net98));
- sg13g2_dlygate4sd3_1 hold47 (.A(\Hammer_delayed[0] ),
+ sg13g2_dlygate4sd3_1 hold46 (.A(\Hammer_delayed[6] ),
+    .X(net99));
+ sg13g2_dlygate4sd3_1 hold47 (.A(\FirstWord[8] ),
     .X(net100));
- sg13g2_dlygate4sd3_1 hold48 (.A(\Hammer_delayed[10] ),
+ sg13g2_dlygate4sd3_1 hold48 (.A(\FirstWord[16] ),
     .X(net101));
- sg13g2_dlygate4sd3_1 hold49 (.A(\Hammer_delayed[11] ),
+ sg13g2_dlygate4sd3_1 hold49 (.A(\FirstWord[12] ),
     .X(net102));
- sg13g2_dlygate4sd3_1 hold50 (.A(\Hammer_delayed[1] ),
+ sg13g2_dlygate4sd3_1 hold50 (.A(\FirstWord[3] ),
     .X(net103));
- sg13g2_dlygate4sd3_1 hold51 (.A(\Hammer_delayed[16] ),
+ sg13g2_dlygate4sd3_1 hold51 (.A(\FirstWord[17] ),
     .X(net104));
- sg13g2_dlygate4sd3_1 hold52 (.A(\Hammer_delayed[8] ),
+ sg13g2_dlygate4sd3_1 hold52 (.A(\FirstWord[7] ),
     .X(net105));
- sg13g2_dlygate4sd3_1 hold53 (.A(\Hammer_delayed[9] ),
+ sg13g2_dlygate4sd3_1 hold53 (.A(\FirstWord[11] ),
     .X(net106));
- sg13g2_dlygate4sd3_1 hold54 (.A(\Hammer_delayed[15] ),
+ sg13g2_dlygate4sd3_1 hold54 (.A(\FirstWord[2] ),
     .X(net107));
- sg13g2_dlygate4sd3_1 hold55 (.A(\Hammer_delayed[6] ),
+ sg13g2_dlygate4sd3_1 hold55 (.A(\FirstWord[1] ),
     .X(net108));
- sg13g2_dlygate4sd3_1 hold56 (.A(\Hammer_delayed[17] ),
+ sg13g2_dlygate4sd3_1 hold56 (.A(\FirstWord[10] ),
     .X(net109));
- sg13g2_dlygate4sd3_1 hold57 (.A(\Hammer_delayed[7] ),
+ sg13g2_dlygate4sd3_1 hold57 (.A(\FirstWord[4] ),
     .X(net110));
- sg13g2_dlygate4sd3_1 hold58 (.A(\Hammer_delayed[3] ),
+ sg13g2_dlygate4sd3_1 hold58 (.A(\FirstWord[14] ),
     .X(net111));
- sg13g2_dlygate4sd3_1 hold59 (.A(\Hammer_delayed[5] ),
+ sg13g2_dlygate4sd3_1 hold59 (.A(Den_In1),
     .X(net112));
- sg13g2_dlygate4sd3_1 hold61 (.A(\Hammer_delayed[4] ),
+ sg13g2_dlygate4sd3_1 hold60 (.A(\FirstWord[0] ),
+    .X(net113));
+ sg13g2_dlygate4sd3_1 hold61 (.A(\FirstWord[15] ),
     .X(net114));
- sg13g2_dlygate4sd3_1 hold62 (.A(\Hammer_delayed[14] ),
+ sg13g2_dlygate4sd3_1 hold62 (.A(\FirstWord[9] ),
     .X(net115));
- sg13g2_dlygate4sd3_1 hold63 (.A(\FirstWord[8] ),
+ sg13g2_dlygate4sd3_1 hold63 (.A(\FirstWord[13] ),
     .X(net116));
- sg13g2_dlygate4sd3_1 hold64 (.A(\FirstWord[17] ),
+ sg13g2_dlygate4sd3_1 hold64 (.A(\FirstWord[5] ),
     .X(net117));
- sg13g2_dlygate4sd3_1 hold65 (.A(\FirstWord[7] ),
+ sg13g2_dlygate4sd3_1 hold65 (.A(\FirstWord[6] ),
     .X(net118));
- sg13g2_dlygate4sd3_1 hold66 (.A(Den_In1),
+ sg13g2_dlygate4sd3_1 hold66 (.A(QEN1),
     .X(net119));
- sg13g2_dlygate4sd3_1 hold67 (.A(\FirstWord[11] ),
+ sg13g2_dlygate4sd3_1 hold67 (.A(INT_RESET),
     .X(net120));
- sg13g2_dlygate4sd3_1 hold68 (.A(\FirstWord[2] ),
-    .X(net121));
- sg13g2_dlygate4sd3_1 hold70 (.A(\FirstWord[16] ),
-    .X(net123));
- sg13g2_dlygate4sd3_1 hold72 (.A(\FirstWord[3] ),
-    .X(net125));
- sg13g2_dlygate4sd3_1 hold73 (.A(\FirstWord[1] ),
-    .X(net126));
- sg13g2_dlygate4sd3_1 hold74 (.A(\FirstWord[10] ),
-    .X(net127));
- sg13g2_dlygate4sd3_1 hold75 (.A(\FirstWord[15] ),
-    .X(net128));
- sg13g2_dlygate4sd3_1 hold76 (.A(\FirstWord[14] ),
-    .X(net129));
- sg13g2_dlygate4sd3_1 hold77 (.A(\FirstWord[6] ),
-    .X(net130));
- sg13g2_dlygate4sd3_1 hold78 (.A(\FirstWord[0] ),
-    .X(net131));
- sg13g2_dlygate4sd3_1 hold79 (.A(\FirstWord[9] ),
-    .X(net132));
- sg13g2_dlygate4sd3_1 hold80 (.A(\FirstWord[5] ),
-    .X(net133));
- sg13g2_dlygate4sd3_1 hold81 (.A(\FirstWord[4] ),
-    .X(net134));
- sg13g2_dlygate4sd3_1 hold82 (.A(QEN1),
-    .X(net135));
- sg13g2_dlygate4sd3_1 hold83 (.A(INT_RESET),
-    .X(net136));
- sg13g2_dlygate4sd3_1 hold85 (.A(\Hammer_mixed[13] ),
-    .X(net138));
- sg13g2_dlygate4sd3_1 hold87 (.A(\Hammer_mixed[12] ),
-    .X(net140));
- sg13g2_dlygate4sd3_1 hold88 (.A(QEN),
-    .X(net141));
- sg13g2_dlygate4sd3_1 hold89 (.A(\Hammer_delayed[13] ),
-    .X(net142));
- sg13g2_dlygate4sd3_1 hold90 (.A(\Hammer_delayed[12] ),
-    .X(net143));
- sg13g2_dlygate4sd3_1 hold91 (.A(\FirstWord[12] ),
-    .X(net144));
- sg13g2_dlygate4sd3_1 hold92 (.A(\FirstWord[13] ),
-    .X(net145));
  sg13g2_decap_8 FILLER_0_0 ();
  sg13g2_decap_8 FILLER_0_7 ();
  sg13g2_decap_8 FILLER_0_14 ();
@@ -2520,9 +2496,8 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_16_378 ();
  sg13g2_decap_8 FILLER_16_385 ();
  sg13g2_decap_8 FILLER_16_392 ();
- sg13g2_decap_8 FILLER_16_399 ();
- sg13g2_fill_2 FILLER_16_406 ();
- sg13g2_fill_1 FILLER_16_408 ();
+ sg13g2_fill_2 FILLER_16_399 ();
+ sg13g2_fill_1 FILLER_16_401 ();
  sg13g2_decap_8 FILLER_17_0 ();
  sg13g2_decap_8 FILLER_17_7 ();
  sg13g2_decap_8 FILLER_17_14 ();
@@ -2567,18 +2542,18 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_17_287 ();
  sg13g2_decap_8 FILLER_17_294 ();
  sg13g2_decap_8 FILLER_17_301 ();
- sg13g2_fill_2 FILLER_17_308 ();
- sg13g2_decap_4 FILLER_17_318 ();
- sg13g2_fill_2 FILLER_17_322 ();
- sg13g2_fill_2 FILLER_17_340 ();
- sg13g2_decap_8 FILLER_17_350 ();
- sg13g2_decap_8 FILLER_17_357 ();
- sg13g2_decap_8 FILLER_17_364 ();
- sg13g2_decap_8 FILLER_17_371 ();
- sg13g2_decap_8 FILLER_17_378 ();
- sg13g2_decap_8 FILLER_17_385 ();
- sg13g2_decap_4 FILLER_17_392 ();
- sg13g2_fill_1 FILLER_17_396 ();
+ sg13g2_decap_8 FILLER_17_308 ();
+ sg13g2_fill_2 FILLER_17_315 ();
+ sg13g2_decap_8 FILLER_17_325 ();
+ sg13g2_decap_8 FILLER_17_332 ();
+ sg13g2_fill_1 FILLER_17_339 ();
+ sg13g2_decap_8 FILLER_17_348 ();
+ sg13g2_decap_8 FILLER_17_355 ();
+ sg13g2_decap_8 FILLER_17_362 ();
+ sg13g2_decap_8 FILLER_17_369 ();
+ sg13g2_decap_8 FILLER_17_376 ();
+ sg13g2_decap_8 FILLER_17_383 ();
+ sg13g2_decap_4 FILLER_17_390 ();
  sg13g2_decap_8 FILLER_18_0 ();
  sg13g2_decap_8 FILLER_18_7 ();
  sg13g2_decap_8 FILLER_18_14 ();
@@ -2623,16 +2598,11 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_18_287 ();
  sg13g2_decap_8 FILLER_18_294 ();
  sg13g2_fill_1 FILLER_18_301 ();
- sg13g2_decap_4 FILLER_18_334 ();
- sg13g2_fill_1 FILLER_18_338 ();
- sg13g2_decap_8 FILLER_18_355 ();
- sg13g2_decap_8 FILLER_18_362 ();
- sg13g2_decap_8 FILLER_18_369 ();
- sg13g2_decap_8 FILLER_18_376 ();
- sg13g2_decap_4 FILLER_18_383 ();
- sg13g2_fill_2 FILLER_18_387 ();
- sg13g2_fill_1 FILLER_18_398 ();
- sg13g2_fill_2 FILLER_18_407 ();
+ sg13g2_fill_2 FILLER_18_326 ();
+ sg13g2_decap_8 FILLER_18_360 ();
+ sg13g2_decap_8 FILLER_18_367 ();
+ sg13g2_decap_8 FILLER_18_374 ();
+ sg13g2_fill_2 FILLER_18_381 ();
  sg13g2_decap_8 FILLER_19_0 ();
  sg13g2_decap_8 FILLER_19_7 ();
  sg13g2_decap_8 FILLER_19_14 ();
@@ -2673,12 +2643,16 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_19_259 ();
  sg13g2_decap_8 FILLER_19_266 ();
  sg13g2_decap_8 FILLER_19_273 ();
- sg13g2_decap_8 FILLER_19_280 ();
- sg13g2_decap_8 FILLER_19_287 ();
- sg13g2_fill_1 FILLER_19_310 ();
- sg13g2_fill_2 FILLER_19_319 ();
- sg13g2_decap_4 FILLER_19_345 ();
- sg13g2_fill_2 FILLER_19_373 ();
+ sg13g2_decap_4 FILLER_19_280 ();
+ sg13g2_fill_1 FILLER_19_284 ();
+ sg13g2_fill_1 FILLER_19_293 ();
+ sg13g2_decap_4 FILLER_19_334 ();
+ sg13g2_fill_2 FILLER_19_338 ();
+ sg13g2_decap_4 FILLER_19_348 ();
+ sg13g2_fill_2 FILLER_19_352 ();
+ sg13g2_decap_4 FILLER_19_362 ();
+ sg13g2_decap_4 FILLER_19_375 ();
+ sg13g2_fill_1 FILLER_19_391 ();
  sg13g2_decap_8 FILLER_20_0 ();
  sg13g2_decap_8 FILLER_20_7 ();
  sg13g2_decap_8 FILLER_20_14 ();
@@ -2713,16 +2687,16 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_20_217 ();
  sg13g2_decap_8 FILLER_20_224 ();
  sg13g2_decap_8 FILLER_20_231 ();
- sg13g2_decap_4 FILLER_20_241 ();
- sg13g2_decap_8 FILLER_20_254 ();
- sg13g2_decap_8 FILLER_20_261 ();
- sg13g2_decap_8 FILLER_20_268 ();
- sg13g2_decap_4 FILLER_20_275 ();
- sg13g2_fill_1 FILLER_20_279 ();
- sg13g2_decap_4 FILLER_20_296 ();
- sg13g2_fill_1 FILLER_20_356 ();
- sg13g2_fill_1 FILLER_20_402 ();
- sg13g2_fill_2 FILLER_20_407 ();
+ sg13g2_decap_8 FILLER_20_238 ();
+ sg13g2_decap_8 FILLER_20_245 ();
+ sg13g2_decap_4 FILLER_20_252 ();
+ sg13g2_fill_2 FILLER_20_256 ();
+ sg13g2_decap_8 FILLER_20_264 ();
+ sg13g2_decap_8 FILLER_20_271 ();
+ sg13g2_decap_8 FILLER_20_303 ();
+ sg13g2_decap_8 FILLER_20_326 ();
+ sg13g2_fill_2 FILLER_20_357 ();
+ sg13g2_fill_1 FILLER_20_359 ();
  sg13g2_decap_8 FILLER_21_0 ();
  sg13g2_decap_8 FILLER_21_7 ();
  sg13g2_decap_8 FILLER_21_14 ();
@@ -2752,16 +2726,16 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_21_182 ();
  sg13g2_decap_8 FILLER_21_189 ();
  sg13g2_decap_8 FILLER_21_196 ();
- sg13g2_decap_8 FILLER_21_203 ();
- sg13g2_decap_8 FILLER_21_210 ();
- sg13g2_decap_8 FILLER_21_217 ();
- sg13g2_decap_8 FILLER_21_224 ();
- sg13g2_fill_2 FILLER_21_265 ();
- sg13g2_fill_1 FILLER_21_284 ();
- sg13g2_fill_2 FILLER_21_320 ();
- sg13g2_fill_1 FILLER_21_331 ();
- sg13g2_fill_1 FILLER_21_345 ();
- sg13g2_fill_1 FILLER_21_408 ();
+ sg13g2_decap_4 FILLER_21_203 ();
+ sg13g2_fill_2 FILLER_21_207 ();
+ sg13g2_fill_1 FILLER_21_212 ();
+ sg13g2_decap_8 FILLER_21_219 ();
+ sg13g2_decap_8 FILLER_21_226 ();
+ sg13g2_fill_2 FILLER_21_233 ();
+ sg13g2_fill_1 FILLER_21_313 ();
+ sg13g2_decap_4 FILLER_21_349 ();
+ sg13g2_fill_2 FILLER_21_353 ();
+ sg13g2_fill_2 FILLER_21_407 ();
  sg13g2_decap_8 FILLER_22_0 ();
  sg13g2_decap_8 FILLER_22_7 ();
  sg13g2_decap_8 FILLER_22_14 ();
@@ -2790,11 +2764,13 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_22_175 ();
  sg13g2_decap_8 FILLER_22_182 ();
  sg13g2_decap_8 FILLER_22_189 ();
- sg13g2_fill_2 FILLER_22_196 ();
- sg13g2_fill_1 FILLER_22_211 ();
- sg13g2_fill_2 FILLER_22_325 ();
- sg13g2_fill_1 FILLER_22_353 ();
- sg13g2_fill_1 FILLER_22_408 ();
+ sg13g2_decap_4 FILLER_22_196 ();
+ sg13g2_fill_2 FILLER_22_200 ();
+ sg13g2_fill_2 FILLER_22_229 ();
+ sg13g2_fill_1 FILLER_22_231 ();
+ sg13g2_decap_4 FILLER_22_263 ();
+ sg13g2_fill_1 FILLER_22_346 ();
+ sg13g2_fill_2 FILLER_22_407 ();
  sg13g2_decap_8 FILLER_23_0 ();
  sg13g2_decap_8 FILLER_23_7 ();
  sg13g2_decap_8 FILLER_23_14 ();
@@ -2822,13 +2798,10 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_23_168 ();
  sg13g2_decap_8 FILLER_23_175 ();
  sg13g2_decap_8 FILLER_23_182 ();
- sg13g2_decap_8 FILLER_23_189 ();
- sg13g2_fill_2 FILLER_23_196 ();
- sg13g2_fill_1 FILLER_23_198 ();
- sg13g2_fill_2 FILLER_23_212 ();
- sg13g2_fill_2 FILLER_23_253 ();
- sg13g2_fill_2 FILLER_23_268 ();
- sg13g2_fill_1 FILLER_23_395 ();
+ sg13g2_decap_4 FILLER_23_189 ();
+ sg13g2_fill_1 FILLER_23_193 ();
+ sg13g2_fill_2 FILLER_23_230 ();
+ sg13g2_fill_1 FILLER_23_288 ();
  sg13g2_decap_8 FILLER_24_0 ();
  sg13g2_decap_8 FILLER_24_7 ();
  sg13g2_decap_8 FILLER_24_14 ();
@@ -2852,13 +2825,18 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_24_140 ();
  sg13g2_decap_8 FILLER_24_147 ();
  sg13g2_decap_8 FILLER_24_154 ();
- sg13g2_fill_2 FILLER_24_161 ();
- sg13g2_decap_8 FILLER_24_181 ();
- sg13g2_decap_4 FILLER_24_188 ();
- sg13g2_fill_2 FILLER_24_300 ();
- sg13g2_fill_1 FILLER_24_302 ();
- sg13g2_fill_2 FILLER_24_358 ();
- sg13g2_fill_1 FILLER_24_408 ();
+ sg13g2_decap_8 FILLER_24_161 ();
+ sg13g2_decap_8 FILLER_24_168 ();
+ sg13g2_decap_8 FILLER_24_175 ();
+ sg13g2_decap_8 FILLER_24_182 ();
+ sg13g2_decap_4 FILLER_24_189 ();
+ sg13g2_fill_2 FILLER_24_220 ();
+ sg13g2_fill_2 FILLER_24_267 ();
+ sg13g2_fill_1 FILLER_24_269 ();
+ sg13g2_decap_4 FILLER_24_303 ();
+ sg13g2_fill_2 FILLER_24_307 ();
+ sg13g2_fill_1 FILLER_24_354 ();
+ sg13g2_fill_2 FILLER_24_407 ();
  sg13g2_decap_8 FILLER_25_0 ();
  sg13g2_decap_8 FILLER_25_7 ();
  sg13g2_decap_8 FILLER_25_14 ();
@@ -2881,14 +2859,15 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_25_133 ();
  sg13g2_decap_8 FILLER_25_140 ();
  sg13g2_decap_8 FILLER_25_147 ();
- sg13g2_decap_4 FILLER_25_154 ();
- sg13g2_decap_4 FILLER_25_185 ();
- sg13g2_fill_2 FILLER_25_189 ();
- sg13g2_fill_2 FILLER_25_277 ();
- sg13g2_fill_1 FILLER_25_279 ();
- sg13g2_fill_2 FILLER_25_329 ();
- sg13g2_fill_2 FILLER_25_354 ();
- sg13g2_fill_1 FILLER_25_356 ();
+ sg13g2_decap_8 FILLER_25_154 ();
+ sg13g2_decap_8 FILLER_25_161 ();
+ sg13g2_decap_4 FILLER_25_168 ();
+ sg13g2_fill_1 FILLER_25_172 ();
+ sg13g2_fill_2 FILLER_25_222 ();
+ sg13g2_fill_1 FILLER_25_322 ();
+ sg13g2_fill_1 FILLER_25_333 ();
+ sg13g2_fill_2 FILLER_25_356 ();
+ sg13g2_fill_2 FILLER_25_403 ();
  sg13g2_decap_8 FILLER_26_0 ();
  sg13g2_decap_8 FILLER_26_7 ();
  sg13g2_decap_8 FILLER_26_14 ();
@@ -2911,12 +2890,15 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_26_133 ();
  sg13g2_decap_8 FILLER_26_140 ();
  sg13g2_decap_8 FILLER_26_147 ();
- sg13g2_fill_2 FILLER_26_206 ();
- sg13g2_fill_2 FILLER_26_276 ();
- sg13g2_fill_1 FILLER_26_278 ();
- sg13g2_fill_1 FILLER_26_299 ();
- sg13g2_fill_2 FILLER_26_375 ();
- sg13g2_fill_2 FILLER_26_407 ();
+ sg13g2_decap_8 FILLER_26_154 ();
+ sg13g2_decap_8 FILLER_26_161 ();
+ sg13g2_decap_4 FILLER_26_168 ();
+ sg13g2_fill_1 FILLER_26_172 ();
+ sg13g2_fill_1 FILLER_26_177 ();
+ sg13g2_fill_2 FILLER_26_287 ();
+ sg13g2_fill_1 FILLER_26_313 ();
+ sg13g2_fill_2 FILLER_26_362 ();
+ sg13g2_fill_1 FILLER_26_408 ();
  sg13g2_decap_8 FILLER_27_0 ();
  sg13g2_decap_8 FILLER_27_7 ();
  sg13g2_decap_8 FILLER_27_14 ();
@@ -2938,13 +2920,13 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_27_126 ();
  sg13g2_decap_8 FILLER_27_133 ();
  sg13g2_decap_8 FILLER_27_140 ();
- sg13g2_fill_2 FILLER_27_147 ();
- sg13g2_fill_1 FILLER_27_235 ();
- sg13g2_fill_2 FILLER_27_318 ();
- sg13g2_fill_1 FILLER_27_320 ();
- sg13g2_fill_2 FILLER_27_366 ();
- sg13g2_fill_1 FILLER_27_372 ();
- sg13g2_fill_1 FILLER_27_408 ();
+ sg13g2_decap_8 FILLER_27_147 ();
+ sg13g2_decap_8 FILLER_27_154 ();
+ sg13g2_fill_2 FILLER_27_161 ();
+ sg13g2_fill_2 FILLER_27_175 ();
+ sg13g2_fill_1 FILLER_27_243 ();
+ sg13g2_decap_4 FILLER_27_302 ();
+ sg13g2_fill_2 FILLER_27_407 ();
  sg13g2_decap_8 FILLER_28_0 ();
  sg13g2_decap_8 FILLER_28_7 ();
  sg13g2_decap_8 FILLER_28_14 ();
@@ -2965,14 +2947,11 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_28_119 ();
  sg13g2_decap_8 FILLER_28_126 ();
  sg13g2_decap_8 FILLER_28_133 ();
- sg13g2_decap_8 FILLER_28_140 ();
- sg13g2_decap_4 FILLER_28_147 ();
- sg13g2_fill_2 FILLER_28_151 ();
- sg13g2_fill_2 FILLER_28_239 ();
- sg13g2_fill_1 FILLER_28_249 ();
- sg13g2_fill_1 FILLER_28_276 ();
- sg13g2_fill_2 FILLER_28_314 ();
- sg13g2_fill_1 FILLER_28_335 ();
+ sg13g2_fill_2 FILLER_28_140 ();
+ sg13g2_fill_1 FILLER_28_142 ();
+ sg13g2_decap_4 FILLER_28_214 ();
+ sg13g2_fill_1 FILLER_28_271 ();
+ sg13g2_fill_1 FILLER_28_301 ();
  sg13g2_decap_8 FILLER_29_0 ();
  sg13g2_decap_8 FILLER_29_7 ();
  sg13g2_decap_8 FILLER_29_14 ();
@@ -2992,12 +2971,11 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_29_112 ();
  sg13g2_decap_8 FILLER_29_119 ();
  sg13g2_decap_8 FILLER_29_126 ();
- sg13g2_decap_8 FILLER_29_133 ();
- sg13g2_decap_8 FILLER_29_140 ();
- sg13g2_decap_4 FILLER_29_147 ();
- sg13g2_fill_2 FILLER_29_151 ();
- sg13g2_fill_1 FILLER_29_275 ();
- sg13g2_fill_2 FILLER_29_302 ();
+ sg13g2_fill_2 FILLER_29_133 ();
+ sg13g2_fill_1 FILLER_29_135 ();
+ sg13g2_fill_1 FILLER_29_262 ();
+ sg13g2_fill_1 FILLER_29_293 ();
+ sg13g2_fill_2 FILLER_29_304 ();
  sg13g2_fill_1 FILLER_29_408 ();
  sg13g2_decap_8 FILLER_30_0 ();
  sg13g2_decap_8 FILLER_30_7 ();
@@ -3021,8 +2999,14 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_30_133 ();
  sg13g2_decap_8 FILLER_30_140 ();
  sg13g2_fill_2 FILLER_30_147 ();
- sg13g2_fill_1 FILLER_30_220 ();
- sg13g2_fill_1 FILLER_30_272 ();
+ sg13g2_fill_1 FILLER_30_193 ();
+ sg13g2_decap_4 FILLER_30_204 ();
+ sg13g2_fill_1 FILLER_30_208 ();
+ sg13g2_fill_1 FILLER_30_227 ();
+ sg13g2_fill_2 FILLER_30_290 ();
+ sg13g2_fill_2 FILLER_30_307 ();
+ sg13g2_fill_2 FILLER_30_337 ();
+ sg13g2_fill_2 FILLER_30_348 ();
  sg13g2_fill_2 FILLER_30_407 ();
  sg13g2_decap_8 FILLER_31_0 ();
  sg13g2_decap_8 FILLER_31_7 ();
@@ -3046,10 +3030,10 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_31_133 ();
  sg13g2_decap_8 FILLER_31_140 ();
  sg13g2_decap_8 FILLER_31_147 ();
- sg13g2_fill_2 FILLER_31_198 ();
- sg13g2_fill_1 FILLER_31_297 ();
- sg13g2_fill_2 FILLER_31_356 ();
- sg13g2_fill_1 FILLER_31_358 ();
+ sg13g2_decap_4 FILLER_31_154 ();
+ sg13g2_fill_2 FILLER_31_158 ();
+ sg13g2_decap_4 FILLER_31_219 ();
+ sg13g2_fill_2 FILLER_31_273 ();
  sg13g2_fill_1 FILLER_31_372 ();
  sg13g2_fill_1 FILLER_31_408 ();
  sg13g2_decap_8 FILLER_32_0 ();
@@ -3074,13 +3058,8 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_32_133 ();
  sg13g2_decap_8 FILLER_32_140 ();
  sg13g2_decap_8 FILLER_32_147 ();
- sg13g2_decap_8 FILLER_32_154 ();
- sg13g2_fill_1 FILLER_32_161 ();
- sg13g2_fill_1 FILLER_32_228 ();
- sg13g2_fill_2 FILLER_32_239 ();
- sg13g2_fill_1 FILLER_32_283 ();
- sg13g2_fill_1 FILLER_32_349 ();
- sg13g2_fill_2 FILLER_32_385 ();
+ sg13g2_decap_4 FILLER_32_208 ();
+ sg13g2_fill_2 FILLER_32_407 ();
  sg13g2_decap_8 FILLER_33_0 ();
  sg13g2_decap_8 FILLER_33_7 ();
  sg13g2_decap_8 FILLER_33_14 ();
@@ -3100,17 +3079,13 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_33_112 ();
  sg13g2_decap_8 FILLER_33_119 ();
  sg13g2_decap_8 FILLER_33_126 ();
- sg13g2_decap_8 FILLER_33_133 ();
- sg13g2_decap_8 FILLER_33_140 ();
- sg13g2_decap_8 FILLER_33_147 ();
- sg13g2_decap_8 FILLER_33_154 ();
- sg13g2_decap_8 FILLER_33_161 ();
- sg13g2_fill_1 FILLER_33_168 ();
- sg13g2_fill_2 FILLER_33_207 ();
- sg13g2_fill_1 FILLER_33_248 ();
- sg13g2_fill_1 FILLER_33_281 ();
- sg13g2_fill_1 FILLER_33_309 ();
- sg13g2_fill_1 FILLER_33_408 ();
+ sg13g2_decap_4 FILLER_33_133 ();
+ sg13g2_fill_2 FILLER_33_137 ();
+ sg13g2_fill_1 FILLER_33_214 ();
+ sg13g2_fill_1 FILLER_33_231 ();
+ sg13g2_fill_1 FILLER_33_296 ();
+ sg13g2_fill_1 FILLER_33_384 ();
+ sg13g2_fill_2 FILLER_33_407 ();
  sg13g2_decap_8 FILLER_34_0 ();
  sg13g2_decap_8 FILLER_34_7 ();
  sg13g2_decap_8 FILLER_34_14 ();
@@ -3132,11 +3107,13 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_34_126 ();
  sg13g2_decap_8 FILLER_34_133 ();
  sg13g2_decap_8 FILLER_34_140 ();
- sg13g2_decap_8 FILLER_34_147 ();
- sg13g2_decap_8 FILLER_34_154 ();
- sg13g2_decap_4 FILLER_34_161 ();
- sg13g2_fill_2 FILLER_34_255 ();
- sg13g2_fill_1 FILLER_34_329 ();
+ sg13g2_decap_4 FILLER_34_147 ();
+ sg13g2_decap_4 FILLER_34_186 ();
+ sg13g2_fill_2 FILLER_34_190 ();
+ sg13g2_fill_2 FILLER_34_215 ();
+ sg13g2_fill_1 FILLER_34_240 ();
+ sg13g2_fill_1 FILLER_34_286 ();
+ sg13g2_fill_1 FILLER_34_408 ();
  sg13g2_decap_8 FILLER_35_0 ();
  sg13g2_decap_8 FILLER_35_7 ();
  sg13g2_decap_8 FILLER_35_14 ();
@@ -3159,10 +3136,14 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_35_133 ();
  sg13g2_decap_8 FILLER_35_140 ();
  sg13g2_decap_8 FILLER_35_147 ();
- sg13g2_decap_4 FILLER_35_154 ();
- sg13g2_fill_2 FILLER_35_158 ();
- sg13g2_fill_1 FILLER_35_188 ();
- sg13g2_fill_2 FILLER_35_216 ();
+ sg13g2_fill_1 FILLER_35_154 ();
+ sg13g2_fill_2 FILLER_35_164 ();
+ sg13g2_fill_1 FILLER_35_166 ();
+ sg13g2_decap_4 FILLER_35_176 ();
+ sg13g2_fill_2 FILLER_35_180 ();
+ sg13g2_fill_1 FILLER_35_247 ();
+ sg13g2_fill_1 FILLER_35_349 ();
+ sg13g2_fill_2 FILLER_35_407 ();
  sg13g2_decap_8 FILLER_36_0 ();
  sg13g2_decap_8 FILLER_36_7 ();
  sg13g2_decap_8 FILLER_36_14 ();
@@ -3185,10 +3166,10 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_36_133 ();
  sg13g2_decap_8 FILLER_36_140 ();
  sg13g2_decap_8 FILLER_36_147 ();
- sg13g2_fill_2 FILLER_36_154 ();
- sg13g2_fill_1 FILLER_36_208 ();
- sg13g2_fill_2 FILLER_36_358 ();
- sg13g2_fill_1 FILLER_36_408 ();
+ sg13g2_decap_8 FILLER_36_154 ();
+ sg13g2_decap_8 FILLER_36_161 ();
+ sg13g2_fill_1 FILLER_36_168 ();
+ sg13g2_fill_1 FILLER_36_172 ();
  sg13g2_decap_8 FILLER_37_0 ();
  sg13g2_decap_8 FILLER_37_7 ();
  sg13g2_decap_8 FILLER_37_14 ();
@@ -3210,11 +3191,12 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_8 FILLER_37_126 ();
  sg13g2_decap_8 FILLER_37_133 ();
  sg13g2_decap_8 FILLER_37_140 ();
- sg13g2_decap_4 FILLER_37_147 ();
- sg13g2_fill_2 FILLER_37_338 ();
- sg13g2_fill_1 FILLER_37_340 ();
- sg13g2_fill_1 FILLER_37_385 ();
- sg13g2_fill_1 FILLER_37_408 ();
+ sg13g2_decap_8 FILLER_37_147 ();
+ sg13g2_decap_8 FILLER_37_154 ();
+ sg13g2_fill_2 FILLER_37_161 ();
+ sg13g2_fill_1 FILLER_37_163 ();
+ sg13g2_fill_1 FILLER_37_189 ();
+ sg13g2_fill_1 FILLER_37_247 ();
  sg13g2_decap_8 FILLER_38_0 ();
  sg13g2_decap_8 FILLER_38_7 ();
  sg13g2_decap_8 FILLER_38_14 ();
@@ -3233,12 +3215,12 @@ module tt_um_miniMAC (clk,
  sg13g2_decap_4 FILLER_38_116 ();
  sg13g2_decap_4 FILLER_38_124 ();
  sg13g2_decap_4 FILLER_38_132 ();
- sg13g2_fill_1 FILLER_38_140 ();
- sg13g2_fill_1 FILLER_38_148 ();
- sg13g2_fill_1 FILLER_38_227 ();
- sg13g2_fill_2 FILLER_38_270 ();
- sg13g2_fill_2 FILLER_38_317 ();
- sg13g2_fill_1 FILLER_38_408 ();
+ sg13g2_decap_4 FILLER_38_140 ();
+ sg13g2_decap_8 FILLER_38_148 ();
+ sg13g2_decap_8 FILLER_38_155 ();
+ sg13g2_decap_4 FILLER_38_162 ();
+ sg13g2_fill_2 FILLER_38_166 ();
+ sg13g2_fill_1 FILLER_38_189 ();
  assign uio_oe[0] = net22;
  assign uio_oe[1] = net23;
  assign uio_oe[2] = net24;
