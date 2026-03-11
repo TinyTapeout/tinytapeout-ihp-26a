@@ -1,0 +1,47 @@
+131. Printing statistics.
+
+=== tt_um_libormiller_SIMON_SPI ===
+
+   Number of wires:               1673
+   Number of wire bits:           1708
+   Number of public wires:         332
+   Number of public wire bits:     367
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1689
+     sg13g2_a21o_1                  26
+     sg13g2_a21oi_1                186
+     sg13g2_a221oi_1                 2
+     sg13g2_a22oi_1                 95
+     sg13g2_and2_1                  12
+     sg13g2_and3_1                   4
+     sg13g2_and4_1                   1
+     sg13g2_buf_1                    7
+     sg13g2_dfrbpq_1               342
+     sg13g2_ebufn_2                  1
+     sg13g2_inv_1                   82
+     sg13g2_mux2_1                 126
+     sg13g2_nand2_1                 96
+     sg13g2_nand2b_1                73
+     sg13g2_nand3_1                 14
+     sg13g2_nand3b_1                 3
+     sg13g2_nand4_1                  3
+     sg13g2_nor2_1                  54
+     sg13g2_nor2b_1                 30
+     sg13g2_nor3_1                  15
+     sg13g2_nor4_1                   8
+     sg13g2_o21ai_1                191
+     sg13g2_or2_1                    8
+     sg13g2_or3_1                    1
+     sg13g2_or4_1                    1
+     sg13g2_tiehi                  142
+     sg13g2_tielo                   22
+     sg13g2_xnor2_1                105
+     sg13g2_xor2_1                  39
+
+   Chip area for module '\tt_um_libormiller_SIMON_SPI': 30364.021800
+     of which used for sequential elements: 16754.169600 (55.18%)
+
