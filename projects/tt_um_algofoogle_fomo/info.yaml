@@ -18,12 +18,14 @@ project:
   source_files:
     - "project.v"
     - "hvsync_generator.v"
+    - "palette.v"
+    - "bitmap_rom.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
+  ui[0]: "tiling"
+  ui[1]: "color_bounce"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
