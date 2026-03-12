@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "Tschai's Tic-Tac-Toe"      # Project title
+  author:       "tschai-yim"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "The classic Tic-Tac-Toe game implemented in ASIC for maximum performance!"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_tschai_yim_mill"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "tictactoe.sv"
+    - "button_handler.sv"
+    - "debouncer.sv"
+    - "blinker_timer.sv"
+    - "blinker_lut.sv"
+    - "prescaler.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Button Top Left"
+  ui[1]: "Button Top Center"
+  ui[2]: "Button Top Right"
+  ui[3]: "Button Middle Left"
+  ui[4]: "Button Middle Center"
+  ui[5]: "Button Middle Right"
+  ui[6]: "Button Bottom Left"
+  ui[7]: "Button Bottom Center"
+
+  # Outputs
+  uo[0]: "LED Top Left"
+  uo[1]: "LED Top Center"
+  uo[2]: "LED Top Right"
+  uo[3]: "LED Middle Left"
+  uo[4]: "LED Middle Center"
+  uo[5]: "LED Middle Right"
+  uo[6]: "LED Bottom Left"
+  uo[7]: "LED Bottom Center"
+
+  # Bidirectional pins
+  uio[0]: "Button Bottom Right"
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: "LED Bottom Right"
+
+# Do not change!
+yaml_version: 6
