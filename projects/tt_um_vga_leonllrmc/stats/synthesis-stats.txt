@@ -2,46 +2,45 @@
 
 === tt_um_vga_leonllrmc ===
 
-   Number of wires:               1670
-   Number of wire bits:           1705
-   Number of public wires:          89
-   Number of public wire bits:     124
+   Number of wires:               2471
+   Number of wire bits:           2506
+   Number of public wires:          98
+   Number of public wire bits:     133
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1686
-     sg13g2_a21o_1                  33
-     sg13g2_a21oi_1                170
-     sg13g2_a221oi_1                28
-     sg13g2_a22oi_1                 40
-     sg13g2_and2_1                  58
-     sg13g2_and3_1                   4
-     sg13g2_and4_1                   2
+   Number of cells:               2487
+     sg13g2_a21o_1                  36
+     sg13g2_a21oi_1                246
+     sg13g2_a221oi_1                65
+     sg13g2_a22oi_1                 59
+     sg13g2_and2_1                  86
+     sg13g2_and3_1                  18
+     sg13g2_and4_1                  12
      sg13g2_buf_1                    2
-     sg13g2_dfrbpq_1                81
-     sg13g2_inv_1                   76
-     sg13g2_mux2_1                  64
-     sg13g2_mux4_1                   2
-     sg13g2_nand2_1                220
-     sg13g2_nand2b_1                78
-     sg13g2_nand3_1                 39
-     sg13g2_nand3b_1                 9
-     sg13g2_nand4_1                  9
-     sg13g2_nor2_1                 134
-     sg13g2_nor2b_1                 76
-     sg13g2_nor3_1                  49
-     sg13g2_nor4_1                   6
-     sg13g2_o21ai_1                190
-     sg13g2_or2_1                   16
-     sg13g2_or3_1                    3
-     sg13g2_or4_1                    1
+     sg13g2_dfrbpq_1                90
+     sg13g2_inv_1                   78
+     sg13g2_mux2_1                  94
+     sg13g2_mux4_1                   6
+     sg13g2_nand2_1                356
+     sg13g2_nand2b_1               127
+     sg13g2_nand3_1                 63
+     sg13g2_nand3b_1                14
+     sg13g2_nand4_1                 17
+     sg13g2_nor2_1                 198
+     sg13g2_nor2b_1                 96
+     sg13g2_nor3_1                  62
+     sg13g2_nor4_1                   5
+     sg13g2_o21ai_1                260
+     sg13g2_or2_1                   43
+     sg13g2_or3_1                   13
      sg13g2_tiehi                   22
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                178
-     sg13g2_xor2_1                  80
+     sg13g2_xnor2_1                265
+     sg13g2_xor2_1                 138
 
-   Chip area for module '\tt_um_vga_leonllrmc': 20025.835200
-     of which used for sequential elements: 3968.092800 (19.81%)
+   Chip area for module '\tt_um_vga_leonllrmc': 28872.131400
+     of which used for sequential elements: 4408.992000 (15.27%)
 
