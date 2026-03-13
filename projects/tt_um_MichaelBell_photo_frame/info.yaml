@@ -20,6 +20,7 @@ project:
     - "project.v"
     - "qspi.v"
     - "display.v"
+    - "dither.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
@@ -29,9 +30,9 @@ pinout:
   ui[1]: "Config data"
   ui[2]: "Display enable"
   ui[3]: "Select QSPI pinout"
-  ui[4]: "QSPI clock half cycle delay"
-  ui[5]: "QSPI latency 0"
-  ui[6]: "QSPI latency 1"
+  ui[4]: "QSPI latency 0"
+  ui[5]: "QSPI latency 1"
+  ui[6]: "QSPI latency 2"
   ui[7]: "Address high bit"
 
   # Outputs
