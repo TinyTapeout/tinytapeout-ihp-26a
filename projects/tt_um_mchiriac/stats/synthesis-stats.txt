@@ -1,0 +1,46 @@
+129. Printing statistics.
+
+=== tt_um_mchiriac ===
+
+   Number of wires:               3442
+   Number of wire bits:           3477
+   Number of public wires:         753
+   Number of public wire bits:     788
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3458
+     sg13g2_a21o_1                  24
+     sg13g2_a21oi_1                 64
+     sg13g2_a221oi_1                54
+     sg13g2_a22oi_1                336
+     sg13g2_and2_1                  28
+     sg13g2_and3_1                  14
+     sg13g2_and4_1                  13
+     sg13g2_buf_1                    3
+     sg13g2_dfrbpq_1               754
+     sg13g2_inv_1                   67
+     sg13g2_mux2_1                 592
+     sg13g2_nand2_1                228
+     sg13g2_nand2b_1                24
+     sg13g2_nand3_1                 75
+     sg13g2_nand3b_1                12
+     sg13g2_nand4_1                 64
+     sg13g2_nor2_1                 117
+     sg13g2_nor2b_1                 20
+     sg13g2_nor3_1                  48
+     sg13g2_nor4_1                  42
+     sg13g2_o21ai_1                189
+     sg13g2_or2_1                   17
+     sg13g2_or3_1                    1
+     sg13g2_or4_1                    1
+     sg13g2_tiehi                  643
+     sg13g2_tielo                   10
+     sg13g2_xnor2_1                 14
+     sg13g2_xor2_1                   4
+
+   Chip area for module '\tt_um_mchiriac': 66221.971200
+     of which used for sequential elements: 36937.555200 (55.78%)
+
