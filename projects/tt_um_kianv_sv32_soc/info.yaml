@@ -1,0 +1,100 @@
+# Tiny Tapeout project information
+project:
+  title:        "KianV SV32 TT Linux SoC"
+  author:       "Hirosh Dabui, Uri Shaked"
+  discord:      ""
+  description:  "RISC-V Linux SoC on TT"
+  language:     "Verilog"
+  clock_hz:     0
+
+  # How many tiles your design occupies?
+  tiles: "8x4"
+
+  # Your top module name must start with "tt_um_".
+  top_module:  "tt_um_kianv_sv32_soc"
+
+  # Source files must be in ./src (paths here are relative to ./src)
+  source_files:
+    - "cache.v"
+    - "clint.v"
+    - "dcache.v"
+    - "dcache_sram.v"
+    - "fifo.v"
+    - "gpio.v"
+    - "icache.v"
+    - "icache_sram.v"
+    - "kianv-sv32-tt/alu.v"
+    - "kianv-sv32-tt/alu_decoder.v"
+    - "kianv-sv32-tt/associative_cache.v"
+    - "kianv-sv32-tt/control_unit.v"
+    - "kianv-sv32-tt/csr_decoder.v"
+    - "kianv-sv32-tt/csr_exception_handler.v"
+    - "kianv-sv32-tt/csr_unit.v"
+    - "kianv-sv32-tt/datapath_unit.v"
+    - "kianv-sv32-tt/design_elements.v"
+    - "kianv-sv32-tt/divider.v"
+    - "kianv-sv32-tt/divider_decoder.v"
+    - "kianv-sv32-tt/extend.v"
+    - "kianv-sv32-tt/interrupt_controller.v"
+    - "kianv-sv32-tt/kianv_harris_mc_edition.v"
+    - "kianv-sv32-tt/load_alignment.v"
+    - "kianv-sv32-tt/load_decoder.v"
+    - "kianv-sv32-tt/main_fsm.v"
+    - "kianv-sv32-tt/multiplier.v"
+    - "kianv-sv32-tt/multiplier_decoder.v"
+    - "kianv-sv32-tt/multiplier_extension_decoder.v"
+    - "kianv-sv32-tt/register_file.v"
+    - "kianv-sv32-tt/store_alignment.v"
+    - "kianv-sv32-tt/store_decoder.v"
+    - "kianv-sv32-tt/sv32.v"
+    - "kianv-sv32-tt/sv32_table_walk.v"
+    - "kianv-sv32-tt/sv32_translate_data_to_physical.v"
+    - "kianv-sv32-tt/sv32_translate_instruction_to_physical.v"
+    - "kianv_smem.v"
+    - "rx_uart.v"
+    - "soc.v"
+    - "spi.v"
+    - "spi_nor_flash.v"
+    - "sram_sp_64x56.v"
+    - "sram_sp_256x56.v"
+    - "sram_sp_512x56.v"
+    - "RM_IHPSG13_1P_core_behavioral_bm_bist.v"
+    - "RM_IHPSG13_1P_64x64_c2_bm_bist.v"
+    - "RM_IHPSG13_1P_256x64_c2_bm_bist.v"
+    - "RM_IHPSG13_1P_512x64_c2_bm_bist.v"
+    - "tt_um_kianv_sv32_soc.v"
+    - "tx_uart.v"
+
+# Pinout for docs/website. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: "GPIO0 IN"
+  ui[2]: "SPI MISO"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: "UART RX"
+
+  # Outputs
+  uo[0]: "UART TX"
+  uo[1]: "GPIO0 OUT"
+  uo[2]: "SPI CS1"
+  uo[3]: "SPI MOSI"
+  uo[4]: "SPI CS0"
+  uo[5]: "SPI SCLK"
+  uo[6]: "SPI CS2"
+  uo[7]: "SPI CS3"
+
+  # Bidirectional pins
+  uio[0]: "KVSMEM SS_N"
+  uio[1]: "KVSMEM SIO0"
+  uio[2]: "KVSMEM SIO1"
+  uio[3]: "KVSMEM SCLK"
+  uio[4]: "KVSMEM SIO2"
+  uio[5]: "KVSMEM SIO3"
+  uio[6]: "KVSMEM CSN0"
+  uio[7]: "KVSMEM CSN1"
+# Do not change!
+yaml_version: 6
