@@ -2,16 +2,16 @@
 
 === tt_um_miniMAC ===
 
-   Number of wires:                212
-   Number of wire bits:            247
-   Number of public wires:         212
-   Number of public wire bits:     247
+   Number of wires:                330
+   Number of wire bits:            365
+   Number of public wires:         330
+   Number of public wire bits:     365
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                228
+   Number of cells:                346
      sg13g2_a22oi_1                  9
      sg13g2_and2_1                   1
      sg13g2_and4_1                   1
@@ -19,16 +19,16 @@
      sg13g2_dfrbp_2                  1
      sg13g2_dfrbpq_1                32
      sg13g2_inv_1                   10
-     sg13g2_mux2_2                  36
+     sg13g2_mux2_2                  54
+     sg13g2_nand2_1                  1
      sg13g2_nor4_1                   4
-     sg13g2_or2_1                    1
-     sg13g2_sdfrbpq_1               36
+     sg13g2_sdfrbpq_1               54
      sg13g2_tiehi                    4
      sg13g2_tielo                    8
-     sg13g2_xor2_1                  82
+     sg13g2_xor2_1                 164
 
    Area for cell type \sg13g2_dfrbp_2 is unknown!
 
-   Chip area for module '\tt_um_miniMAC': 6099.672600
-     of which used for sequential elements: 3853.785600 (63.18%)
+   Chip area for module '\tt_um_miniMAC': 8790.427800
+     of which used for sequential elements: 4996.857600 (56.84%)
 

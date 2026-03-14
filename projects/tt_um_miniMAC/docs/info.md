@@ -22,7 +22,7 @@ An external circuit is required to implement the higher-level protocol, bufferin
 
 ## How it works
 
-The gPEAC requires two cycles:
+The gPEAC requires two cycles, two passes through the adder: first to compute the sums, then to adjust the modulus. OTOH the Hammer18 circuit requires one depth of XOR, but at different places:
 
 - For encoding, the input data goes through gPEAC then Hammer is inserted at the end of the last cycle.
 
@@ -68,7 +68,8 @@ Notes :
 - The input/plaintext word contains the C/D bit and an unused bit. C/D should be on Dx8 of the first halfword for fastest detection.
 - The output/scrambled word contains the C/D bit and an error bit (saves a pin)
 - Asserting DEN during more than one cycle is an error condition.
-- The Zero output is always active (encoding as well as decoding) but gives a valid result only when QEN is asserted.
+- The Zero output is always active (encoding as well as decoding) but gives a valid result only when QEN is asserted. It does only check the data bits: [7:0] and [17:9], conveniently mapped to the output byte pins.
+- Do not change the Enc and Dec while data are in the pipeline, do it during the Reset state.
 
 ## External hardware
 
