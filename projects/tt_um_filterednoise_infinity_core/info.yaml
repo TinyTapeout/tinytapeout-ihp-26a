@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "The Infinity Core"
+  title:        "Infinity Core"
   author:       "FilteredNoise"
   discord:      ""        # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Audio visualizer and algorithmic pattern generator"
