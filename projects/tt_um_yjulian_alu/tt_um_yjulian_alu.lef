@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_yjulian_mima
+MACRO tt_um_yjulian_alu
   CLASS BLOCK ;
-  FOREIGN tt_um_yjulian_mima ;
+  FOREIGN tt_um_yjulian_alu ;
   ORIGIN 0.000 0.000 ;
   SIZE 202.080 BY 154.980 ;
   PIN VGND
@@ -93,7 +93,7 @@ MACRO tt_um_yjulian_mima
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 175.530 153.980 175.830 154.980 ;
@@ -378,7 +378,7 @@ MACRO tt_um_yjulian_mima
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.706800 ;
+    ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
         RECT 114.090 153.980 114.390 154.980 ;
@@ -396,7 +396,7 @@ MACRO tt_um_yjulian_mima
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.632400 ;
+    ANTENNADIFFAREA 0.706800 ;
     PORT
       LAYER Metal4 ;
         RECT 106.410 153.980 106.710 154.980 ;
@@ -444,9 +444,9 @@ MACRO tt_um_yjulian_mima
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 11.895 3.635 198.825 152.185 ;
+        RECT 15.560 3.635 198.345 152.185 ;
       LAYER Metal3 ;
-        RECT 11.855 3.680 198.865 152.145 ;
+        RECT 15.515 3.680 198.385 152.145 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
@@ -490,10 +490,10 @@ MACRO tt_um_yjulian_mima
         RECT 176.040 153.770 179.160 153.980 ;
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
-        RECT 15.560 3.635 187.305 153.770 ;
+        RECT 15.560 3.635 187.300 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 187.345 151.510 ;
+        RECT 15.515 3.470 183.505 151.510 ;
   END
-END tt_um_yjulian_mima
+END tt_um_yjulian_alu
 END LIBRARY
 
