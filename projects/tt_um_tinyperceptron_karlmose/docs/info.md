@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Just a binary adder, I hope this doesn't get submitted
+Will go into more detail, basically just some table lookups using SPI and an adder
 
 ## How to test
 
-:)  Test est est
+Likely will be a bit complicated
 
 ## External hardware
 
-Assumed a 7 segment display but didnt make use of it.
+Using RPI SPI simulator
