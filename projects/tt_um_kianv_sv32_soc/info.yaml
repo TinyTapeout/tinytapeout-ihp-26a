@@ -68,13 +68,13 @@ project:
 # Pinout for docs/website. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: "GPIO0 IN"
+  ui[0]: "GPIO IN 0"
+  ui[1]: "GPIO IN 1"
   ui[2]: "SPI MISO"
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
+  ui[3]: "GPIO IN 3"
+  ui[4]: "GPIO IN 4"
+  ui[5]: "GPIO IN 5"
+  ui[6]: "GPIO IN 6"
   ui[7]: "UART RX"
 
   # Outputs

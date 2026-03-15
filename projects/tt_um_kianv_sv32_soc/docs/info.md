@@ -39,11 +39,13 @@ The system boots from SPI NOR flash. After reset, the CPU starts executing code 
 
 ### GPIO Peripheral registers
 
-| Address    | Name       | Description                  |
-| ---------- | ---------- | ---------------------------- |
-| 0x10000700 | GPIO_DIR   | Direction (output enable)    |
-| 0x10000704 | GPIO_OUT   | Write to output pins         |
-| 0x10000708 | GPIO_IN    | Read from input pins         |
+| Address    | Name       | Bits  | Description                                       |
+| ---------- | ---------- | ----- | ------------------------------------------------- |
+| 0x10000700 | GPIO_DIR   | -     | Direction (output enable), currently unused in HW |
+| 0x10000704 | GPIO_OUT   | [9]   | Output value driven on `uo_out[1]`                |
+| 0x10000708 | GPIO_IN    | [7:0] | Read all 8 input pins (`ui_in[7:0]`)              |
+
+**Notes:** GPIO_DIR is implemented in the register file but the output enable has no hardware effect. Only a single output bit exists (`uo_out[1]`), controlled via bit 9 of GPIO_OUT. All 8 `ui_in` pins are readable via GPIO_IN; pins 2 and 7 are shared with SPI MISO and UART RX respectively.
 
 ### QSPI PSRAM Control register
 
