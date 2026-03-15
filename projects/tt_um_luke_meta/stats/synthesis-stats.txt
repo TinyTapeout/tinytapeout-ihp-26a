@@ -1,39 +1,208 @@
-115. Printing statistics.
+109. Printing statistics.
+
+=== $paramod\inverter_chain\N=s32'00000000000000000000000001100100 ===
+
+   Number of wires:                101
+   Number of wire bits:            101
+   Number of public wires:         101
+   Number of public wire bits:     101
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                100
+     inverter                      100
+
+   Area for cell type \inverter is unknown!
+
+=== $paramod\inverter_chain\N=s32'00000000000000000000000110010000 ===
+
+   Number of wires:                401
+   Number of wire bits:            401
+   Number of public wires:         401
+   Number of public wire bits:     401
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                400
+     inverter                      400
+
+   Area for cell type \inverter is unknown!
+
+=== data_generator ===
+
+   Number of wires:                 42
+   Number of wire bits:             45
+   Number of public wires:          31
+   Number of public wire bits:      34
+   Number of ports:                  6
+   Number of port bits:              9
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 26
+     $paramod\inverter_chain\N=s32'00000000000000000000000001100100      6
+     $paramod\inverter_chain\N=s32'00000000000000000000000110010000      1
+     inverter                        1
+     one_hot_encoder_2to4            1
+     one_hot_encoder_3to8            1
+     ripple_divider                  1
+     sg13g2_a221oi_1                 1
+     sg13g2_a22oi_1                  3
+     sg13g2_and2_1                   1
+     sg13g2_buf_1                    1
+     sg13g2_inv_1                    2
+     sg13g2_nand2_1                  4
+     sg13g2_nor3_1                   1
+     sg13g2_o21ai_1                  2
+
+   Area for cell type \one_hot_encoder_3to8 is unknown!
+   Area for cell type \one_hot_encoder_2to4 is unknown!
+   Area for cell type \inverter is unknown!
+   Area for cell type \ripple_divider is unknown!
+   Area for cell type $paramod\inverter_chain\N=s32'00000000000000000000000110010000 is unknown!
+   Area for cell type $paramod\inverter_chain\N=s32'00000000000000000000000001100100 is unknown!
+
+   Chip area for module '\data_generator': 130.523400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== inverter ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_inv_4                    1
+
+   Chip area for module '\inverter': 10.886400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== one_hot_encoder_2to4 ===
+
+   Number of wires:                  2
+   Number of wire bits:              6
+   Number of public wires:           2
+   Number of public wire bits:       6
+   Number of ports:                  2
+   Number of port bits:              6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     sg13g2_and2_1                   1
+     sg13g2_nor2_1                   1
+     sg13g2_nor2b_1                  2
+
+   Chip area for module '\one_hot_encoder_2to4': 34.473600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== one_hot_encoder_3to8 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           2
+   Number of public wire bits:      11
+   Number of ports:                  2
+   Number of port bits:             11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     sg13g2_inv_1                    3
+     sg13g2_nand2_1                  1
+     sg13g2_nor2_1                   2
+     sg13g2_nor3_1                   6
+
+   Chip area for module '\one_hot_encoder_3to8': 92.534400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== ripple_divider ===
+
+   Number of wires:                  7
+   Number of wire bits:              7
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     sg13g2_dfrbpq_1                 2
+     sg13g2_inv_1                    2
+     sg13g2_tiehi                    2
+
+   Chip area for module '\ripple_divider': 123.379200
+     of which used for sequential elements: 97.977600 (79.41%)
 
 === tt_um_luke_meta ===
 
-   Number of wires:                209
-   Number of wire bits:            244
-   Number of public wires:          41
-   Number of public wire bits:      76
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                225
-     sg13g2_a21o_1                   2
-     sg13g2_a21oi_1                 14
-     sg13g2_and2_1                  15
-     sg13g2_and3_1                   2
-     sg13g2_and4_1                   7
-     sg13g2_buf_1                    1
-     sg13g2_dfrbpq_1                33
-     sg13g2_inv_1                    7
-     sg13g2_nand2_1                  6
-     sg13g2_nand2b_1                 2
-     sg13g2_nand3_1                  2
-     sg13g2_nand4_1                  4
-     sg13g2_nor2_1                  26
-     sg13g2_nor2b_1                  6
-     sg13g2_nor3_1                  22
-     sg13g2_nor4_1                   5
-     sg13g2_o21ai_1                  3
-     sg13g2_tiehi                   33
-     sg13g2_tielo                   16
-     sg13g2_xnor2_1                 15
-     sg13g2_xor2_1                   4
+   Number of cells:                 24
+     data_generator                  1
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   22
 
-   Chip area for module '\tt_um_luke_meta': 3356.640000
-     of which used for sequential elements: 1616.630400 (48.16%)
+   Area for cell type \data_generator is unknown!
+
+   Chip area for module '\tt_um_luke_meta': 166.924800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+   tt_um_luke_meta                   1
+     data_generator                  1
+       $paramod\inverter_chain\N=s32'00000000000000000000000001100100      6
+         inverter                  100
+       $paramod\inverter_chain\N=s32'00000000000000000000000110010000      1
+         inverter                  400
+       inverter                      1
+       one_hot_encoder_2to4          1
+       one_hot_encoder_3to8          1
+       ripple_divider                1
+
+   Number of wires:               3074
+   Number of wire bits:           3125
+   Number of public wires:        3055
+   Number of public wire bits:    3106
+   Number of ports:               2037
+   Number of port bits:           2088
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1061
+     sg13g2_a221oi_1                 1
+     sg13g2_a22oi_1                  3
+     sg13g2_and2_1                   2
+     sg13g2_buf_1                    1
+     sg13g2_dfrbpq_1                 2
+     sg13g2_inv_1                    7
+     sg13g2_inv_4                 1001
+     sg13g2_nand2_1                  5
+     sg13g2_nor2_1                   3
+     sg13g2_nor2b_1                  2
+     sg13g2_nor3_1                   7
+     sg13g2_o21ai_1                  2
+     sg13g2_tiehi                    3
+     sg13g2_tielo                   22
+
+   Chip area for top module '\tt_um_luke_meta': 11445.121800
+     of which used for sequential elements: 97.977600 (0.86%)
 
