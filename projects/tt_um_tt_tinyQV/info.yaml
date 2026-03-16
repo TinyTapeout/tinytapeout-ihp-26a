@@ -1,11 +1,10 @@
-# Tiny Tapeout project information
 project:
-  title:        "Borg - Floating point addition"
+  title:        "Borg - Tiny GPU"
   author:       "Andreas Wendleder"
   discord:      "gonsolo"
-  description:  "A Risc-V SoC with a floating point peripheral"
+  description:  "A RISC-V SoC with a GPU featuring vertex shading, rasterization, and RGB fragment shading"
   language:     "Chisel"
-  clock_hz:     64000000       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     0
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "4x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -22,7 +21,7 @@ project:
     - "../out/borg/verilog/MulAddRecFNToRaw_preMul_e5_s11.sv"
     - "../out/borg/verilog/MulAddRecFNToRaw_postMul_e5_s11.sv"
     - "../out/borg/verilog/Borg.sv"
-    - "../out/borg/verilog/instructionMemory_8x16.sv"
+    - "../out/borg/verilog/instructionMemory_6x16.sv"
     - "../out/borg/verilog/registerFile_8x16.sv"
     - "../out/borg/verilog/RoundAnyRawFNToRecFN_ie5_is13_oe5_os11.sv"
     - "../out/borg/verilog/RoundRawFNToRecFN_e5_s11.sv"
