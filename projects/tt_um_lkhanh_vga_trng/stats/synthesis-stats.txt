@@ -1,0 +1,45 @@
+150. Printing statistics.
+
+=== tt_um_lkhanh_vga_trng ===
+
+   Number of wires:               1012
+   Number of wire bits:           1047
+   Number of public wires:          79
+   Number of public wire bits:     114
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1028
+     sg13g2_a21o_1                  19
+     sg13g2_a21oi_1                102
+     sg13g2_a221oi_1                11
+     sg13g2_a22oi_1                 38
+     sg13g2_and2_1                  33
+     sg13g2_and3_1                   6
+     sg13g2_and4_1                   2
+     sg13g2_buf_1                    2
+     sg13g2_dfrbpq_1                54
+     sg13g2_inv_1                   73
+     sg13g2_mux2_1                  12
+     sg13g2_nand2_1                 91
+     sg13g2_nand2b_1                23
+     sg13g2_nand3_1                 51
+     sg13g2_nand3b_1                 6
+     sg13g2_nand4_1                 18
+     sg13g2_nor2_1                  97
+     sg13g2_nor2b_1                 19
+     sg13g2_nor3_1                  30
+     sg13g2_nor4_1                   5
+     sg13g2_o21ai_1                120
+     sg13g2_or2_1                   22
+     sg13g2_or3_1                    6
+     sg13g2_tiehi                   22
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                109
+     sg13g2_xor2_1                  41
+
+   Chip area for module '\tt_um_lkhanh_vga_trng': 12042.550800
+     of which used for sequential elements: 2645.395200 (21.97%)
+
