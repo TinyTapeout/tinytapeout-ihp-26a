@@ -75,7 +75,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213200 ;
+    ANTENNAGATEAREA 0.725400 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -375,7 +375,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.299200 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 110.250 153.980 110.550 154.980 ;
@@ -384,7 +384,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 106.410 153.980 106.710 154.980 ;
@@ -479,10 +479,10 @@ MACRO tt_um_filterednoise_infinity_core
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
         RECT 187.560 153.770 190.680 153.980 ;
-        RECT 191.400 153.770 197.385 153.980 ;
-        RECT 15.560 3.635 197.385 153.770 ;
+        RECT 191.400 153.770 194.985 153.980 ;
+        RECT 15.560 3.635 194.985 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 197.425 151.510 ;
+        RECT 15.515 3.470 195.025 151.510 ;
   END
 END tt_um_filterednoise_infinity_core
 END LIBRARY
