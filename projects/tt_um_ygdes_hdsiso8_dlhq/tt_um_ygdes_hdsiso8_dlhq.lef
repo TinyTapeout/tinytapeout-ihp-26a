@@ -381,7 +381,7 @@ MACRO tt_um_ygdes_hdsiso8_dlhq
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.592800 ;
+    ANTENNAGATEAREA 0.561600 ;
     ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
@@ -391,7 +391,7 @@ MACRO tt_um_ygdes_hdsiso8_dlhq
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.592800 ;
+    ANTENNAGATEAREA 0.561600 ;
     ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
@@ -401,7 +401,7 @@ MACRO tt_um_ygdes_hdsiso8_dlhq
   PIN uo_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.592800 ;
+    ANTENNAGATEAREA 0.561600 ;
     ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
@@ -411,7 +411,7 @@ MACRO tt_um_ygdes_hdsiso8_dlhq
   PIN uo_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.483600 ;
+    ANTENNAGATEAREA 0.452400 ;
     ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
@@ -442,9 +442,9 @@ MACRO tt_um_ygdes_hdsiso8_dlhq
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 3.255 3.635 198.825 152.185 ;
+        RECT 3.260 3.635 198.345 152.185 ;
       LAYER Metal3 ;
-        RECT 3.215 3.680 198.865 152.145 ;
+        RECT 3.695 3.680 198.385 152.145 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 154.240 ;
         RECT 30.120 153.770 33.240 154.240 ;
@@ -488,11 +488,10 @@ MACRO tt_um_ygdes_hdsiso8_dlhq
         RECT 176.040 153.770 179.160 154.240 ;
         RECT 179.880 153.770 183.000 154.240 ;
         RECT 183.720 153.770 186.840 154.240 ;
-        RECT 187.560 153.770 190.680 154.240 ;
-        RECT 191.400 153.770 197.865 154.240 ;
-        RECT 15.560 3.635 197.865 153.770 ;
+        RECT 187.560 153.770 188.265 154.240 ;
+        RECT 15.560 3.635 188.265 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 197.905 151.510 ;
+        RECT 15.515 3.470 188.305 151.510 ;
   END
 END tt_um_ygdes_hdsiso8_dlhq
 END LIBRARY
