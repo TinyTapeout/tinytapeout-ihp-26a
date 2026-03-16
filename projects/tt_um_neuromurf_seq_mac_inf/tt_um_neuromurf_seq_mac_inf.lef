@@ -76,7 +76,7 @@ MACRO tt_um_neuromurf_seq_mac_inf
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.725400 ;
+    ANTENNAGATEAREA 1.450800 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 312.740 183.510 313.740 ;
@@ -220,7 +220,7 @@ MACRO tt_um_neuromurf_seq_mac_inf
   PIN uio_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 121.770 312.740 122.070 313.740 ;
@@ -373,7 +373,7 @@ MACRO tt_um_neuromurf_seq_mac_inf
   PIN uo_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 1.008100 ;
+    ANTENNADIFFAREA 0.958400 ;
     PORT
       LAYER Metal4 ;
         RECT 117.930 312.740 118.230 313.740 ;
@@ -448,11 +448,11 @@ MACRO tt_um_neuromurf_seq_mac_inf
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 310.180 ;
       LAYER Metal2 ;
-        RECT 2.295 3.635 199.305 310.945 ;
+        RECT 2.775 3.635 199.305 310.945 ;
       LAYER Metal3 ;
-        RECT 2.255 3.680 199.345 310.905 ;
+        RECT 2.735 3.680 199.345 310.905 ;
       LAYER Metal4 ;
-        RECT 4.700 312.530 29.400 312.740 ;
+        RECT 6.620 312.530 29.400 312.740 ;
         RECT 30.120 312.530 33.240 312.740 ;
         RECT 33.960 312.530 37.080 312.740 ;
         RECT 37.800 312.530 40.920 312.740 ;
@@ -495,10 +495,9 @@ MACRO tt_um_neuromurf_seq_mac_inf
         RECT 179.880 312.530 183.000 312.740 ;
         RECT 183.720 312.530 186.840 312.740 ;
         RECT 187.560 312.530 190.680 312.740 ;
-        RECT 191.400 312.530 193.540 312.740 ;
-        RECT 4.700 3.635 193.540 312.530 ;
+        RECT 6.620 3.635 191.140 312.530 ;
       LAYER Metal5 ;
-        RECT 10.895 3.470 189.745 310.270 ;
+        RECT 15.515 3.470 187.345 310.270 ;
   END
 END tt_um_neuromurf_seq_mac_inf
 END LIBRARY
