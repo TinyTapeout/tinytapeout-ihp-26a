@@ -33,7 +33,7 @@ pinout:
   ui[4]: "QSPI latency 0"
   ui[5]: "QSPI latency 1"
   ui[6]: "QSPI latency 2"
-  ui[7]: "Address high bit"
+  ui[7]: "Config register selection"
 
   # Outputs
   uo[0]: "R[1]"

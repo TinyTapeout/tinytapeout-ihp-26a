@@ -1,46 +1,46 @@
-145. Printing statistics.
+152. Printing statistics.
 
 === tt_um_MichaelBell_photo_frame ===
 
-   Number of wires:               1094
-   Number of wire bits:           1129
-   Number of public wires:         211
-   Number of public wire bits:     246
+   Number of wires:               1121
+   Number of wire bits:           1156
+   Number of public wires:         217
+   Number of public wire bits:     252
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1110
-     sg13g2_a21o_1                  16
-     sg13g2_a21oi_1                 85
-     sg13g2_a221oi_1                14
-     sg13g2_a22oi_1                 36
-     sg13g2_and2_1                  38
-     sg13g2_and3_1                   3
-     sg13g2_and4_1                   5
+   Number of cells:               1137
+     sg13g2_a21o_1                  12
+     sg13g2_a21oi_1                 93
+     sg13g2_a221oi_1                 6
+     sg13g2_a22oi_1                 42
+     sg13g2_and2_1                  17
+     sg13g2_and3_1                   5
+     sg13g2_and4_1                   3
      sg13g2_buf_1                    7
-     sg13g2_dfrbpq_1               206
-     sg13g2_inv_1                   58
-     sg13g2_mux2_1                  67
-     sg13g2_mux4_1                   4
-     sg13g2_nand2_1                 79
-     sg13g2_nand2b_1                17
-     sg13g2_nand3_1                 19
-     sg13g2_nand3b_1                 1
-     sg13g2_nand4_1                 12
-     sg13g2_nor2_1                  60
-     sg13g2_nor2b_1                 20
-     sg13g2_nor3_1                  17
-     sg13g2_nor4_1                   8
-     sg13g2_o21ai_1                 93
-     sg13g2_or2_1                    9
+     sg13g2_dfrbpq_1               212
+     sg13g2_inv_1                   59
+     sg13g2_mux2_1                  74
+     sg13g2_mux4_1                   6
+     sg13g2_nand2_1                 63
+     sg13g2_nand2b_1                22
+     sg13g2_nand3_1                 17
+     sg13g2_nand3b_1                 4
+     sg13g2_nand4_1                  7
+     sg13g2_nor2_1                  83
+     sg13g2_nor2b_1                 29
+     sg13g2_nor3_1                  25
+     sg13g2_nor4_1                  10
+     sg13g2_o21ai_1                 87
+     sg13g2_or2_1                    8
      sg13g2_or3_1                    4
      sg13g2_or4_1                    2
-     sg13g2_tiehi                  208
-     sg13g2_xnor2_1                 14
-     sg13g2_xor2_1                   8
+     sg13g2_tiehi                  214
+     sg13g2_xnor2_1                 20
+     sg13g2_xor2_1                   6
 
-   Chip area for module '\tt_um_MichaelBell_photo_frame': 18585.352800
-     of which used for sequential elements: 10091.692800 (54.30%)
+   Chip area for module '\tt_um_MichaelBell_photo_frame': 19140.332400
+     of which used for sequential elements: 10385.625600 (54.26%)
 
