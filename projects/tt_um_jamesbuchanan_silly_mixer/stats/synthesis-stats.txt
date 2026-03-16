@@ -1,0 +1,39 @@
+115. Printing statistics.
+
+=== tt_um_jamesbuchanan_silly_mixer ===
+
+   Number of wires:                204
+   Number of wire bits:            239
+   Number of public wires:          30
+   Number of public wire bits:      65
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                220
+     sg13g2_a21o_1                   5
+     sg13g2_a21oi_1                 10
+     sg13g2_a22oi_1                  6
+     sg13g2_and2_1                  24
+     sg13g2_and3_1                   7
+     sg13g2_and4_1                   4
+     sg13g2_dfrbpq_1                30
+     sg13g2_nand2_1                 19
+     sg13g2_nand2b_1                 3
+     sg13g2_nand3_1                  8
+     sg13g2_nand4_1                  3
+     sg13g2_nor2_1                   6
+     sg13g2_nor2b_1                  5
+     sg13g2_nor3_1                   1
+     sg13g2_o21ai_1                 18
+     sg13g2_or2_1                    3
+     sg13g2_or3_1                    6
+     sg13g2_tiehi                   30
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                  7
+     sg13g2_xor2_1                   9
+
+   Chip area for module '\tt_um_jamesbuchanan_silly_mixer': 3254.806800
+     of which used for sequential elements: 1469.664000 (45.15%)
+
