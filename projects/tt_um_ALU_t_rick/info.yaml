@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "A fully functional ALU (Arithmetic logic unit)"      # Project title
+  author:       "Tobias Rickenbacher"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A fully functional 4 bit ALU which implements all the usual operations (add, subtract, and, or, xor, ones complement, twos complement, logic and arithmetic shifts in both directions, rotate and rotate through carry in both directions)."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     100000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ALU_t_rick"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_ALU_t_rick.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Port A bit 0"
+  ui[1]: "Port A bit 1"
+  ui[2]: "Port A bit 2"
+  ui[3]: "Port A bit 3"
+  ui[4]: "Port B bit 0"
+  ui[5]: "Port B bit 1"
+  ui[6]: "Port B bit 2"
+  ui[7]: "Port B bit 3"
+
+  # Outputs
+  uo[0]: "result of the operation bit 0"
+  uo[1]: "result of the operation bit 1"
+  uo[2]: "result of the operation bit 2"
+  uo[3]: "result of the operation bit 3"
+  uo[4]: "Carry flag"
+  uo[5]: "Zero flag"
+  uo[6]: "Negative flag"
+  uo[7]: "Overflow flag"
+
+  # Bidirectional pins
+  uio[0]: "subtract mode on"
+  uio[1]: "output mux bit 0"
+  uio[2]: "output mux bit 1"
+  uio[3]: "output mux bit 2"
+  uio[4]: "output mux bit 3"
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
