@@ -2,46 +2,45 @@
 
 === tt_um_TscherterJunior_top ===
 
-   Number of wires:                839
-   Number of wire bits:            874
-   Number of public wires:         103
-   Number of public wire bits:     138
+   Number of wires:                863
+   Number of wire bits:            898
+   Number of public wires:          93
+   Number of public wire bits:     128
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                855
-     sg13g2_a21o_1                  13
-     sg13g2_a21oi_1                 98
-     sg13g2_a221oi_1                28
-     sg13g2_a22oi_1                 23
-     sg13g2_and2_1                  21
-     sg13g2_and3_1                   1
-     sg13g2_and4_1                   2
+   Number of cells:                879
+     sg13g2_a21o_1                  22
+     sg13g2_a21oi_1                113
+     sg13g2_a221oi_1                29
+     sg13g2_a22oi_1                 29
+     sg13g2_and2_1                  19
+     sg13g2_and3_1                   5
+     sg13g2_and4_1                   7
      sg13g2_buf_1                    2
      sg13g2_dfrbpq_1                85
-     sg13g2_inv_1                   41
-     sg13g2_mux2_1                  78
-     sg13g2_mux4_1                   4
-     sg13g2_nand2_1                 81
-     sg13g2_nand2b_1                15
-     sg13g2_nand3_1                 24
-     sg13g2_nand3b_1                 6
-     sg13g2_nand4_1                 12
-     sg13g2_nor2_1                  97
-     sg13g2_nor2b_1                 18
-     sg13g2_nor3_1                  18
-     sg13g2_nor4_1                   6
-     sg13g2_o21ai_1                119
-     sg13g2_or2_1                   12
+     sg13g2_inv_1                   47
+     sg13g2_mux2_1                  74
+     sg13g2_mux4_1                   1
+     sg13g2_nand2_1                 93
+     sg13g2_nand2b_1                23
+     sg13g2_nand3_1                 33
+     sg13g2_nand4_1                  9
+     sg13g2_nor2_1                  61
+     sg13g2_nor2b_1                 13
+     sg13g2_nor3_1                  19
+     sg13g2_nor4_1                   7
+     sg13g2_o21ai_1                126
+     sg13g2_or2_1                   11
      sg13g2_or3_1                    2
-     sg13g2_or4_1                    2
+     sg13g2_or4_1                    1
      sg13g2_tiehi                    8
-     sg13g2_tielo                    3
-     sg13g2_xnor2_1                 25
-     sg13g2_xor2_1                  11
+     sg13g2_tielo                    1
+     sg13g2_xnor2_1                 34
+     sg13g2_xor2_1                   5
 
-   Chip area for module '\tt_um_TscherterJunior_top': 12001.386600
-     of which used for sequential elements: 4164.048000 (34.70%)
+   Chip area for module '\tt_um_TscherterJunior_top': 12197.115000
+     of which used for sequential elements: 4164.048000 (34.14%)
 
