@@ -1,31 +1,50 @@
-123. Printing statistics.
+159. Printing statistics.
 
 === tt_um_tinymoa_ihp26a ===
 
-   Number of wires:                 61
-   Number of wire bits:             96
-   Number of public wires:           8
-   Number of public wire bits:      43
-   Number of ports:                  8
-   Number of port bits:             43
-   Number of memories:               0
-   Number of memory bits:            0
-   Number of processes:              0
-   Number of cells:                 77
-     sg13g2_a21o_1                   1
-     sg13g2_a21oi_1                 10
-     sg13g2_a221oi_1                 1
-     sg13g2_dfrbpq_1                 8
-     sg13g2_inv_1                    2
-     sg13g2_nand2_1                  2
-     sg13g2_nor2_1                   1
-     sg13g2_nor2b_1                  3
-     sg13g2_o21ai_1                 11
-     sg13g2_tiehi                    8
-     sg13g2_tielo                   16
-     sg13g2_xnor2_1                 11
-     sg13g2_xor2_1                   3
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     4160        - wires
+     4195        - wire bits
+      748        - public wires
+      783        - public wire bits
+        8        - ports
+       43        - port bits
+     4113 6.45E+04 cells
+        1        -   RM_IHPSG13_2P_512x32_c2_bm_bist
+       39  495.331   sg13g2_a21o_1
+      431 3.91E+03   sg13g2_a21oi_1
+       52   754.79   sg13g2_a221oi_1
+      199 2.16E+03   sg13g2_a22oi_1
+       76  689.472   sg13g2_and2_1
+       11  139.709   sg13g2_and3_1
+        4   58.061   sg13g2_and4_1
+        5   36.288   sg13g2_buf_1
+      677 3.32E+04   sg13g2_dfrbpq_1
+      121  658.627   sg13g2_inv_1
+      150   2721.6   sg13g2_mux2_1
+        2   76.205   sg13g2_mux4_1
+      254  1843.43   sg13g2_nand2_1
+       44  399.168   sg13g2_nand2b_1
+       76  689.472   sg13g2_nand3_1
+       10  127.008   sg13g2_nand3b_1
+       19  206.842   sg13g2_nand4_1
+      329  2387.75   sg13g2_nor2_1
+       43  390.096   sg13g2_nor2b_1
+       48  435.456   sg13g2_nor3_1
+       16  174.182   sg13g2_nor4_1
+      317 2.88E+03   sg13g2_o21ai_1
+       41  371.952   sg13g2_or2_1
+       10  127.008   sg13g2_or3_1
+        3   43.546   sg13g2_or4_1
+      720 5.23E+03   sg13g2_tiehi
+      239 1.73E+03   sg13g2_tielo
+      105 1.52E+03   sg13g2_xnor2_1
+       71 1.03E+03   sg13g2_xor2_1
 
-   Chip area for module '\tt_um_tinymoa_ihp26a': 1046.908800
-     of which used for sequential elements: 391.910400 (37.44%)
+   Area for cell type \RM_IHPSG13_2P_512x32_c2_bm_bist is unknown!
+
+   Chip area for module '\tt_um_tinymoa_ihp26a': 64450.852200
+     of which used for sequential elements: 33165.417600 (51.46%)
 
