@@ -18,8 +18,9 @@ The unit supports both **E4M3** and **E5M2** element formats:
 
 ### Operational Protocol (41-Cycle Standard / 25-Cycle Packed)
 To minimize resource usage, operands are streamed into the unit over a fixed sequence:
+0. **Cycle 0**: Load MX+ Metadata (BM Indices/Offsets) and Debug flags, or trigger **Short Protocol** (Fast Start) by setting `ui_in[7]=1`.
 1. **Cycle 1**: Load Scale A ($X_A$ on `ui_in`) and Configuration (on `uio_in`).
-2. **Cycle 2**: Load Scale B ($X_B$ on `ui_in`) and Format B (on `uio_in`).
+2. **Cycle 2**: Load Scale B ($X_B$ on `ui_in`), Format B, and BM Index B (on `uio_in`).
 3. **Streaming Phase**:
    - **Standard Mode**: Cycles 3-34 (32 pairs of elements).
    - **Packed Lane Mode (FP4)**: Cycles 3-18 (16 cycles, 2 elements/cycle, dual-lane).
@@ -31,9 +32,10 @@ To minimize resource usage, operands are streamed into the unit over a fixed seq
 
 The design uses a clocked FSM. To test:
 1. Reset the unit (`rst_n` = 0) then enable it (`ena` = 1).
-2. On Cycle 1, provide Scale A on `ui_in` and Config on `uio_in` (Set `uio_in[6]=1` for Packed Mode).
-3. On Cycle 2, provide Scale B on `ui_in` and Format B on `uio_in`.
-4. Stream elements $A_i$ and $B_i$:
+2. On Cycle 0, provide MX+ metadata on `ui_in`/`uio_in`. Set `ui_in[7]=1` to trigger the **Short Protocol**, which reuses Scales from the previous block while capturing new Formats and Rounding Modes from `uio_in`.
+3. On Cycle 1, provide Scale A on `ui_in` and Config on `uio_in` (Set `uio_in[6]=1` for Packed Mode).
+4. On Cycle 2, provide Scale B on `ui_in`, Format B, and BM Index B on `uio_in`.
+5. Stream elements $A_i$ and $B_i$:
    - **Standard**: 32 cycles.
    - **Packed Lane**: 16 cycles (two 4-bit elements per cycle: `[7:4]=E_i+1`, `[3:0]=E_i`).
    - **Packed Serial**: 32 cycles. Load a packed byte on odd cycles (3, 5...); Hardware waits on even cycles (4, 6...).
