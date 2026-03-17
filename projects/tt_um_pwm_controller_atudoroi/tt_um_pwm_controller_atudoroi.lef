@@ -365,7 +365,7 @@ MACRO tt_um_pwm_controller_atudoroi
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.708600 ;
+    ANTENNADIFFAREA 0.706800 ;
     PORT
       LAYER Metal4 ;
         RECT 114.090 153.980 114.390 154.980 ;
@@ -374,7 +374,7 @@ MACRO tt_um_pwm_controller_atudoroi
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.706800 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 110.250 153.980 110.550 154.980 ;
@@ -392,7 +392,7 @@ MACRO tt_um_pwm_controller_atudoroi
   PIN uo_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.708600 ;
+    ANTENNADIFFAREA 0.706800 ;
     PORT
       LAYER Metal4 ;
         RECT 102.570 153.980 102.870 154.980 ;
@@ -431,11 +431,11 @@ MACRO tt_um_pwm_controller_atudoroi
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 4.215 3.635 199.785 151.345 ;
+        RECT 4.695 3.635 200.745 151.345 ;
       LAYER Metal3 ;
-        RECT 4.175 3.680 199.825 151.300 ;
+        RECT 4.655 3.680 200.785 151.300 ;
       LAYER Metal4 ;
-        RECT 10.460 153.770 29.400 153.980 ;
+        RECT 14.780 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
         RECT 33.960 153.770 37.080 153.980 ;
         RECT 37.800 153.770 40.920 153.980 ;
@@ -477,9 +477,11 @@ MACRO tt_um_pwm_controller_atudoroi
         RECT 176.040 153.770 179.160 153.980 ;
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
-        RECT 10.460 3.635 187.300 153.770 ;
+        RECT 187.560 153.770 190.680 153.980 ;
+        RECT 191.400 153.770 196.420 153.980 ;
+        RECT 14.780 3.635 196.420 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 179.125 151.510 ;
+        RECT 15.515 3.470 195.985 151.510 ;
   END
 END tt_um_pwm_controller_atudoroi
 END LIBRARY
