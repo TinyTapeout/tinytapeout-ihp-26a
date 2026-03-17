@@ -2,42 +2,42 @@
 
 === tt_um_yjulian_alu ===
 
-   Number of wires:                660
-   Number of wire bits:            695
-   Number of public wires:          90
-   Number of public wire bits:     125
+   Number of wires:                657
+   Number of wire bits:            692
+   Number of public wires:          84
+   Number of public wire bits:     119
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                676
-     sg13g2_a21o_1                  13
-     sg13g2_a21oi_1                 40
-     sg13g2_a221oi_1                32
-     sg13g2_a22oi_1                 56
-     sg13g2_and2_1                  29
-     sg13g2_and3_1                  17
-     sg13g2_and4_1                   3
-     sg13g2_dfrbpq_1                82
-     sg13g2_inv_1                   46
-     sg13g2_mux2_1                  69
-     sg13g2_nand2_1                 39
-     sg13g2_nand2b_1                16
-     sg13g2_nand3_1                 16
-     sg13g2_nand3b_1                 5
-     sg13g2_nand4_1                 14
-     sg13g2_nor2_1                  51
-     sg13g2_nor2b_1                 21
-     sg13g2_nor3_1                  20
-     sg13g2_nor4_1                  12
+   Number of cells:                673
+     sg13g2_a21o_1                  17
+     sg13g2_a21oi_1                 37
+     sg13g2_a221oi_1                35
+     sg13g2_a22oi_1                 57
+     sg13g2_and2_1                  22
+     sg13g2_and3_1                  15
+     sg13g2_and4_1                   6
+     sg13g2_dfrbpq_1                76
+     sg13g2_inv_1                   47
+     sg13g2_mux2_1                  61
+     sg13g2_nand2_1                 50
+     sg13g2_nand2b_1                13
+     sg13g2_nand3_1                 29
+     sg13g2_nand3b_1                12
+     sg13g2_nand4_1                 13
+     sg13g2_nor2_1                  48
+     sg13g2_nor2b_1                 12
+     sg13g2_nor3_1                  21
+     sg13g2_nor4_1                   6
      sg13g2_o21ai_1                 54
      sg13g2_or2_1                   12
-     sg13g2_or3_1                    4
+     sg13g2_or3_1                    3
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                  7
+     sg13g2_xnor2_1                  9
      sg13g2_xor2_1                   2
 
-   Chip area for module '\tt_um_yjulian_alu': 10200.254400
-     of which used for sequential elements: 4017.081600 (39.38%)
+   Chip area for module '\tt_um_yjulian_alu': 9904.469400
+     of which used for sequential elements: 3723.148800 (37.59%)
 

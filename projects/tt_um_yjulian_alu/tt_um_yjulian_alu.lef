@@ -75,7 +75,7 @@ MACRO tt_um_yjulian_alu
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 2.176200 ;
+    ANTENNAGATEAREA 1.450800 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -84,7 +84,7 @@ MACRO tt_um_yjulian_alu
   PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213200 ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 179.370 153.980 179.670 154.980 ;
@@ -93,7 +93,7 @@ MACRO tt_um_yjulian_alu
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213200 ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 175.530 153.980 175.830 154.980 ;
@@ -156,7 +156,7 @@ MACRO tt_um_yjulian_alu
   PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 148.650 153.980 148.950 154.980 ;
@@ -165,7 +165,7 @@ MACRO tt_um_yjulian_alu
   PIN uio_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 144.810 153.980 145.110 154.980 ;
@@ -174,7 +174,7 @@ MACRO tt_um_yjulian_alu
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 140.970 153.980 141.270 154.980 ;
@@ -183,7 +183,7 @@ MACRO tt_um_yjulian_alu
   PIN uio_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 137.130 153.980 137.430 154.980 ;
@@ -192,7 +192,7 @@ MACRO tt_um_yjulian_alu
   PIN uio_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 133.290 153.980 133.590 154.980 ;
@@ -378,7 +378,7 @@ MACRO tt_um_yjulian_alu
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.632400 ;
+    ANTENNADIFFAREA 0.706800 ;
     PORT
       LAYER Metal4 ;
         RECT 114.090 153.980 114.390 154.980 ;
@@ -387,7 +387,7 @@ MACRO tt_um_yjulian_alu
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.706800 ;
+    ANTENNADIFFAREA 0.632400 ;
     PORT
       LAYER Metal4 ;
         RECT 110.250 153.980 110.550 154.980 ;
@@ -444,9 +444,9 @@ MACRO tt_um_yjulian_alu
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 15.560 3.635 198.345 152.185 ;
+        RECT 4.215 3.635 198.825 152.185 ;
       LAYER Metal3 ;
-        RECT 15.515 3.680 198.385 152.145 ;
+        RECT 4.175 3.680 198.865 152.145 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
@@ -490,9 +490,9 @@ MACRO tt_um_yjulian_alu
         RECT 176.040 153.770 179.160 153.980 ;
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
-        RECT 15.560 3.635 187.300 153.770 ;
+        RECT 15.560 3.635 187.305 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 183.505 151.510 ;
+        RECT 15.515 3.470 187.345 151.510 ;
   END
 END tt_um_yjulian_alu
 END LIBRARY
