@@ -1,0 +1,46 @@
+159. Printing statistics.
+
+=== tt_um_malik_tiny_npu ===
+
+   Number of wires:               5193
+   Number of wire bits:           5228
+   Number of public wires:         584
+   Number of public wire bits:     619
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5209
+     sg13g2_a21o_1                  85
+     sg13g2_a21oi_1                479
+     sg13g2_a221oi_1                49
+     sg13g2_a22oi_1                431
+     sg13g2_and2_1                 123
+     sg13g2_and3_1                  31
+     sg13g2_and4_1                  11
+     sg13g2_buf_1                    3
+     sg13g2_dfrbpq_1               579
+     sg13g2_inv_1                  468
+     sg13g2_mux2_1                  67
+     sg13g2_nand2_1                320
+     sg13g2_nand2b_1               100
+     sg13g2_nand3_1                128
+     sg13g2_nand3b_1                 6
+     sg13g2_nand4_1                 31
+     sg13g2_nor2_1                 426
+     sg13g2_nor2b_1                104
+     sg13g2_nor3_1                  83
+     sg13g2_nor4_1                  39
+     sg13g2_o21ai_1                547
+     sg13g2_or2_1                   79
+     sg13g2_or3_1                   30
+     sg13g2_or4_1                    9
+     sg13g2_tiehi                  582
+     sg13g2_tielo                   10
+     sg13g2_xnor2_1                246
+     sg13g2_xor2_1                 143
+
+   Chip area for module '\tt_um_malik_tiny_npu': 70781.596200
+     of which used for sequential elements: 28364.515200 (40.07%)
+
