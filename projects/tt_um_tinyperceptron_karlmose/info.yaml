@@ -18,14 +18,13 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
-    - "verilog/src/pred.v"
-    - "verilog/src/perceptron.v"
-    - "verilog/src/pred_slave_spi.v"
-    - "verilog/src/ram_interface.v"
-    - "verilog/lib/verilog_spi/spi_module.v"
-    - "verilog/lib/verilog_spi/clock_divider.v"
-    - "verilog/lib/verilog_spi/neg_edge_det.v"
-    - "verilog/lib/verilog_spi/pos_edge_det.v"
+    - "perceptron.v"
+    - "pred_slave_spi.v"
+    - "ram_interface.v"
+    - "lib/verilog_spi/spi_module.v"
+    - "lib/verilog_spi/clock_divider.v"
+    - "lib/verilog_spi/neg_edge_det.v"
+    - "lib/verilog_spi/pos_edge_det.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
