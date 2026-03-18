@@ -24,7 +24,7 @@ The apparent complexity comes from the 8-phase clock, which is brought to the "a
 
 Compared to a shift register with normal DFF cells, it could store up to twice the same amount of bits per unit of surface, without the need of full-custom cells, as the controller's (sequencer, mux and demux) size becomes insignificant when the chain gets longer. Depths of several kilobits are possible without too much hassles (if the synth agrees), without a mad clock network, reducing simultaneous switching noise... Not only are the pulses slower, their traces are also shorter: each pulse affects only 1/8th of the cells at any time.
 
-Ideally, manual placement of the 8 chains should be manual/tooled, not thrown at random. For implementation, I use a "tuned" Verilog workflow and instantiate cells directly from https://github.com/IHP-GmbH/IHP-Open-PDK/blob/main/ihp-sg13g2/libs.ref/sg13g2_stdcell/verilog/sg13g2_stdcell.v . For simulation, parts of this file are copy-pasted to gate-specific files to remove some warnings (find them in /test, thank you Jeremy!).
+Ideally, the 8 chains should be manually placed (or with a script), not thrown at random. For implementation, I use a "tuned" Verilog workflow and instantiate cells directly from https://github.com/IHP-GmbH/IHP-Open-PDK/blob/main/ihp-sg13g2/libs.ref/sg13g2_stdcell/verilog/sg13g2_stdcell.v . For simulation, parts of this file are copy-pasted to gate-specific files to remove some warnings (find them in /test, thank you Jeremy!).
 
 You will get a "Synthesis warnings : Warning: There are XXX unclocked register/latch pins." This is normal.
 
