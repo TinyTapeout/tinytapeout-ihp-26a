@@ -3,9 +3,9 @@ project:
   title:        "SID Voice Synthesizer"
   author:       "shue"
   discord:      "rrrh"
-  description:  "Dual SID voice synthesizer with flat memory-mapped control and 8-bit PWM audio output"
+  description:  "Triple SID voice synthesizer with flat memory-mapped control and 8-bit PWM audio output"
   language:     "Verilog"
-  clock_hz:     5000000  # 5 MHz
+  clock_hz:     24000000  # 24 MHz
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x2"
