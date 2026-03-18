@@ -1,0 +1,68 @@
+# Tiny Tapeout project information
+yaml_version: 6
+
+project:
+  title:        "Gate-Level 8-bit MAC with Ripple-Carry Accumulator"
+  author:       "Malik"  # Replace with your full name
+  discord:      ""
+  description:  "Structurally-optimized unsigned 8-bit MAC unit from ML-guided design-space exploration, with 17-bit accumulator and serial command interface"
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  source_files:
+    - "project.v"
+    - "mac_8b_unsigned_and_accum_ripple_carry.v"
+  top_module:   "tt_um_malik_mac_ripple"
+
+  tiles: "1x1"
+
+pinout:
+  ui[0]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: "data_in[4]"
+  ui[5]: "data_in[5]"
+  ui[6]: "data_in[6]"
+  ui[7]: "data_in[7]"
+
+  uo[0]: "data_out[0]"
+  uo[1]: "data_out[1]"
+  uo[2]: "data_out[2]"
+  uo[3]: "data_out[3]"
+  uo[4]: "data_out[4]"
+  uo[5]: "data_out[5]"
+  uo[6]: "data_out[6]"
+  uo[7]: "data_out[7]"
+
+  uio[0]: "cmd[0]"
+  uio[1]: "cmd[1]"
+  uio[2]: "cmd[2]"
+  uio[3]: "busy"
+  uio[4]: "overflow (acc[16])"
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+documentation:
+  inputs:
+    - "8-bit data input (operand A or B depending on command)"
+  outputs:
+    - "8-bit data output (accumulator readout, byte selected by command)"
+  bidirectional:
+    - "cmd[2:0]: command (NOP/LoadA/LoadB+MAC/ReadLSB/ReadMSB/ReadOVF/Clear/Preload)"
+    - "busy: high for 1 cycle after MAC operation"
+    - "overflow: mirrors acc[16]"
+  how_it_works: >
+    A gate-level unsigned 8-bit multiply-accumulate unit produced through
+    ML-guided design-space exploration of arithmetic architectures. The inner
+    MAC core is a structurally-optimized combinational netlist implementing
+    y[16:0] = a[7:0] * b[7:0] + c[15:0] using a ripple-carry accumulation
+    structure. A clocked wrapper provides serial operand loading and accumulator
+    readback. Load A (cmd=001), load B (cmd=010) to trigger acc = a*b + acc.
+    The 17-bit accumulator supports one level of overflow detection.
+  how_to_test: >
+    1. Reset. 2. cmd=001, ui_in=3 (load A=3). 3. cmd=010, ui_in=4 (load B=4,
+    triggers MAC). 4. cmd=011, read uo_out → should be 12. 5. Repeat to
+    accumulate. 6. cmd=110 to clear.
+  external_hw: "None required."
