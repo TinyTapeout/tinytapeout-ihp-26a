@@ -1,0 +1,30 @@
+101. Printing statistics.
+
+=== tt_um_YannGuidon_TinyScanChain ===
+
+   Number of wires:                 92
+   Number of wire bits:            127
+   Number of public wires:          92
+   Number of public wire bits:     127
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                104
+     sg13g2_a21o_2                   4
+     sg13g2_a21oi_1                 57
+     sg13g2_a221oi_1                 9
+     sg13g2_buf_1                   10
+     sg13g2_buf_4                    4
+     sg13g2_dfrbp_2                  4
+     sg13g2_inv_1                    1
+     sg13g2_inv_4                    1
+     sg13g2_tiehi                    2
+     sg13g2_tielo                   12
+
+   Area for cell type \sg13g2_dfrbp_2 is unknown!
+
+   Chip area for module '\tt_um_YannGuidon_TinyScanChain': 954.374400
+     of which used for sequential elements: 0.000000 (0.00%)
+
