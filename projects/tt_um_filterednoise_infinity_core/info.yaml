@@ -37,7 +37,7 @@ pinout:
   uo[1]: "SPI Clock (SCK)"
   uo[2]: "SPI Data (MOSI)"
   uo[3]: "SPI Data/Command (DC)"
-  uo[4]: ""
+  uo[4]: "SPI Chip Select (CS)"
   uo[5]: ""
   uo[6]: ""
   uo[7]: ""

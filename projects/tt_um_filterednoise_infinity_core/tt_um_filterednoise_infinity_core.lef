@@ -75,7 +75,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.725400 ;
+    ANTENNAGATEAREA 1.450800 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -93,6 +93,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 175.530 153.980 175.830 154.980 ;
@@ -101,6 +102,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN ui_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 171.690 153.980 171.990 154.980 ;
@@ -109,6 +111,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 167.850 153.980 168.150 154.980 ;
@@ -117,6 +120,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 164.010 153.980 164.310 154.980 ;
@@ -357,7 +361,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN uo_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.662000 ;
+    ANTENNADIFFAREA 0.988000 ;
     PORT
       LAYER Metal4 ;
         RECT 117.930 153.980 118.230 154.980 ;
@@ -393,7 +397,7 @@ MACRO tt_um_filterednoise_infinity_core
   PIN uo_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.299200 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 102.570 153.980 102.870 154.980 ;
@@ -432,11 +436,11 @@ MACRO tt_um_filterednoise_infinity_core
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 15.560 3.635 198.825 152.185 ;
+        RECT 3.255 3.635 198.825 152.185 ;
       LAYER Metal3 ;
-        RECT 15.515 3.680 198.865 152.145 ;
+        RECT 3.215 3.680 198.865 152.145 ;
       LAYER Metal4 ;
-        RECT 15.560 153.770 29.400 153.980 ;
+        RECT 4.695 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
         RECT 33.960 153.770 37.080 153.980 ;
         RECT 37.800 153.770 40.920 153.980 ;
@@ -479,10 +483,10 @@ MACRO tt_um_filterednoise_infinity_core
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
         RECT 187.560 153.770 190.680 153.980 ;
-        RECT 191.400 153.770 194.985 153.980 ;
-        RECT 15.560 3.635 194.985 153.770 ;
+        RECT 191.400 153.770 197.865 153.980 ;
+        RECT 4.695 3.635 197.865 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 195.025 151.510 ;
+        RECT 4.655 3.470 197.905 151.510 ;
   END
 END tt_um_filterednoise_infinity_core
 END LIBRARY
