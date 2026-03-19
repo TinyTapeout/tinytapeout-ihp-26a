@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This is a simple adder circuit that cycles through 0-15 on 4 outputs
+It plays pong
 
 ## How to test
 
-Connect the power and clk signal, and connect 4 leds on the output (via a transistor to not fry the chip)
+Connect a vga converter to it, and 2 buttons, and play :)
 
 ## External hardware
 
-4 leds
+VGA converter and 2 debounced buttons
