@@ -2,8 +2,8 @@
 
 === tt_um_pong ===
 
-   Number of wires:               1377
-   Number of wire bits:           1412
+   Number of wires:               1360
+   Number of wire bits:           1395
    Number of public wires:         104
    Number of public wire bits:     139
    Number of ports:                  8
@@ -11,36 +11,36 @@
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1393
-     sg13g2_a21o_1                  30
-     sg13g2_a21oi_1                136
-     sg13g2_a221oi_1                24
-     sg13g2_a22oi_1                 20
-     sg13g2_and2_1                  33
-     sg13g2_and3_1                  19
-     sg13g2_and4_1                   3
+   Number of cells:               1376
+     sg13g2_a21o_1                  28
+     sg13g2_a21oi_1                142
+     sg13g2_a221oi_1                15
+     sg13g2_a22oi_1                 19
+     sg13g2_and2_1                  32
+     sg13g2_and3_1                  12
+     sg13g2_and4_1                   2
      sg13g2_buf_1                    2
      sg13g2_dfrbpq_1                94
-     sg13g2_inv_1                   57
-     sg13g2_mux2_1                   6
-     sg13g2_nand2_1                117
-     sg13g2_nand2b_1                54
-     sg13g2_nand3_1                 44
-     sg13g2_nand3b_1                11
-     sg13g2_nand4_1                 16
-     sg13g2_nor2_1                 124
-     sg13g2_nor2b_1                 51
-     sg13g2_nor3_1                  53
-     sg13g2_nor4_1                  18
-     sg13g2_o21ai_1                131
-     sg13g2_or2_1                   27
-     sg13g2_or3_1                   12
+     sg13g2_inv_1                   54
+     sg13g2_mux2_1                   3
+     sg13g2_nand2_1                137
+     sg13g2_nand2b_1                53
+     sg13g2_nand3_1                 48
+     sg13g2_nand3b_1                10
+     sg13g2_nand4_1                 25
+     sg13g2_nor2_1                 112
+     sg13g2_nor2b_1                 57
+     sg13g2_nor3_1                  35
+     sg13g2_nor4_1                  24
+     sg13g2_o21ai_1                118
+     sg13g2_or2_1                   24
+     sg13g2_or3_1                    9
      sg13g2_or4_1                    7
      sg13g2_tiehi                   94
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                111
-     sg13g2_xor2_1                  83
+     sg13g2_xnor2_1                125
+     sg13g2_xor2_1                  79
 
-   Chip area for module '\tt_um_pong': 17196.127200
-     of which used for sequential elements: 4604.947200 (26.78%)
+   Chip area for module '\tt_um_pong': 16989.323400
+     of which used for sequential elements: 4604.947200 (27.10%)
 
