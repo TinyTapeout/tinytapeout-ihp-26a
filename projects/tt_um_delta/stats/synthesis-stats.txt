@@ -1,0 +1,35 @@
+137. Printing statistics.
+
+=== tt_um_delta ===
+
+   Number of wires:                131
+   Number of wire bits:            166
+   Number of public wires:          32
+   Number of public wire bits:      67
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                147
+     sg13g2_a21o_1                   1
+     sg13g2_a21oi_1                 11
+     sg13g2_and2_1                   7
+     sg13g2_and3_1                   2
+     sg13g2_buf_1                    7
+     sg13g2_dfrbpq_1                24
+     sg13g2_inv_1                   11
+     sg13g2_nand2_1                 13
+     sg13g2_nand2b_1                 2
+     sg13g2_nand3_1                 17
+     sg13g2_nand3b_1                 1
+     sg13g2_nor2_1                   5
+     sg13g2_nor3_1                   9
+     sg13g2_nor4_1                   2
+     sg13g2_o21ai_1                 10
+     sg13g2_tiehi                   24
+     sg13g2_xnor2_1                  1
+
+   Chip area for module '\tt_um_delta': 2186.352000
+     of which used for sequential elements: 1175.731200 (53.78%)
+
