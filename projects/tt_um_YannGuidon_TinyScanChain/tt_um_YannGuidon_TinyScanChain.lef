@@ -58,6 +58,7 @@ MACRO tt_um_YannGuidon_TinyScanChain
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.725400 ;
     PORT
       LAYER Metal4 ;
         RECT 187.050 153.980 187.350 154.980 ;
@@ -74,6 +75,7 @@ MACRO tt_um_YannGuidon_TinyScanChain
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -172,7 +174,7 @@ MACRO tt_um_YannGuidon_TinyScanChain
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.938600 ;
     PORT
       LAYER Metal4 ;
         RECT 140.970 153.980 141.270 154.980 ;
@@ -215,6 +217,7 @@ MACRO tt_um_YannGuidon_TinyScanChain
   PIN uio_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 121.770 153.980 122.070 154.980 ;
@@ -340,7 +343,7 @@ MACRO tt_um_YannGuidon_TinyScanChain
   PIN uio_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.706800 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 68.010 153.980 68.310 154.980 ;
@@ -442,9 +445,9 @@ MACRO tt_um_YannGuidon_TinyScanChain
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 15.560 3.635 181.065 153.865 ;
+        RECT 15.560 3.635 198.345 153.865 ;
       LAYER Metal3 ;
-        RECT 15.515 3.680 181.105 153.825 ;
+        RECT 15.515 3.680 198.385 153.825 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
@@ -486,9 +489,13 @@ MACRO tt_um_YannGuidon_TinyScanChain
         RECT 168.360 153.770 171.480 153.980 ;
         RECT 172.200 153.770 175.320 153.980 ;
         RECT 176.040 153.770 179.160 153.980 ;
-        RECT 15.560 3.635 179.620 153.770 ;
+        RECT 179.880 153.770 183.000 153.980 ;
+        RECT 183.720 153.770 186.840 153.980 ;
+        RECT 187.560 153.770 190.680 153.980 ;
+        RECT 191.400 153.770 195.465 153.980 ;
+        RECT 15.560 3.635 195.465 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 179.125 151.510 ;
+        RECT 15.515 3.470 195.505 151.510 ;
   END
 END tt_um_YannGuidon_TinyScanChain
 END LIBRARY

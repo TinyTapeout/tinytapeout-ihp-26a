@@ -77,12 +77,12 @@ For speed/convenience,
 
 * the input/GET bits are located closest to the SC_DOUT pin so they are most immediately available.
 
-Thus we have :
+Thus we have 24 bits stored in the shift register:
 
 - SC_DIN
-- 3×3 bits to the output port (DO0-DO8)
-- 15-bit counter (controlled by the internal clk and reset, enabled by Count_Enable)
-- 3×3 bits to the input port (DI0-DI7, DI8 set to 1 as marker)
+- 9 bits SET to the output port (DO0-DO8)
+- 8-bit LFSR (7 LSB visible, controlled by the internal clk and reset, enabled by Count_Enable)
+- 8 bits GET from the input port (DI0-DI7)
 - SC_DOUT
 
 (more to be documented)
