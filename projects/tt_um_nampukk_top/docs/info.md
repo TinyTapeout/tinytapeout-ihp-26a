@@ -8,12 +8,14 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
+- Read tapeout.typ
 
-It's an adder
+Explain how your project works
 
 ## How to test
+- Read tapeout.typ
 
-Add numbers and see
+Explain how to use your project
 
 ## External hardware
 

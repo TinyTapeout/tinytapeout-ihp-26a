@@ -1,0 +1,41 @@
+122. Printing statistics.
+
+=== tt_um_nampukk_top ===
+
+   Number of wires:                217
+   Number of wire bits:            252
+   Number of public wires:          20
+   Number of public wire bits:      55
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                233
+     sg13g2_a21o_1                   4
+     sg13g2_a21oi_1                 28
+     sg13g2_a221oi_1                 7
+     sg13g2_a22oi_1                  6
+     sg13g2_and2_1                   4
+     sg13g2_dfrbpq_1                12
+     sg13g2_inv_1                   14
+     sg13g2_nand2_1                 22
+     sg13g2_nand2b_1                 6
+     sg13g2_nand3_1                  4
+     sg13g2_nand3b_1                 1
+     sg13g2_nand4_1                  3
+     sg13g2_nor2_1                  21
+     sg13g2_nor2b_1                  3
+     sg13g2_nor3_1                   7
+     sg13g2_nor4_1                   1
+     sg13g2_o21ai_1                 36
+     sg13g2_or2_1                    4
+     sg13g2_or3_1                    1
+     sg13g2_tiehi                   12
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                 17
+     sg13g2_xor2_1                   4
+
+   Chip area for module '\tt_um_nampukk_top': 2605.251600
+     of which used for sequential elements: 587.865600 (22.56%)
+

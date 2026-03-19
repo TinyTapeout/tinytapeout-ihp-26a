@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title:        "Miniproc"      # Project title
+  author:       "Tapeout"      # Your name
+  discord:      "nampukk"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "It could be a processor, but right now its just an ALU"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_nampukk_top"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+  - "tt_um_nampukk_top.v"
+  # - "adder.v"
+  - "alu.v"
+  # - "idecoder.v"
+  # - "memio.v"
+  # - "processor.v"
+  # - "project.v"
+  # - "spi_ram_controller.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Nibble0"
+  ui[1]: "Nibble1"
+  ui[2]: "Nibble2"
+  ui[3]: "Nibble3"
+  ui[4]: "Addr0"
+  ui[5]: "Addr1"
+  ui[6]: "Addr2"
+  ui[7]: "Addr3"
+
+  # Outputs
+  uo[0]: "C0"
+  uo[1]: "C1"
+  uo[2]: "C2"
+  uo[3]: "C3"
+  uo[4]: "C4"
+  uo[5]: "C5"
+  uo[6]: "C6"
+  uo[7]: "C7"
+
+  # Bidirectional pins
+  uio[0]: "B0"
+  uio[1]: "B1"
+  uio[2]: "B2"
+  uio[3]: "B3"
+  uio[4]: "B4"
+  uio[5]: "B5"
+  uio[6]: "B6"
+  uio[7]: "B7"
+
+# Do not change!
+yaml_version: 6
