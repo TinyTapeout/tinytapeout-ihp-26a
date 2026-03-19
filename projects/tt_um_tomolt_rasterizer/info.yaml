@@ -5,7 +5,7 @@ project:
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "An extremely crude on-line triangle rasterizer with VGA output"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # TODO Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     25175000       # Clock frequency in Hz
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -17,9 +17,10 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
     - "hvsync_generator.v"
     - "rasterizer.v"
+    - "serial_div.v"
+    - "serial_mul.v"
     - "triscan.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
