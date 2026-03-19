@@ -2,7 +2,7 @@
 project:
   title:        "TinyPong"      # Project title
   author:       "MvD"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  discord:      "Koleskab"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Plays Ping Pong"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     25175000       # Clock frequency in Hz (or 0 if not applicable)
@@ -34,13 +34,13 @@ pinout:
 
   # Outputs
   uo[0]: "R1"
-  uo[1]: "R0"
-  uo[2]: "G1"
-  uo[3]: "G0"
-  uo[4]: "B1"
-  uo[5]: "B0"
-  uo[6]: "HSync"
-  uo[7]: "VSync"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "VSync"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "HSync"
 
   # Bidirectional pins
   uio[0]: ""
