@@ -1,4 +1,36 @@
-109. Printing statistics.
+132. Printing statistics.
+
+=== $paramod\inverter_chain\N=s32'00000000000000000000000000000110 ===
+
+   Number of wires:                  7
+   Number of wire bits:              7
+   Number of public wires:           7
+   Number of public wire bits:       7
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     inverter                        6
+
+   Area for cell type \inverter is unknown!
+
+=== $paramod\inverter_chain\N=s32'00000000000000000000000000011110 ===
+
+   Number of wires:                 31
+   Number of wire bits:             31
+   Number of public wires:          31
+   Number of public wire bits:      31
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 30
+     inverter                       30
+
+   Area for cell type \inverter is unknown!
 
 === $paramod\inverter_chain\N=s32'00000000000000000000000001100100 ===
 
@@ -16,58 +48,160 @@
 
    Area for cell type \inverter is unknown!
 
-=== $paramod\inverter_chain\N=s32'00000000000000000000000110010000 ===
+=== $paramod\start_delay\N=s32'00000000000000000000000000000101 ===
 
-   Number of wires:                401
-   Number of wire bits:            401
-   Number of public wires:         401
-   Number of public wire bits:     401
-   Number of ports:                  2
-   Number of port bits:              2
+   Number of wires:                 29
+   Number of wire bits:             29
+   Number of public wires:           9
+   Number of public wire bits:       9
+   Number of ports:                  4
+   Number of port bits:              4
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                400
-     inverter                      400
+   Number of cells:                 26
+     sg13g2_a21oi_1                  3
+     sg13g2_and3_1                   2
+     sg13g2_and4_1                   1
+     sg13g2_dfrbpq_1                 6
+     sg13g2_inv_1                    3
+     sg13g2_nand2_1                  2
+     sg13g2_nand2b_1                 1
+     sg13g2_nand3_1                  1
+     sg13g2_nand4_1                  1
+     sg13g2_nor2_1                   1
+     sg13g2_nor2b_1                  2
+     sg13g2_nor3_1                   1
+     sg13g2_o21ai_1                  1
+     sg13g2_or2_1                    1
 
-   Area for cell type \inverter is unknown!
+   Chip area for module '$paramod\start_delay\N=s32'00000000000000000000000000000101': 473.558400
+     of which used for sequential elements: 293.932800 (62.07%)
+
+=== and2 ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_and2_2                   1
+
+   Chip area for module '\and2': 10.886400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== and4 ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of ports:                  5
+   Number of port bits:              5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_and4_2                   1
+
+   Chip area for module '\and4': 16.329600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== calibrate_data_generator ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    1
+
+   Chip area for module '\calibrate_data_generator': 54.432000
+     of which used for sequential elements: 48.988800 (90.00%)
 
 === data_generator ===
 
-   Number of wires:                 42
-   Number of wire bits:             45
-   Number of public wires:          31
-   Number of public wire bits:      34
+   Number of wires:                 47
+   Number of wire bits:             50
+   Number of public wires:          45
+   Number of public wire bits:      48
    Number of ports:                  6
    Number of port bits:              9
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 26
-     $paramod\inverter_chain\N=s32'00000000000000000000000001100100      6
-     $paramod\inverter_chain\N=s32'00000000000000000000000110010000      1
+   Number of cells:                 31
+     $paramod\inverter_chain\N=s32'00000000000000000000000001100100      7
+     and2                           12
+     and4                            1
      inverter                        1
      one_hot_encoder_2to4            1
      one_hot_encoder_3to8            1
+     or2                             1
+     or3                             1
+     or4                             2
      ripple_divider                  1
-     sg13g2_a221oi_1                 1
-     sg13g2_a22oi_1                  3
-     sg13g2_and2_1                   1
      sg13g2_buf_1                    1
      sg13g2_inv_1                    2
-     sg13g2_nand2_1                  4
-     sg13g2_nor3_1                   1
-     sg13g2_o21ai_1                  2
 
+   Area for cell type \and2 is unknown!
+   Area for cell type \or2 is unknown!
    Area for cell type \one_hot_encoder_3to8 is unknown!
    Area for cell type \one_hot_encoder_2to4 is unknown!
    Area for cell type \inverter is unknown!
+   Area for cell type \and4 is unknown!
+   Area for cell type \or4 is unknown!
+   Area for cell type \or3 is unknown!
    Area for cell type \ripple_divider is unknown!
-   Area for cell type $paramod\inverter_chain\N=s32'00000000000000000000000110010000 is unknown!
    Area for cell type $paramod\inverter_chain\N=s32'00000000000000000000000001100100 is unknown!
 
-   Chip area for module '\data_generator': 130.523400
+   Chip area for module '\data_generator': 18.144000
      of which used for sequential elements: 0.000000 (0.00%)
+
+=== hold_buffer ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $paramod\inverter_chain\N=s32'00000000000000000000000000000110      1
+
+   Area for cell type $paramod\inverter_chain\N=s32'00000000000000000000000000000110 is unknown!
+
+=== input_synchronizer ===
+
+   Number of wires:                  8
+   Number of wire bits:              8
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     sg13g2_dfrbpq_1                 3
+     sg13g2_tiehi                    3
+
+   Chip area for module '\input_synchronizer': 168.739200
+     of which used for sequential elements: 146.966400 (87.10%)
 
 === inverter ===
 
@@ -81,10 +215,125 @@
    Number of memory bits:            0
    Number of processes:              0
    Number of cells:                  1
-     sg13g2_inv_4                    1
+     sg13g2_inv_2                    1
 
-   Chip area for module '\inverter': 10.886400
+   Chip area for module '\inverter': 7.257600
      of which used for sequential elements: 0.000000 (0.00%)
+
+=== meta_top ===
+
+   Number of wires:                 21
+   Number of wire bits:             35
+   Number of public wires:          21
+   Number of public wire bits:      35
+   Number of ports:                 13
+   Number of port bits:             27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     $paramod\start_delay\N=s32'00000000000000000000000000000101      1
+     calibrate_data_generator        1
+     data_generator                  1
+     input_synchronizer              2
+     metastability_counter           1
+     metastability_detector_1        1
+     metastability_detector_2        1
+     reset_synchronizer              1
+     sg13g2_mux2_1                   1
+     sg13g2_xor2_1                   1
+     tunable_delay                   1
+
+   Area for cell type \tunable_delay is unknown!
+   Area for cell type \reset_synchronizer is unknown!
+   Area for cell type \input_synchronizer is unknown!
+   Area for cell type \data_generator is unknown!
+   Area for cell type \calibrate_data_generator is unknown!
+   Area for cell type \metastability_detector_1 is unknown!
+   Area for cell type \metastability_detector_2 is unknown!
+   Area for cell type \metastability_counter is unknown!
+   Area for cell type $paramod\start_delay\N=s32'00000000000000000000000000000101 is unknown!
+
+   Chip area for module '\meta_top': 32.659200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== metastability_counter ===
+
+   Number of wires:                 23
+   Number of wire bits:             30
+   Number of public wires:           4
+   Number of public wire bits:      11
+   Number of ports:                  4
+   Number of port bits:             11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 27
+     sg13g2_a21oi_1                  3
+     sg13g2_a22oi_1                  1
+     sg13g2_and2_1                   3
+     sg13g2_and3_1                   1
+     sg13g2_and4_1                   1
+     sg13g2_dfrbpq_1                 8
+     sg13g2_inv_1                    2
+     sg13g2_nand3_1                  2
+     sg13g2_nor2_1                   2
+     sg13g2_xor2_1                   4
+
+   Chip area for module '\metastability_counter': 586.013400
+     of which used for sequential elements: 391.910400 (66.88%)
+
+=== metastability_detector_1 ===
+
+   Number of wires:                 19
+   Number of wire bits:             19
+   Number of public wires:          18
+   Number of public wire bits:      18
+   Number of ports:                  7
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 13
+     and2                            2
+     hold_buffer                     2
+     or2                             1
+     sg13g2_dfrbpq_1                 6
+     sg13g2_inv_1                    1
+     sg13g2_xor2_1                   1
+
+   Area for cell type \and2 is unknown!
+   Area for cell type \or2 is unknown!
+   Area for cell type \hold_buffer is unknown!
+
+   Chip area for module '\metastability_detector_1': 313.891200
+     of which used for sequential elements: 293.932800 (93.64%)
+
+=== metastability_detector_2 ===
+
+   Number of wires:                 20
+   Number of wire bits:             20
+   Number of public wires:          19
+   Number of public wire bits:      19
+   Number of ports:                  7
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 14
+     and2                            2
+     hold_buffer                     3
+     or2                             1
+     sg13g2_dfrbpq_1                 6
+     sg13g2_inv_1                    1
+     sg13g2_xor2_1                   1
+
+   Area for cell type \and2 is unknown!
+   Area for cell type \or2 is unknown!
+   Area for cell type \hold_buffer is unknown!
+
+   Chip area for module '\metastability_detector_2': 313.891200
+     of which used for sequential elements: 293.932800 (93.64%)
 
 === one_hot_encoder_2to4 ===
 
@@ -125,10 +374,35 @@
    Chip area for module '\one_hot_encoder_3to8': 92.534400
      of which used for sequential elements: 0.000000 (0.00%)
 
-=== ripple_divider ===
+=== one_hot_encoder_5to32 ===
 
-   Number of wires:                  7
-   Number of wire bits:              7
+   Number of wires:                 13
+   Number of wire bits:             48
+   Number of public wires:           2
+   Number of public wire bits:      37
+   Number of ports:                  2
+   Number of port bits:             37
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 43
+     sg13g2_inv_1                    3
+     sg13g2_nand2b_1                 2
+     sg13g2_nand3_1                  1
+     sg13g2_nand3b_1                 3
+     sg13g2_nand4_1                  1
+     sg13g2_nor2_1                   2
+     sg13g2_nor3_1                  14
+     sg13g2_nor4_1                  16
+     sg13g2_or2_1                    1
+
+   Chip area for module '\one_hot_encoder_5to32': 417.312000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== or2 ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
    Number of public wires:           3
    Number of public wire bits:       3
    Number of ports:                  3
@@ -136,13 +410,81 @@
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                  6
-     sg13g2_dfrbpq_1                 2
-     sg13g2_inv_1                    2
-     sg13g2_tiehi                    2
+   Number of cells:                  1
+     sg13g2_or2_2                    1
 
-   Chip area for module '\ripple_divider': 123.379200
-     of which used for sequential elements: 97.977600 (79.41%)
+   Chip area for module '\or2': 10.886400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== or3 ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of ports:                  4
+   Number of port bits:              4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_or3_2                    1
+
+   Chip area for module '\or3': 14.515200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== or4 ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of ports:                  5
+   Number of port bits:              5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_or4_2                    1
+
+   Chip area for module '\or4': 16.329600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== reset_synchronizer ===
+
+   Number of wires:                  6
+   Number of wire bits:              6
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     sg13g2_dfrbpq_1                 3
+     sg13g2_tiehi                    1
+
+   Chip area for module '\reset_synchronizer': 154.224000
+     of which used for sequential elements: 146.966400 (95.29%)
+
+=== ripple_divider ===
+
+   Number of wires:                 10
+   Number of wire bits:             10
+   Number of public wires:           6
+   Number of public wire bits:       6
+   Number of ports:                  4
+   Number of port bits:              4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     sg13g2_dfrbpq_1                 4
+     sg13g2_inv_1                    4
+
+   Chip area for module '\ripple_divider': 217.728000
+     of which used for sequential elements: 195.955200 (90.00%)
 
 === tt_um_luke_meta ===
 
@@ -155,54 +497,128 @@
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 24
-     data_generator                  1
-     sg13g2_tiehi                    1
-     sg13g2_tielo                   22
+   Number of cells:                 14
+     meta_top                        1
+     sg13g2_tiehi                    3
+     sg13g2_tielo                   10
 
-   Area for cell type \data_generator is unknown!
+   Area for cell type \meta_top is unknown!
 
-   Chip area for module '\tt_um_luke_meta': 166.924800
+   Chip area for module '\tt_um_luke_meta': 94.348800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== tunable_delay ===
+
+   Number of wires:                109
+   Number of wire bits:            113
+   Number of public wires:         109
+   Number of public wire bits:     113
+   Number of ports:                  3
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 76
+     $paramod\inverter_chain\N=s32'00000000000000000000000000011110     30
+     and2                           32
+     inverter                        1
+     one_hot_encoder_5to32           1
+     or2                             1
+     or4                            10
+     sg13g2_buf_1                    1
+
+   Area for cell type \and2 is unknown!
+   Area for cell type \or2 is unknown!
+   Area for cell type \inverter is unknown!
+   Area for cell type \or4 is unknown!
+   Area for cell type \one_hot_encoder_5to32 is unknown!
+   Area for cell type $paramod\inverter_chain\N=s32'00000000000000000000000000011110 is unknown!
+
+   Chip area for module '\tunable_delay': 7.257600
      of which used for sequential elements: 0.000000 (0.00%)
 
 === design hierarchy ===
 
    tt_um_luke_meta                   1
-     data_generator                  1
-       $paramod\inverter_chain\N=s32'00000000000000000000000001100100      6
-         inverter                  100
-       $paramod\inverter_chain\N=s32'00000000000000000000000110010000      1
-         inverter                  400
-       inverter                      1
-       one_hot_encoder_2to4          1
-       one_hot_encoder_3to8          1
-       ripple_divider                1
+     meta_top                        1
+       $paramod\start_delay\N=s32'00000000000000000000000000000101      1
+       calibrate_data_generator      1
+       data_generator                1
+         $paramod\inverter_chain\N=s32'00000000000000000000000001100100      7
+           inverter                100
+         and2                       12
+         and4                        1
+         inverter                    1
+         one_hot_encoder_2to4        1
+         one_hot_encoder_3to8        1
+         or2                         1
+         or3                         1
+         or4                         2
+         ripple_divider              1
+       input_synchronizer            2
+       metastability_counter         1
+       metastability_detector_1      1
+         and2                        2
+         hold_buffer                 2
+           $paramod\inverter_chain\N=s32'00000000000000000000000000000110      1
+             inverter                6
+         or2                         1
+       metastability_detector_2      1
+         and2                        2
+         hold_buffer                 3
+           $paramod\inverter_chain\N=s32'00000000000000000000000000000110      1
+             inverter                6
+         or2                         1
+       reset_synchronizer            1
+       tunable_delay                 1
+         $paramod\inverter_chain\N=s32'00000000000000000000000000011110     30
+           inverter                 30
+         and2                       32
+         inverter                    1
+         one_hot_encoder_5to32       1
+         or2                         1
+         or4                        10
 
-   Number of wires:               3074
-   Number of wire bits:           3125
-   Number of public wires:        3055
-   Number of public wire bits:    3106
-   Number of ports:               2037
-   Number of port bits:           2088
+   Number of wires:               5504
+   Number of wire bits:           5615
+   Number of public wires:        5434
+   Number of public wire bits:    5545
+   Number of ports:               3657
+   Number of port bits:           3768
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1061
-     sg13g2_a221oi_1                 1
-     sg13g2_a22oi_1                  3
-     sg13g2_and2_1                   2
-     sg13g2_buf_1                    1
-     sg13g2_dfrbpq_1                 2
-     sg13g2_inv_1                    7
-     sg13g2_inv_4                 1001
-     sg13g2_nand2_1                  5
-     sg13g2_nor2_1                   3
-     sg13g2_nor2b_1                  2
-     sg13g2_nor3_1                   7
-     sg13g2_o21ai_1                  2
-     sg13g2_tiehi                    3
-     sg13g2_tielo                   22
+   Number of cells:               1871
+     sg13g2_a21oi_1                  6
+     sg13g2_a22oi_1                  1
+     sg13g2_and2_1                   4
+     sg13g2_and2_2                  48
+     sg13g2_and3_1                   3
+     sg13g2_and4_1                   2
+     sg13g2_and4_2                   1
+     sg13g2_buf_1                    2
+     sg13g2_dfrbpq_1                40
+     sg13g2_inv_1                   20
+     sg13g2_inv_2                 1632
+     sg13g2_mux2_1                   1
+     sg13g2_nand2_1                  3
+     sg13g2_nand2b_1                 3
+     sg13g2_nand3_1                  4
+     sg13g2_nand3b_1                 3
+     sg13g2_nand4_1                  2
+     sg13g2_nor2_1                   8
+     sg13g2_nor2b_1                  4
+     sg13g2_nor3_1                  21
+     sg13g2_nor4_1                  16
+     sg13g2_o21ai_1                  1
+     sg13g2_or2_1                    2
+     sg13g2_or2_2                    4
+     sg13g2_or3_2                    1
+     sg13g2_or4_2                   12
+     sg13g2_tiehi                   10
+     sg13g2_tielo                   10
+     sg13g2_xor2_1                   7
 
-   Chip area for top module '\tt_um_luke_meta': 11445.121800
-     of which used for sequential elements: 97.977600 (0.86%)
+   Chip area for top module '\tt_um_luke_meta': 15785.242200
+     of which used for sequential elements: 1959.552000 (12.41%)
 

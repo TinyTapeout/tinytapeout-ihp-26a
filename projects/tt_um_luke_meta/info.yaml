@@ -4,8 +4,8 @@ project:
   author:       "Luca Pezzarossa"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A demostrator of metastability effects."      # One line description of what your project does
-  language:     "Chisel" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -17,46 +17,58 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
+    - "sc/inverter.v"
+    - "sc/and2.v"
+    - "sc/and4.v"
+    - "sc/or2.v"
+    - "sc/or3.v"
+    - "sc/or4.v"
+    - "inverter_chain.v"
     - "data_generator.v"
-    - "ChiselTop.v"
-    - "tt_um_chisel_template.v"
+    - "calibrate_data_generator.v"
+    - "tunable_delay.v"
+    - "hold_buffer.v"
+    - "metastability_detector_1.v"
+    - "metastability_detector_2.v"
+    - "metastability_counter.v"
+    - "reset_synchronizer.v"
+    - "input_synchronizer.v"
+    - "start_delay.v"
+    - "meta_top.v"
+    - "tt_um_luke_meta.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "in0"
-  ui[1]: "in1"
-  ui[2]: "in2"
-  ui[3]: "in3"
-  ui[4]: "in4"
-  ui[5]: "in5"
-  ui[6]: "in6"
-  ui[7]: "in7"
+  ui[0]: "data_frequency_ctrl[0] (in)"
+  ui[1]: "data_frequency_ctrl[1] (in)"
+  ui[2]: "data_frequency_ctrl[2] (in)"
+  ui[3]: "prescaler_bypass_ctrl[0] (in)"
+  ui[4]: "prescaler_bypass_ctrl[1] (in)"
+  ui[5]: "external_data (in)"
+  ui[6]: "detector_select (in)"
+  ui[7]: "calibration_mode (in)"
 
   # Outputs
-  uo[0]: "out0"
-  uo[1]: "out1"
-  uo[2]: "out2"
-  uo[3]: "out3"
-  uo[4]: "out4"
-  uo[5]: "out5"
-  uo[6]: "out6"
-  uo[7]: "out7"
+  uo[0]: "metastability_count[0] (out)"
+  uo[1]: "metastability_count[1] (out)"
+  uo[2]: "metastability_count[2] (out)"
+  uo[3]: "metastability_count[3] (out)"
+  uo[4]: "metastability_count[4] (out)"
+  uo[5]: "metastability_count[5] (out)"
+  uo[6]: "metastability_count[6] (out)"
+  uo[7]: "metastability_count[7] (out)"
 
   # Bidirectional pins
-  uio[0]: "inout0"
-  uio[1]: "inout1"
-  uio[2]: "inout2"
-  uio[3]: "inout3"
-  uio[4]: "inout4"
-  uio[5]: "inout5"
-  uio[6]: "inout6"
-  uio[7]: "inout7"
-
-# Skip gate level test
-test:
-  skip_gl: true
+  uio[0]: "metastability_detected (out)"
+  uio[1]: "data_monitor (out)"
+  uio[2]: "tune_delay_monitor (out)"
+  uio[3]: "tune_delay_ctrl[0] (in)"
+  uio[4]: "tune_delay_ctrl[1] (in)"
+  uio[5]: "tune_delay_ctrl[2] (in)"
+  uio[6]: "tune_delay_ctrl[3] (in)"
+  uio[7]: "tune_delay_ctrl[4] (in)"
 
 # Do not change!
 yaml_version: 6
