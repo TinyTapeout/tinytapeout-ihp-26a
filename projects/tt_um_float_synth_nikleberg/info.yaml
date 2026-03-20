@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title: "float_synth"
+  author: "Niklaus Leuenberger"
+  discord: ""
+  description: "Synthesizing the VHDL-2008 IEEE.float_pkg"
+  language: "Verilog" # choose: Verilog, SystemVerilog, Amaranth, VHDL, etc
+  clock_hz: 50000000
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1" # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module: "tt_um_float_synth_nikleberg"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "gen/fadd8.v"
+    - "gen/fmul8.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "a0" # float 8-bit (1.4.3)
+  ui[1]: "a1"
+  ui[2]: "a2"
+  ui[3]: "a3"
+  ui[4]: "a4"
+  ui[5]: "a5"
+  ui[6]: "a6"
+  ui[7]: "a7"
+
+  # Outputs
+  uo[0]: "y0" # float 8-bit (1.4.3)
+  uo[1]: "y1"
+  uo[2]: "y2"
+  uo[3]: "y3"
+  uo[4]: "y4"
+  uo[5]: "y5"
+  uo[6]: "y6"
+  uo[7]: "y7"
+
+  # Bidirectional pins
+  uio[0]: "b0" # float 8-bit (1.4.3)
+  uio[1]: "b1"
+  uio[2]: "b2"
+  uio[3]: "b3"
+  uio[4]: "b4"
+  uio[5]: "b5"
+  uio[6]: "b6"
+  uio[7]: "b7"
+
+# Do not change!
+yaml_version: 6
