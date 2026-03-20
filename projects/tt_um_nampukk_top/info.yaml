@@ -20,6 +20,8 @@ project:
   - "tt_um_nampukk_top.v"
   # - "adder.v"
   - "alu.v"
+  - "alu_ext.v"
+  - "adder.v"
   # - "idecoder.v"
   # - "memio.v"
   # - "processor.v"
