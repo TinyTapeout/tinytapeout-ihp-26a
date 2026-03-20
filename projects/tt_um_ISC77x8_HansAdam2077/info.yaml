@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:        "ISC77x16"      # Project title
+  author:       "Hans Kristensen"      # Your name
+  discord:      "denko512"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "7 segment side scrolling display with 16 character programmeable message"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ISC77x8_HansAdam2077"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - tt_um_ISC77x8_HansAdam2077.v
+    - ISC77x8v2.v
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "bit0 of the alphanumeric character to be programmed"
+  ui[1]: "bit1 of the alphanumeric character to be programmed"
+  ui[2]: "bit2 of the alphanumeric character to be programmed"
+  ui[3]: "bit3 of the alphanumeric character to be programmed"
+  ui[4]: "bit4 of the alphanumeric character to be programmed"
+  ui[5]: "bit0 of the register selector"
+  ui[6]: "bit1 of the register selector"
+  ui[7]: "bit2 of the register selector"
+
+  # Outputs
+  uo[0]: "Segment of the first 7 segment display"
+  uo[1]: "Segment of the first 7 segment display"
+  uo[2]: "Segment of the first 7 segment display"
+  uo[3]: "Segment of the first 7 segment display"
+  uo[4]: "Segment of the first 7 segment display"
+  uo[5]: "Segment of the first 7 segment display"
+  uo[6]: "Segment of the first 7 segment display"
+  uo[7]: "Segment of the second 7 segment display"
+
+  # Bidirectional pins
+  uio[0]: "bit3 of the register selector"
+  uio[1]: "The write switch. Loads the alphanumeric character to the selected register when high"
+  uio[2]: "Segment of the second 7 segment display"
+  uio[3]: "Segment of the second 7 segment display"
+  uio[4]: "Segment of the second 7 segment display"
+  uio[5]: "Segment of the second 7 segment display"
+  uio[6]: "Segment of the second 7 segment display"
+  uio[7]: "Segment of the second 7 segment display"
+
+# Do not change!
+yaml_version: 6
