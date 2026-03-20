@@ -9,14 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-For now it just generates basic VGA video timing and generates some crappy noise patterns.
-
-Later, it might be a totally different project!
+Metal wires connect the 8 input pins directly to the 8 output pins.
 
 ## How to test
 
-Supply the usual 25.175MHz clock and use a Tiny VGA PMOD.
+Present signals on `ui_in` and observe them appear on `uo_out`.
 
 ## External hardware
 
-Tiny VGA PMOD is all you really need for now.
+Maybe just an oscilloscope to measure timing?
