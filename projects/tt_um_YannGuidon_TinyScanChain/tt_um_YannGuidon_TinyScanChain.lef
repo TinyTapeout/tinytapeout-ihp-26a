@@ -174,7 +174,7 @@ MACRO tt_um_YannGuidon_TinyScanChain
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.938600 ;
+    ANTENNAGATEAREA 0.725400 ;
     PORT
       LAYER Metal4 ;
         RECT 140.970 153.980 141.270 154.980 ;
@@ -445,9 +445,9 @@ MACRO tt_um_YannGuidon_TinyScanChain
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 15.560 3.635 198.345 153.865 ;
+        RECT 15.560 3.635 194.505 153.865 ;
       LAYER Metal3 ;
-        RECT 15.515 3.680 198.385 153.825 ;
+        RECT 15.515 3.680 194.545 153.825 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
@@ -491,11 +491,9 @@ MACRO tt_um_YannGuidon_TinyScanChain
         RECT 176.040 153.770 179.160 153.980 ;
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
-        RECT 187.560 153.770 190.680 153.980 ;
-        RECT 191.400 153.770 195.465 153.980 ;
-        RECT 15.560 3.635 195.465 153.770 ;
+        RECT 15.560 3.635 187.300 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 195.505 151.510 ;
+        RECT 15.515 3.470 179.125 151.510 ;
   END
 END tt_um_YannGuidon_TinyScanChain
 END LIBRARY
