@@ -1,0 +1,41 @@
+123. Printing statistics.
+
+=== tt_um_catalinlazar_ihp_osc_array ===
+
+   Number of wires:               1104
+   Number of wire bits:           1139
+   Number of public wires:         837
+   Number of public wire bits:     872
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1120
+     sg13g2_a21o_1                   2
+     sg13g2_a21oi_1                 40
+     sg13g2_a22oi_1                  9
+     sg13g2_and2_1                  21
+     sg13g2_and3_1                   4
+     sg13g2_dfrbpq_1                72
+     sg13g2_inv_1                  283
+     sg13g2_inv_2                  250
+     sg13g2_inv_4                  250
+     sg13g2_nand2_1                 29
+     sg13g2_nand3_1                  4
+     sg13g2_nand4_1                  5
+     sg13g2_nor2_1                  19
+     sg13g2_nor2b_1                  6
+     sg13g2_nor3_1                   7
+     sg13g2_nor4_1                   5
+     sg13g2_o21ai_1                 30
+     sg13g2_or2_1                    2
+     sg13g2_or4_1                    2
+     sg13g2_tiehi                   48
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                  7
+     sg13g2_xor2_1                   9
+
+   Chip area for module '\tt_um_catalinlazar_ihp_osc_array': 11958.370200
+     of which used for sequential elements: 3527.193600 (29.50%)
+

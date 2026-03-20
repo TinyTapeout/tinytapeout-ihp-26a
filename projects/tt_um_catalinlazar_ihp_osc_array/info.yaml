@@ -1,0 +1,48 @@
+# Tiny Tapeout project information
+project:
+  title:      "IHP Gate Delay Characterizer (3-Flavor)"
+  author:     "Catalin Lazar"
+  language:   "Verilog"
+  description: "Characterizes 3 flavors of ring oscillators (Inv1, 2, 4) with 31 stages (30 inv + 1 NAND, prime length) using a 24-bit counter."
+  clock_hz:    10000000
+  tiles:       "1x1"
+  top_module:  "tt_um_catalinlazar_ihp_osc_array"
+  source_files:
+    - "tt_um_catalinlazar_ihp_osc_array.v"
+    - "catalinlazar_ihp_ring_osc_1248.v"
+    - "primitives.v"
+
+# Pinout mapping updated to match tt_um_catalinlazar_ihp_osc_array.v logic
+pinout:
+  # Inputs
+  ui[0]: "global_en (Master Enable)"
+  ui[1]: "f_sel[0] (Flavor Select Bit 0)"
+  ui[2]: "f_sel[1] (Flavor Select Bit 1)"
+  ui[3]: "b_sel[0] (Byte Select Bit 0)"
+  ui[4]: "b_sel[1] (Byte Select Bit 1)"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs
+  uo[0]: "data_out[0]"
+  uo[1]: "data_out[1]"
+  uo[2]: "data_out[2]"
+  uo[3]: "data_out[3]"
+  uo[4]: "data_out[4]"
+  uo[5]: "data_out[5]"
+  uo[6]: "data_out[6]"
+  uo[7]: "data_out[7]"
+
+  # Bidirectional pins
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+# Do not change!
+yaml_version: 6
