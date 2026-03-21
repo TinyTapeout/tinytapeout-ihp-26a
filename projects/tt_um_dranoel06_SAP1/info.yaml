@@ -51,7 +51,7 @@ pinout:
   uio[3]: "Address[3]"
   uio[4]: ""
   uio[5]: ""
-  uio[6]: ""
+  uio[6]: "UART_TX"
   uio[7]: "Prog"
 
 # Do not change!
