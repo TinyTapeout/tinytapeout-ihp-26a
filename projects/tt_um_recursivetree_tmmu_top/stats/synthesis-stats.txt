@@ -1,0 +1,41 @@
+122. Printing statistics.
+
+=== tt_um_recursivetree_tmmu_top ===
+
+   Number of wires:               1952
+   Number of wire bits:           1987
+   Number of public wires:         670
+   Number of public wire bits:     705
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1968
+     sg13g2_a21oi_1                 12
+     sg13g2_a22oi_1                320
+     sg13g2_and2_1                   1
+     sg13g2_and3_1                   2
+     sg13g2_buf_1                    2
+     sg13g2_dfrbpq_1                18
+     sg13g2_dllrq_1                640
+     sg13g2_inv_1                   14
+     sg13g2_mux2_1                  12
+     sg13g2_nand2_1                 74
+     sg13g2_nand2b_1                 7
+     sg13g2_nand3b_1                 1
+     sg13g2_nand4_1                 81
+     sg13g2_nor2_1                  18
+     sg13g2_nor2b_1                  1
+     sg13g2_nor3_1                  46
+     sg13g2_nor4_1                  42
+     sg13g2_o21ai_1                  2
+     sg13g2_or2_1                    2
+     sg13g2_or4_1                    1
+     sg13g2_tiehi                  658
+     sg13g2_tielo                   12
+     sg13g2_xor2_1                   2
+
+   Chip area for module '\tt_um_recursivetree_tmmu_top': 30836.332800
+     of which used for sequential elements: 881.798400 (2.86%)
+
