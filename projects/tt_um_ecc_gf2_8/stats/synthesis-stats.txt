@@ -1,0 +1,47 @@
+140. Printing statistics.
+
+=== tt_um_ecc_gf2_8 ===
+
+   Number of wires:               1230
+   Number of wire bits:           1265
+   Number of public wires:         101
+   Number of public wire bits:     136
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1246
+     sg13g2_a21o_1                  46
+     sg13g2_a21oi_1                113
+     sg13g2_a221oi_1                66
+     sg13g2_a22oi_1                 87
+     sg13g2_and2_1                  28
+     sg13g2_and3_1                   8
+     sg13g2_and4_1                   6
+     sg13g2_buf_1                    3
+     sg13g2_dfrbpq_1                93
+     sg13g2_inv_1                   41
+     sg13g2_mux2_1                  48
+     sg13g2_mux4_1                   1
+     sg13g2_nand2_1                112
+     sg13g2_nand2b_1                15
+     sg13g2_nand3_1                 48
+     sg13g2_nand3b_1                 4
+     sg13g2_nand4_1                 19
+     sg13g2_nor2_1                 123
+     sg13g2_nor2b_1                 12
+     sg13g2_nor3_1                  59
+     sg13g2_nor4_1                  27
+     sg13g2_o21ai_1                129
+     sg13g2_or2_1                   22
+     sg13g2_or3_1                    9
+     sg13g2_or4_1                    3
+     sg13g2_tiehi                    3
+     sg13g2_tielo                   10
+     sg13g2_xnor2_1                 83
+     sg13g2_xor2_1                  28
+
+   Chip area for module '\tt_um_ecc_gf2_8': 16369.857000
+     of which used for sequential elements: 4555.958400 (27.83%)
+
