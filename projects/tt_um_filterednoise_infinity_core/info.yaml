@@ -24,10 +24,10 @@ project:
 pinout:
   # Inputs
   ui[0]: "Audio Trigger In (Digital Pulse)"
-  ui[1]: "Encoder 1 Pin A (Decay)"
-  ui[2]: "Encoder 1 Pin B (Decay)"
-  ui[3]: "Encoder 2 Pin A (Pattern)"
-  ui[4]: "Encoder 2 Pin B (Pattern)"
+  ui[1]: "Encoder 1 Pin A (Brightness/Density)"
+  ui[2]: "Encoder 1 Pin B (Brightness/Density)"
+  ui[3]: "Encoder 2 Pin A (Decay Speed)"
+  ui[4]: "Encoder 2 Pin B (Decay Speed)"
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
@@ -38,7 +38,7 @@ pinout:
   uo[2]: "SPI Data (MOSI)"
   uo[3]: "SPI Data/Command (DC)"
   uo[4]: "SPI Chip Select (CS)"
-  uo[5]: ""
+  uo[5]: "Debug Heartbeat Blink"
   uo[6]: ""
   uo[7]: ""
 
