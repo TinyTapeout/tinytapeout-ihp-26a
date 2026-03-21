@@ -8,14 +8,11 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-
-First two inputs are connected to SR flip flop.
-Last 3 are added
+Input three 8-bit numbers A, B, C sequentially at consecutive positive clock edges.
+Upon the fourth positive clock edge, the result out=(A+B)*C is provided.
 
 ## How to test
-
-Set in 0, reset 0
+Insert 3 numbers, check result.
 
 ## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None
