@@ -1,0 +1,45 @@
+182. Printing statistics.
+
+=== tt_um_intv0id_kalman ===
+
+   Number of wires:               2273
+   Number of wire bits:           2308
+   Number of public wires:         369
+   Number of public wire bits:     404
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2289
+     sg13g2_a21o_1                  46
+     sg13g2_a21oi_1                216
+     sg13g2_a221oi_1                23
+     sg13g2_a22oi_1                 39
+     sg13g2_and2_1                  50
+     sg13g2_and3_1                  18
+     sg13g2_and4_1                   9
+     sg13g2_buf_1                    4
+     sg13g2_dfrbpq_1               366
+     sg13g2_inv_1                  127
+     sg13g2_mux2_1                 156
+     sg13g2_nand2_1                222
+     sg13g2_nand2b_1                65
+     sg13g2_nand3_1                 83
+     sg13g2_nand3b_1                 8
+     sg13g2_nand4_1                 12
+     sg13g2_nor2_1                 196
+     sg13g2_nor2b_1                 47
+     sg13g2_nor3_1                  52
+     sg13g2_nor4_1                  15
+     sg13g2_o21ai_1                213
+     sg13g2_or2_1                   38
+     sg13g2_or3_1                   12
+     sg13g2_or4_1                    1
+     sg13g2_tielo                   20
+     sg13g2_xnor2_1                172
+     sg13g2_xor2_1                  79
+
+   Chip area for module '\tt_um_intv0id_kalman': 37496.730600
+     of which used for sequential elements: 17929.900800 (47.82%)
+

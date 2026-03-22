@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_kalman
+MACRO tt_um_intv0id_kalman
   CLASS BLOCK ;
-  FOREIGN tt_um_kalman ;
+  FOREIGN tt_um_intv0id_kalman ;
   ORIGIN 0.000 0.000 ;
   SIZE 202.080 BY 313.740 ;
   PIN VGND
@@ -84,7 +84,6 @@ MACRO tt_um_kalman
   PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 179.370 312.740 179.670 313.740 ;
@@ -149,6 +148,7 @@ MACRO tt_um_kalman
   PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 148.650 312.740 148.950 313.740 ;
@@ -432,11 +432,11 @@ MACRO tt_um_kalman
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 310.180 ;
       LAYER Metal2 ;
-        RECT 0.855 3.215 201.705 310.105 ;
+        RECT 0.375 3.635 199.785 311.320 ;
       LAYER Metal3 ;
-        RECT 0.815 3.260 201.745 310.060 ;
+        RECT 0.335 3.680 199.825 310.905 ;
       LAYER Metal4 ;
-        RECT 3.735 312.530 29.400 312.740 ;
+        RECT 3.260 312.530 29.400 312.740 ;
         RECT 30.120 312.530 33.240 312.740 ;
         RECT 33.960 312.530 37.080 312.740 ;
         RECT 37.800 312.530 40.920 312.740 ;
@@ -479,11 +479,11 @@ MACRO tt_um_kalman
         RECT 179.880 312.530 183.000 312.740 ;
         RECT 183.720 312.530 186.840 312.740 ;
         RECT 187.560 312.530 190.680 312.740 ;
-        RECT 191.400 312.530 197.385 312.740 ;
-        RECT 3.735 3.635 197.385 312.530 ;
+        RECT 191.400 312.530 197.865 312.740 ;
+        RECT 3.260 3.635 197.865 312.530 ;
       LAYER Metal5 ;
-        RECT 3.695 3.470 197.425 310.270 ;
+        RECT 4.175 3.470 197.905 310.270 ;
   END
-END tt_um_kalman
+END tt_um_intv0id_kalman
 END LIBRARY
 
