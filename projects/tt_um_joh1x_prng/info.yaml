@@ -1,0 +1,50 @@
+# Tiny Tapeout project information
+project:
+  title:        "8-bit PRNG"        # Project title
+  author:       "Johannes Reibold"  # Your name
+  discord:      ""                  # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "see title"         # One line description of what your project does
+  language:     "Verilog"           # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0                   # Clock frequency in Hz (or 0 if not applicable)
+
+  tiles: "1x1"
+  top_module:  "tt_um_joh1x_prng"
+  source_files:
+    - "project.v"
+    - "7segment_decoder.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs: First seed, then can be used as a maximum value for the seven segment display output
+  ui[0]: "Input bit 0"
+  ui[1]: "Input bit 1"
+  ui[2]: "Input bit 2"
+  ui[3]: "Input bit 3"
+  ui[4]: "Input bit 4"
+  ui[5]: "Input bit 5"
+  ui[6]: "Input bit 6"
+  ui[7]: "Input bit 7"
+
+  # Outputs
+  uo[0]: "Seven segment output A"
+  uo[1]: "Seven segment output B"
+  uo[2]: "Seven segment output C"
+  uo[3]: "Seven segment output D"
+  uo[4]: "Seven segment output E"
+  uo[5]: "Seven segment output F"
+  uo[6]: "Seven segment output G"
+  uo[7]: "Seven segment output dot"
+
+  # Bidirectional pins
+  uio[0]: "RNG output bit 0"
+  uio[1]: "RNG output bit 1"
+  uio[2]: "RNG output bit 2"
+  uio[3]: "RNG output bit 3"
+  uio[4]: "RNG output bit 4"
+  uio[5]: "RNG output bit 5"
+  uio[6]: "RNG output bit 6"
+  uio[7]: "RNG output bit 7"
+
+# Do not change!
+yaml_version: 6
