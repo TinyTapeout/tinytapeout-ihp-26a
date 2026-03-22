@@ -37,9 +37,9 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "clk_o"
+  uo[0]: "clk_pll_o"
   uo[1]: "locked_o"
-  uo[2]: ""
+  uo[2]: "clk_ref_o"
   uo[3]: ""
   uo[4]: ""
   uo[5]: ""

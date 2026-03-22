@@ -12,10 +12,10 @@ You can also include images in this folder and reference them in the markdown. E
 An All-Digital Phase-Locked Loop (ADPLL).
 
 ```
-ref_clk ──►[Bang-Bang PD]──► early/late ──►[Loop Filter]──► freq_ctrl[6:0]
+clk_ref ──►[Bang-Bang PD]──► early/late ──►[Loop Filter]──► freq_ctrl[6:0]
                 ▲                        (up/down counter)           │
                 │                                                    ▼
-           [Divider /8] ◄── dco_clk ◄─────────────────────────[Ring Osc DCO] ──► clk_out
+           [Divider /8] ◄── dco_clk ◄─────────────────────────[Ring Osc DCO] ──► clk_pll_o
 ```
 
 The bang-bang phase detector compares the divided DCO output against the reference clock. If the DCO is too fast, the loop filter decrements `freq_ctrl` (adding delay stages, slowing the DCO). If too slow, it increments. At lock, `freq_ctrl` dithers by +/-1 around the target value.
@@ -33,8 +33,9 @@ The PLL will start to lock onto the input reference clock after reset is deasser
 
 The generated PLL can be measured on output pin uo[0].
 
-  uo[0]: "clk_o"
+  uo[0]: "clk_pll_o"
   uo[1]: "locked_o"
+  uo[2]: "clk_ref_o"
 
 The clock frequency is adjusted by a 7-bit control that can be read on the bi-dir pins for debugging:
 
