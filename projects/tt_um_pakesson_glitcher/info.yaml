@@ -3,7 +3,7 @@ project:
   title:        "Glitcher"      # Project title
   author:       "Philip Åkesson"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Pulse generator with trigger input and configurable parameters"      # One line description of what your project does
+  description:  "Fault injection pulse generator with trigger input and configurable parameters, controllable over UART."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -44,12 +44,12 @@ pinout:
   uo[3]: "Pulse EN"
   uo[4]: "Busy"
   uo[5]: "Armed"
-  uo[6]: "Pulse Out (Inverted)"
-  uo[7]: "Target Reset (Inverted)"
+  uo[6]: "Pulse Out or Target Reset"
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
+  uio[0]: "Pulse Out (Inverted)"
+  uio[1]: "Target Reset (Inverted)"
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
