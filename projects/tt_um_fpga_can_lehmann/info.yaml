@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Test"      # Project title
+  title:        "FPGA"      # Project title
   author:       "Can Lehmann"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Test"      # One line description of what your project does
+  discord:      "can.l"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A tiny FPGA"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -23,9 +23,9 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "test"
-  ui[1]: "test2"
-  ui[2]: "test3"
+  ui[0]: "Program Data"
+  ui[1]: "Program Enable"
+  ui[2]: "Virtual Reset"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -33,24 +33,24 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "test4"
-  uo[1]: "test5"
-  uo[2]: ""
-  uo[3]: ""
+  uo[0]: "out[0]"
+  uo[1]: "out[1]"
+  uo[2]: "out[2]"
+  uo[3]: "out[3]"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "test6"
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "in[0]"
+  uio[1]: "in[1]"
+  uio[2]: "in[2]"
+  uio[3]: "in[3]"
+  uio[4]: "in[4]"
+  uio[5]: "in[5]"
+  uio[6]: "in[6]"
+  uio[7]: "in[7]"
 
 # Do not change!
 yaml_version: 6
