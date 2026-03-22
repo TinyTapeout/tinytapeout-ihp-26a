@@ -1,0 +1,43 @@
+145. Printing statistics.
+
+=== tt_um_chisel_template ===
+
+   Number of wires:                541
+   Number of wire bits:            576
+   Number of public wires:          66
+   Number of public wire bits:     101
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                557
+     sg13g2_a21o_1                  12
+     sg13g2_a21oi_1                 51
+     sg13g2_a221oi_1                10
+     sg13g2_a22oi_1                  8
+     sg13g2_and2_1                  26
+     sg13g2_and3_1                   6
+     sg13g2_and4_1                   2
+     sg13g2_dfrbpq_1                57
+     sg13g2_inv_1                   29
+     sg13g2_nand2_1                 47
+     sg13g2_nand2b_1                14
+     sg13g2_nand3_1                  9
+     sg13g2_nand3b_1                 2
+     sg13g2_nor2_1                  39
+     sg13g2_nor2b_1                 19
+     sg13g2_nor3_1                   9
+     sg13g2_nor4_1                   2
+     sg13g2_o21ai_1                 60
+     sg13g2_or2_1                    5
+     sg13g2_or3_1                    3
+     sg13g2_or4_1                    2
+     sg13g2_tiehi                   57
+     sg13g2_tielo                   23
+     sg13g2_xnor2_1                 46
+     sg13g2_xor2_1                  19
+
+   Chip area for module '\tt_um_chisel_template': 7453.252800
+     of which used for sequential elements: 2792.361600 (37.47%)
+
