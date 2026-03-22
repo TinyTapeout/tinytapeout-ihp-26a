@@ -4,7 +4,7 @@ project:
   title:        "Nielss first failure"      # Project title
   author:       "Niels Engelbrecht"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Tiny tapeout fun v1"      # One line description of what your project does
+  description:  "Count from 0 to 9 continously"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:      1      # Clock frequency in Hz (or 0 if not applicable)
 
@@ -16,14 +16,14 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "Input 0"
-  ui[1]: "Input 1"
-  ui[2]: "Input 2"
-  ui[3]: "Input 3"
-  ui[4]: "Input 4"
-  ui[5]: "Input 5"
-  ui[6]: "Input 6"
-  ui[7]: "Input 7"
+  ui[0]: "Counter_EN"
+  ui[1]: "Point_EN"
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
   uo[0]: "Output 0"
