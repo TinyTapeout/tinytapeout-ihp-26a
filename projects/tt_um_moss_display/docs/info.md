@@ -1,11 +1,30 @@
-<!---
+# The story of Moss
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+## Specimen Profile: Fluffulus Hoppi (aka "Moss")
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+> "Moss is a newly identified species of potentially sentient Fluffulus Hoppi enigmatica bryophyta. She is, to date, the only recorded specimen of her kind, and researchers have yet to determine her origins, ecological role, or underlying biology. What is known is that she is undeniably adorable: predominantly green, equipped with several antennae whose function remains a mystery, and capable of communicating exclusively through a series of soft “wiwiiwiiwiii!” vocalizations. She has been observed to possess four small feet; however, their practical function remains unclear, as she has thus far only been seen using them to jump in place.
+>
+> While the broader characteristics of this organism remain unclear, preliminary observations suggest a strong and possibly symbiotic association with another little-understood, recently documented species known as Chipsaur. Early interactions between the two indicate behavioral coordination, though the nature and purpose of this relationship are still under investigation.
+>
+> Further research is urgently required. We are currently seeking additional funding to better understand both of these remarkable bio-anomalies." 
+>
+> - **Dr. Sophie Zweifel**
+
+[Read the full article: What is Moss?](https://swisschips.ethz.ch/news-and-events/swisschips-news/2026/02/chipsaur-asks-what-on-earth-is-a-mosfet-and-what-is-moss.html)
+
+## Acknowledgements
+
+Special thanks to **swisschips** for making this project possible. [SwissChips](http://swisschips.ethz.ch/)
+
+### Honorary Moss
+
+<img src="MOSS_SMOL.png" width="400"/>
+
+---
+
+# MOSS Media Player
+
+The chip brings Moss to life by continuously looping her animation and vocalizations directly from hardware memory.
 
 ## How it works
 
@@ -17,7 +36,7 @@ The sprite ROM stores 4 animation frames at 64×64 pixels, scaled 4× and center
 
 <img src="jump_sequence.gif" width="300"/>
 
-### VGA Output
+### VGA output
 
 <img src="vga_output.png" width="300"/>
 
@@ -29,11 +48,3 @@ Connect the TinyVGA PMOD to the Out PMOD and an Audio PMOD to the Bidir PMOD. Pu
 
 - TinyVGA PMOD
 - Audio PMOD
-
-## Acknowledgements
-
-Special thanks to **swisschips** for making this project possible. [SwissChips](http://swisschips.ethz.ch/)
-
-### Honorary Moss
-
-<img src="MOSS_SMOL.png" width="400"/>
