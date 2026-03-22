@@ -28,13 +28,13 @@ project:
 pinout:
   # Inputs
   ui[0]: "data_in[0]"
-  ui[1]: "data_in[0]"
-  ui[2]: "data_in[0]"
-  ui[3]: "data_in[0]"
-  ui[4]: "data_in[0]"
-  ui[5]: "data_in[0]"
-  ui[6]: "data_in[0]"
-  ui[7]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: "data_in[4]"
+  ui[5]: "data_in[5]"
+  ui[6]: "data_in[6]"
+  ui[7]: "data_in[7]"
 
   # Outputs
   uo[0]: "data_out[0]"

@@ -78,7 +78,7 @@ All data is loaded 8 bits at a time via `ui_in`. Assert the corresponding `uio_i
 3. ui_in = Gx, uio_in = 0x02  → wait 1 cycle
 4. ui_in = Gy, uio_in = 0x04  → wait 1 cycle
 5. uio_in = 0x08 (start)      → wait 1 cycle, then uio_in = 0
-6. Poll uio_out[5] (done flag) — goes high for 1 cycle when complete
+6. Poll `uio_out[6]` (`busy`) — wait for it to go **low**. 
 7. Set uio_in[4] = 0, read uo_out → public key X
 8. Set uio_in[4] = 1, read uo_out → public key Y
 ```
@@ -87,9 +87,9 @@ All data is loaded 8 bits at a time via `ui_in`. Assert the corresponding `uio_i
 
 | Bit | Signal | Description |
 |-----|--------|-------------|
-| 5 | `done` | Pulses high for one cycle when result is ready |
-| 6 | `busy` | High while computation is in progress |
-| 7 | `error` | High if k=0 or result is the point at infinity |
+| 5 | `done` | Pulses high for **one clock cycle** when result is ready. Do not poll this pin from software — the pulse will be missed. |
+| 6 | `busy` | High while computation is in progress. **Poll this pin instead** — wait for it to go low, then read the result. |
+| 7 | `error` | High if k=0 or result is the point at infinity. Sample after `busy` goes low. |
 
 ### Example: Generating a public key
 ```
