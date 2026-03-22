@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2026 FABulous Contributors
+// SPDX-FileCopyrightText: © 2026 Leo Moser <leo.moser@pm.me>
 // SPDX-License-Identifier: Apache-2.0
 
 module tt_um_fabulous_ihp_26a (
@@ -77,7 +77,7 @@ module tt_um_fabulous_ihp_26a (
     assign uio_out = fabric_uio_out;
     assign uio_oe = fabric_uio_oe;
 
-    eFPGA eFPGA (
+    tiny_fabric_5x5 tiny_fabric_5x5 (
         // IN/OUT is from the PoV of the fabric
 
         // clk
