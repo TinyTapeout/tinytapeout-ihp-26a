@@ -1,58 +1,61 @@
-170. Printing statistics.
+174. Printing statistics.
 
 === tt_um_chatelao_fp8_multiplier ===
 
-   Number of wires:               5078
-   Number of wire bits:           5113
-   Number of public wires:         153
-   Number of public wire bits:     188
+   Number of wires:               5171
+   Number of wire bits:           5206
+   Number of public wires:         152
+   Number of public wire bits:     187
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               5094
-     sg13g2_a21o_1                  51
+   Number of cells:               5187
+     sg13g2_a21o_1                  55
      sg13g2_a21o_2                   1
-     sg13g2_a21oi_1                414
-     sg13g2_a21oi_2                 19
-     sg13g2_a221oi_1                36
-     sg13g2_a22oi_1                105
-     sg13g2_and2_1                  29
-     sg13g2_and3_1                   9
-     sg13g2_buf_1                  180
-     sg13g2_buf_16                   2
-     sg13g2_buf_2                   43
-     sg13g2_buf_4                   24
-     sg13g2_buf_8                   18
-     sg13g2_dfrbpq_1               145
-     sg13g2_inv_1                  550
-     sg13g2_inv_2                   16
-     sg13g2_inv_4                    3
-     sg13g2_inv_8                    1
-     sg13g2_mux2_1                  16
-     sg13g2_nand2_1               1007
-     sg13g2_nand2_2                 99
-     sg13g2_nand2b_1               115
-     sg13g2_nand2b_2                 5
-     sg13g2_nand3_1                287
-     sg13g2_nand3b_1                19
+     sg13g2_a21oi_1                417
+     sg13g2_a21oi_2                 32
+     sg13g2_a221oi_1                19
+     sg13g2_a22oi_1                108
+     sg13g2_and2_1                  40
+     sg13g2_and2_2                   2
+     sg13g2_and3_1                   6
+     sg13g2_and4_1                   1
+     sg13g2_buf_1                  142
+     sg13g2_buf_16                  36
+     sg13g2_buf_2                   14
+     sg13g2_buf_4                   25
+     sg13g2_buf_8                   62
+     sg13g2_dfrbpq_1               144
+     sg13g2_dlygate4sd2_1            3
+     sg13g2_inv_1                  485
+     sg13g2_inv_2                   53
+     sg13g2_inv_4                   21
+     sg13g2_inv_8                    4
+     sg13g2_mux2_1                  14
+     sg13g2_nand2_1                956
+     sg13g2_nand2_2                180
+     sg13g2_nand2b_1               123
+     sg13g2_nand2b_2                 7
+     sg13g2_nand3_1                337
+     sg13g2_nand3b_1                31
      sg13g2_nand4_1                 52
-     sg13g2_nor2_1                 600
-     sg13g2_nor2_2                  39
-     sg13g2_nor2b_1                 94
-     sg13g2_nor2b_2                 10
-     sg13g2_nor3_1                  85
-     sg13g2_nor3_2                  10
-     sg13g2_nor4_1                  32
-     sg13g2_o21ai_1                450
+     sg13g2_nor2_1                 557
+     sg13g2_nor2_2                  49
+     sg13g2_nor2b_1                 80
+     sg13g2_nor2b_2                 12
+     sg13g2_nor3_1                  98
+     sg13g2_nor3_2                  12
+     sg13g2_nor4_1                  36
+     sg13g2_o21ai_1                466
      sg13g2_or2_1                    5
-     sg13g2_or4_1                    1
-     sg13g2_tiehi                  145
+     sg13g2_or3_1                    1
+     sg13g2_tiehi                  144
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                272
-     sg13g2_xor2_1                  89
+     sg13g2_xnor2_1                242
+     sg13g2_xor2_1                  99
 
-   Chip area for module '\tt_um_chatelao_fp8_multiplier': 50352.888600
-     of which used for sequential elements: 7103.376000 (14.11%)
+   Chip area for module '\tt_um_chatelao_fp8_multiplier': 53636.839200
+     of which used for sequential elements: 7054.387200 (13.15%)
 

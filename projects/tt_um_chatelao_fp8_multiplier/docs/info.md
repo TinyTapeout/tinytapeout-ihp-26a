@@ -32,7 +32,7 @@ To minimize resource usage, operands are streamed into the unit over a fixed seq
 
 The design uses a clocked FSM. To test:
 1. Reset the unit (`rst_n` = 0) then enable it (`ena` = 1).
-2. On Cycle 0, provide MX+ metadata on `ui_in`/`uio_in`. Set `ui_in[7]=1` to trigger the **Short Protocol**, which reuses Scales from the previous block while capturing new Formats and Rounding Modes from `uio_in`.
+2. On Cycle 0, provide MX+ metadata on `ui_in`/`uio_in`. Set `ui_in[7]=1` to trigger the **Short Protocol**, which reuses Scales from the previous block while capturing new Formats (A & B) and Rounding Modes from `uio_in`.
 3. On Cycle 1, provide Scale A on `ui_in` and Config on `uio_in` (Set `uio_in[6]=1` for Packed Mode).
 4. On Cycle 2, provide Scale B on `ui_in`, Format B, and BM Index B on `uio_in`.
 5. Stream elements $A_i$ and $B_i$:

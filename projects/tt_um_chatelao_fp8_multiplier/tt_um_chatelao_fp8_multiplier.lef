@@ -115,7 +115,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN ena
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.450800 ;
+    ANTENNAGATEAREA 0.725400 ;
     PORT
       LAYER Metal4 ;
         RECT 190.890 312.740 191.190 313.740 ;
@@ -124,7 +124,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.450800 ;
+    ANTENNAGATEAREA 0.725400 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 312.740 183.510 313.740 ;
@@ -160,7 +160,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.725400 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 167.850 312.740 168.150 313.740 ;
@@ -196,7 +196,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN ui_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 152.490 312.740 152.790 313.740 ;
@@ -205,7 +205,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213200 ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 148.650 312.740 148.950 313.740 ;
@@ -223,7 +223,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 140.970 312.740 141.270 313.740 ;
@@ -232,7 +232,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uio_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 1.450800 ;
     PORT
       LAYER Metal4 ;
         RECT 137.130 312.740 137.430 313.740 ;
@@ -421,7 +421,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.677200 ;
+    ANTENNADIFFAREA 0.958400 ;
     PORT
       LAYER Metal4 ;
         RECT 117.930 312.740 118.230 313.740 ;
@@ -430,7 +430,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.677200 ;
+    ANTENNADIFFAREA 0.958400 ;
     PORT
       LAYER Metal4 ;
         RECT 114.090 312.740 114.390 313.740 ;
@@ -439,7 +439,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.677200 ;
+    ANTENNADIFFAREA 0.958400 ;
     PORT
       LAYER Metal4 ;
         RECT 110.250 312.740 110.550 313.740 ;
@@ -448,7 +448,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.677200 ;
+    ANTENNADIFFAREA 0.958400 ;
     PORT
       LAYER Metal4 ;
         RECT 106.410 312.740 106.710 313.740 ;
@@ -466,7 +466,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.677200 ;
+    ANTENNADIFFAREA 1.124800 ;
     PORT
       LAYER Metal4 ;
         RECT 98.730 312.740 99.030 313.740 ;
@@ -475,7 +475,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 1.124800 ;
+    ANTENNADIFFAREA 0.958400 ;
     PORT
       LAYER Metal4 ;
         RECT 94.890 312.740 95.190 313.740 ;
@@ -484,7 +484,7 @@ MACRO tt_um_chatelao_fp8_multiplier
   PIN uo_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 1.008100 ;
+    ANTENNADIFFAREA 0.988000 ;
     PORT
       LAYER Metal4 ;
         RECT 91.050 312.740 91.350 313.740 ;
@@ -496,11 +496,11 @@ MACRO tt_um_chatelao_fp8_multiplier
       LAYER Metal1 ;
         RECT 2.880 3.560 416.640 310.180 ;
       LAYER Metal2 ;
-        RECT 4.215 3.635 417.225 310.945 ;
+        RECT 3.735 3.635 415.785 310.945 ;
       LAYER Metal3 ;
-        RECT 4.175 3.680 417.265 310.905 ;
+        RECT 3.695 3.680 415.825 310.905 ;
       LAYER Metal4 ;
-        RECT 12.380 312.530 29.400 312.740 ;
+        RECT 9.975 312.530 29.400 312.740 ;
         RECT 30.120 312.530 33.240 312.740 ;
         RECT 33.960 312.530 37.080 312.740 ;
         RECT 37.800 312.530 40.920 312.740 ;
@@ -543,10 +543,10 @@ MACRO tt_um_chatelao_fp8_multiplier
         RECT 179.880 312.530 183.000 312.740 ;
         RECT 183.720 312.530 186.840 312.740 ;
         RECT 187.560 312.530 190.680 312.740 ;
-        RECT 191.400 312.530 413.380 312.740 ;
-        RECT 12.380 3.635 413.380 312.530 ;
+        RECT 191.400 312.530 413.860 312.740 ;
+        RECT 9.975 3.635 413.860 312.530 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 412.345 310.270 ;
+        RECT 9.935 3.470 412.345 310.270 ;
   END
 END tt_um_chatelao_fp8_multiplier
 END LIBRARY

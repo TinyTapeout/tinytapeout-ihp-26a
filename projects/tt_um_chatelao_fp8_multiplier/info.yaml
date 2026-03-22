@@ -5,7 +5,7 @@ project:
   discord:      "evertex"                                     # Your discord handle - make sure to include the # part as well
   description:  "Streaming MAC unit supporting OCP MXFP8 (E4M3/E5M2) with shared scaling" # Short description of what your project does
   language:     "Verilog"                                     # Other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0                                             # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     20000000                                      # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -18,6 +18,10 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
+    - "fp8_mul.v"
+    - "fp8_mul_lns.v"
+    - "fp8_aligner.v"
+    - "accumulator.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).  
