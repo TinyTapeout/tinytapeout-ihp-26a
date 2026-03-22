@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This is only a test so far; its a simple AND-gate between inputs 1 and 3 with its output connected to output 2.
+This block shows the name `Elias` by displaying the letters `E` `L` `I` `A` `S` one after another with one second in between.
 
 ## How to test
 
-Test inputs 1 and 3 together with output 2 to behave like an AND-Gate.
+Start the block with the 10 kHz clock enabled and the letters should show up on the 7-segment-display.
 
 ## External hardware
 
