@@ -18,9 +18,9 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "hvsync_generator.v"
+    - "prog_if.v"
     - "rasterizer.v"
-    - "serial_div.v"
-    - "serial_mul.v"
+    - "serial_muldiv.v"
     - "triscan.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
@@ -47,12 +47,12 @@ pinout:
   uo[7]: "hsync"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
+  uio[0]: "CS"
+  uio[1]: "MOSI"
   uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
+  uio[3]: "SCK"
+  uio[4]: "vsync"
+  uio[5]: "hsync"
   uio[6]: ""
   uio[7]: ""
 
