@@ -40,7 +40,7 @@ The design is split across three modules:
 ```
 λ = xr + yr · xr⁻¹
 x3 = λ² + λ + a
-y3 = xr² + (λ + xr)·x3 + x3        (where a = 0x20)
+y3 = xr² + (λ)·x3 + x3        (where a = 0x20)
 ```
 
 ### Point Addition (R ≠ G, R ≠ O)
