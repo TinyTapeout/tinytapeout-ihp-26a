@@ -53,9 +53,9 @@ pinout:
   uio[1]: "I2C_SCL"
   uio[2]: ""
   uio[3]: ""
-  uio[4]: "DEBUG OUTPUT"
-  uio[5]: "DEBUG OUTPUT"
-  uio[6]: ""
+  uio[4]: "DEBUG_SETTIME_OUT"
+  uio[5]: "DEBUG_I2C_OUT"
+  uio[6]: "DEBUG_I2C_OUT"
   uio[7]: "LTC_OUT"
 
 # Do not change!
