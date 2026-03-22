@@ -83,7 +83,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 179.370 153.980 179.670 154.980 ;
@@ -92,7 +92,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 175.530 153.980 175.830 154.980 ;
@@ -101,7 +101,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 171.690 153.980 171.990 154.980 ;
@@ -110,7 +110,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 167.850 153.980 168.150 154.980 ;
@@ -119,7 +119,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 164.010 153.980 164.310 154.980 ;
@@ -128,7 +128,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 160.170 153.980 160.470 154.980 ;
@@ -137,7 +137,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 156.330 153.980 156.630 154.980 ;
@@ -155,7 +155,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 148.650 153.980 148.950 154.980 ;
@@ -164,7 +164,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 144.810 153.980 145.110 154.980 ;
@@ -173,7 +173,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 140.970 153.980 141.270 154.980 ;
@@ -182,7 +182,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 137.130 153.980 137.430 154.980 ;
@@ -191,7 +191,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 133.290 153.980 133.590 154.980 ;
@@ -200,7 +200,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 129.450 153.980 129.750 154.980 ;
@@ -209,7 +209,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 125.610 153.980 125.910 154.980 ;
@@ -218,7 +218,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uio_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.109200 ;
     PORT
       LAYER Metal4 ;
         RECT 121.770 153.980 122.070 154.980 ;
@@ -398,7 +398,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.632400 ;
+    ANTENNADIFFAREA 0.716100 ;
     PORT
       LAYER Metal4 ;
         RECT 106.410 153.980 106.710 154.980 ;
@@ -407,7 +407,7 @@ MACRO tt_um_float_synth_nikleberg
   PIN uo_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.632400 ;
+    ANTENNADIFFAREA 0.716100 ;
     PORT
       LAYER Metal4 ;
         RECT 102.570 153.980 102.870 154.980 ;
@@ -446,9 +446,9 @@ MACRO tt_um_float_synth_nikleberg
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 4.695 3.635 198.820 153.445 ;
+        RECT 5.180 3.635 198.820 152.185 ;
       LAYER Metal3 ;
-        RECT 4.655 3.680 198.385 153.405 ;
+        RECT 5.615 3.680 197.905 152.145 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
@@ -492,9 +492,10 @@ MACRO tt_um_float_synth_nikleberg
         RECT 176.040 153.770 179.160 153.980 ;
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
-        RECT 15.560 3.635 187.300 153.770 ;
+        RECT 187.560 153.770 189.705 153.980 ;
+        RECT 15.560 3.635 189.705 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 179.125 151.510 ;
+        RECT 15.515 3.470 189.745 151.510 ;
   END
 END tt_um_float_synth_nikleberg
 END LIBRARY
