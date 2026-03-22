@@ -1,0 +1,44 @@
+128. Printing statistics.
+
+=== tt_um_ro_puf_trng ===
+
+   Number of wires:                802
+   Number of wire bits:            837
+   Number of public wires:         170
+   Number of public wire bits:     205
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                818
+     sg13g2_a21o_1                  23
+     sg13g2_a21oi_1                 33
+     sg13g2_a221oi_1                 5
+     sg13g2_a22oi_1                 19
+     sg13g2_and2_1                   1
+     sg13g2_and3_1                   5
+     sg13g2_and4_1                   1
+     sg13g2_dfrbpq_1               171
+     sg13g2_inv_1                   62
+     sg13g2_mux2_1                  10
+     sg13g2_nand2_1                111
+     sg13g2_nand2b_1                13
+     sg13g2_nand3_1                 40
+     sg13g2_nand3b_1                 1
+     sg13g2_nand4_1                  6
+     sg13g2_nor2_1                  58
+     sg13g2_nor2b_1                 22
+     sg13g2_nor3_1                   7
+     sg13g2_nor4_1                   8
+     sg13g2_o21ai_1                119
+     sg13g2_or2_1                    6
+     sg13g2_or3_1                    2
+     sg13g2_tiehi                    2
+     sg13g2_tielo                   31
+     sg13g2_xnor2_1                 46
+     sg13g2_xor2_1                  16
+
+   Chip area for module '\tt_um_ro_puf_trng': 14287.681800
+     of which used for sequential elements: 8377.084800 (58.63%)
+
