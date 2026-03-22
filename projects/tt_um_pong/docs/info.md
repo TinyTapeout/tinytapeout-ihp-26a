@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-It plays pong
+The chip has a VGA output for visuals. Connect two buttons (debouncing is done on chip), and when when you press them, the respective paddles will jump, like in flappy bird.
 
 ## How to test
 
-Connect a vga converter to it, and 2 buttons, and play :)
+Connect a VGA module and a screen, and 2 buttons, and check for the image to be presented.
 
 ## External hardware
 
-VGA converter and 2 debounced buttons
+Requirements: VGA module, VGA cable, VGA compatible monitor/screen and 2 buttons.
