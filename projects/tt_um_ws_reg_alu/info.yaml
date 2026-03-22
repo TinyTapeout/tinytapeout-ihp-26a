@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "8-bit Registered ALU"      # Project title
+  author:       "Wiwathana Son"                 # Your name
+  discord:      ""                          # Your discord username (optional)
+  description:  "A simple 8-bit ALU with registered output and 8 operations"
+  language:     "Verilog" 
+  clock_hz:     10000000                    # Set to 10MHz as a safe default
+
+  # How many tiles your design occupies? 
+  tiles: "1x1"          
+
+  # Your top module name must match the Verilog module name:
+  top_module:  "tt_um_ws_reg_alu"
+
+  # List your project's source files here.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. 
+pinout:
+  # Inputs (ui_in)
+  ui[0]: "A_data[0]"
+  ui[1]: "A_data[1]"
+  ui[2]: "A_data[2]"
+  ui[3]: "A_data[3]"
+  ui[4]: "A_data[4]"
+  ui[5]: "OpCode[0]"
+  ui[6]: "OpCode[1]"
+  ui[7]: "OpCode[2]"
+
+  # Outputs (uo_out)
+  uo[0]: "ALU_Out[0]"
+  uo[1]: "ALU_Out[1]"
+  uo[2]: "ALU_Out[2]"
+  uo[3]: "ALU_Out[3]"
+  uo[4]: "ALU_Out[4]"
+  uo[5]: "ALU_Out[5]"
+  uo[6]: "ALU_Out[6]"
+  uo[7]: "ALU_Out[7]"
+
+  # Bidirectional pins (uio_in used as Input B)
+  uio[0]: "B_data[0]"
+  uio[1]: "B_data[1]"
+  uio[2]: "B_data[2]"
+  uio[3]: "B_data[3]"
+  uio[4]: "B_data[4]"
+  uio[5]: "B_data[5]"
+  uio[6]: "B_data[6]"
+  uio[7]: "B_data[7]"
+
+# Do not change!
+yaml_version: 6
