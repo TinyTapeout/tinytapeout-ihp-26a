@@ -1,39 +1,34 @@
-115. Printing statistics.
+118. Printing statistics.
 
 === tt_um_async_test ===
 
-   Number of wires:                209
-   Number of wire bits:            244
-   Number of public wires:          41
-   Number of public wire bits:      76
+   Number of wires:                 70
+   Number of wire bits:            105
+   Number of public wires:          35
+   Number of public wire bits:      70
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                225
-     sg13g2_a21o_1                   2
-     sg13g2_a21oi_1                 14
+   Number of cells:                 86
+     sg13g2_a21o_1                   1
+     sg13g2_a21oi_1                  3
      sg13g2_and2_1                  15
-     sg13g2_and3_1                   2
-     sg13g2_and4_1                   7
-     sg13g2_buf_1                    1
-     sg13g2_dfrbpq_1                33
-     sg13g2_inv_1                    7
-     sg13g2_nand2_1                  6
-     sg13g2_nand2b_1                 2
-     sg13g2_nand3_1                  2
-     sg13g2_nand4_1                  4
-     sg13g2_nor2_1                  26
-     sg13g2_nor2b_1                  6
-     sg13g2_nor3_1                  22
-     sg13g2_nor4_1                   5
+     sg13g2_buf_1                    7
+     sg13g2_dfrbpq_1                 3
+     sg13g2_dllrq_1                  8
+     sg13g2_inv_1                    3
+     sg13g2_mux2_1                   1
+     sg13g2_nand2_1                  5
+     sg13g2_nand2b_1                 1
+     sg13g2_nor2_1                   2
+     sg13g2_nor4_1                   2
      sg13g2_o21ai_1                  3
-     sg13g2_tiehi                   33
-     sg13g2_tielo                   16
-     sg13g2_xnor2_1                 15
+     sg13g2_tiehi                   19
+     sg13g2_tielo                    9
      sg13g2_xor2_1                   4
 
-   Chip area for module '\tt_um_async_test': 3356.640000
-     of which used for sequential elements: 1616.630400 (48.16%)
+   Chip area for module '\tt_um_async_test': 1010.620800
+     of which used for sequential elements: 146.966400 (14.54%)
 

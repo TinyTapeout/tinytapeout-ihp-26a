@@ -19,28 +19,31 @@ project:
   source_files:
     - "tt_um_async_test.v"
     - "ChiselTop.v"
+    - "latch.sv"
+    - "delay.sv"
+    - "c_gates.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "ui0"
-  ui[1]: "ui1"
-  ui[2]: "ui2"
-  ui[3]: "ui3"
-  ui[4]: "ui4"
-  ui[5]: "ui5"
+  ui[0]: "a"
+  ui[1]: "b"
+  ui[2]: "launch_arbiter"
+  ui[3]: "fifo_in_req"
+  ui[4]: "fifo_in_data"
+  ui[5]: "fifo_out_ack"
   ui[6]: "ui6"
   ui[7]: "ui7"
 
   # Outputs
-  uo[0]: "uo0"
-  uo[1]: "uo1"
-  uo[2]: "uo2"
-  uo[3]: "uo3"
-  uo[4]: "uo4"
-  uo[5]: "uo5"
-  uo[6]: "uo6"
+  uo[0]: "c_gate_ao"
+  uo[1]: "c_gate_mux"
+  uo[2]: "c_gate_sr_nor_latch"
+  uo[3]: "arbiter_test_bad"
+  uo[4]: "fifo_out_data"
+  uo[5]: "fifo_out_req"
+  uo[6]: "fifo_in_ack"
   uo[7]: "uo7"
 
   # Bidirectional pins
