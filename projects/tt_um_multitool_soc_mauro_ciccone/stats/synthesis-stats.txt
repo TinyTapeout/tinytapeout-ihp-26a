@@ -1,0 +1,44 @@
+159. Printing statistics.
+
+=== tt_um_multitool_soc_mauro_ciccone ===
+
+   Number of wires:               1030
+   Number of wire bits:           1065
+   Number of public wires:         182
+   Number of public wire bits:     217
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1046
+     sg13g2_a21o_1                  20
+     sg13g2_a21oi_1                105
+     sg13g2_a221oi_1                18
+     sg13g2_a22oi_1                 29
+     sg13g2_and2_1                  44
+     sg13g2_and3_1                  18
+     sg13g2_and4_1                   5
+     sg13g2_dfrbpq_1               182
+     sg13g2_inv_1                   58
+     sg13g2_mux2_1                  45
+     sg13g2_nand2_1                 78
+     sg13g2_nand2b_1                27
+     sg13g2_nand3_1                 30
+     sg13g2_nand3b_1                 9
+     sg13g2_nand4_1                 10
+     sg13g2_nor2_1                 101
+     sg13g2_nor2b_1                 23
+     sg13g2_nor3_1                  43
+     sg13g2_nor4_1                  16
+     sg13g2_o21ai_1                100
+     sg13g2_or2_1                   15
+     sg13g2_or3_1                    4
+     sg13g2_or4_1                    5
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                 32
+     sg13g2_xor2_1                  13
+
+   Chip area for module '\tt_um_multitool_soc_mauro_ciccone': 17279.249400
+     of which used for sequential elements: 8915.961600 (51.60%)
+

@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title:        "Multi-Tool SoC"      # Project title
+  author:       "Mauro Ciccone"      # Your name
+  discord:      "sprunggelenkbandage"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "An alphabet-driven, multi-state OS featuring hardware engines for Euclidean GCD, Integer Square Root, and a Cryptographic LFSR"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_multitool_soc_mauro_ciccone"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_multitool_soc_mauro_ciccone.v"
+    - "op_gcd.v"
+    - "led_decoder.v"
+    - "os_menu.v"
+    - "delay_timer.v"
+    - "bin_to_bcd.v"
+    - "op_isqrt.v"
+    - "op_lfsr.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Data Bit 0 (Opcode / Val A / Val B)"
+  ui[1]: "Data Bit 1 (Opcode / Val A / Val B)"
+  ui[2]: "Data Bit 2 (Opcode / Val A / Val B)"
+  ui[3]: "Data Bit 3 (Opcode / Val A / Val B)"
+  ui[4]: "Data Bit 4 (Opcode / Val A / Val B)"
+  ui[5]: "Data Bit 5 (Opcode / Val A / Val B)"
+  ui[6]: "Data Bit 6 (Opcode / Val A / Val B)"
+  ui[7]: "Enter / Submit Switch (Debounced)"
+
+  # Outputs
+  uo[0]: "Segment A"
+  uo[1]: "Segment B"
+  uo[2]: "Segment C"
+  uo[3]: "Segment D"
+  uo[4]: "Segment E"
+  uo[5]: "Segment F"
+  uo[6]: "Segment G"
+  uo[7]: "Decimal Point (Digit Multiplexer)"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: "Test Mode (Fast-Forward Timer Bypass)"
+
+# Do not change!
+yaml_version: 6
