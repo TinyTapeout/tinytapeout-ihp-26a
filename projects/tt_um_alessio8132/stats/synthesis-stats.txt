@@ -2,8 +2,8 @@
 
 === tt_um_alessio8132 ===
 
-   Number of wires:                498
-   Number of wire bits:            533
+   Number of wires:                469
+   Number of wire bits:            504
    Number of public wires:          76
    Number of public wire bits:     111
    Number of ports:                  8
@@ -11,31 +11,31 @@
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                514
-     sg13g2_a21o_1                   3
-     sg13g2_a21oi_1                 33
+   Number of cells:                485
+     sg13g2_a21o_1                   2
+     sg13g2_a21oi_1                 20
      sg13g2_a221oi_1                 3
-     sg13g2_a22oi_1                100
-     sg13g2_and2_1                   4
-     sg13g2_and3_1                   1
+     sg13g2_a22oi_1                 71
+     sg13g2_and2_1                   6
      sg13g2_and4_1                   1
      sg13g2_dfrbpq_1                76
      sg13g2_inv_1                   75
-     sg13g2_nand2_1                 22
-     sg13g2_nand2b_1                 3
-     sg13g2_nand3_1                  7
-     sg13g2_nand4_1                  2
-     sg13g2_nor2_1                  49
-     sg13g2_nor2b_1                  3
-     sg13g2_nor3_1                   7
-     sg13g2_nor4_1                   5
-     sg13g2_o21ai_1                 17
-     sg13g2_or2_1                    4
+     sg13g2_mux4_1                  18
+     sg13g2_nand2_1                 10
+     sg13g2_nand2b_1                 6
+     sg13g2_nand3_1                  5
+     sg13g2_nand3b_1                 4
+     sg13g2_nor2_1                  45
+     sg13g2_nor2b_1                  8
+     sg13g2_nor3_1                  12
+     sg13g2_nor4_1                   1
+     sg13g2_o21ai_1                 21
+     sg13g2_or2_1                    1
+     sg13g2_or3_1                    2
      sg13g2_tiehi                   76
      sg13g2_tielo                   16
-     sg13g2_xnor2_1                  4
-     sg13g2_xor2_1                   3
+     sg13g2_xnor2_1                  6
 
-   Chip area for module '\tt_um_alessio8132': 7393.528800
-     of which used for sequential elements: 3723.148800 (50.36%)
+   Chip area for module '\tt_um_alessio8132': 7628.682600
+     of which used for sequential elements: 3723.148800 (48.80%)
 
