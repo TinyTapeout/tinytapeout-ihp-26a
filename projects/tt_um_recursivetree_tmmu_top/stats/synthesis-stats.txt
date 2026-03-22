@@ -2,40 +2,40 @@
 
 === tt_um_recursivetree_tmmu_top ===
 
-   Number of wires:               1952
-   Number of wire bits:           1987
-   Number of public wires:         670
-   Number of public wire bits:     705
+   Number of wires:               1596
+   Number of wire bits:           1631
+   Number of public wires:         928
+   Number of public wire bits:     963
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1968
-     sg13g2_a21oi_1                 12
-     sg13g2_a22oi_1                320
+   Number of cells:               1612
+     sg13g2_a21oi_1                 13
+     sg13g2_a22oi_1                384
      sg13g2_and2_1                   1
-     sg13g2_and3_1                   2
+     sg13g2_and2_2                  64
      sg13g2_buf_1                    2
-     sg13g2_dfrbpq_1                18
-     sg13g2_dllrq_1                640
-     sg13g2_inv_1                   14
-     sg13g2_mux2_1                  12
-     sg13g2_nand2_1                 74
-     sg13g2_nand2b_1                 7
-     sg13g2_nand3b_1                 1
-     sg13g2_nand4_1                 81
-     sg13g2_nor2_1                  18
-     sg13g2_nor2b_1                  1
-     sg13g2_nor3_1                  46
-     sg13g2_nor4_1                  42
-     sg13g2_o21ai_1                  2
-     sg13g2_or2_1                    2
-     sg13g2_or4_1                    1
-     sg13g2_tiehi                  658
-     sg13g2_tielo                   12
+     sg13g2_dfrbpq_1                20
+     sg13g2_dlhq_1                 768
+     sg13g2_inv_1                   15
+     sg13g2_mux2_1                  14
+     sg13g2_nand2_1                 15
+     sg13g2_nand2b_1                 9
+     sg13g2_nand3_1                  6
+     sg13g2_nand3b_1                 2
+     sg13g2_nand4_1                 99
+     sg13g2_nor2_1                  61
+     sg13g2_nor2b_1                  3
+     sg13g2_nor3_1                  61
+     sg13g2_nor4_1                  36
+     sg13g2_o21ai_1                  3
+     sg13g2_or2_1                    4
+     sg13g2_tiehi                   22
+     sg13g2_tielo                    8
      sg13g2_xor2_1                   2
 
-   Chip area for module '\tt_um_recursivetree_tmmu_top': 30836.332800
-     of which used for sequential elements: 881.798400 (2.86%)
+   Chip area for module '\tt_um_recursivetree_tmmu_top': 33081.955200
+     of which used for sequential elements: 979.776000 (2.96%)
 
