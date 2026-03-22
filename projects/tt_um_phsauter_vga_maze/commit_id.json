@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout main b4a9e6c7",
+  "app": "Tiny Tapeout main 4c1ebdd9",
   "repo": "https://github.com/phsauter/vga-playground-maze",
-  "commit": "393dfa78bd6a923d1f678de93c2f3d869a8c0cc1",
-  "workflow_url": "https://github.com/phsauter/vga-playground-maze/actions/runs/21800997903",
+  "commit": "b030a44ea74b3dad4b7aec70b01f7db58bf57d30",
+  "workflow_url": "https://github.com/phsauter/vga-playground-maze/actions/runs/23413212137",
   "project_id": 3633,
   "sort_id": 1770567174982
 }

@@ -16,7 +16,18 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:
-    - "project.v"
+    - "tt_um_phsauter_vga_maze.v"
+    - "maze_game_core.v"
+    - "maze_gen_binary_tree.v"
+    - "maze_gen_eller.v"
+    - "maze_gen_proc_binary_tree.v"
+    - "maze_input_edges.v"
+    - "maze_map.v"
+    - "maze_solver_hand.v"
+    - "maze_video.v"
+    - "maze_wall_query.v"
+    - "maze_wall_query_proc_binary_tree.v"
+    - "gamepad_pmod.v"
     - "hvsync_generator.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.

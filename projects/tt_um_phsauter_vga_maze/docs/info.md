@@ -9,14 +9,23 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-A procedural maze is generated on the fly, the generation is 'animated'.
-Then a player can control the green dot via a gamepad, additionally two simple solvers (right-hand and left-hand follower) can be started by pressing the 'A' button.
-The solvers movement speed can be adjusted using the 'L' and 'R' buttons.
-Using the 'SELECT' button a new maze can be generated.
+The default design generates a perfect maze on-chip using a procedural binary-tree maze generator.
+The current top-level configuration uses a `10x10` maze.
+The maze is shown live while it is being built, so walls can visibly change during the reveal.
+After generation finishes, the player controls the green dot while a single wall-following solver can race as well.
+
+## Controls
+
+- D-pad: move the player
+- A: start or stop the solver
+- B: reset player and solver positions
+- SELECT: generate a new maze
+- START: speed up generation while the maze is still being built
 
 ## How to test
 
-Play the game!
+Connect VGA and the PMOD gamepad, then reset the design and play the maze game.
+Press SELECT to generate a fresh maze and START during generation to accelerate the live build animation.
 
 ## External hardware
 
