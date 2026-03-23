@@ -10,7 +10,7 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 <!-- Explain how your project works -->
-Pressing RST writes the current state of the dip-switches into the SRAM cells.
+Enter the desired track with the dip-switches, press RST to load the switch signals into the SRAMs.
 
 ## How to test
 

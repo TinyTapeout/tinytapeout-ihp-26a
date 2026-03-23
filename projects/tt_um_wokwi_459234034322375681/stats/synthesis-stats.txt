@@ -1,5 +1,22 @@
 101. Printing statistics.
 
+=== and_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_and2_1                   1
+
+   Chip area for module '\and_cell': 9.072000
+     of which used for sequential elements: 0.000000 (0.00%)
+
 === mux_cell ===
 
    Number of wires:                  4
@@ -34,50 +51,96 @@
    Chip area for module '\not_cell': 5.443200
      of which used for sequential elements: 0.000000 (0.00%)
 
+=== or_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_or2_1                    1
+
+   Chip area for module '\or_cell': 9.072000
+     of which used for sequential elements: 0.000000 (0.00%)
+
 === tt_um_wokwi_459234034322375681 ===
 
-   Number of wires:                 48
-   Number of wire bits:             83
-   Number of public wires:          48
-   Number of public wire bits:      83
+   Number of wires:                118
+   Number of wire bits:            153
+   Number of public wires:         118
+   Number of public wire bits:     153
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 64
+   Number of cells:                134
+     and_cell                       33
      mux_cell                       16
-     not_cell                       24
-     sg13g2_buf_1                    8
-     sg13g2_tielo                   16
+     not_cell                       54
+     or_cell                         5
+     sg13g2_buf_1                   16
+     sg13g2_tiehi                    8
+     xor_cell                        2
 
    Area for cell type \mux_cell is unknown!
    Area for cell type \not_cell is unknown!
+   Area for cell type \xor_cell is unknown!
+   Area for cell type \and_cell is unknown!
+   Area for cell type \or_cell is unknown!
 
    Chip area for module '\tt_um_wokwi_459234034322375681': 174.182400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== xor_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_xor2_1                   1
+
+   Chip area for module '\xor_cell': 14.515200
      of which used for sequential elements: 0.000000 (0.00%)
 
 === design hierarchy ===
 
    tt_um_wokwi_459234034322375681      1
+     and_cell                       33
      mux_cell                       16
-     not_cell                       24
+     not_cell                       54
+     or_cell                         5
+     xor_cell                        2
 
-   Number of wires:                160
-   Number of wire bits:            195
-   Number of public wires:         160
-   Number of public wire bits:     195
-   Number of ports:                120
-   Number of port bits:            155
+   Number of wires:                410
+   Number of wire bits:            445
+   Number of public wires:         410
+   Number of public wire bits:     445
+   Number of ports:                300
+   Number of port bits:            335
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 64
-     sg13g2_buf_1                    8
-     sg13g2_inv_1                   24
+   Number of cells:                134
+     sg13g2_and2_1                  33
+     sg13g2_buf_1                   16
+     sg13g2_inv_1                   54
      sg13g2_mux2_1                  16
-     sg13g2_tielo                   16
+     sg13g2_or2_1                    5
+     sg13g2_tiehi                    8
+     sg13g2_xor2_1                   2
 
-   Chip area for top module '\tt_um_wokwi_459234034322375681': 595.123200
+   Chip area for top module '\tt_um_wokwi_459234034322375681': 1132.185600
      of which used for sequential elements: 0.000000 (0.00%)
 

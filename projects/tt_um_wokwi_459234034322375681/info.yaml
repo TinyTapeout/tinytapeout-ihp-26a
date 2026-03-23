@@ -1,10 +1,10 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
   wokwi_id:     459234034322375681              # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        "TinyTapeout Fallback Project"  # Project title
+  title:        "TinyTapeout Signal Box"        # Project title
   author:       "Pascal"                        # Your name
   discord:      ""                              # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "just a bunch of alibi SRAMs, press RST to write into memory"   # One line description of what your project does
+  description:  "Signal Box v1"                 # One line description of what your project does
   language:     "Wokwi"                         # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0                               # Clock frequency in Hz (or 0 if not applicable)
 
@@ -26,24 +26,24 @@ pinout:
   ui[7]: "q7_i"
 
   # Outputs
-  uo[0]: "q0_o"
-  uo[1]: "q1_o"
-  uo[2]: "q2_o"
-  uo[3]: "q3_o"
-  uo[4]: "q4_o"
-  uo[5]: "q5_o"
-  uo[6]: "q6_o"
-  uo[7]: "q7_o"
+  uo[0]: "s1_o"
+  uo[1]: "s2_o"
+  uo[2]: "s3_o"
+  uo[3]: "s4_o"
+  uo[4]: "s5_o"
+  uo[5]: "s6_o"
+  uo[6]: "s7_o"
+  uo[7]: "s8_o"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "x_o"
+  uio[1]: "a_o"
+  uio[2]: "b_o"
+  uio[3]: "c_o"
+  uio[4]: "d_o"
+  uio[5]: "ef_o"
+  uio[6]: "gh_o"
+  uio[7]: "ij_o"
 
 # Do not change!
 yaml_version: 6
