@@ -1,0 +1,65 @@
+# Tiny Tapeout project information
+project:
+  title:        "Genesis"      # Project title
+  author:       "brunny95"      # Your name
+  discord:      "Brunny"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "8-phase buck converter + ultra low power BG"      # One line description of what your project does
+  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 200x150 uM.
+  tiles: "2x2"          # Valid values for analog projects: 1x2, 2x2
+
+  # How many analog pins does your project use?
+  analog_pins: 5        # Valid values: 0 to 6
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_analog_genesis"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "EN_BIAS_1P2V"
+  ui[1]: "EN_CTRL_1P2V"
+  ui[2]: "VC_PULL_DOWN"
+  ui[3]: "SS_BYPASS_EXT"
+  ui[4]: "THWN"
+  ui[5]: "SR_COMMIT"
+  ui[6]: "SR_DATA"
+  ui[7]: "SR_CLK"
+
+  # Outputs
+  uo[0]: "FORCE_CCM"
+  uo[1]: "DISB_N"
+  uo[2]: "SS_ACTIVE"
+  uo[3]: "SHREG_MSB"
+  uo[4]: "DBG_4"
+  uo[5]: "DBG_5"
+  uo[6]: "DBG_6"
+  uo[7]: "DBG_7"
+
+  # Bidirectional pins
+  uio[0]: "HS_OUT[0]"
+  uio[1]: "HS_OUT[1]"
+  uio[2]: "HS_OUT[2]"
+  uio[3]: "HS_OUT[3]"
+  uio[4]: "HS_OUT[4]"
+  uio[5]: "HS_OUT[5]"
+  uio[6]: "HS_OUT[6]"
+  uio[7]: "HS_OUT[7]"
+
+  # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
+  ua[0]: "VDDA"
+  ua[1]: "EXT_REF"
+  ua[2]: "FB_VOUT"
+  ua[3]: "FB_SW"
+  ua[4]: "VC"
+  ua[5]: ""
+
+# Do not change!
+yaml_version: 6
