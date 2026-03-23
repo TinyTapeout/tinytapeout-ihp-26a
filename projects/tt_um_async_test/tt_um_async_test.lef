@@ -75,7 +75,7 @@ MACRO tt_um_async_test
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 1.450800 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -138,6 +138,7 @@ MACRO tt_um_async_test
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 156.330 153.980 156.630 154.980 ;
@@ -218,7 +219,7 @@ MACRO tt_um_async_test
   PIN uio_oe[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 56.490 153.980 56.790 154.980 ;
@@ -227,7 +228,7 @@ MACRO tt_um_async_test
   PIN uio_oe[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 52.650 153.980 52.950 154.980 ;
@@ -236,7 +237,7 @@ MACRO tt_um_async_test
   PIN uio_oe[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 48.810 153.980 49.110 154.980 ;
@@ -245,7 +246,7 @@ MACRO tt_um_async_test
   PIN uio_oe[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 44.970 153.980 45.270 154.980 ;
@@ -254,7 +255,7 @@ MACRO tt_um_async_test
   PIN uio_oe[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 41.130 153.980 41.430 154.980 ;
@@ -263,7 +264,7 @@ MACRO tt_um_async_test
   PIN uio_oe[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 37.290 153.980 37.590 154.980 ;
@@ -272,7 +273,7 @@ MACRO tt_um_async_test
   PIN uio_oe[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 33.450 153.980 33.750 154.980 ;
@@ -281,7 +282,7 @@ MACRO tt_um_async_test
   PIN uio_oe[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.392700 ;
+    ANTENNADIFFAREA 0.299200 ;
     PORT
       LAYER Metal4 ;
         RECT 29.610 153.980 29.910 154.980 ;
@@ -290,7 +291,7 @@ MACRO tt_um_async_test
   PIN uio_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.299200 ;
+    ANTENNADIFFAREA 0.706800 ;
     PORT
       LAYER Metal4 ;
         RECT 87.210 153.980 87.510 154.980 ;
@@ -299,7 +300,7 @@ MACRO tt_um_async_test
   PIN uio_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.299200 ;
+    ANTENNADIFFAREA 0.708600 ;
     PORT
       LAYER Metal4 ;
         RECT 83.370 153.980 83.670 154.980 ;
@@ -308,7 +309,7 @@ MACRO tt_um_async_test
   PIN uio_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.299200 ;
+    ANTENNADIFFAREA 2.827200 ;
     PORT
       LAYER Metal4 ;
         RECT 79.530 153.980 79.830 154.980 ;
@@ -437,9 +438,9 @@ MACRO tt_um_async_test
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 15.560 3.635 197.385 153.865 ;
+        RECT 4.695 3.635 198.345 153.865 ;
       LAYER Metal3 ;
-        RECT 15.515 3.680 197.425 153.825 ;
+        RECT 4.655 3.680 198.385 153.825 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;

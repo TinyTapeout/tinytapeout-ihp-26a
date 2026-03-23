@@ -1,34 +1,34 @@
-118. Printing statistics.
+125. Printing statistics.
 
 === tt_um_async_test ===
 
-   Number of wires:                 70
-   Number of wire bits:            105
-   Number of public wires:          35
-   Number of public wire bits:      70
+   Number of wires:               1223
+   Number of wire bits:           1258
+   Number of public wires:         803
+   Number of public wire bits:     838
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 86
-     sg13g2_a21o_1                   1
-     sg13g2_a21oi_1                  3
-     sg13g2_and2_1                  15
-     sg13g2_buf_1                    7
+   Number of cells:               1239
+     sg13g2_a21o_1                 129
+     sg13g2_a21oi_1                  6
+     sg13g2_and2_1                 396
+     sg13g2_buf_1                   10
      sg13g2_dfrbpq_1                 3
      sg13g2_dllrq_1                  8
-     sg13g2_inv_1                    3
-     sg13g2_mux2_1                   1
+     sg13g2_inv_1                  132
+     sg13g2_mux2_1                 129
      sg13g2_nand2_1                  5
      sg13g2_nand2b_1                 1
-     sg13g2_nor2_1                   2
+     sg13g2_nor2_1                 258
      sg13g2_nor4_1                   2
      sg13g2_o21ai_1                  3
-     sg13g2_tiehi                   19
-     sg13g2_tielo                    9
+     sg13g2_tiehi                   11
+     sg13g2_tielo                  142
      sg13g2_xor2_1                   4
 
-   Chip area for module '\tt_um_async_test': 1010.620800
-     of which used for sequential elements: 146.966400 (14.54%)
+   Chip area for module '\tt_um_async_test': 11931.494400
+     of which used for sequential elements: 146.966400 (1.23%)
 

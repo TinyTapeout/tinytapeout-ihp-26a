@@ -18,6 +18,8 @@ The tile contains three attempts of implementing Müller C-elements using standa
 
 All C-elements share the same input signals `a` and `b`, and their outputs are `c_gate_ao`, `c_gate_mux`, and `c_gate_sr_nor_latch` respectively.
 
+### C Element Ring Oscillators
+To test the speed of the C-elements, rings with 128 stages are implemented for each type. The `c_ring_en` signals enables the oscillation of the rings.
 
 ### Arbiter Test
 Asynchronous arbitration is difficult, since no relation is assumed between the request signals and metastability can occur. A SR-latch can serve as an arbiter, but it is not guaranteed to be metastability-free. [1] suggests using 4-input NOR gates to create metastability filters after a NAND-based SR-latch. 
@@ -38,6 +40,9 @@ The C-elements can be tested by applying all combinations of input transitions a
 - `a=1, b=1` (output should transition to 1)
 - `a=0, b=1` (output should remain 1)
 - `a=0, b=0` (output should transition back to 0)
+
+### C Element Ring Oscillators
+The ring oscillators can be tested by enabling the ring and checking for oscillation on the outputs `uio_out[2:0]`.
 
 ### Arbiter Test
 The arbiter can be brought into a known state using:

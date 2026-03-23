@@ -5,7 +5,7 @@ project:
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Testing several asynchronous primitives"      # One line description of what your project does
   language:     "Chisel" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     5000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -33,7 +33,7 @@ pinout:
   ui[3]: "fifo_in_req"
   ui[4]: "fifo_in_data"
   ui[5]: "fifo_out_ack"
-  ui[6]: "ui6"
+  ui[6]: "c_ring_en"
   ui[7]: "ui7"
 
   # Outputs
@@ -47,9 +47,9 @@ pinout:
   uo[7]: "uo7"
 
   # Bidirectional pins
-  uio[0]: "uio0"
-  uio[1]: "uio1"
-  uio[2]: "uio2"
+  uio[0]: "c_ring_ao"
+  uio[1]: "c_ring_mux"
+  uio[2]: "c_ring_latch"
   uio[3]: "uio3"
   uio[4]: "uio4"
   uio[5]: "uio5"
