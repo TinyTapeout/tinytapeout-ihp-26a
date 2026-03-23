@@ -37,7 +37,7 @@ pinout:
   uo[0]: "FORCE_CCM"
   uo[1]: "DISB_N"
   uo[2]: "SS_ACTIVE"
-  uo[3]: "SHREG_MSB"
+  uo[3]: "SR_OUT"
   uo[4]: "DBG_4"
   uo[5]: "DBG_5"
   uo[6]: "DBG_6"

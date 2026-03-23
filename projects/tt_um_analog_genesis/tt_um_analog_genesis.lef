@@ -448,6 +448,8 @@ MACRO tt_um_analog_genesis
         RECT 18.805 0.000 20.555 2.000 ;
     END
   END ua[7]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
   PIN VDPWR
     DIRECTION INOUT ;
     USE POWER ;
