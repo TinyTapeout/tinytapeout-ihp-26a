@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Metal wires connect the 8 input pins directly to the 8 output pins.
+31-stage ring oscillator with controllable current sources.
 
 ## How to test
 
-Present signals on `ui_in` and observe them appear on `uo_out`.
+Set `ui_in = 0xFF` and `ring_enb=1` to make things oscillate on `uo_out[5:0]`.
 
 ## External hardware
 

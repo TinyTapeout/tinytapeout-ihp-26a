@@ -5,7 +5,7 @@ project:
   discord:      "algofoogle"
   description:  "Fear Of Missing Out on TTIHP26a!"
   language:     "Mixed"
-  clock_hz:     25175000
+  clock_hz:     0
 
   # How many tiles your design occupies? A single tile is about 200x150 uM.
   tiles: "1x1"          # Valid values for analog projects: 1x2, 2x2
@@ -21,42 +21,34 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "in0"
-  ui[1]: "in1"
-  ui[2]: "in2"
-  ui[3]: "in3"
-  ui[4]: "in4"
-  ui[5]: "in5"
-  ui[6]: "in6"
-  ui[7]: "in7"
+  ui[0]: "sel_n[0]"
+  ui[1]: "sel_n[1]"
+  ui[2]: "sel_n[2]"
+  ui[3]: "sel_n[3]"
+  ui[4]: "sel[0]"
+  ui[5]: "sel[1]"
+  ui[6]: "sel[2]"
+  ui[7]: "sel[3]"
 
   # Outputs
-  uo[0]: "out0"
-  uo[1]: "out1"
-  uo[2]: "out2"
-  uo[3]: "out3"
-  uo[4]: "out4"
-  uo[5]: "out5"
-  uo[6]: "out6"
-  uo[7]: "out7"
+  uo[0]: "div8"
+  uo[1]: "div16"
+  uo[2]: "div32"
+  uo[3]: "div64"
+  uo[4]: "div128"
+  uo[5]: "div256"
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
-
-  # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: ""
-  ua[1]: ""
-  ua[2]: ""
-  ua[3]: ""
-  ua[4]: ""
-  ua[5]: ""
+  uio[0]: "ring_enb"
+  uio[1]: "VGND"
+  uio[2]: "VGND"
+  uio[3]: "VGND"
+  uio[4]: "VGND"
+  uio[5]: "VGND"
+  uio[6]: "VGND"
+  uio[7]: "VDPWR"
 
 # Do not change!
 yaml_version: 6
