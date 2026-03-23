@@ -26,10 +26,11 @@ The circuit consists of two parts - a simple 4-bit binary counter, plus logic to
 
 As a brief summary:
 
-The first four output pins should simply count through 0000-1111, one step per clock cycle.
-The outputs shown on the other four output pins are controlled by IN0,IN1,IN2,IN7, which can be used
-to store data in the two 4-bit registers and also retrieve them from there.
+* Output pins C0,C1,C2,C3 simply cyclically count through 0000-1111, one step per clock cycle.
 
-Setting IN0-IN2 to 011 makes register A store the value available on IN3-IN6.
-Setting IN0-IN2 to 110 makes register B store the value available on IN3-IN6.
-Setting IN0-IN2 to 111 makes the OUT4-OUT7 show register A if IN7 is 0, and register B if IN7 is 1.
+* The outputs on pins DO0,DO1,DO2,DO3 can be made to show the value of either of two "4-bit registers" as follows:
+
+  * Setting (OP0,OP1,OP2) to (0,1,1) makes internal register A store the value available on DI0-DI3.
+  * Setting (OP0,OP1,OP2) to (1,1,0) makes internal register B store the value available on DI0-DI3.
+  * Setting (OP0,OP1,OP2) to (1,1,1) makes the outpot DO0-DO3 show the value of register A if SEL0 is 0, else the value of register B.
+  * If (OP0,OP1,OP2) is not (1,1,1), then DO0-DO3 are all 0.
