@@ -35,7 +35,7 @@ pinout:
   uo[6]: "DO2"
   uo[7]: "DO3"
 
-  # Bidirectional pins
+  # Bidirectional pins (we do not have any in this design)
   uio[0]: ""
   uio[1]: ""
   uio[2]: ""
