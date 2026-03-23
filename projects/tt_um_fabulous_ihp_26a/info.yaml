@@ -8,7 +8,7 @@ project:
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 200x150 uM.
-  tiles: "4x4"          # Valid values for analog projects: 1x2, 2x2
+  tiles: "8x4"          # Valid values for analog projects: 1x2, 2x2
 
   # How many analog pins does your project use?
   analog_pins: 0        # Valid values: 0 to 6
