@@ -31,7 +31,7 @@ The pulse generator runs at 50 MHz, giving a timing resolution of 20 ns. This is
 
 | Pin    | Signal       | Description |
 |--------|--------------|-------------|
-| `ui[0]`| Trigger In   | External hardware trigger. When the trigger is armed, a high signal on this pin starts the glitch sequence. |
+| `ui[0]`| Trigger In   | External hardware trigger. When the trigger is armed, a high signal on this pin starts the pulse sequence. |
 | `ui[1]`| UART RX      | Serial input from the host (115200 8N1). Connect to your host's TX pin. |
 
 ### Outputs
@@ -116,6 +116,10 @@ When in the target reset state, the `Target Reset` (`uo[2]`) output is high.
 
 When in the pulse active state, the `Pulse Out` (`uo[1]`) output is high.
 
+The trigger is activated when `Trigger In` (`ui[0]`) is high, not just on a rising edge. This means that if the trigger input is set to a constant high signal, the system will trigger immediately after being armed.
+
+Note that the trigger input is synchronized internally, so there is an initial delay of two clock cycles before starting the pulse sequence. The pulse sequence then has a minimum of one additional delay cycle before the pulse output goes high, giving a minimum time from trigger input to pulse output of 60-80 ns (three to four clock cycles), depending on the timing of the trigger, when configured with zero additional delay.
+
 ### Manual Trigger Over UART
 
 In the simplest use case, the host first configures the pulse parameters over UART and then sends the `t` command to start a sequence immediately. The glitcher waits for the configured delay, generates the requested number of pulses with the configured width and spacing, and then returns to the idle state.
@@ -150,18 +154,69 @@ When reset mode is set to `Arm`, the `p` command resets the target and then retu
 
 ## How to Test
 
+All examples and oscilloscope captures in this section were taken with the project running on a Lattice UP5K FPGA on the [Tiny Tapeout FPGA Breakout](https://tinytapeout.com/guides/fpga-breakout/).
+
+### Basic Use Cases
+
 The project can be tested by connecting a microcontroller or USB-to-serial adapter to the UART RX and TX pins (`ui[1]` and `uo[0]`, respectively).
 
 First test that the UART works by sending `x` (hex byte `78`), which should be echoed back because it is an unknown command, or `h` which should return the string `Erika`.
 
-To test a basic pulse, set the pulse width to 100 clock cycles with `w\x64` (hex bytes `77 64`) and trigger the pulse with `t` (hex byte `74`). This should result in a pulse on the Pulse Out pin (`uo[1]`).
+To test a basic pulse, set the pulse width to 100 clock cycles (2 μs) with `w\x64` (hex bytes `77 64`) and trigger the pulse with `t` (hex byte `74`). This should result in a pulse on the Pulse Out pin (`uo[1]`).
+
+Full sequence:
+```
+w 0x64
+t
+```
+
+![Oscilloscope capture of a single pulse, with width set to 100 clock cycles](oscilloscope_single_pulse_w64.png)
+
+To test multiple pulses, set the width to 50 clock cycles (1 μs) with `w\x32` (hex bytes `77 32`), spacing to 32 clock cycles (640 ns) with `s\x00\x20` (hex bytes `73 00 20`) and number of pulses to 3 with `n\x03` (hex bytes `6E 03`), then trigger the pulse with `t` (hex byte `74`).
+
+Full sequence:
+```
+w 0x32
+s 0x00 0x20
+n 0x03
+t
+```
+
+![Oscilloscope capture of multiple pulses](oscilloscope_multiple_pulses_w32_s20_n3.png)
 
 To test trigger arming, send `a` (hex byte `61`). This should make the armed pin (`uo[5]`) go high.
-Sending `a` again should disarm the trigger. While armed, setting the trigger input pin (`ui[0]`) to high will trigger a pulse.
+Sending `a` again should disarm the trigger. While armed, setting the trigger input pin (`ui[0]`) to high will trigger a pulse sequence with the configured parameters.
+
+Full sequence:
+```
+w 0x32
+s 0x00 0x20
+n 0x03
+a
+```
+
+![Oscilloscope capture of both trigger signal and pulse output with three pulses, pulse width 50 clock cycles and spacing 32 clock cycles.](oscilloscope_trigger_no_delay.png)
+
+This can be combined with a delay. Set the delay to 100 clock cycles (2 μs) with `d\x00\x64` (hex bytes `64 00 64`), pulse width to 50 clock cycles (1 μs) with `w\x32` (hex bytes `77 64`), spacing to 32 clock cycles (640 ns) with `s\x00\x20` (hex bytes `73 00 20`) and number of pulses to 3 with `n\x03` (hex bytes `6E 03`).
+Arm with `a` (hex byte `61`) and then set the trigger input pin (`ui[0]`) to high.
+
+Full sequence:
+```
+d 0x00 0x64
+w 0x32
+s 0x00 0x20
+n 0x03
+a
+```
+
+![Oscilloscope capture of both trigger signal and pulse output with delay 100 cycles, three pulses, pulse width 50 clock cycles and spacing 32 clock cycles.](oscilloscope_trigger_d64.png)
 
 See the cocotb tests for more examples.
 
-Alternatively, the RP2350 running MicroPython on the demo board can be used to test basic functionality.
+### Using with MicroPython on the TT Demo Board
+
+The Tiny Tapeout demo board includes an RP2350 running MicroPython, which can be used to test most of the functionality.
+
 First, set `mode = ASIC_RP_CONTROL` in `config.ini` (or manually in the REPL) to allow the RP2350 to drive the project inputs.
 
 To use UART from the MicroPython REPL, initialize it like this:
