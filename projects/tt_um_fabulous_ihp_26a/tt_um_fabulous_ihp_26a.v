@@ -12,7 +12,7 @@ module tt_um_fabulous_ihp_26a (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    parameter FABRIC_NUM_COLUMNS = 5;
+    parameter FABRIC_NUM_COLUMNS = 9;
     parameter FABRIC_NUM_ROWS = 5;
     
     parameter FRAME_BITS_PER_ROW = 32;
@@ -77,7 +77,7 @@ module tt_um_fabulous_ihp_26a (
     assign uio_out = fabric_uio_out;
     assign uio_oe = fabric_uio_oe;
 
-    tiny_fabric_5x5 tiny_fabric_5x5 (
+    tiny_fabric_9x5 tiny_fabric_9x5 (
         // IN/OUT is from the PoV of the fabric
 
         // clk
@@ -117,30 +117,30 @@ module tt_um_fabulous_ihp_26a (
         .Tile_X0Y1_D_OUT_top  (fabric_ui_in[7]),
 
         // uo
-        .Tile_X4Y3_A_EN_top   (),
-        .Tile_X4Y3_A_IN_top   (fabric_uo_out[0]),
-        .Tile_X4Y3_A_OUT_top  (1'b0),
-        .Tile_X4Y3_B_EN_top   (),
-        .Tile_X4Y3_B_IN_top   (fabric_uo_out[1]),
-        .Tile_X4Y3_B_OUT_top  (1'b0),
-        .Tile_X4Y3_C_EN_top   (),
-        .Tile_X4Y3_C_IN_top   (fabric_uo_out[2]),
-        .Tile_X4Y3_C_OUT_top  (1'b0),
-        .Tile_X4Y3_D_EN_top   (),
-        .Tile_X4Y3_D_IN_top   (fabric_uo_out[3]),
-        .Tile_X4Y3_D_OUT_top  (1'b0),
-        .Tile_X4Y1_A_EN_top   (),
-        .Tile_X4Y1_A_IN_top   (fabric_uo_out[4]),
-        .Tile_X4Y1_A_OUT_top  (1'b0),
-        .Tile_X4Y1_B_EN_top   (),
-        .Tile_X4Y1_B_IN_top   (fabric_uo_out[5]),
-        .Tile_X4Y1_B_OUT_top  (1'b0),
-        .Tile_X4Y1_C_EN_top   (),
-        .Tile_X4Y1_C_IN_top   (fabric_uo_out[6]),
-        .Tile_X4Y1_C_OUT_top  (1'b0),
-        .Tile_X4Y1_D_EN_top   (),
-        .Tile_X4Y1_D_IN_top   (fabric_uo_out[7]),
-        .Tile_X4Y1_D_OUT_top  (1'b0),
+        .Tile_X8Y3_A_EN_top   (),
+        .Tile_X8Y3_A_IN_top   (fabric_uo_out[0]),
+        .Tile_X8Y3_A_OUT_top  (1'b0),
+        .Tile_X8Y3_B_EN_top   (),
+        .Tile_X8Y3_B_IN_top   (fabric_uo_out[1]),
+        .Tile_X8Y3_B_OUT_top  (1'b0),
+        .Tile_X8Y3_C_EN_top   (),
+        .Tile_X8Y3_C_IN_top   (fabric_uo_out[2]),
+        .Tile_X8Y3_C_OUT_top  (1'b0),
+        .Tile_X8Y3_D_EN_top   (),
+        .Tile_X8Y3_D_IN_top   (fabric_uo_out[3]),
+        .Tile_X8Y3_D_OUT_top  (1'b0),
+        .Tile_X8Y1_A_EN_top   (),
+        .Tile_X8Y1_A_IN_top   (fabric_uo_out[4]),
+        .Tile_X8Y1_A_OUT_top  (1'b0),
+        .Tile_X8Y1_B_EN_top   (),
+        .Tile_X8Y1_B_IN_top   (fabric_uo_out[5]),
+        .Tile_X8Y1_B_OUT_top  (1'b0),
+        .Tile_X8Y1_C_EN_top   (),
+        .Tile_X8Y1_C_IN_top   (fabric_uo_out[6]),
+        .Tile_X8Y1_C_OUT_top  (1'b0),
+        .Tile_X8Y1_D_EN_top   (),
+        .Tile_X8Y1_D_IN_top   (fabric_uo_out[7]),
+        .Tile_X8Y1_D_OUT_top  (1'b0),
 
         // uio
         .Tile_X1Y4_A_EN_top   (fabric_uio_oe[0]),
