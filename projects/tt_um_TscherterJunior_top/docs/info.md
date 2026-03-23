@@ -19,10 +19,24 @@ You can also include images in this folder and reference them in the markdown. E
     Register 7 is hardcoded to be used as the source for the page address in paged jumps
 
     The Chip further has a 2 bit flag registers
+    Set by:
+
+    Arithmetic Ops:
+        F[0] = overflow/borrow
+        F[1] = carry
+
+    bitwise Logic:
+        F[0] = Zero
+        F[1] = Parity
+
+    shift:
+        F[0] = Zero
+        F[1] = Sign
 
 ### Instruction encoding and semantics
 
   A: The used accumulator
+  RRR: [2:1] The involved Register
 
   Adi: 000I_AIII
     Acc[A] += IIII
@@ -30,11 +44,11 @@ You can also include images in this folder and reference them in the markdown. E
   Add 0010_ARRR
     Acc[A] += Reg[RRR]
 
-  Sub 0011_ARR
+  Sub 0011_ARRR
     Acc[A] += Reg[RRR]
 
   Dcd 0100_MMMM
-    Set Flags = 11 if current flag state is in the subset of possible states set by the mask MMMM
+    Set Flags = 11 if current flag state is in the subset of possible states set([[False,False],[False,True],[True,False],[True,True]]) by the mask MMMM else 0
 
   Cmp 0101_AUGE
     Let Target = A ? Acc[1] : 0
@@ -42,6 +56,8 @@ You can also include images in this folder and reference them in the markdown. E
     set flages as follows:
         Flag[1] = ((G && A signed  grater than Target) || (E && A == Target)) ? 1 : 0
         Flag[0] = ((G && A unsiged grater than Target) || (E && A == Target)) ? 1 : 0
+
+    note: the U bit is unused
 
   Jmp 0110_PRRR
     if flag[0]: 
