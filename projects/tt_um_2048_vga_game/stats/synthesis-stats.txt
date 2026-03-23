@@ -1,0 +1,47 @@
+192. Printing statistics.
+
+=== tt_um_2048_vga_game ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     5877        - wires
+     5912        - wire bits
+      471        - public wires
+      506        - public wire bits
+        8        - ports
+       43        - port bits
+     5893 7.64E+04 cells
+      131 1.66E+03   sg13g2_a21o_1
+      679 6.16E+03   sg13g2_a21oi_1
+      232 3.37E+03   sg13g2_a221oi_1
+      295  3.2E+03   sg13g2_a22oi_1
+      177 1.61E+03   sg13g2_and2_1
+       34  431.827   sg13g2_and3_1
+       21  304.819   sg13g2_and4_1
+        6   43.546   sg13g2_buf_1
+      542 2.66E+04   sg13g2_dfrbpq_1
+      197  1072.31   sg13g2_inv_1
+       32  580.608   sg13g2_mux2_1
+       30 1.14E+03   sg13g2_mux4_1
+      485 3.52E+03   sg13g2_nand2_1
+      174 1.58E+03   sg13g2_nand2b_1
+      212 1.92E+03   sg13g2_nand3_1
+       19  241.315   sg13g2_nand3b_1
+      110  1.2E+03   sg13g2_nand4_1
+      605 4.39E+03   sg13g2_nor2_1
+       42  381.024   sg13g2_nor2b_1
+      190  1723.68   sg13g2_nor3_1
+       76  827.366   sg13g2_nor4_1
+      811 7.36E+03   sg13g2_o21ai_1
+       68  616.896   sg13g2_or2_1
+       33  419.126   sg13g2_or3_1
+       22  319.334   sg13g2_or4_1
+      542 3.93E+03   sg13g2_tiehi
+        8   58.061   sg13g2_tielo
+       82 1.19E+03   sg13g2_xnor2_1
+       38  551.578   sg13g2_xor2_1
+
+   Chip area for module '\tt_um_2048_vga_game': 76355.130600
+     of which used for sequential elements: 26551.929600 (34.77%)
+
