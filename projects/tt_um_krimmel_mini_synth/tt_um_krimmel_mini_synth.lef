@@ -75,7 +75,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN rst_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.450800 ;
+    ANTENNAGATEAREA 0.725400 ;
     PORT
       LAYER Metal4 ;
         RECT 183.210 153.980 183.510 154.980 ;
@@ -84,7 +84,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 179.370 153.980 179.670 154.980 ;
@@ -93,7 +93,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 175.530 153.980 175.830 154.980 ;
@@ -102,7 +102,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 171.690 153.980 171.990 154.980 ;
@@ -111,7 +111,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.180700 ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 167.850 153.980 168.150 154.980 ;
@@ -120,7 +120,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213200 ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 164.010 153.980 164.310 154.980 ;
@@ -138,6 +138,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
     PORT
       LAYER Metal4 ;
         RECT 156.330 153.980 156.630 154.980 ;
@@ -146,6 +147,7 @@ MACRO tt_um_krimmel_mini_synth
   PIN ui_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213200 ;
     PORT
       LAYER Metal4 ;
         RECT 152.490 153.980 152.790 154.980 ;
@@ -437,11 +439,11 @@ MACRO tt_um_krimmel_mini_synth
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 3.255 3.635 198.825 152.185 ;
+        RECT 2.295 3.635 198.825 152.185 ;
       LAYER Metal3 ;
-        RECT 3.215 3.680 198.865 152.145 ;
+        RECT 2.255 3.680 198.865 152.145 ;
       LAYER Metal4 ;
-        RECT 15.560 153.770 29.400 153.980 ;
+        RECT 14.300 153.770 29.400 153.980 ;
         RECT 30.120 153.770 33.240 153.980 ;
         RECT 33.960 153.770 37.080 153.980 ;
         RECT 37.800 153.770 40.920 153.980 ;
@@ -483,7 +485,8 @@ MACRO tt_um_krimmel_mini_synth
         RECT 176.040 153.770 179.160 153.980 ;
         RECT 179.880 153.770 183.000 153.980 ;
         RECT 183.720 153.770 186.840 153.980 ;
-        RECT 15.560 3.635 187.300 153.770 ;
+        RECT 187.560 153.770 190.680 153.980 ;
+        RECT 14.300 3.635 191.140 153.770 ;
       LAYER Metal5 ;
         RECT 15.515 3.470 179.125 151.510 ;
   END
