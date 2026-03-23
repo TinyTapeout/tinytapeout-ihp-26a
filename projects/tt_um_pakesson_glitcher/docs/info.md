@@ -17,13 +17,13 @@ In a typical voltage fault injection setup, the target microcontroller's power r
 
 Similarly, electromagnetic fault injection (EMFI) uses a coil placed near the target IC to induce transient currents in the die.
 
-In practice, the correct glitch parameters are rarely known in advance. The useful fault parameters often have to be found experimentally by sweeping across different delay values, pulse widths, pulse counts, and pulse spacing values until the target shows an interesting response.
+In practice, the correct glitch parameters are rarely known in advance. The useful fault parameters often have to be found experimentally by sweeping across different delay values, pulse widths, pulse counts, and pulse spacing until the target shows an interesting response.
 
 The pulse generator can be configured and controlled over a standard UART serial connection at 115200 baud, making it easy to drive from a microcontroller, a single-board computer like a Raspberry Pi, or a USB-to-serial adapter.
 
-Pulses can be triggered either by UART commands or by the external trigger input.
+Pulses can be triggered either by UART commands or by an external trigger input.
 
-The pulse generator runs at 50 MHz, giving a timing resolution of 20 ns. This is fine enough for precise, repeatable glitch placement on a wide range of targets.
+The pulse generator runs at 50 MHz, giving a timing resolution of 20 ns. This is sufficient for precise, repeatable glitch placement on a wide range of targets.
 
 ## Hardware Interface
 
@@ -54,7 +54,7 @@ The `Pulse Out` (`uo[1]`) output can be used with an N-channel MOSFET or analog 
 
 Use `Pulse Out (Inverted)` (`uio[0]`) when your driver circuit expects an active-low enable signal.
 
-In cases where the pulse output might drive (parts of) a target during reset, the combined `Pulse Out or Target Reset` (`uo[6]`) output, which is high during both pulse generation and target reset.
+In cases where the pulse output might drive (all or parts of) a target during reset, use the combined `Pulse Out or Target Reset` (`uo[6]`) output, which is high during both pulse generation and target reset.
 
 To use the `Target Reset` (or `Target Reset (Inverted)`), connect it to a suitable reset pin or a power switch for the entire target.
 
@@ -66,9 +66,9 @@ All parameter values are either 8-bit or 16-bit unsigned integers.
 
 All timing values are specified in clock cycles at 50 MHz, where 1 cycle = 20 ns.
 
-The minimum effective duration for all timing parameters is 1 clock cycle (20 ns). Both 0 and 1 produce a 1-cycle duration; to set a 2-cycle duration use the value 2, and so on.
+The minimum effective duration for all timing parameters is 1 clock cycle (20 ns). Both 0 and 1 produce a 1-cycle duration; to set a 2-cycle duration, use the value 2, and so on.
 
-The maximum value for a 8-bit timing parameters is 5.10 µs, while the 16-bit timing parameters go up to 1.31 ms.
+The maximum value for 8-bit timing parameters is 5.10 µs, while the 16-bit timing parameters go up to 1.31 ms.
 
 ### Configuration
 
@@ -92,7 +92,7 @@ Configuration commands only update the stored parameter values.
 
 ### Reset Modes
 
-The reset mode determines what happens after the `Target Reset` command has completed.
+The reset mode determines what happens after the target reset command has completed.
 By default, a pulse sequence is started directly after resetting the target, but it is also possible to set the armed state and wait for a trigger input, or do nothing at all.
 
 | Command | Byte  | Parameters          | Default | Description                     |
@@ -116,9 +116,9 @@ When in the target reset state, the `Target Reset` (`uo[2]`) output is high.
 
 When in the pulse active state, the `Pulse Out` (`uo[1]`) output is high.
 
-The trigger is activated when `Trigger In` (`ui[0]`) is high, not just on a rising edge. This means that if the trigger input is set to a constant high signal, the system will trigger immediately after being armed.
-
 Note that the trigger input is synchronized internally, so there is an initial delay of two clock cycles before starting the pulse sequence. The pulse sequence then has a minimum of one additional delay cycle before the pulse output goes high, giving a minimum time from trigger input to pulse output of 60-80 ns (three to four clock cycles), depending on the timing of the trigger, when configured with zero additional delay.
+
+The trigger is activated when `Trigger In` (`ui[0]`) is high, not just on a rising edge. This means that if the trigger input is set to a constant high signal, the system will trigger as soon as the synchronized trigger is seen after arming.
 
 ### Manual Trigger Over UART
 
@@ -160,7 +160,7 @@ All examples and oscilloscope captures in this section were taken with the proje
 
 The project can be tested by connecting a microcontroller or USB-to-serial adapter to the UART RX and TX pins (`ui[1]` and `uo[0]`, respectively).
 
-First test that the UART works by sending `x` (hex byte `78`), which should be echoed back because it is an unknown command, or `h` which should return the string `Erika`.
+First, test that the UART works by sending `x` (hex byte `78`), which should be echoed back because it is an unknown command, or `h`, which should return the string `Erika`.
 
 To test a basic pulse, set the pulse width to 100 clock cycles (2 μs) with `w\x64` (hex bytes `77 64`) and trigger the pulse with `t` (hex byte `74`). This should result in a pulse on the Pulse Out pin (`uo[1]`).
 
@@ -197,7 +197,7 @@ a
 
 ![Oscilloscope capture of both trigger signal and pulse output with three pulses, pulse width 50 clock cycles and spacing 32 clock cycles.](oscilloscope_trigger_no_delay.png)
 
-This can be combined with a delay. Set the delay to 100 clock cycles (2 μs) with `d\x00\x64` (hex bytes `64 00 64`), pulse width to 50 clock cycles (1 μs) with `w\x32` (hex bytes `77 64`), spacing to 32 clock cycles (640 ns) with `s\x00\x20` (hex bytes `73 00 20`) and number of pulses to 3 with `n\x03` (hex bytes `6E 03`).
+This can be combined with a delay. Set the delay to 100 clock cycles (2 μs) with `d\x00\x64` (hex bytes `64 00 64`), pulse width to 50 clock cycles (1 μs) with `w\x32` (hex bytes `77 32`), spacing to 32 clock cycles (640 ns) with `s\x00\x20` (hex bytes `73 00 20`) and number of pulses to 3 with `n\x03` (hex bytes `6E 03`).
 Arm with `a` (hex byte `61`) and then set the trigger input pin (`ui[0]`) to high.
 
 Full sequence:
@@ -226,7 +226,7 @@ To use UART from the MicroPython REPL, initialize it like this:
 >>> _ = uart.read() # Clear read buffer
 ```
 
-The `h` command will verify that the project is running:
+The `h` command can be used to verify that the project is running:
 ```python
 >>> uart.write(b'h')
 1
@@ -242,7 +242,7 @@ Unknown commands are echoed back directly:
 b'x'
 ```
 
-The `armed` signal can be found on `uo[5]`, and the trigger input is on `ui[0]`.
+The `Armed` signal can be found on `uo[5]`, and the trigger input is on `ui[0]`.
 Here is a quick sanity check for these:
 ```python
 >>> tt.uo_out[5]     # Check if armed (0 = not armed, 1 = armed)
@@ -263,6 +263,6 @@ This project had several sources of inspiration, including:
 * The ["NXP LPC1343 Bootloader Bypass"](https://toothless.co/blog/bootloader-bypass-part1) series of blog posts by Dmitry Nedospasov is where I first saw this type of glitcher implemented in an FPGA.
 * The [Wallet.fail](https://wallet.fail/) presentation at 35C3 ([watch the presentation on YouTube](https://www.youtube.com/watch?v=Y1OBIGslgGM)), by Thomas Roth, Dmitry Nedospasov, and Josh Datko, used a very similar FPGA glitcher.
 * ... and so did the [Chip.Fail](https://www.youtube.com/watch?v=CX71p_qcCxY) presentation at Black Hat USA 2019, by Thomas Roth and Josh Datko. The code for this can be found on [GitHub](https://github.com/chipfail/chipfail-glitcher).
-* I attended one of Dmitry's in-person "Hardware hacking with FPGAs" trainings in 2019 as well, which was also a great source of inspiration.
+* I attended one of Dmitry's in-person "Hardware hacking with FPGAs" training courses in 2019 as well, which was also a great source of inspiration.
 
 If you are looking for fault injection tooling that works out-of-the-box, also check out the [ChipWhisperer](http://chipwhisperer.com/) by Colin O'Flynn (NewAE Technology) or the [Faultier](https://1bitsquared.com/products/faultier) by Thomas Roth (Hextree.io).
