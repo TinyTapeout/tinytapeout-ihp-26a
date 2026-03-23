@@ -1,0 +1,70 @@
+# Tiny Tapeout project information
+project:
+  title:        "Mini PSG"      # Project title
+  author:       "Peter Szentkuti"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Mini Programmable Sound Generator"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000       # Clock in Hz
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_zettpe_mini_psg"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_zettpe_mini_psg.v"
+    - "mini_psg_top.v"
+    - "mini_psg_control_top.v"
+    - "mini_psg_audio_top.v"
+    - "mini_psg_audio_generator_top.v"
+    - "mini_psg_audio_output_top.v"
+    - "spi_slave.v"
+    - "register_file.v"
+    - "note_lut.v"
+    - "phase_accumulator.v"
+    - "waveform_generator.v"
+    - "envelope_generator.v"
+    - "volume_control.v"
+    - "mixer.v"
+    - "dac_1bit.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "HARD_MUTE"
+  ui[1]: "NOT_USED_1"
+  ui[2]: "NOT_USED_2"
+  ui[3]: "NOT_USED_3"
+  ui[4]: "NOT_USED_4"
+  ui[5]: "NOT_USED_5"
+  ui[6]: "NOT_USED_6"
+  ui[7]: "NOT_USED_7"
+
+  # Outputs
+  uo[0]: "NOT_USED_0"
+  uo[1]: "NOT_USED_1"
+  uo[2]: "NOT_USED_2"
+  uo[3]: "NOT_USED_3"
+  uo[4]: "NOT_USED_4"
+  uo[5]: "NOT_USED_5"
+  uo[6]: "NOT_USED_6"
+  uo[7]: "AUDIO"
+
+  # Bidirectional pins
+  uio[0]: "SPI_CS_N"
+  uio[1]: "SPI_MOSI"
+  uio[2]: "NOT_USED_2"
+  uio[3]: "SPI_SCK"
+  uio[4]: "NOT_USED_4"
+  uio[5]: "NOT_USED_5"
+  uio[6]: "NOT_USED_6"
+  uio[7]: "NOT_USED_7"
+
+# Do not change!
+yaml_version: 6
