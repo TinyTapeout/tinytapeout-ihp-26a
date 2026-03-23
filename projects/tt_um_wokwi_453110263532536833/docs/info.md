@@ -9,11 +9,10 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Input 0 and CLK is inputed to the and gate and the and ouput is put at the output1
+Input 0 and 1 are the Input to the Full ADDER with CIN being connected to GND. Input 2 and 3 are connected to the XOR gate. Input 4 is connected to the D flip D input. Input 5 is connected to the INVERTER. Input 6 and 7 are connected to the NAND and AND gate. OUTPUT 0 is the SUM output of the FULL ADDER and OUTPUT 1 is the COUT. OUTPUT 2 is the XOR, OUTPUT 3 is the NAND, OUTPUT 4 is the AND, Output 5 is Q, Output 6 is Q_B and Output 7 is the INVERTER
 
 ## How to test
-
-connect the clk and put the 1st input high. Output should toggele according to clock speed.
+Use the DIP switches to set the inputs of the gates according to the descripton. The 7 Segment Display can be used to see the outputs.
 
 ## External hardware
 

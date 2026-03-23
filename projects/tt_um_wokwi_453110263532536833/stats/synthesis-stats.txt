@@ -17,46 +17,154 @@
    Chip area for module '\and_cell': 9.072000
      of which used for sequential elements: 0.000000 (0.00%)
 
+=== dff_cell ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of ports:                  4
+   Number of port bits:              4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    1
+     sg13g2_tiehi                    1
+
+   Chip area for module '\dff_cell': 61.689600
+     of which used for sequential elements: 48.988800 (79.41%)
+
+=== nand_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_nand2_1                  1
+
+   Chip area for module '\nand_cell': 7.257600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== not_cell ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_inv_1                    1
+
+   Chip area for module '\not_cell': 5.443200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== or_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_or2_1                    1
+
+   Chip area for module '\or_cell': 9.072000
+     of which used for sequential elements: 0.000000 (0.00%)
+
 === tt_um_wokwi_453110263532536833 ===
 
-   Number of wires:                  9
-   Number of wire bits:             44
-   Number of public wires:           9
-   Number of public wire bits:      44
+   Number of wires:                 21
+   Number of wire bits:             56
+   Number of public wires:          19
+   Number of public wire bits:      54
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 25
-     and_cell                        1
+   Number of cells:                 36
+     and_cell                        3
+     dff_cell                        1
+     nand_cell                       1
+     not_cell                        1
+     or_cell                         1
      sg13g2_buf_1                    8
-     sg13g2_tielo                   16
+     sg13g2_tielo                   18
+     xor_cell                        3
 
+   Area for cell type \xor_cell is unknown!
    Area for cell type \and_cell is unknown!
+   Area for cell type \or_cell is unknown!
+   Area for cell type \nand_cell is unknown!
+   Area for cell type \dff_cell is unknown!
+   Area for cell type \not_cell is unknown!
 
-   Chip area for module '\tt_um_wokwi_453110263532536833': 174.182400
+   Chip area for module '\tt_um_wokwi_453110263532536833': 188.697600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== xor_cell ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of ports:                  3
+   Number of port bits:              3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_xor2_1                   1
+
+   Chip area for module '\xor_cell': 14.515200
      of which used for sequential elements: 0.000000 (0.00%)
 
 === design hierarchy ===
 
    tt_um_wokwi_453110263532536833      1
-     and_cell                        1
+     and_cell                        3
+     dff_cell                        1
+     nand_cell                       1
+     not_cell                        1
+     or_cell                         1
+     xor_cell                        3
 
-   Number of wires:                 12
-   Number of wire bits:             47
-   Number of public wires:          12
-   Number of public wire bits:      47
-   Number of ports:                 11
-   Number of port bits:             46
+   Number of wires:                 52
+   Number of wire bits:             87
+   Number of public wires:          49
+   Number of public wire bits:      84
+   Number of ports:                 38
+   Number of port bits:             73
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 25
-     sg13g2_and2_1                   1
+   Number of cells:                 38
+     sg13g2_and2_1                   3
      sg13g2_buf_1                    8
-     sg13g2_tielo                   16
+     sg13g2_dfrbpq_1                 1
+     sg13g2_inv_1                    2
+     sg13g2_nand2_1                  1
+     sg13g2_or2_1                    1
+     sg13g2_tiehi                    1
+     sg13g2_tielo                   18
+     sg13g2_xor2_1                   3
 
-   Chip area for top module '\tt_um_wokwi_453110263532536833': 183.254400
-     of which used for sequential elements: 0.000000 (0.00%)
+   Chip area for top module '\tt_um_wokwi_453110263532536833': 342.921600
+     of which used for sequential elements: 48.988800 (14.29%)
 
