@@ -1,0 +1,45 @@
+150. Printing statistics.
+
+=== tt_um_wscore ===
+
+   Number of wires:               2066
+   Number of wire bits:           2101
+   Number of public wires:         275
+   Number of public wire bits:     310
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2082
+     sg13g2_a21o_1                  38
+     sg13g2_a21oi_1                192
+     sg13g2_a221oi_1                93
+     sg13g2_a22oi_1                129
+     sg13g2_and2_1                  46
+     sg13g2_and3_1                  10
+     sg13g2_and4_1                   1
+     sg13g2_dfrbpq_1               275
+     sg13g2_inv_1                   52
+     sg13g2_mux2_1                 247
+     sg13g2_mux4_1                  30
+     sg13g2_nand2_1                213
+     sg13g2_nand2b_1                19
+     sg13g2_nand3_1                 43
+     sg13g2_nand3b_1                 4
+     sg13g2_nand4_1                  5
+     sg13g2_nor2_1                  89
+     sg13g2_nor2b_1                 30
+     sg13g2_nor3_1                  44
+     sg13g2_nor4_1                   2
+     sg13g2_o21ai_1                165
+     sg13g2_or2_1                    8
+     sg13g2_or3_1                    7
+     sg13g2_or4_1                    1
+     sg13g2_tiehi                  283
+     sg13g2_xnor2_1                 40
+     sg13g2_xor2_1                  16
+
+   Chip area for module '\tt_um_wscore': 33004.503000
+     of which used for sequential elements: 13471.920000 (40.82%)
+
