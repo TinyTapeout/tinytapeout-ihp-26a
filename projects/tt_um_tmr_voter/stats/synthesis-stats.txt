@@ -1,44 +1,45 @@
-128. Printing statistics.
+121. Printing statistics.
 
 === tt_um_tmr_voter ===
 
-   Number of wires:                657
-   Number of wire bits:            692
-   Number of public wires:         155
-   Number of public wire bits:     190
+   Number of wires:                760
+   Number of wire bits:            795
+   Number of public wires:         174
+   Number of public wire bits:     209
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                673
-     sg13g2_a21o_1                   5
-     sg13g2_a21oi_1                 42
-     sg13g2_a221oi_1                 3
-     sg13g2_a22oi_1                 31
-     sg13g2_and2_1                   5
-     sg13g2_and3_1                   1
-     sg13g2_and4_1                   3
+   Number of cells:                776
+     sg13g2_a21o_1                  69
+     sg13g2_a21oi_1                 47
+     sg13g2_a221oi_1                22
+     sg13g2_a22oi_1                 41
+     sg13g2_and2_1                  25
+     sg13g2_and3_1                   3
+     sg13g2_and4_1                   1
      sg13g2_buf_1                    5
-     sg13g2_dfrbpq_1               157
-     sg13g2_inv_1                   44
-     sg13g2_mux2_1                  82
-     sg13g2_nand2_1                 64
-     sg13g2_nand2b_1                 5
-     sg13g2_nand3_1                 52
-     sg13g2_nand4_1                 17
-     sg13g2_nor2_1                  22
+     sg13g2_dfrbpq_1               184
+     sg13g2_inv_1                   43
+     sg13g2_mux2_1                  52
+     sg13g2_nand2_1                 38
+     sg13g2_nand2b_1                 3
+     sg13g2_nand3_1                 28
+     sg13g2_nand3b_1                16
+     sg13g2_nand4_1                 21
+     sg13g2_nor2_1                  36
      sg13g2_nor2b_1                  3
-     sg13g2_nor3_1                   2
-     sg13g2_nor4_1                   8
-     sg13g2_o21ai_1                 59
-     sg13g2_or2_1                    1
-     sg13g2_or4_1                    2
+     sg13g2_nor3_1                   8
+     sg13g2_nor4_1                   2
+     sg13g2_o21ai_1                 54
+     sg13g2_or2_1                    2
+     sg13g2_or4_1                    1
      sg13g2_tiehi                    5
      sg13g2_tielo                    6
-     sg13g2_xnor2_1                 26
-     sg13g2_xor2_1                  23
+     sg13g2_xnor2_1                 22
+     sg13g2_xor2_1                  39
 
-   Chip area for module '\tt_um_tmr_voter': 13204.031400
-     of which used for sequential elements: 7691.241600 (58.25%)
+   Chip area for module '\tt_um_tmr_voter': 15433.551000
+     of which used for sequential elements: 9013.939200 (58.40%)
 
