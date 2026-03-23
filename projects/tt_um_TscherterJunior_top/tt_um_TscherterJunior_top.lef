@@ -319,7 +319,7 @@ MACRO tt_um_TscherterJunior_top
   PIN uio_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.649200 ;
+    ANTENNADIFFAREA 0.677200 ;
     PORT
       LAYER Metal4 ;
         RECT 75.690 153.980 75.990 154.980 ;
@@ -337,7 +337,7 @@ MACRO tt_um_TscherterJunior_top
   PIN uio_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.649200 ;
+    ANTENNADIFFAREA 0.677200 ;
     PORT
       LAYER Metal4 ;
         RECT 68.010 153.980 68.310 154.980 ;
@@ -355,7 +355,7 @@ MACRO tt_um_TscherterJunior_top
   PIN uio_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.649200 ;
+    ANTENNADIFFAREA 0.677200 ;
     PORT
       LAYER Metal4 ;
         RECT 60.330 153.980 60.630 154.980 ;
@@ -411,7 +411,7 @@ MACRO tt_um_TscherterJunior_top
   PIN uo_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.046500 ;
+    ANTENNAGATEAREA 0.800800 ;
     ANTENNADIFFAREA 0.716100 ;
     PORT
       LAYER Metal4 ;
@@ -421,7 +421,7 @@ MACRO tt_um_TscherterJunior_top
   PIN uo_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.948700 ;
+    ANTENNAGATEAREA 1.994200 ;
     ANTENNADIFFAREA 0.716100 ;
     PORT
       LAYER Metal4 ;
@@ -431,7 +431,7 @@ MACRO tt_um_TscherterJunior_top
   PIN uo_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 1.448200 ;
+    ANTENNAGATEAREA 1.563900 ;
     ANTENNADIFFAREA 0.716100 ;
     PORT
       LAYER Metal4 ;
@@ -444,9 +444,9 @@ MACRO tt_um_TscherterJunior_top
       LAYER Metal1 ;
         RECT 2.880 3.560 199.200 151.420 ;
       LAYER Metal2 ;
-        RECT 3.735 3.635 198.825 154.705 ;
+        RECT 8.055 3.635 198.825 154.705 ;
       LAYER Metal3 ;
-        RECT 3.695 3.680 198.865 154.665 ;
+        RECT 8.015 3.680 198.865 154.665 ;
       LAYER Metal4 ;
         RECT 15.560 153.770 29.400 154.705 ;
         RECT 30.120 153.770 33.240 154.705 ;
@@ -492,7 +492,7 @@ MACRO tt_um_TscherterJunior_top
         RECT 183.720 153.770 186.840 154.705 ;
         RECT 15.560 3.635 187.300 153.770 ;
       LAYER Metal5 ;
-        RECT 15.515 3.470 183.505 151.510 ;
+        RECT 15.515 3.470 182.545 151.510 ;
   END
 END tt_um_TscherterJunior_top
 END LIBRARY
