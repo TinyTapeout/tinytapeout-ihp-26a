@@ -36,17 +36,17 @@
 
 === tt_um_ihp26a_ring_osc ===
 
-   Number of wires:               2931
-   Number of wire bits:           2966
-   Number of public wires:        2912
-   Number of public wire bits:    2947
+   Number of wires:               3133
+   Number of wire bits:           3168
+   Number of public wires:        3114
+   Number of public wire bits:    3149
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2947
-     LT_inverter                  1004
+   Number of cells:               3149
+     LT_inverter                  1206
      amm_inverter                 1881
      sg13g2_a21o_1                   2
      sg13g2_and2_1                  10
@@ -72,24 +72,24 @@
 === design hierarchy ===
 
    tt_um_ihp26a_ring_osc             1
-     LT_inverter                  1004
+     LT_inverter                  1206
      amm_inverter                 1881
 
-   Number of wires:               8701
-   Number of wire bits:           8736
-   Number of public wires:        8682
-   Number of public wire bits:    8717
-   Number of ports:               5778
-   Number of port bits:           5813
+   Number of wires:               9307
+   Number of wire bits:           9342
+   Number of public wires:        9288
+   Number of public wire bits:    9323
+   Number of ports:               6182
+   Number of port bits:           6217
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2947
+   Number of cells:               3149
      sg13g2_a21o_1                   2
      sg13g2_and2_1                  10
      sg13g2_buf_1                    8
      sg13g2_dfrbpq_1                 9
-     sg13g2_inv_1                 2889
+     sg13g2_inv_1                 3091
      sg13g2_nand2_1                  2
      sg13g2_nand3_1                  2
      sg13g2_nand3b_1                 2
@@ -100,6 +100,6 @@
      sg13g2_xnor2_1                  2
      sg13g2_xor2_1                   3
 
-   Chip area for top module '\tt_um_ihp26a_ring_osc': 16609.017600
-     of which used for sequential elements: 440.899200 (2.65%)
+   Chip area for top module '\tt_um_ihp26a_ring_osc': 17708.544000
+     of which used for sequential elements: 440.899200 (2.49%)
 
