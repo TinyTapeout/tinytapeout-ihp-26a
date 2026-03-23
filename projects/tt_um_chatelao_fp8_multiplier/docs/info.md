@@ -126,6 +126,50 @@ The unit captures configuration and scaling data during the first three cycles o
 | `rst_n` | Reset | Active-low asynchronous reset. |
 | `ena` | Enable | Clock enable. |
 
+## Appendix: OCP MX+ Mathematics
+
+The OCP MX+ extension optimizes quantization by preserving high-precision "outliers" (Block Max elements) while maintaining a low bit-width for the rest of the block.
+
+### 1. Base OCP MX Mathematics (Standard)
+For a block of $k$ elements, the value of an element $A_i$ is given by:
+$$V(A_i) = S \cdot M_i \cdot 2^{X_A - 127}$$
+Where:
+- $S$: Sign bit ($\pm 1$).
+- $M_i$: Mantissa (significand), including an implicit leading bit for subnormals.
+- $X_A$: Shared 8-bit scale (UE8M0).
+- $E_i$: Individual element exponent (for FP8/FP6/FP4 formats).
+
+### 2. OCP MX+ (Extended Mantissa)
+When `MX+ Enable` is set, the **Block Max (BM)** element—identified by `BM Index`—repurposes its exponent bits as additional mantissa.
+
+**Normal Element ($i \neq BM$):**
+Decoded as standard MXFP (e.g., E4M3).
+
+**Block Max Element ($i = BM$):**
+- **Exponent**: Fixed to $E_{max}$ for the selected format.
+- **Mantissa**: The original exponent bits are appended to the mantissa field.
+- **Benefit**: For FP4 (E2M1), the mantissa grows from 1 bit to 3 bits ($1 + 2$), reducing quantization error for the most critical value by up to 10x.
+
+### 3. OCP MX++ (Decoupled Shared Scaling)
+MX++ allows "Non-Block Max" (NBM) elements to use a finer quantization grid than the BM element by applying a secondary exponent offset.
+
+$$V(A_{i \neq BM}) = S \cdot M_i \cdot 2^{(X_A - 127) - NBM\_Offset\_A}$$
+
+This effectively "zooms in" on the smaller values in the block, reducing the floor noise caused by a single large outlier.
+
+### 4. LNS Mitchell's Approximation
+In LNS Mode, multiplication $P = A \times B$ is performed in the logarithmic domain:
+$$\log_2(P) = \log_2(A) + \log_2(B)$$
+
+To avoid expensive Power/Log circuits, the unit uses **Mitchell’s Approximation**:
+$$\log_2(1+m) \approx m, \quad m \in [0, 1)$$
+
+The product of two significands $(1+m_a)$ and $(1+m_b)$ is approximated as:
+```math
+(1+m_a)(1+m_b) \approx \begin{cases} 1 + m_a + m_b & \text{if } m_a + m_b < 1 \\ 2(m_a + m_b) & \text{if } m_a + m_b \ge 1 \end{cases}
+```
+This allows the multiplier to be replaced by a simple adder and a shift, reducing hardware area by over 50%.
+
 ## Thank you!
 
 A massive thank you to **Matt Venn**, **Uri Shaked**, **Sophie**, and the entire **Tiny Tapeout / IHP** community for making open-source silicon a reality. This project was built on the foundation of your incredible tools and dedication.
