@@ -1,0 +1,50 @@
+project:
+  title: "Hopfield Associative Memory — Odd Digit Recall on 7-Segment"
+  author: "Shanmukha Mangadahalli Siddaramu"
+  discord: ""
+  description: >
+    A 7-node Hopfield associative memory storing two 7-segment display patterns:
+    digit 1 and digit 9. Given a noisy or partial segment pattern on the inputs,
+    the network iterates each clock cycle until it recalls the nearest stored digit.
+    Weights computed analytically via Hebbian learning (W = p1⊗p1 + p9⊗p9).
+    Total gate count ~140 GE. Decimal point lights up when the network converges.
+  language: "Verilog"
+  clock_hz: 50000000
+  tiles: "1x1"
+  top_module: "tt_um_hopfield"
+  source_files:
+    - "project.v"
+    - "hopfield_odd.v"
+
+pinout:
+  # Dedicated inputs — noisy 7-segment pattern to recall from
+  ui[0]: "seg-a: top horizontal segment"
+  ui[1]: "seg-b: top-right vertical segment"
+  ui[2]: "seg-c: bottom-right vertical segment"
+  ui[3]: "seg-d: bottom horizontal segment"
+  ui[4]: "seg-e: bottom-left vertical segment"
+  ui[5]: "seg-f: top-left vertical segment"
+  ui[6]: "seg-g: middle horizontal segment"
+  ui[7]: ""
+
+  # Dedicated outputs — recalled segment pattern + converged flag
+  uo[0]: "seg-a: recalled top horizontal"
+  uo[1]: "seg-b: recalled top-right"
+  uo[2]: "seg-c: recalled bottom-right"
+  uo[3]: "seg-d: recalled bottom horizontal"
+  uo[4]: "seg-e: recalled bottom-left"
+  uo[5]: "seg-f: recalled top-left"
+  uo[6]: "seg-g: recalled middle"
+  uo[7]: "dp: decimal point — high when network has converged"
+
+  # Bidirectional — input only
+  uio[0]: "start: pulse high 1 cycle to load input and begin recall"
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+yaml_version: 6
