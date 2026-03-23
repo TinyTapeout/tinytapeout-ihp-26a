@@ -1,0 +1,41 @@
+# Tiny Tapeout project information
+project:
+  title:        "Maze Explorer Game"
+  author:       "Tatsuya Nomoto"
+  discord:      ""
+  description:  "I2C OLED display maze game with wall-breaking mechanics and audio feedback"
+  language:     "Verilog"
+  clock_hz:     50000000
+  tiles:        "1x1"
+  top_module:   "tt_um_maze_game"
+  source_files:
+    - "tt_um_maze_game.v"
+    - "user_module.sv"
+
+pinout:
+  ui[0]: "btn_up (direction: up)"
+  ui[1]: "btn_down (direction: down)"
+  ui[2]: "btn_left (direction: left)"
+  ui[3]: "btn_right (direction: right)"
+  ui[4]: "btn_break (wall break, active high)"
+  ui[5]: "btn_cancel (cancel confirm dialog)"
+  ui[6]: "btn_restart (restart game, press twice)"
+  ui[7]: "btn_refresh (refresh display, press twice)"
+  uo[0]: "unused"
+  uo[1]: "unused"
+  uo[2]: "audio_out (piezo speaker)"
+  uo[3]: "unused"
+  uo[4]: "unused"
+  uo[5]: "unused"
+  uo[6]: "unused"
+  uo[7]: "unused"
+  uio[0]: "I2C SDA (pseudo open-drain, 4.7k pull-up required)"
+  uio[1]: "I2C SCL (pseudo open-drain, 4.7k pull-up required)"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+yaml_version: 6
