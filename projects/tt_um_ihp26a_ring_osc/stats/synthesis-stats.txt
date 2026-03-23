@@ -1,0 +1,105 @@
+105. Printing statistics.
+
+=== LT_inverter ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_inv_1                    1
+
+   Chip area for module '\LT_inverter': 5.443200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== amm_inverter ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of ports:                  2
+   Number of port bits:              2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     sg13g2_inv_1                    1
+
+   Chip area for module '\amm_inverter': 5.443200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== tt_um_ihp26a_ring_osc ===
+
+   Number of wires:               2931
+   Number of wire bits:           2966
+   Number of public wires:        2912
+   Number of public wire bits:    2947
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2947
+     LT_inverter                  1004
+     amm_inverter                 1881
+     sg13g2_a21o_1                   2
+     sg13g2_and2_1                  10
+     sg13g2_buf_1                    8
+     sg13g2_dfrbpq_1                 9
+     sg13g2_inv_1                    4
+     sg13g2_nand2_1                  2
+     sg13g2_nand3_1                  2
+     sg13g2_nand3b_1                 2
+     sg13g2_nor2_1                   2
+     sg13g2_nor2b_1                  2
+     sg13g2_o21ai_1                  2
+     sg13g2_tielo                   12
+     sg13g2_xnor2_1                  2
+     sg13g2_xor2_1                   3
+
+   Area for cell type \LT_inverter is unknown!
+   Area for cell type \amm_inverter is unknown!
+
+   Chip area for module '\tt_um_ihp26a_ring_osc': 905.385600
+     of which used for sequential elements: 440.899200 (48.70%)
+
+=== design hierarchy ===
+
+   tt_um_ihp26a_ring_osc             1
+     LT_inverter                  1004
+     amm_inverter                 1881
+
+   Number of wires:               8701
+   Number of wire bits:           8736
+   Number of public wires:        8682
+   Number of public wire bits:    8717
+   Number of ports:               5778
+   Number of port bits:           5813
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2947
+     sg13g2_a21o_1                   2
+     sg13g2_and2_1                  10
+     sg13g2_buf_1                    8
+     sg13g2_dfrbpq_1                 9
+     sg13g2_inv_1                 2889
+     sg13g2_nand2_1                  2
+     sg13g2_nand3_1                  2
+     sg13g2_nand3b_1                 2
+     sg13g2_nor2_1                   2
+     sg13g2_nor2b_1                  2
+     sg13g2_o21ai_1                  2
+     sg13g2_tielo                   12
+     sg13g2_xnor2_1                  2
+     sg13g2_xor2_1                   3
+
+   Chip area for top module '\tt_um_ihp26a_ring_osc': 16609.017600
+     of which used for sequential elements: 440.899200 (2.65%)
+
