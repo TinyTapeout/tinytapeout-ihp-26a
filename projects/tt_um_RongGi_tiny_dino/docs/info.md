@@ -13,9 +13,9 @@ using vga color scheme to build a oversimplified Dino game
 
 ## How to test
 
-connect a button to pin 0 and vga to output and let the block jump over the obstracle
+connect a button to pin 0 and vga to output and let the dino jump over the obstracle
 
 ## External hardware
 
-Display, same as template (vga commection)
+Display, same as template (vga connection)
 Button with power source
