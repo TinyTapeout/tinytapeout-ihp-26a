@@ -1,0 +1,45 @@
+150. Printing statistics.
+
+=== tt_um_spongent88 ===
+
+   Number of wires:               2394
+   Number of wire bits:           2429
+   Number of public wires:         378
+   Number of public wire bits:     413
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2410
+     sg13g2_a21o_1                  27
+     sg13g2_a21oi_1                401
+     sg13g2_a221oi_1                 9
+     sg13g2_a22oi_1                112
+     sg13g2_and2_1                  18
+     sg13g2_and3_1                   9
+     sg13g2_and4_1                   1
+     sg13g2_buf_1                   10
+     sg13g2_dfrbpq_1               372
+     sg13g2_inv_1                   48
+     sg13g2_mux2_1                 109
+     sg13g2_nand2_1                302
+     sg13g2_nand2b_1               144
+     sg13g2_nand3_1                 31
+     sg13g2_nand3b_1                 5
+     sg13g2_nand4_1                  3
+     sg13g2_nor2_1                 195
+     sg13g2_nor2b_1                 37
+     sg13g2_nor3_1                  21
+     sg13g2_nor4_1                   1
+     sg13g2_o21ai_1                327
+     sg13g2_or2_1                   17
+     sg13g2_or3_1                    4
+     sg13g2_tiehi                    2
+     sg13g2_tielo                   12
+     sg13g2_xnor2_1                111
+     sg13g2_xor2_1                  82
+
+   Chip area for module '\tt_um_spongent88': 38056.435200
+     of which used for sequential elements: 18223.833600 (47.89%)
+
