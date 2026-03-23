@@ -1,6 +1,6 @@
 ## How it works
 
-This project is heavily inspired by the glitch detector security peripheral of the Raspberry RP2350 microcontroller. Thanks to the detailed description in the datasheet, I was inspired to create my own implementation of such a detector in the form of a Tiny Tapeout ASIC design.
+This project is heavily inspired by the glitch detector security peripheral of the Raspberry RP2350 microcontroller. Thanks to the detailed description in the datasheet, I was inspired to create my own implementation of such a detector in the form of a Tiny Tapeout ASIC design. It includes eight parallel glitching detectors with differing sensitivities and a dedicated latching trigger output for each. There is one global test trigger input. The internal delay chains to detect setup / hold margin violations are parametrized between 70% and 140% of the defined system clock period for a regular clock of 25 MHz, which is a slightly wider range than for the detectors in the RP2350.
 
 The working principle of the detector is explained in the RP2350 datasheet, from which I am quoting here:
 > The glitch detector detects loss of setup and hold margin in the system clock domain, which may be caused by deliberate external manipulation of the system clock or core supply voltage. [...]

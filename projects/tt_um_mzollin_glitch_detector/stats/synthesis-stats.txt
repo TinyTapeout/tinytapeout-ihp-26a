@@ -2,26 +2,26 @@
 
 === tt_um_mzollin_glitch_detector ===
 
-   Number of wires:                 21
-   Number of wire bits:             56
-   Number of public wires:          12
-   Number of public wire bits:      47
+   Number of wires:                593
+   Number of wire bits:            628
+   Number of public wires:         528
+   Number of public wire bits:     563
    Number of ports:                  8
    Number of port bits:             43
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 37
-     sg13g2_a21oi_1                  1
-     sg13g2_buf_1                    1
-     sg13g2_dfrbpq_1                 3
-     sg13g2_dlygate4sd3_1            1
+   Number of cells:                609
+     sg13g2_a21oi_1                  8
+     sg13g2_buf_1                    8
+     sg13g2_dfrbpq_1                24
+     sg13g2_dlygate4sd3_1          496
      sg13g2_inv_1                    1
-     sg13g2_nor2_1                   3
-     sg13g2_tiehi                    3
-     sg13g2_tielo                   23
-     sg13g2_xnor2_1                  1
+     sg13g2_nor2_1                  24
+     sg13g2_tiehi                   24
+     sg13g2_tielo                   16
+     sg13g2_xnor2_1                  8
 
-   Chip area for module '\tt_um_mzollin_glitch_detector': 410.054400
-     of which used for sequential elements: 146.966400 (35.84%)
+   Chip area for module '\tt_um_mzollin_glitch_detector': 9991.900800
+     of which used for sequential elements: 1175.731200 (11.77%)
 

@@ -33,14 +33,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "Detector trigger status"
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "Detector 0 trigger status"
+  uo[1]: "Detector 1 trigger status"
+  uo[2]: "Detector 2 trigger status"
+  uo[3]: "Detector 3 trigger status"
+  uo[4]: "Detector 4 trigger status"
+  uo[5]: "Detector 5 trigger status"
+  uo[6]: "Detector 6 trigger status"
+  uo[7]: "Detector 7 trigger status"
 
   # Bidirectional pins
   uio[0]: ""
