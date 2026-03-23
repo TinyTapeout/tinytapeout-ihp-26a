@@ -1,0 +1,35 @@
+118. Printing statistics.
+
+=== tt_um_jmkr_ece_git_code_lock ===
+
+   Number of wires:                 68
+   Number of wire bits:            103
+   Number of public wires:          22
+   Number of public wire bits:      57
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 84
+     sg13g2_a221oi_1                 1
+     sg13g2_a22oi_1                  3
+     sg13g2_and2_1                   2
+     sg13g2_and3_1                   2
+     sg13g2_buf_1                    2
+     sg13g2_dfrbpq_1                13
+     sg13g2_inv_1                   11
+     sg13g2_nand2_1                  2
+     sg13g2_nand2b_1                 2
+     sg13g2_nand3b_1                 2
+     sg13g2_nor2b_1                  2
+     sg13g2_nor3_1                   1
+     sg13g2_o21ai_1                  6
+     sg13g2_or2_1                    1
+     sg13g2_or4_1                    1
+     sg13g2_tiehi                   13
+     sg13g2_tielo                   20
+
+   Chip area for module '\tt_um_jmkr_ece_git_code_lock': 1204.648200
+     of which used for sequential elements: 636.854400 (52.87%)
+
