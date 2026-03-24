@@ -32,6 +32,10 @@ def main(argv0, in_gds, out_gds):
 
 
 	def simplify_cell(cell):
+		# Skip analog
+		if 'ua[0]' in [x.text for x in cell.labels]:
+			return cell
+
 		# Get boundary
 		bbox_bound = cell.get_polygons(layer=189, datatype=4)[0].bounding_box()
 
