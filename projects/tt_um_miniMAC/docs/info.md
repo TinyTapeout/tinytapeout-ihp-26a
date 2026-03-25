@@ -1,3 +1,5 @@
+Warning: this tile is not working properly.
+
 ## What is this miniMAC
 
 IMPORTANT: This custom circuit and protocol is not at all compliant or even compatible, even remotely linked to any 802.3 standard. It's all explained and detailed on Hackaday at https://hackaday.io/project/198914
