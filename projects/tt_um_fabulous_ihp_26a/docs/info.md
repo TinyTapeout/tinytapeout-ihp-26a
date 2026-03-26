@@ -11,7 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 Tiny FABulous FPGA for IHP26a.
 
-This design implements a tiny FPGA with 72 LUT4+FF. The FPGA fabric is 5x5 tiles in size, of which 3x3 are LUT4x8_ha tiles.
+This design implements a tiny FPGA with 168 LUT4+FF. The FPGA fabric is 9x5 tiles in size, of which 7x3 are LUT4x8_ha tiles.
 The logic cells include a vertical carry-chain in upwards direction, allowing for fast additions up to 23-bits.
 
 The I/Os resemble the Tiny Tapeout interface, allowing for clk, rst_n, uo, ui and uio signals. This enables to directly implement simple Tiny Tapeout designs on the FPGA.
@@ -24,7 +24,7 @@ The exact available resources can be seen in this table:
 
 | Primitive | Available | Description |
 |---|---|---|
-| FABULOUS_LC | 72  | Logic cells with LUT4+FF and carry-chain. |
+| FABULOUS_LC | 168  | Logic cells with LUT4+FF and carry-chain. |
 | IOBUF | 26  | Input/output buffers. |
 | GBUF | 4  | Global buffers to supply clock, reset and enable to the flip-flops. |
 | SYS_RESET | 1 | Can be used to reset the design after configuration. |
