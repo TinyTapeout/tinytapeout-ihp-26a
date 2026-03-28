@@ -11,6 +11,69 @@ datasheet_config:
   theme_override_colour: tt.colours.THEME_SKY_BLUE
   link_override_colour: tt.colours.THEME_SKY_BLUE
 
+  disabled:
+  - tt_um_zouzias
+  - tt_um_wokwi_455291650157032449
+  - tt_um_mo_module
+  - tt_um_wokwi_455291611094391809
+  - tt_um_wokwi_456579003210233857
+  - tt_um_neb_top
+  - tt_um_wokwi_455303279136701441
+  - tt_um_wokwi_455291837898350593
+  - tt_um_wokwi_459299619699169281
+  - tt_um_floAfentaki_top
+  - tt_um_wokwi_455303592417686529
+  - tt_um_tinymoa_ihp26a
+  - tt_um_nampukk_top
+  - tt_um_wokwi_456578694921494529
+  - tt_um_wokwi_456571798679348225
+  - tt_um_wokwi_455291787137823745
+  - tt_um_wokwi_455291807082792961
+  - tt_um_wokwi_456571702213480449
+  - tt_um_wokwi_456571875721383937
+  - tt_um_wokwi_455293127747668993
+  - tt_um_wokwi_456571746867102721
+  - tt_um_wokwi_456571686260436993
+  - tt_um_wokwi_455299760551464961
+  - tt_um_ECM24_serv_soc_top
+  - tt_um_wokwi_455300425088680961
+  - tt_um_wokwi_455291728585320449
+  - tt_um_Jan_three_body_solution
+  - tt_um_FTEVE_FISH
+  - tt_um_wokwi_456576548374933505
+  - tt_um_wokwi_456572315745884161
+  - tt_um_wokwi_456571568465442817
+  - tt_um_wokwi_456575744901356545
+  - tt_um_wokwi_456574528376856577
+  - tt_um_wokwi_455292199922428929
+  - tt_um_wokwi_455291642603080705
+  - tt_um_wokwi_455291689699908609
+  - tt_um_wokwi_456571628648495105
+  - tt_um_wokwi_455291560479595521
+  - tt_um_wokwi_456131795093444609
+  - tt_um_wokwi_455297270449581057
+  - tt_um_wokwi_455291727376311297
+  - tt_um_wokwi_457062377137305601
+  - tt_um_wokwi_456576238411624449
+  - tt_um_wokwi_455299783033986049
+  - tt_um_wokwi_455291688143820801
+  - tt_um_wokwi_450492222691728385
+  - tt_um_wokwi_455291603750154241
+  - tt_um_wokwi_455300379278483457
+  - tt_um_wokwi_456572140961867777
+  - tt_um_wokwi_455291618175430657
+  - tt_um_wokwi_455291738750219265
+  - tt_um_wokwi_455290751669808129
+  - tt_um_wokwi_455291641368904705
+  - tt_um_arthfink_ddmtd
+  - tt_um_wokwi_455291872587345921
+  - tt_um_wokwi_456571687437989889
+  - tt_um_wokwi_455291654560013313
+  - tt_um_wokwi_456572032892464129
+  - tt_um_wokwi_456571638794523649
+  - tt_um_schoeberl_undecided
+  - tt_um_wokwi_455291654653337601
+
   # include:
     # - docs/chip_map.typ
     # - docs/funding.typ
